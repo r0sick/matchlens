@@ -332,7 +332,7 @@
    "distance_m": 3515,
    "top_speed_kmh": 31.7,
    "sprints": 5,
-   "name": "Cartwright",
+   "name": "G. Cartwright",
    "side": "home"
   },
   "P0216": {
@@ -412,7 +412,7 @@
    "distance_m": 1758,
    "top_speed_kmh": 30.0,
    "sprints": 2,
-   "name": "Delattre",
+   "name": "J. Delattre",
    "side": "home"
   },
   "P0113": {
@@ -430,7 +430,7 @@
    "distance_m": 773,
    "top_speed_kmh": 28.1,
    "sprints": 1,
-   "name": "Whitfield",
+   "name": "C. Whitfield",
    "side": "home"
   }
  },

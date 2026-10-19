@@ -109,7 +109,7 @@
    "distance_m": 11846,
    "top_speed_kmh": 28.3,
    "sprints": 11,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "away"
   },
   "P0910": {
@@ -123,7 +123,7 @@
    "distance_m": 8010,
    "top_speed_kmh": 34.6,
    "sprints": 16,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "away"
   },
   "P0506": {
@@ -165,7 +165,7 @@
    "distance_m": 8582,
    "top_speed_kmh": 36.0,
    "sprints": 17,
-   "name": "Krämer",
+   "name": "N. Krämer",
    "side": "home"
   },
   "P0503": {
@@ -176,7 +176,7 @@
    "distance_m": 9046,
    "top_speed_kmh": 29.2,
    "sprints": 4,
-   "name": "Krämer",
+   "name": "J. Krämer",
    "side": "home"
   },
   "P0905": {
@@ -187,7 +187,7 @@
    "distance_m": 11228,
    "top_speed_kmh": 33.5,
    "sprints": 17,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "away"
   },
   "P0904": {
@@ -279,7 +279,7 @@
    "distance_m": 7275,
    "top_speed_kmh": 33.6,
    "sprints": 11,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "away"
   },
   "P0502": {
@@ -360,7 +360,7 @@
    "distance_m": 2940,
    "top_speed_kmh": 30.4,
    "sprints": 2,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "away"
   },
   "P0919": {
@@ -407,7 +407,7 @@
    "distance_m": 1515,
    "top_speed_kmh": 29.8,
    "sprints": 1,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "away"
   },
   "P0521": {
@@ -416,7 +416,7 @@
    "distance_m": 1586,
    "top_speed_kmh": 33.1,
    "sprints": 1,
-   "name": "Albrecht",
+   "name": "Felix Albrecht",
    "side": "home"
   },
   "P0513": {
@@ -425,14 +425,14 @@
    "distance_m": 1549,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ostermann",
+   "name": "J. Ostermann",
    "side": "home"
   },
   "P0913": {
    "distance_m": 1548,
    "top_speed_kmh": 30.0,
    "sprints": 1,
-   "name": "Visser",
+   "name": "L. Visser",
    "side": "away"
   }
  },

@@ -147,7 +147,7 @@
       {
         "player_id": "P1004",
         "name": "Ren Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "R. Tanabe",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -203,7 +203,7 @@
       {
         "player_id": "P1006",
         "name": "Owen Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "O. Cartwright",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -231,7 +231,7 @@
       {
         "player_id": "P1007",
         "name": "Brandon Crawford",
-        "short_name": "Crawford",
+        "short_name": "B. Crawford",
         "shirt": 3,
         "position": "DM",
         "group": "DM",
@@ -259,7 +259,7 @@
       {
         "player_id": "P1020",
         "name": "Takumi Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "T. Tanabe",
         "shirt": 35,
         "position": "LCM",
         "group": "CM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P1009",
         "name": "Alfie Thorne",
-        "short_name": "Thorne",
+        "short_name": "A. Thorne",
         "shirt": 7,
         "position": "LWB",
         "group": "FB",
@@ -315,7 +315,7 @@
       {
         "player_id": "P1010",
         "name": "Grant Crawford",
-        "short_name": "Crawford",
+        "short_name": "G. Crawford",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -373,7 +373,7 @@
       {
         "player_id": "P1003",
         "name": "Harry Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "H. Cartwright",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -429,7 +429,7 @@
       {
         "player_id": "P1008",
         "name": "George Calloway",
-        "short_name": "Calloway",
+        "short_name": "G. Calloway",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -485,7 +485,7 @@
       {
         "player_id": "P1013",
         "name": "Callum Thorne",
-        "short_name": "Thorne",
+        "short_name": "C. Thorne",
         "shirt": 34,
         "position": "CB",
         "group": "CB",
@@ -513,7 +513,7 @@
       {
         "player_id": "P1015",
         "name": "Callum Calloway",
-        "short_name": "Calloway",
+        "short_name": "C. Calloway",
         "shirt": 22,
         "position": "DM",
         "group": "DM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P1017",
         "name": "Reece Thorne",
-        "short_name": "Thorne",
+        "short_name": "R. Thorne",
         "shirt": 20,
         "position": "CAM",
         "group": "AM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P1019",
         "name": "Lewis Calloway",
-        "short_name": "Calloway",
+        "short_name": "L. Calloway",
         "shirt": 37,
         "position": "ST",
         "group": "ST",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0801",
         "name": "Charlie Bramley",
-        "short_name": "Bramley",
+        "short_name": "C. Bramley",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -762,7 +762,7 @@
       {
         "player_id": "P0802",
         "name": "Harry Marlow",
-        "short_name": "Marlow",
+        "short_name": "H. Marlow",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -902,7 +902,7 @@
       {
         "player_id": "P0807",
         "name": "Femi Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "F. Olatunji",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -930,7 +930,7 @@
       {
         "player_id": "P0820",
         "name": "Tunde Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "T. Nwosu",
         "shirt": 19,
         "position": "LCM",
         "group": "CM",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0809",
         "name": "George Marlow",
-        "short_name": "Marlow",
+        "short_name": "G. Marlow",
         "shirt": 11,
         "position": "LM",
         "group": "WM",
@@ -1014,7 +1014,7 @@
       {
         "player_id": "P0810",
         "name": "Harry Bramley",
-        "short_name": "Bramley",
+        "short_name": "H. Bramley",
         "shirt": 9,
         "position": "LST",
         "group": "ST",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0804",
         "name": "Musa Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "M. Olatunji",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -1212,7 +1212,7 @@
       {
         "player_id": "P0816",
         "name": "Charlie Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0818",
         "name": "Owen Marlow",
-        "short_name": "Marlow",
+        "short_name": "O. Marlow",
         "shirt": 16,
         "position": "RW",
         "group": "W",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0821",
         "name": "Lewis Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "L. Whitfield",
         "shirt": 17,
         "position": "CB",
         "group": "CB",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0823",
         "name": "Ifeanyi Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "I. Nwosu",
         "shirt": 29,
         "position": "GK",
         "group": "GK",
@@ -1457,7 +1457,7 @@
       },
       {
         "player_id": "P1003",
-        "name": "Cartwright",
+        "name": "H. Cartwright",
         "season": {
           "apps": 7,
           "minutes": 497,
@@ -1477,7 +1477,7 @@
       },
       {
         "player_id": "P1004",
-        "name": "Tanabe",
+        "name": "R. Tanabe",
         "season": {
           "apps": 7,
           "minutes": 684,
@@ -1517,7 +1517,7 @@
       },
       {
         "player_id": "P1006",
-        "name": "Cartwright",
+        "name": "O. Cartwright",
         "season": {
           "apps": 7,
           "minutes": 684,
@@ -1537,7 +1537,7 @@
       },
       {
         "player_id": "P1007",
-        "name": "Crawford",
+        "name": "B. Crawford",
         "season": {
           "apps": 5,
           "minutes": 393,
@@ -1557,7 +1557,7 @@
       },
       {
         "player_id": "P1008",
-        "name": "Calloway",
+        "name": "G. Calloway",
         "season": {
           "apps": 7,
           "minutes": 598,
@@ -1577,7 +1577,7 @@
       },
       {
         "player_id": "P1009",
-        "name": "Thorne",
+        "name": "A. Thorne",
         "season": {
           "apps": 7,
           "minutes": 684,
@@ -1597,7 +1597,7 @@
       },
       {
         "player_id": "P1010",
-        "name": "Crawford",
+        "name": "G. Crawford",
         "season": {
           "apps": 7,
           "minutes": 439,
@@ -1664,7 +1664,7 @@
       },
       {
         "player_id": "P1013",
-        "name": "Thorne",
+        "name": "C. Thorne",
         "season": {
           "apps": 2,
           "minutes": 81,
@@ -1704,7 +1704,7 @@
       },
       {
         "player_id": "P1015",
-        "name": "Calloway",
+        "name": "C. Calloway",
         "season": {
           "apps": 3,
           "minutes": 228,
@@ -1744,7 +1744,7 @@
       },
       {
         "player_id": "P1017",
-        "name": "Thorne",
+        "name": "R. Thorne",
         "season": {
           "apps": 3,
           "minutes": 43,
@@ -1784,7 +1784,7 @@
       },
       {
         "player_id": "P1019",
-        "name": "Calloway",
+        "name": "L. Calloway",
         "season": {
           "apps": 7,
           "minutes": 369,
@@ -1804,7 +1804,7 @@
       },
       {
         "player_id": "P1020",
-        "name": "Tanabe",
+        "name": "T. Tanabe",
         "season": {
           "apps": 1,
           "minutes": 33,
@@ -1884,7 +1884,7 @@
       },
       {
         "player_id": "P0801",
-        "name": "Bramley",
+        "name": "C. Bramley",
         "season": {
           "apps": 7,
           "minutes": 685,
@@ -1904,7 +1904,7 @@
       },
       {
         "player_id": "P0802",
-        "name": "Marlow",
+        "name": "H. Marlow",
         "season": {
           "apps": 7,
           "minutes": 685,
@@ -1944,7 +1944,7 @@
       },
       {
         "player_id": "P0804",
-        "name": "Olatunji",
+        "name": "M. Olatunji",
         "season": {
           "apps": 5,
           "minutes": 370,
@@ -2004,7 +2004,7 @@
       },
       {
         "player_id": "P0807",
-        "name": "Olatunji",
+        "name": "F. Olatunji",
         "season": {
           "apps": 7,
           "minutes": 682,
@@ -2051,7 +2051,7 @@
       },
       {
         "player_id": "P0809",
-        "name": "Marlow",
+        "name": "G. Marlow",
         "season": {
           "apps": 7,
           "minutes": 683,
@@ -2071,7 +2071,7 @@
       },
       {
         "player_id": "P0810",
-        "name": "Bramley",
+        "name": "H. Bramley",
         "season": {
           "apps": 6,
           "minutes": 272,
@@ -2198,7 +2198,7 @@
       },
       {
         "player_id": "P0816",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 4,
           "minutes": 134,
@@ -2238,7 +2238,7 @@
       },
       {
         "player_id": "P0818",
-        "name": "Marlow",
+        "name": "O. Marlow",
         "season": {
           "apps": 2,
           "minutes": 24,
@@ -2278,7 +2278,7 @@
       },
       {
         "player_id": "P0820",
-        "name": "Nwosu",
+        "name": "T. Nwosu",
         "season": {
           "apps": 4,
           "minutes": 276,
@@ -2298,7 +2298,7 @@
       },
       {
         "player_id": "P0821",
-        "name": "Whitfield",
+        "name": "L. Whitfield",
         "season": {
           "apps": 3,
           "minutes": 132,
@@ -2338,7 +2338,7 @@
       },
       {
         "player_id": "P0823",
-        "name": "Nwosu",
+        "name": "I. Nwosu",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2367,7 +2367,7 @@
       },
       {
         "player_id": "P0807",
-        "name": "Olatunji",
+        "name": "F. Olatunji",
         "type": "career_apps",
         "target": 300,
         "needed": 1

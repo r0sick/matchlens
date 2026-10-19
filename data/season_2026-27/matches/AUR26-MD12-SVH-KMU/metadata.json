@@ -119,7 +119,7 @@
       {
         "player_id": "P0513",
         "name": "Jonas Ostermann",
-        "short_name": "Ostermann",
+        "short_name": "J. Ostermann",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0511",
         "name": "Niklas Krämer",
-        "short_name": "Krämer",
+        "short_name": "N. Krämer",
         "shirt": 11,
         "position": "LW",
         "group": "W",
@@ -373,7 +373,7 @@
       {
         "player_id": "P0503",
         "name": "Jonas Krämer",
-        "short_name": "Krämer",
+        "short_name": "J. Krämer",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0517",
         "name": "Finn Albrecht",
-        "short_name": "Albrecht",
+        "short_name": "Finn Albrecht",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0521",
         "name": "Felix Albrecht",
-        "short_name": "Albrecht",
+        "short_name": "Felix Albrecht",
         "shirt": 44,
         "position": "CB",
         "group": "CB",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0522",
         "name": "Tim Ostermann",
-        "short_name": "Ostermann",
+        "short_name": "T. Ostermann",
         "shirt": 20,
         "position": "RW",
         "group": "W",
@@ -1465,7 +1465,7 @@
       },
       {
         "player_id": "P0503",
-        "name": "Krämer",
+        "name": "J. Krämer",
         "season": {
           "apps": 11,
           "minutes": 857,
@@ -1625,7 +1625,7 @@
       },
       {
         "player_id": "P0511",
-        "name": "Krämer",
+        "name": "N. Krämer",
         "season": {
           "apps": 8,
           "minutes": 595,
@@ -1665,7 +1665,7 @@
       },
       {
         "player_id": "P0513",
-        "name": "Ostermann",
+        "name": "J. Ostermann",
         "season": {
           "apps": 5,
           "minutes": 311,
@@ -1745,7 +1745,7 @@
       },
       {
         "player_id": "P0517",
-        "name": "Albrecht",
+        "name": "Finn Albrecht",
         "season": {
           "apps": 2,
           "minutes": 45,
@@ -1825,7 +1825,7 @@
       },
       {
         "player_id": "P0521",
-        "name": "Albrecht",
+        "name": "Felix Albrecht",
         "season": {
           "apps": 10,
           "minutes": 285,
@@ -1845,7 +1845,7 @@
       },
       {
         "player_id": "P0522",
-        "name": "Ostermann",
+        "name": "T. Ostermann",
         "season": {
           "apps": 2,
           "minutes": 87,

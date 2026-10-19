@@ -63,7 +63,7 @@
       {
         "player_id": "P0801",
         "name": "Charlie Bramley",
-        "short_name": "Bramley",
+        "short_name": "C. Bramley",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -91,7 +91,7 @@
       {
         "player_id": "P0802",
         "name": "Harry Marlow",
-        "short_name": "Marlow",
+        "short_name": "H. Marlow",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -147,7 +147,7 @@
       {
         "player_id": "P0804",
         "name": "Musa Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "M. Olatunji",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -231,7 +231,7 @@
       {
         "player_id": "P0807",
         "name": "Femi Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "F. Olatunji",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -259,7 +259,7 @@
       {
         "player_id": "P0820",
         "name": "Tunde Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "T. Nwosu",
         "shirt": 19,
         "position": "LCM",
         "group": "CM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P0809",
         "name": "George Marlow",
-        "short_name": "Marlow",
+        "short_name": "G. Marlow",
         "shirt": 11,
         "position": "LM",
         "group": "WM",
@@ -315,7 +315,7 @@
       {
         "player_id": "P0810",
         "name": "Harry Bramley",
-        "short_name": "Bramley",
+        "short_name": "H. Bramley",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0816",
         "name": "Charlie Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0818",
         "name": "Owen Marlow",
-        "short_name": "Marlow",
+        "short_name": "O. Marlow",
         "shirt": 16,
         "position": "RW",
         "group": "W",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0821",
         "name": "Lewis Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "L. Whitfield",
         "shirt": 17,
         "position": "CB",
         "group": "CB",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0823",
         "name": "Ifeanyi Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "I. Nwosu",
         "shirt": 29,
         "position": "GK",
         "group": "GK",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0601",
         "name": "Riccardo Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "R. Ferraresi",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0603",
         "name": "Davide Santoro",
-        "short_name": "Santoro",
+        "short_name": "D. Santoro",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -930,7 +930,7 @@
       {
         "player_id": "P0608",
         "name": "Marco Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "M. Lombardo",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0606",
         "name": "Nicolò Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "N. Ferraresi",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0612",
         "name": "Simone Galvani",
-        "short_name": "Galvani",
+        "short_name": "S. Galvani",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1184,7 +1184,7 @@
       {
         "player_id": "P0617",
         "name": "Simone Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "S. Ferraresi",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -1212,7 +1212,7 @@
       {
         "player_id": "P0618",
         "name": "Nicolò Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "N. Lombardo",
         "shirt": 22,
         "position": "RW",
         "group": "W",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0620",
         "name": "Simone Santoro",
-        "short_name": "Santoro",
+        "short_name": "S. Santoro",
         "shirt": 44,
         "position": "RCM",
         "group": "CM",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0621",
         "name": "Gianluca Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "G. Lombardo",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0623",
         "name": "Andrea Galvani",
-        "short_name": "Galvani",
+        "short_name": "A. Galvani",
         "shirt": 15,
         "position": "GK",
         "group": "GK",
@@ -1417,7 +1417,7 @@
     "players": [
       {
         "player_id": "P0801",
-        "name": "Bramley",
+        "name": "C. Bramley",
         "season": {
           "apps": 2,
           "minutes": 197,
@@ -1437,7 +1437,7 @@
       },
       {
         "player_id": "P0802",
-        "name": "Marlow",
+        "name": "H. Marlow",
         "season": {
           "apps": 2,
           "minutes": 197,
@@ -1477,7 +1477,7 @@
       },
       {
         "player_id": "P0804",
-        "name": "Olatunji",
+        "name": "M. Olatunji",
         "season": {
           "apps": 1,
           "minutes": 64,
@@ -1537,7 +1537,7 @@
       },
       {
         "player_id": "P0807",
-        "name": "Olatunji",
+        "name": "F. Olatunji",
         "season": {
           "apps": 2,
           "minutes": 197,
@@ -1577,7 +1577,7 @@
       },
       {
         "player_id": "P0809",
-        "name": "Marlow",
+        "name": "G. Marlow",
         "season": {
           "apps": 2,
           "minutes": 197,
@@ -1597,7 +1597,7 @@
       },
       {
         "player_id": "P0810",
-        "name": "Bramley",
+        "name": "H. Bramley",
         "season": {
           "apps": 1,
           "minutes": 64,
@@ -1724,7 +1724,7 @@
       },
       {
         "player_id": "P0816",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 2,
           "minutes": 39,
@@ -1764,7 +1764,7 @@
       },
       {
         "player_id": "P0818",
-        "name": "Marlow",
+        "name": "O. Marlow",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1804,7 +1804,7 @@
       },
       {
         "player_id": "P0820",
-        "name": "Nwosu",
+        "name": "T. Nwosu",
         "season": {
           "apps": 2,
           "minutes": 152,
@@ -1824,7 +1824,7 @@
       },
       {
         "player_id": "P0821",
-        "name": "Whitfield",
+        "name": "L. Whitfield",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1864,7 +1864,7 @@
       },
       {
         "player_id": "P0823",
-        "name": "Nwosu",
+        "name": "I. Nwosu",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1884,7 +1884,7 @@
       },
       {
         "player_id": "P0601",
-        "name": "Ferraresi",
+        "name": "R. Ferraresi",
         "season": {
           "apps": 2,
           "minutes": 197,
@@ -1931,7 +1931,7 @@
       },
       {
         "player_id": "P0603",
-        "name": "Santoro",
+        "name": "D. Santoro",
         "season": {
           "apps": 2,
           "minutes": 149,
@@ -1991,7 +1991,7 @@
       },
       {
         "player_id": "P0606",
-        "name": "Ferraresi",
+        "name": "N. Ferraresi",
         "season": {
           "apps": 2,
           "minutes": 197,
@@ -2031,7 +2031,7 @@
       },
       {
         "player_id": "P0608",
-        "name": "Lombardo",
+        "name": "M. Lombardo",
         "season": {
           "apps": 2,
           "minutes": 135,
@@ -2111,7 +2111,7 @@
       },
       {
         "player_id": "P0612",
-        "name": "Galvani",
+        "name": "S. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2211,7 +2211,7 @@
       },
       {
         "player_id": "P0617",
-        "name": "Ferraresi",
+        "name": "S. Ferraresi",
         "season": {
           "apps": 1,
           "minutes": 23,
@@ -2231,7 +2231,7 @@
       },
       {
         "player_id": "P0618",
-        "name": "Lombardo",
+        "name": "N. Lombardo",
         "season": {
           "apps": 1,
           "minutes": 25,
@@ -2271,7 +2271,7 @@
       },
       {
         "player_id": "P0620",
-        "name": "Santoro",
+        "name": "S. Santoro",
         "season": {
           "apps": 1,
           "minutes": 25,
@@ -2291,7 +2291,7 @@
       },
       {
         "player_id": "P0621",
-        "name": "Lombardo",
+        "name": "G. Lombardo",
         "season": {
           "apps": 1,
           "minutes": 20,
@@ -2331,7 +2331,7 @@
       },
       {
         "player_id": "P0623",
-        "name": "Galvani",
+        "name": "A. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,

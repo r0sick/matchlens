@@ -78,7 +78,7 @@
    "distance_m": 10984,
    "top_speed_kmh": 32.4,
    "sprints": 12,
-   "name": "Lombardo",
+   "name": "M. Lombardo",
    "side": "home"
   },
   "P0908": {
@@ -119,7 +119,7 @@
    "distance_m": 11076,
    "top_speed_kmh": 31.3,
    "sprints": 9,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "home"
   },
   "P0614": {
@@ -178,7 +178,7 @@
    "distance_m": 11606,
    "top_speed_kmh": 28.3,
    "sprints": 7,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "away"
   },
   "P0910": {
@@ -192,7 +192,7 @@
    "distance_m": 6700,
    "top_speed_kmh": 34.5,
    "sprints": 7,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "away"
   },
   "P0903": {
@@ -214,7 +214,7 @@
    "distance_m": 11055,
    "top_speed_kmh": 31.3,
    "sprints": 13,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "away"
   },
   "P0911": {
@@ -257,7 +257,7 @@
    "distance_m": 6630,
    "top_speed_kmh": 27.0,
    "sprints": 1,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "home"
   },
   "P0607": {
@@ -281,7 +281,7 @@
    "distance_m": 6971,
    "top_speed_kmh": 34.2,
    "sprints": 7,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "away"
   },
   "P0902": {
@@ -311,7 +311,7 @@
    "distance_m": 4996,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "home"
   },
   "P0922": {
@@ -364,7 +364,7 @@
    "distance_m": 3004,
    "top_speed_kmh": 29.5,
    "sprints": 5,
-   "name": "Santoro",
+   "name": "S. Santoro",
    "side": "home"
   },
   "P0605": {
@@ -385,7 +385,7 @@
    "distance_m": 3205,
    "top_speed_kmh": 30.2,
    "sprints": 4,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "away"
   },
   "P0613": {
@@ -404,7 +404,7 @@
    "distance_m": 2628,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Lombardo",
+   "name": "G. Lombardo",
    "side": "home"
   },
   "P0917": {
@@ -413,7 +413,7 @@
    "distance_m": 3020,
    "top_speed_kmh": 30.0,
    "sprints": 2,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "away"
   },
   "P0913": {
@@ -422,7 +422,7 @@
    "distance_m": 1659,
    "top_speed_kmh": 29.2,
    "sprints": 1,
-   "name": "Visser",
+   "name": "L. Visser",
    "side": "away"
   }
  },

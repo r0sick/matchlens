@@ -150,7 +150,7 @@
    "distance_m": 10143,
    "top_speed_kmh": 28.1,
    "sprints": 8,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "away"
   },
   "P0401": {
@@ -159,7 +159,7 @@
    "distance_m": 5363,
    "top_speed_kmh": 23.7,
    "sprints": 1,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0407": {
@@ -185,7 +185,7 @@
    "distance_m": 8704,
    "top_speed_kmh": 30.0,
    "sprints": 8,
-   "name": "Delattre",
+   "name": "J. Delattre",
    "side": "home"
   },
   "P0409": {
@@ -201,7 +201,7 @@
    "distance_m": 9925,
    "top_speed_kmh": 31.6,
    "sprints": 10,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "away"
   },
   "P0101": {
@@ -261,7 +261,7 @@
    "distance_m": 6547,
    "top_speed_kmh": 32.1,
    "sprints": 5,
-   "name": "Cartwright",
+   "name": "M. Cartwright",
    "side": "home"
   },
   "P0103": {
@@ -294,7 +294,7 @@
    "distance_m": 10949,
    "top_speed_kmh": 35.6,
    "sprints": 11,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0413": {
@@ -318,7 +318,7 @@
    "distance_m": 10742,
    "top_speed_kmh": 33.4,
    "sprints": 23,
-   "name": "Brunet",
+   "name": "B. Brunet",
    "side": "away"
   },
   "P0403": {
@@ -328,7 +328,7 @@
    "distance_m": 9896,
    "top_speed_kmh": 27.6,
    "sprints": 3,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   },
   "P0118": {
@@ -341,7 +341,7 @@
    "distance_m": 4283,
    "top_speed_kmh": 34.4,
    "sprints": 8,
-   "name": "Whitfield",
+   "name": "O. Whitfield",
    "side": "home"
   },
   "P0115": {
@@ -407,7 +407,7 @@
    "distance_m": 1649,
    "top_speed_kmh": 28.2,
    "sprints": 4,
-   "name": "Lefèvre",
+   "name": "L. Lefèvre",
    "side": "away"
   },
   "P0418": {

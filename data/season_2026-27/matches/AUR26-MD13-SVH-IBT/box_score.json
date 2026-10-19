@@ -80,7 +80,7 @@
    "distance_m": 8195,
    "top_speed_kmh": 29.8,
    "sprints": 17,
-   "name": "Calloway",
+   "name": "L. Calloway",
    "side": "away"
   },
   "P0506": {
@@ -121,7 +121,7 @@
    "distance_m": 8172,
    "top_speed_kmh": 30.1,
    "sprints": 19,
-   "name": "Crawford",
+   "name": "G. Crawford",
    "side": "away"
   },
   "P1006": {
@@ -134,7 +134,7 @@
    "distance_m": 11243,
    "top_speed_kmh": 31.8,
    "sprints": 19,
-   "name": "Cartwright",
+   "name": "O. Cartwright",
    "side": "away"
   },
   "P0503": {
@@ -146,7 +146,7 @@
    "distance_m": 7583,
    "top_speed_kmh": 28.9,
    "sprints": 9,
-   "name": "Krämer",
+   "name": "J. Krämer",
    "side": "home"
   },
   "P0505": {
@@ -169,7 +169,7 @@
    "distance_m": 10384,
    "top_speed_kmh": 32.1,
    "sprints": 13,
-   "name": "Thorne",
+   "name": "A. Thorne",
    "side": "away"
   },
   "P1008": {
@@ -182,7 +182,7 @@
    "distance_m": 9644,
    "top_speed_kmh": 31.1,
    "sprints": 8,
-   "name": "Calloway",
+   "name": "G. Calloway",
    "side": "away"
   },
   "P0502": {
@@ -229,7 +229,7 @@
    "distance_m": 7563,
    "top_speed_kmh": 36.5,
    "sprints": 15,
-   "name": "Krämer",
+   "name": "N. Krämer",
    "side": "home"
   },
   "P1003": {
@@ -240,7 +240,7 @@
    "distance_m": 9461,
    "top_speed_kmh": 26.6,
    "sprints": 5,
-   "name": "Cartwright",
+   "name": "H. Cartwright",
    "side": "away"
   },
   "P1007": {
@@ -251,7 +251,7 @@
    "distance_m": 10863,
    "top_speed_kmh": 28.0,
    "sprints": 10,
-   "name": "Crawford",
+   "name": "B. Crawford",
    "side": "away"
   },
   "P0504": {
@@ -345,7 +345,7 @@
    "distance_m": 3172,
    "top_speed_kmh": 29.4,
    "sprints": 2,
-   "name": "Ostermann",
+   "name": "T. Ostermann",
    "side": "home"
   },
   "P0518": {
@@ -368,7 +368,7 @@
    "distance_m": 2343,
    "top_speed_kmh": 29.7,
    "sprints": 2,
-   "name": "Ostermann",
+   "name": "J. Ostermann",
    "side": "home"
   },
   "P1011": {
@@ -412,7 +412,7 @@
    "distance_m": 2339,
    "top_speed_kmh": 32.1,
    "sprints": 3,
-   "name": "Albrecht",
+   "name": "Felix Albrecht",
    "side": "home"
   }
  },

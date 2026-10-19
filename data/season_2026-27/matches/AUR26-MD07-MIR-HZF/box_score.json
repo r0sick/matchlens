@@ -107,7 +107,7 @@
    "distance_m": 11083,
    "top_speed_kmh": 29.4,
    "sprints": 3,
-   "name": "Arteche",
+   "name": "N. Arteche",
    "side": "home"
   },
   "P0306": {
@@ -129,7 +129,7 @@
    "distance_m": 9537,
    "top_speed_kmh": 30.1,
    "sprints": 5,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "home"
   },
   "P0302": {
@@ -141,7 +141,7 @@
    "distance_m": 8266,
    "top_speed_kmh": 30.9,
    "sprints": 6,
-   "name": "Lozano",
+   "name": "J. Lozano",
    "side": "home"
   },
   "P0322": {
@@ -154,7 +154,7 @@
    "distance_m": 8159,
    "top_speed_kmh": 35.1,
    "sprints": 15,
-   "name": "Villalba",
+   "name": "N. Villalba",
    "side": "home"
   },
   "P0303": {
@@ -176,7 +176,7 @@
    "distance_m": 7327,
    "top_speed_kmh": 34.3,
    "sprints": 21,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "away"
   },
   "P0907": {
@@ -188,7 +188,7 @@
    "distance_m": 6944,
    "top_speed_kmh": 28.4,
    "sprints": 7,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "away"
   },
   "P0311": {
@@ -247,7 +247,7 @@
    "distance_m": 10287,
    "top_speed_kmh": 32.0,
    "sprints": 27,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "home"
   },
   "P0905": {
@@ -258,7 +258,7 @@
    "distance_m": 10821,
    "top_speed_kmh": 36.0,
    "sprints": 15,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "away"
   },
   "P0908": {
@@ -284,7 +284,7 @@
    "distance_m": 7001,
    "top_speed_kmh": 30.0,
    "sprints": 7,
-   "name": "Visser",
+   "name": "L. Visser",
    "side": "away"
   },
   "P0906": {
@@ -327,7 +327,7 @@
    "distance_m": 4569,
    "top_speed_kmh": 33.1,
    "sprints": 3,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "away"
   },
   "P0922": {
@@ -365,7 +365,7 @@
    "distance_m": 3094,
    "top_speed_kmh": 31.5,
    "sprints": 5,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "away"
   },
   "P0320": {
@@ -377,7 +377,7 @@
    "distance_m": 2493,
    "top_speed_kmh": 30.2,
    "sprints": 6,
-   "name": "Mendívil",
+   "name": "R. Mendívil",
    "side": "home"
   },
   "P0316": {
@@ -400,7 +400,7 @@
    "distance_m": 2860,
    "top_speed_kmh": 29.9,
    "sprints": 3,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "away"
   },
   "P0314": {
@@ -431,7 +431,7 @@
    "distance_m": 1699,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Arteche",
+   "name": "D. Arteche",
    "side": "home"
   }
  },

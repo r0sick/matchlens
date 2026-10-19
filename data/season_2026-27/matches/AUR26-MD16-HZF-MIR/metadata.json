@@ -231,7 +231,7 @@
       {
         "player_id": "P0907",
         "name": "Bram Visser",
-        "short_name": "Visser",
+        "short_name": "B. Visser",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P0909",
         "name": "Sofiane Kettani",
-        "short_name": "Kettani",
+        "short_name": "S. Kettani",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -373,7 +373,7 @@
       {
         "player_id": "P0905",
         "name": "Zakaria Kettani",
-        "short_name": "Kettani",
+        "short_name": "Z. Kettani",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -401,7 +401,7 @@
       {
         "player_id": "P0910",
         "name": "Daan Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "D. Verhoef",
         "shirt": 9,
         "position": "ST",
         "group": "ST",
@@ -457,7 +457,7 @@
       {
         "player_id": "P0913",
         "name": "Luuk Visser",
-        "short_name": "Visser",
+        "short_name": "L. Visser",
         "shirt": 12,
         "position": "CB",
         "group": "CB",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0917",
         "name": "Bram van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "B. van Rijn",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0918",
         "name": "Stijn Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "S. Verhoef",
         "shirt": 40,
         "position": "RW",
         "group": "W",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0923",
         "name": "Luuk van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "L. van Rijn",
         "shirt": 34,
         "position": "GK",
         "group": "GK",
@@ -762,7 +762,7 @@
       {
         "player_id": "P0302",
         "name": "Javi Lozano",
-        "short_name": "Lozano",
+        "short_name": "J. Lozano",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0304",
         "name": "Tomás Villalba",
-        "short_name": "Villalba",
+        "short_name": "T. Villalba",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0305",
         "name": "Dani Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "D. Mendívil",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0322",
         "name": "Nahuel Villalba",
-        "short_name": "Villalba",
+        "short_name": "N. Villalba",
         "shirt": 14,
         "position": "RW",
         "group": "W",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0309",
         "name": "Javi Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "J. Mendívil",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -1100,7 +1100,7 @@
       {
         "player_id": "P0312",
         "name": "Nacho Lozano",
-        "short_name": "Lozano",
+        "short_name": "N. Lozano",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0313",
         "name": "Dani Arteche",
-        "short_name": "Arteche",
+        "short_name": "D. Arteche",
         "shirt": 35,
         "position": "CB",
         "group": "CB",
@@ -1184,7 +1184,7 @@
       {
         "player_id": "P0315",
         "name": "Nacho Arteche",
-        "short_name": "Arteche",
+        "short_name": "N. Arteche",
         "shirt": 36,
         "position": "DM",
         "group": "DM",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0320",
         "name": "Rubén Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "R. Mendívil",
         "shirt": 41,
         "position": "RCM",
         "group": "CM",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0323",
         "name": "Hugo Arteche",
-        "short_name": "Arteche",
+        "short_name": "H. Arteche",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1505,7 +1505,7 @@
       },
       {
         "player_id": "P0905",
-        "name": "Kettani",
+        "name": "Z. Kettani",
         "season": {
           "apps": 10,
           "minutes": 973,
@@ -1545,7 +1545,7 @@
       },
       {
         "player_id": "P0907",
-        "name": "Visser",
+        "name": "B. Visser",
         "season": {
           "apps": 13,
           "minutes": 1069,
@@ -1585,7 +1585,7 @@
       },
       {
         "player_id": "P0909",
-        "name": "Kettani",
+        "name": "S. Kettani",
         "season": {
           "apps": 14,
           "minutes": 906,
@@ -1605,7 +1605,7 @@
       },
       {
         "player_id": "P0910",
-        "name": "Verhoef",
+        "name": "D. Verhoef",
         "season": {
           "apps": 15,
           "minutes": 932,
@@ -1665,7 +1665,7 @@
       },
       {
         "player_id": "P0913",
-        "name": "Visser",
+        "name": "L. Visser",
         "season": {
           "apps": 9,
           "minutes": 359,
@@ -1752,7 +1752,7 @@
       },
       {
         "player_id": "P0917",
-        "name": "van Rijn",
+        "name": "B. van Rijn",
         "season": {
           "apps": 9,
           "minutes": 200,
@@ -1772,7 +1772,7 @@
       },
       {
         "player_id": "P0918",
-        "name": "Verhoef",
+        "name": "S. Verhoef",
         "season": {
           "apps": 12,
           "minutes": 376,
@@ -1872,7 +1872,7 @@
       },
       {
         "player_id": "P0923",
-        "name": "van Rijn",
+        "name": "L. van Rijn",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1912,7 +1912,7 @@
       },
       {
         "player_id": "P0302",
-        "name": "Lozano",
+        "name": "J. Lozano",
         "season": {
           "apps": 14,
           "minutes": 1172,
@@ -1952,7 +1952,7 @@
       },
       {
         "player_id": "P0304",
-        "name": "Villalba",
+        "name": "T. Villalba",
         "season": {
           "apps": 14,
           "minutes": 1355,
@@ -1972,7 +1972,7 @@
       },
       {
         "player_id": "P0305",
-        "name": "Mendívil",
+        "name": "D. Mendívil",
         "season": {
           "apps": 14,
           "minutes": 1286,
@@ -2052,7 +2052,7 @@
       },
       {
         "player_id": "P0309",
-        "name": "Mendívil",
+        "name": "J. Mendívil",
         "season": {
           "apps": 14,
           "minutes": 1016,
@@ -2119,7 +2119,7 @@
       },
       {
         "player_id": "P0312",
-        "name": "Lozano",
+        "name": "N. Lozano",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2139,7 +2139,7 @@
       },
       {
         "player_id": "P0313",
-        "name": "Arteche",
+        "name": "D. Arteche",
         "season": {
           "apps": 10,
           "minutes": 244,
@@ -2179,7 +2179,7 @@
       },
       {
         "player_id": "P0315",
-        "name": "Arteche",
+        "name": "N. Arteche",
         "season": {
           "apps": 6,
           "minutes": 408,
@@ -2279,7 +2279,7 @@
       },
       {
         "player_id": "P0320",
-        "name": "Mendívil",
+        "name": "R. Mendívil",
         "season": {
           "apps": 6,
           "minutes": 343,
@@ -2319,7 +2319,7 @@
       },
       {
         "player_id": "P0322",
-        "name": "Villalba",
+        "name": "N. Villalba",
         "season": {
           "apps": 10,
           "minutes": 471,
@@ -2339,7 +2339,7 @@
       },
       {
         "player_id": "P0323",
-        "name": "Arteche",
+        "name": "H. Arteche",
         "season": {
           "apps": 0,
           "minutes": 0,

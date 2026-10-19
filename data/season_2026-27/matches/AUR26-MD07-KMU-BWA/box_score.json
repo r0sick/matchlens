@@ -135,7 +135,7 @@
    "distance_m": 11199,
    "top_speed_kmh": 32.6,
    "sprints": 11,
-   "name": "Olatunji",
+   "name": "F. Olatunji",
    "side": "away"
   },
   "P0211": {
@@ -233,7 +233,7 @@
    "distance_m": 9320,
    "top_speed_kmh": 29.4,
    "sprints": 8,
-   "name": "Olatunji",
+   "name": "M. Olatunji",
    "side": "away"
   },
   "P0203": {
@@ -253,7 +253,7 @@
    "distance_m": 5060,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Bramley",
+   "name": "C. Bramley",
    "side": "away"
   },
   "P0809": {
@@ -264,7 +264,7 @@
    "distance_m": 10616,
    "top_speed_kmh": 33.1,
    "sprints": 14,
-   "name": "Marlow",
+   "name": "G. Marlow",
    "side": "away"
   },
   "P0808": {
@@ -311,7 +311,7 @@
    "distance_m": 10262,
    "top_speed_kmh": 31.0,
    "sprints": 13,
-   "name": "Marlow",
+   "name": "H. Marlow",
    "side": "away"
   },
   "P0201": {
@@ -360,7 +360,7 @@
   },
   "P0810": {
    "pressures": 1.0,
-   "name": "Bramley",
+   "name": "H. Bramley",
    "side": "away"
   }
  },

@@ -373,7 +373,7 @@
       {
         "player_id": "P0107",
         "name": "Jules Delattre",
-        "short_name": "Delattre",
+        "short_name": "J. Delattre",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0117",
         "name": "Baptiste Delattre",
-        "short_name": "Delattre",
+        "short_name": "B. Delattre",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0118",
         "name": "Owen Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "O. Whitfield",
         "shirt": 17,
         "position": "RW",
         "group": "W",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0120",
         "name": "George Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "G. Cartwright",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0121",
         "name": "Callum Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 43,
         "position": "CB",
         "group": "CB",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0122",
         "name": "Mason Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "M. Cartwright",
         "shirt": 29,
         "position": "RW",
         "group": "W",
@@ -1537,7 +1537,7 @@
       },
       {
         "player_id": "P0107",
-        "name": "Delattre",
+        "name": "J. Delattre",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1756,7 +1756,7 @@
       },
       {
         "player_id": "P0117",
-        "name": "Delattre",
+        "name": "B. Delattre",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1776,7 +1776,7 @@
       },
       {
         "player_id": "P0118",
-        "name": "Whitfield",
+        "name": "O. Whitfield",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1816,7 +1816,7 @@
       },
       {
         "player_id": "P0120",
-        "name": "Cartwright",
+        "name": "G. Cartwright",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1836,7 +1836,7 @@
       },
       {
         "player_id": "P0121",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1856,7 +1856,7 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2386,7 +2386,7 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "type": "career_goals",
         "target": 25,
         "needed": 2

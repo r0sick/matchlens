@@ -68,7 +68,7 @@
    "distance_m": 6508,
    "top_speed_kmh": 30.0,
    "sprints": 13,
-   "name": "Crawford",
+   "name": "G. Crawford",
    "side": "home"
   },
   "P1015": {
@@ -80,7 +80,7 @@
    "distance_m": 11392,
    "top_speed_kmh": 29.1,
    "sprints": 5,
-   "name": "Calloway",
+   "name": "C. Calloway",
    "side": "home"
   },
   "P0411": {
@@ -160,7 +160,7 @@
    "distance_m": 10786,
    "top_speed_kmh": 34.1,
    "sprints": 17,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0410": {
@@ -200,7 +200,7 @@
    "distance_m": 11546,
    "top_speed_kmh": 30.8,
    "sprints": 10,
-   "name": "Cartwright",
+   "name": "O. Cartwright",
    "side": "home"
   },
   "P0406": {
@@ -226,7 +226,7 @@
    "distance_m": 11474,
    "top_speed_kmh": 31.1,
    "sprints": 10,
-   "name": "Calloway",
+   "name": "G. Calloway",
    "side": "home"
   },
   "P1009": {
@@ -237,7 +237,7 @@
    "distance_m": 10507,
    "top_speed_kmh": 32.5,
    "sprints": 11,
-   "name": "Thorne",
+   "name": "A. Thorne",
    "side": "home"
   },
   "P0401": {
@@ -246,7 +246,7 @@
    "distance_m": 5283,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0403": {
@@ -256,7 +256,7 @@
    "distance_m": 9793,
    "top_speed_kmh": 27.7,
    "sprints": 10,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   },
   "P1005": {
@@ -287,7 +287,7 @@
    "distance_m": 9657,
    "top_speed_kmh": 29.2,
    "sprints": 3,
-   "name": "Tanabe",
+   "name": "R. Tanabe",
    "side": "home"
   },
   "P0417": {
@@ -310,7 +310,7 @@
    "distance_m": 9696,
    "top_speed_kmh": 27.2,
    "sprints": 4,
-   "name": "Cartwright",
+   "name": "H. Cartwright",
    "side": "home"
   },
   "P1013": {
@@ -319,7 +319,7 @@
    "distance_m": 7713,
    "top_speed_kmh": 28.2,
    "sprints": 3,
-   "name": "Thorne",
+   "name": "C. Thorne",
    "side": "home"
   },
   "P1019": {
@@ -331,7 +331,7 @@
    "distance_m": 3737,
    "top_speed_kmh": 29.0,
    "sprints": 4,
-   "name": "Calloway",
+   "name": "L. Calloway",
    "side": "home"
   },
   "P0415": {
@@ -341,7 +341,7 @@
    "distance_m": 2261,
    "top_speed_kmh": 24.5,
    "sprints": 1,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "away"
   },
   "P0416": {

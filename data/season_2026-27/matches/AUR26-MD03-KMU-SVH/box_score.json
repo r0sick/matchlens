@@ -103,7 +103,7 @@
    "distance_m": 7715,
    "top_speed_kmh": 29.6,
    "sprints": 10,
-   "name": "Krämer",
+   "name": "J. Krämer",
    "side": "away"
   },
   "P0505": {
@@ -290,7 +290,7 @@
    "distance_m": 8159,
    "top_speed_kmh": 35.7,
    "sprints": 14,
-   "name": "Krämer",
+   "name": "N. Krämer",
    "side": "away"
   },
   "P0508": {
@@ -371,7 +371,7 @@
    "distance_m": 2920,
    "top_speed_kmh": 34.1,
    "sprints": 4,
-   "name": "Albrecht",
+   "name": "Finn Albrecht",
    "side": "away"
   },
   "P0522": {
@@ -381,7 +381,7 @@
    "distance_m": 2834,
    "top_speed_kmh": 31.1,
    "sprints": 4,
-   "name": "Ostermann",
+   "name": "T. Ostermann",
    "side": "away"
   },
   "P0521": {
@@ -391,7 +391,7 @@
    "distance_m": 2377,
    "top_speed_kmh": 30.2,
    "sprints": 2,
-   "name": "Albrecht",
+   "name": "Felix Albrecht",
    "side": "away"
   }
  },

@@ -67,7 +67,7 @@
    "distance_m": 6447,
    "top_speed_kmh": 31.3,
    "sprints": 5,
-   "name": "Lobato",
+   "name": "R. Lobato",
    "side": "home"
   },
   "P0708": {
@@ -105,7 +105,7 @@
    "distance_m": 8149,
    "top_speed_kmh": 33.9,
    "sprints": 14,
-   "name": "Lobato",
+   "name": "G. Lobato",
    "side": "home"
   },
   "P0721": {
@@ -131,7 +131,7 @@
    "distance_m": 7811,
    "top_speed_kmh": 32.0,
    "sprints": 10,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "away"
   },
   "P0719": {
@@ -211,7 +211,7 @@
    "distance_m": 5242,
    "top_speed_kmh": 25.6,
    "sprints": 1,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0411": {
@@ -272,7 +272,7 @@
    "distance_m": 10708,
    "top_speed_kmh": 35.0,
    "sprints": 22,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0704": {
@@ -282,7 +282,7 @@
    "distance_m": 7700,
    "top_speed_kmh": 30.5,
    "sprints": 3,
-   "name": "Lobato",
+   "name": "F. Lobato",
    "side": "home"
   },
   "P0702": {
@@ -303,7 +303,7 @@
    "distance_m": 7859,
    "top_speed_kmh": 28.7,
    "sprints": 8,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   },
   "P0701": {
@@ -312,7 +312,7 @@
    "distance_m": 5120,
    "top_speed_kmh": 23.1,
    "sprints": 1,
-   "name": "Valcárcel",
+   "name": "Á. Valcárcel",
    "side": "home"
   },
   "P0711": {
@@ -371,7 +371,7 @@
    "distance_m": 2592,
    "top_speed_kmh": 26.6,
    "sprints": 3,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "away"
   },
   "P0718": {
@@ -392,7 +392,7 @@
    "distance_m": 3157,
    "top_speed_kmh": 30.9,
    "sprints": 3,
-   "name": "Mendonça",
+   "name": "A. Mendonça",
    "side": "home"
   },
   "P0419": {
@@ -405,7 +405,7 @@
    "distance_m": 1947,
    "top_speed_kmh": 29.0,
    "sprints": 6,
-   "name": "Lefèvre",
+   "name": "L. Lefèvre",
    "side": "away"
   },
   "P0703": {
@@ -423,7 +423,7 @@
    "distance_m": 1831,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Fontaine",
+   "name": "J. Fontaine",
    "side": "away"
   }
  },

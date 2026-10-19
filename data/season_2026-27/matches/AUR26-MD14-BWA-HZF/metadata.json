@@ -63,7 +63,7 @@
       {
         "player_id": "P0801",
         "name": "Charlie Bramley",
-        "short_name": "Bramley",
+        "short_name": "C. Bramley",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -91,7 +91,7 @@
       {
         "player_id": "P0802",
         "name": "Harry Marlow",
-        "short_name": "Marlow",
+        "short_name": "H. Marlow",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -147,7 +147,7 @@
       {
         "player_id": "P0804",
         "name": "Musa Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "M. Olatunji",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -231,7 +231,7 @@
       {
         "player_id": "P0807",
         "name": "Femi Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "F. Olatunji",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P0809",
         "name": "George Marlow",
-        "short_name": "Marlow",
+        "short_name": "G. Marlow",
         "shirt": 11,
         "position": "LM",
         "group": "WM",
@@ -373,7 +373,7 @@
       {
         "player_id": "P0810",
         "name": "Harry Bramley",
-        "short_name": "Bramley",
+        "short_name": "H. Bramley",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0816",
         "name": "Charlie Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0818",
         "name": "Owen Marlow",
-        "short_name": "Marlow",
+        "short_name": "O. Marlow",
         "shirt": 16,
         "position": "RW",
         "group": "W",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0820",
         "name": "Tunde Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "T. Nwosu",
         "shirt": 19,
         "position": "RCM",
         "group": "CM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0821",
         "name": "Lewis Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "L. Whitfield",
         "shirt": 17,
         "position": "CB",
         "group": "CB",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0823",
         "name": "Ifeanyi Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "I. Nwosu",
         "shirt": 29,
         "position": "GK",
         "group": "GK",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0913",
         "name": "Luuk Visser",
-        "short_name": "Visser",
+        "short_name": "L. Visser",
         "shirt": 12,
         "position": "LCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0905",
         "name": "Zakaria Kettani",
-        "short_name": "Kettani",
+        "short_name": "Z. Kettani",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -902,7 +902,7 @@
       {
         "player_id": "P0907",
         "name": "Bram Visser",
-        "short_name": "Visser",
+        "short_name": "B. Visser",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -986,7 +986,7 @@
       {
         "player_id": "P0910",
         "name": "Daan Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "D. Verhoef",
         "shirt": 9,
         "position": "ST",
         "group": "ST",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0909",
         "name": "Sofiane Kettani",
-        "short_name": "Kettani",
+        "short_name": "S. Kettani",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P0917",
         "name": "Bram van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "B. van Rijn",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0918",
         "name": "Stijn Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "S. Verhoef",
         "shirt": 40,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0923",
         "name": "Luuk van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "L. van Rijn",
         "shirt": 34,
         "position": "GK",
         "group": "GK",
@@ -1425,7 +1425,7 @@
     "players": [
       {
         "player_id": "P0801",
-        "name": "Bramley",
+        "name": "C. Bramley",
         "season": {
           "apps": 13,
           "minutes": 1279,
@@ -1445,7 +1445,7 @@
       },
       {
         "player_id": "P0802",
-        "name": "Marlow",
+        "name": "H. Marlow",
         "season": {
           "apps": 13,
           "minutes": 1279,
@@ -1485,7 +1485,7 @@
       },
       {
         "player_id": "P0804",
-        "name": "Olatunji",
+        "name": "M. Olatunji",
         "season": {
           "apps": 11,
           "minutes": 741,
@@ -1545,7 +1545,7 @@
       },
       {
         "player_id": "P0807",
-        "name": "Olatunji",
+        "name": "F. Olatunji",
         "season": {
           "apps": 12,
           "minutes": 1120,
@@ -1585,7 +1585,7 @@
       },
       {
         "player_id": "P0809",
-        "name": "Marlow",
+        "name": "G. Marlow",
         "season": {
           "apps": 13,
           "minutes": 1277,
@@ -1605,7 +1605,7 @@
       },
       {
         "player_id": "P0810",
-        "name": "Bramley",
+        "name": "H. Bramley",
         "season": {
           "apps": 12,
           "minutes": 725,
@@ -1732,7 +1732,7 @@
       },
       {
         "player_id": "P0816",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 6,
           "minutes": 273,
@@ -1772,7 +1772,7 @@
       },
       {
         "player_id": "P0818",
-        "name": "Marlow",
+        "name": "O. Marlow",
         "season": {
           "apps": 5,
           "minutes": 85,
@@ -1812,7 +1812,7 @@
       },
       {
         "player_id": "P0820",
-        "name": "Nwosu",
+        "name": "T. Nwosu",
         "season": {
           "apps": 6,
           "minutes": 390,
@@ -1832,7 +1832,7 @@
       },
       {
         "player_id": "P0821",
-        "name": "Whitfield",
+        "name": "L. Whitfield",
         "season": {
           "apps": 4,
           "minutes": 198,
@@ -1872,7 +1872,7 @@
       },
       {
         "player_id": "P0823",
-        "name": "Nwosu",
+        "name": "I. Nwosu",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1972,7 +1972,7 @@
       },
       {
         "player_id": "P0905",
-        "name": "Kettani",
+        "name": "Z. Kettani",
         "season": {
           "apps": 9,
           "minutes": 874,
@@ -2012,7 +2012,7 @@
       },
       {
         "player_id": "P0907",
-        "name": "Visser",
+        "name": "B. Visser",
         "season": {
           "apps": 11,
           "minutes": 962,
@@ -2052,7 +2052,7 @@
       },
       {
         "player_id": "P0909",
-        "name": "Kettani",
+        "name": "S. Kettani",
         "season": {
           "apps": 12,
           "minutes": 802,
@@ -2072,7 +2072,7 @@
       },
       {
         "player_id": "P0910",
-        "name": "Verhoef",
+        "name": "D. Verhoef",
         "season": {
           "apps": 13,
           "minutes": 801,
@@ -2132,7 +2132,7 @@
       },
       {
         "player_id": "P0913",
-        "name": "Visser",
+        "name": "L. Visser",
         "season": {
           "apps": 8,
           "minutes": 260,
@@ -2219,7 +2219,7 @@
       },
       {
         "player_id": "P0917",
-        "name": "van Rijn",
+        "name": "B. van Rijn",
         "season": {
           "apps": 7,
           "minutes": 138,
@@ -2239,7 +2239,7 @@
       },
       {
         "player_id": "P0918",
-        "name": "Verhoef",
+        "name": "S. Verhoef",
         "season": {
           "apps": 10,
           "minutes": 314,
@@ -2339,7 +2339,7 @@
       },
       {
         "player_id": "P0923",
-        "name": "van Rijn",
+        "name": "L. van Rijn",
         "season": {
           "apps": 0,
           "minutes": 0,

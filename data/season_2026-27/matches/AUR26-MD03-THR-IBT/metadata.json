@@ -231,7 +231,7 @@
       {
         "player_id": "P0107",
         "name": "Jules Delattre",
-        "short_name": "Delattre",
+        "short_name": "J. Delattre",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0122",
         "name": "Mason Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "M. Cartwright",
         "shirt": 29,
         "position": "LW",
         "group": "W",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0117",
         "name": "Baptiste Delattre",
-        "short_name": "Delattre",
+        "short_name": "B. Delattre",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0118",
         "name": "Owen Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "O. Whitfield",
         "shirt": 17,
         "position": "RW",
         "group": "W",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0120",
         "name": "George Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "G. Cartwright",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0121",
         "name": "Callum Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 43,
         "position": "CB",
         "group": "CB",
@@ -790,7 +790,7 @@
       {
         "player_id": "P1003",
         "name": "Harry Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "H. Cartwright",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P1004",
         "name": "Ren Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "R. Tanabe",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P1006",
         "name": "Owen Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "O. Cartwright",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -902,7 +902,7 @@
       {
         "player_id": "P1007",
         "name": "Brandon Crawford",
-        "short_name": "Crawford",
+        "short_name": "B. Crawford",
         "shirt": 3,
         "position": "DM",
         "group": "DM",
@@ -930,7 +930,7 @@
       {
         "player_id": "P1008",
         "name": "George Calloway",
-        "short_name": "Calloway",
+        "short_name": "G. Calloway",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -958,7 +958,7 @@
       {
         "player_id": "P1009",
         "name": "Alfie Thorne",
-        "short_name": "Thorne",
+        "short_name": "A. Thorne",
         "shirt": 7,
         "position": "LWB",
         "group": "FB",
@@ -986,7 +986,7 @@
       {
         "player_id": "P1010",
         "name": "Grant Crawford",
-        "short_name": "Crawford",
+        "short_name": "G. Crawford",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P1013",
         "name": "Callum Thorne",
-        "short_name": "Thorne",
+        "short_name": "C. Thorne",
         "shirt": 34,
         "position": "CB",
         "group": "CB",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P1015",
         "name": "Callum Calloway",
-        "short_name": "Calloway",
+        "short_name": "C. Calloway",
         "shirt": 22,
         "position": "DM",
         "group": "DM",
@@ -1184,7 +1184,7 @@
       {
         "player_id": "P1017",
         "name": "Reece Thorne",
-        "short_name": "Thorne",
+        "short_name": "R. Thorne",
         "shirt": 20,
         "position": "CAM",
         "group": "AM",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P1019",
         "name": "Lewis Calloway",
-        "short_name": "Calloway",
+        "short_name": "L. Calloway",
         "shirt": 37,
         "position": "ST",
         "group": "ST",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P1020",
         "name": "Takumi Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "T. Tanabe",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -1544,7 +1544,7 @@
       },
       {
         "player_id": "P0107",
-        "name": "Delattre",
+        "name": "J. Delattre",
         "season": {
           "apps": 2,
           "minutes": 82,
@@ -1765,7 +1765,7 @@
       },
       {
         "player_id": "P0117",
-        "name": "Delattre",
+        "name": "B. Delattre",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1785,7 +1785,7 @@
       },
       {
         "player_id": "P0118",
-        "name": "Whitfield",
+        "name": "O. Whitfield",
         "season": {
           "apps": 1,
           "minutes": 36,
@@ -1825,7 +1825,7 @@
       },
       {
         "player_id": "P0120",
-        "name": "Cartwright",
+        "name": "G. Cartwright",
         "season": {
           "apps": 1,
           "minutes": 35,
@@ -1845,7 +1845,7 @@
       },
       {
         "player_id": "P0121",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 1,
           "minutes": 11,
@@ -1865,7 +1865,7 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "season": {
           "apps": 1,
           "minutes": 36,
@@ -1959,7 +1959,7 @@
       },
       {
         "player_id": "P1003",
-        "name": "Cartwright",
+        "name": "H. Cartwright",
         "season": {
           "apps": 2,
           "minutes": 188,
@@ -1979,7 +1979,7 @@
       },
       {
         "player_id": "P1004",
-        "name": "Tanabe",
+        "name": "R. Tanabe",
         "season": {
           "apps": 2,
           "minutes": 194,
@@ -2019,7 +2019,7 @@
       },
       {
         "player_id": "P1006",
-        "name": "Cartwright",
+        "name": "O. Cartwright",
         "season": {
           "apps": 2,
           "minutes": 194,
@@ -2039,7 +2039,7 @@
       },
       {
         "player_id": "P1007",
-        "name": "Crawford",
+        "name": "B. Crawford",
         "season": {
           "apps": 1,
           "minutes": 96,
@@ -2059,7 +2059,7 @@
       },
       {
         "player_id": "P1008",
-        "name": "Calloway",
+        "name": "G. Calloway",
         "season": {
           "apps": 2,
           "minutes": 141,
@@ -2079,7 +2079,7 @@
       },
       {
         "player_id": "P1009",
-        "name": "Thorne",
+        "name": "A. Thorne",
         "season": {
           "apps": 2,
           "minutes": 194,
@@ -2099,7 +2099,7 @@
       },
       {
         "player_id": "P1010",
-        "name": "Crawford",
+        "name": "G. Crawford",
         "season": {
           "apps": 2,
           "minutes": 151,
@@ -2166,7 +2166,7 @@
       },
       {
         "player_id": "P1013",
-        "name": "Thorne",
+        "name": "C. Thorne",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2206,7 +2206,7 @@
       },
       {
         "player_id": "P1015",
-        "name": "Calloway",
+        "name": "C. Calloway",
         "season": {
           "apps": 1,
           "minutes": 98,
@@ -2246,7 +2246,7 @@
       },
       {
         "player_id": "P1017",
-        "name": "Thorne",
+        "name": "R. Thorne",
         "season": {
           "apps": 1,
           "minutes": 6,
@@ -2286,7 +2286,7 @@
       },
       {
         "player_id": "P1019",
-        "name": "Calloway",
+        "name": "L. Calloway",
         "season": {
           "apps": 2,
           "minutes": 133,
@@ -2306,7 +2306,7 @@
       },
       {
         "player_id": "P1020",
-        "name": "Tanabe",
+        "name": "T. Tanabe",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2416,7 +2416,7 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "type": "career_goals",
         "target": 25,
         "needed": 2

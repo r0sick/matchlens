@@ -119,7 +119,7 @@
       {
         "player_id": "P0503",
         "name": "Jonas Krämer",
-        "short_name": "Krämer",
+        "short_name": "J. Krämer",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0511",
         "name": "Niklas Krämer",
-        "short_name": "Krämer",
+        "short_name": "N. Krämer",
         "shirt": 11,
         "position": "LW",
         "group": "W",
@@ -401,7 +401,7 @@
       {
         "player_id": "P0513",
         "name": "Jonas Ostermann",
-        "short_name": "Ostermann",
+        "short_name": "J. Ostermann",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0517",
         "name": "Finn Albrecht",
-        "short_name": "Albrecht",
+        "short_name": "Finn Albrecht",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0521",
         "name": "Felix Albrecht",
-        "short_name": "Albrecht",
+        "short_name": "Felix Albrecht",
         "shirt": 44,
         "position": "CB",
         "group": "CB",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0522",
         "name": "Tim Ostermann",
-        "short_name": "Ostermann",
+        "short_name": "T. Ostermann",
         "shirt": 20,
         "position": "RW",
         "group": "W",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0905",
         "name": "Zakaria Kettani",
-        "short_name": "Kettani",
+        "short_name": "Z. Kettani",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -902,7 +902,7 @@
       {
         "player_id": "P0907",
         "name": "Bram Visser",
-        "short_name": "Visser",
+        "short_name": "B. Visser",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0909",
         "name": "Sofiane Kettani",
-        "short_name": "Kettani",
+        "short_name": "S. Kettani",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -986,7 +986,7 @@
       {
         "player_id": "P0910",
         "name": "Daan Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "D. Verhoef",
         "shirt": 9,
         "position": "ST",
         "group": "ST",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0913",
         "name": "Luuk Visser",
-        "short_name": "Visser",
+        "short_name": "L. Visser",
         "shirt": 12,
         "position": "CB",
         "group": "CB",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P0917",
         "name": "Bram van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "B. van Rijn",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0918",
         "name": "Stijn Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "S. Verhoef",
         "shirt": 40,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0923",
         "name": "Luuk van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "L. van Rijn",
         "shirt": 34,
         "position": "GK",
         "group": "GK",
@@ -1465,7 +1465,7 @@
       },
       {
         "player_id": "P0503",
-        "name": "Krämer",
+        "name": "J. Krämer",
         "season": {
           "apps": 9,
           "minutes": 682,
@@ -1625,7 +1625,7 @@
       },
       {
         "player_id": "P0511",
-        "name": "Krämer",
+        "name": "N. Krämer",
         "season": {
           "apps": 7,
           "minutes": 524,
@@ -1665,7 +1665,7 @@
       },
       {
         "player_id": "P0513",
-        "name": "Ostermann",
+        "name": "J. Ostermann",
         "season": {
           "apps": 4,
           "minutes": 295,
@@ -1745,7 +1745,7 @@
       },
       {
         "player_id": "P0517",
-        "name": "Albrecht",
+        "name": "Finn Albrecht",
         "season": {
           "apps": 2,
           "minutes": 45,
@@ -1825,7 +1825,7 @@
       },
       {
         "player_id": "P0521",
-        "name": "Albrecht",
+        "name": "Felix Albrecht",
         "season": {
           "apps": 8,
           "minutes": 264,
@@ -1845,7 +1845,7 @@
       },
       {
         "player_id": "P0522",
-        "name": "Ostermann",
+        "name": "T. Ostermann",
         "season": {
           "apps": 2,
           "minutes": 87,
@@ -1965,7 +1965,7 @@
       },
       {
         "player_id": "P0905",
-        "name": "Kettani",
+        "name": "Z. Kettani",
         "season": {
           "apps": 5,
           "minutes": 483,
@@ -2005,7 +2005,7 @@
       },
       {
         "player_id": "P0907",
-        "name": "Visser",
+        "name": "B. Visser",
         "season": {
           "apps": 8,
           "minutes": 669,
@@ -2045,7 +2045,7 @@
       },
       {
         "player_id": "P0909",
-        "name": "Kettani",
+        "name": "S. Kettani",
         "season": {
           "apps": 8,
           "minutes": 551,
@@ -2065,7 +2065,7 @@
       },
       {
         "player_id": "P0910",
-        "name": "Verhoef",
+        "name": "D. Verhoef",
         "season": {
           "apps": 9,
           "minutes": 500,
@@ -2125,7 +2125,7 @@
       },
       {
         "player_id": "P0913",
-        "name": "Visser",
+        "name": "L. Visser",
         "season": {
           "apps": 6,
           "minutes": 227,
@@ -2212,7 +2212,7 @@
       },
       {
         "player_id": "P0917",
-        "name": "van Rijn",
+        "name": "B. van Rijn",
         "season": {
           "apps": 4,
           "minutes": 74,
@@ -2232,7 +2232,7 @@
       },
       {
         "player_id": "P0918",
-        "name": "Verhoef",
+        "name": "S. Verhoef",
         "season": {
           "apps": 7,
           "minutes": 193,
@@ -2332,7 +2332,7 @@
       },
       {
         "player_id": "P0923",
-        "name": "van Rijn",
+        "name": "L. van Rijn",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2368,7 +2368,7 @@
       },
       {
         "player_id": "P0910",
-        "name": "Verhoef",
+        "name": "D. Verhoef",
         "matches": 2
       }
     ]

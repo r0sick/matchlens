@@ -126,7 +126,7 @@
    "distance_m": 9619,
    "top_speed_kmh": 29.7,
    "sprints": 5,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "home"
   },
   "P0311": {
@@ -150,7 +150,7 @@
    "distance_m": 6626,
    "top_speed_kmh": 29.0,
    "sprints": 5,
-   "name": "Ostermann",
+   "name": "J. Ostermann",
    "side": "away"
   },
   "P0505": {
@@ -174,7 +174,7 @@
    "distance_m": 7099,
    "top_speed_kmh": 36.3,
    "sprints": 18,
-   "name": "Krämer",
+   "name": "N. Krämer",
    "side": "away"
   },
   "P0506": {
@@ -224,7 +224,7 @@
    "distance_m": 8243,
    "top_speed_kmh": 30.6,
    "sprints": 6,
-   "name": "Lozano",
+   "name": "J. Lozano",
    "side": "home"
   },
   "P0309": {
@@ -237,7 +237,7 @@
    "distance_m": 8063,
    "top_speed_kmh": 32.4,
    "sprints": 18,
-   "name": "Mendívil",
+   "name": "J. Mendívil",
    "side": "home"
   },
   "P0303": {
@@ -273,7 +273,7 @@
    "distance_m": 10459,
    "top_speed_kmh": 30.8,
    "sprints": 17,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "home"
   },
   "P0503": {
@@ -284,7 +284,7 @@
    "distance_m": 10060,
    "top_speed_kmh": 28.0,
    "sprints": 5,
-   "name": "Krämer",
+   "name": "J. Krämer",
    "side": "away"
   },
   "P0301": {
@@ -366,7 +366,7 @@
    "distance_m": 3689,
    "top_speed_kmh": 32.8,
    "sprints": 3,
-   "name": "Albrecht",
+   "name": "Felix Albrecht",
    "side": "away"
   },
   "P0502": {
@@ -411,7 +411,7 @@
    "distance_m": 2781,
    "top_speed_kmh": 34.3,
    "sprints": 1,
-   "name": "Villalba",
+   "name": "N. Villalba",
    "side": "home"
   },
   "P0317": {

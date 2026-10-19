@@ -200,7 +200,7 @@
     {
      "player_id": "P0107",
      "name": "Jules Delattre",
-     "short_name": "Delattre",
+     "short_name": "J. Delattre",
      "nationality": "FRA",
      "shirt": 4,
      "position": "DM",
@@ -480,7 +480,7 @@
     {
      "player_id": "P0117",
      "name": "Baptiste Delattre",
-     "short_name": "Delattre",
+     "short_name": "B. Delattre",
      "nationality": "FRA",
      "shirt": 19,
      "position": "CAM",
@@ -508,7 +508,7 @@
     {
      "player_id": "P0118",
      "name": "Owen Whitfield",
-     "short_name": "Whitfield",
+     "short_name": "O. Whitfield",
      "nationality": "ENG",
      "shirt": 17,
      "position": "RW",
@@ -564,7 +564,7 @@
     {
      "player_id": "P0120",
      "name": "George Cartwright",
-     "short_name": "Cartwright",
+     "short_name": "G. Cartwright",
      "nationality": "ENG",
      "shirt": 25,
      "position": "RCM",
@@ -592,7 +592,7 @@
     {
      "player_id": "P0121",
      "name": "Callum Whitfield",
-     "short_name": "Whitfield",
+     "short_name": "C. Whitfield",
      "nationality": "ENG",
      "shirt": 43,
      "position": "CB",
@@ -620,7 +620,7 @@
     {
      "player_id": "P0122",
      "name": "Mason Cartwright",
-     "short_name": "Cartwright",
+     "short_name": "M. Cartwright",
      "nationality": "ENG",
      "shirt": 29,
      "position": "RW",
@@ -1404,7 +1404,7 @@
     {
      "player_id": "P0302",
      "name": "Javi Lozano",
-     "short_name": "Lozano",
+     "short_name": "J. Lozano",
      "nationality": "ESP",
      "shirt": 2,
      "position": "RB",
@@ -1460,7 +1460,7 @@
     {
      "player_id": "P0304",
      "name": "Tomás Villalba",
-     "short_name": "Villalba",
+     "short_name": "T. Villalba",
      "nationality": "ARG",
      "shirt": 6,
      "position": "LCB",
@@ -1488,7 +1488,7 @@
     {
      "player_id": "P0305",
      "name": "Dani Mendívil",
-     "short_name": "Mendívil",
+     "short_name": "D. Mendívil",
      "nationality": "ESP",
      "shirt": 3,
      "position": "LB",
@@ -1600,7 +1600,7 @@
     {
      "player_id": "P0309",
      "name": "Javi Mendívil",
-     "short_name": "Mendívil",
+     "short_name": "J. Mendívil",
      "nationality": "ESP",
      "shirt": 7,
      "position": "RW",
@@ -1684,7 +1684,7 @@
     {
      "player_id": "P0312",
      "name": "Nacho Lozano",
-     "short_name": "Lozano",
+     "short_name": "N. Lozano",
      "nationality": "ESP",
      "shirt": 13,
      "position": "GK",
@@ -1712,7 +1712,7 @@
     {
      "player_id": "P0313",
      "name": "Dani Arteche",
-     "short_name": "Arteche",
+     "short_name": "D. Arteche",
      "nationality": "ESP",
      "shirt": 35,
      "position": "CB",
@@ -1768,7 +1768,7 @@
     {
      "player_id": "P0315",
      "name": "Nacho Arteche",
-     "short_name": "Arteche",
+     "short_name": "N. Arteche",
      "nationality": "ESP",
      "shirt": 36,
      "position": "DM",
@@ -1908,7 +1908,7 @@
     {
      "player_id": "P0320",
      "name": "Rubén Mendívil",
-     "short_name": "Mendívil",
+     "short_name": "R. Mendívil",
      "nationality": "ESP",
      "shirt": 41,
      "position": "RCM",
@@ -1964,7 +1964,7 @@
     {
      "player_id": "P0322",
      "name": "Nahuel Villalba",
-     "short_name": "Villalba",
+     "short_name": "N. Villalba",
      "nationality": "ARG",
      "shirt": 14,
      "position": "RW",
@@ -1992,7 +1992,7 @@
     {
      "player_id": "P0323",
      "name": "Hugo Arteche",
-     "short_name": "Arteche",
+     "short_name": "H. Arteche",
      "nationality": "ESP",
      "shirt": 13,
      "position": "GK",
@@ -2048,7 +2048,7 @@
     {
      "player_id": "P0401",
      "name": "Enzo Fontaine",
-     "short_name": "Fontaine",
+     "short_name": "E. Fontaine",
      "nationality": "FRA",
      "shirt": 1,
      "position": "GK",
@@ -2104,7 +2104,7 @@
     {
      "player_id": "P0403",
      "name": "Yanis Brunet",
-     "short_name": "Brunet",
+     "short_name": "Y. Brunet",
      "nationality": "FRA",
      "shirt": 5,
      "position": "RCB",
@@ -2160,7 +2160,7 @@
     {
      "player_id": "P0405",
      "name": "Samuel Afolabi",
-     "short_name": "Afolabi",
+     "short_name": "S. Afolabi",
      "nationality": "NGA",
      "shirt": 3,
      "position": "LB",
@@ -2272,7 +2272,7 @@
     {
      "player_id": "P0409",
      "name": "Kylian Fontaine",
-     "short_name": "Fontaine",
+     "short_name": "K. Fontaine",
      "nationality": "FRA",
      "shirt": 10,
      "position": "CAM",
@@ -2356,7 +2356,7 @@
     {
      "player_id": "P0412",
      "name": "Kylian Brunet",
-     "short_name": "Brunet",
+     "short_name": "K. Brunet",
      "nationality": "FRA",
      "shirt": 13,
      "position": "GK",
@@ -2412,7 +2412,7 @@
     {
      "player_id": "P0414",
      "name": "Baptiste Brunet",
-     "short_name": "Brunet",
+     "short_name": "B. Brunet",
      "nationality": "FRA",
      "shirt": 38,
      "position": "RB",
@@ -2440,7 +2440,7 @@
     {
      "player_id": "P0415",
      "name": "Noah Lefèvre",
-     "short_name": "Lefèvre",
+     "short_name": "N. Lefèvre",
      "nationality": "FRA",
      "shirt": 13,
      "position": "DM",
@@ -2552,7 +2552,7 @@
     {
      "player_id": "P0419",
      "name": "Lucas Lefèvre",
-     "short_name": "Lefèvre",
+     "short_name": "L. Lefèvre",
      "nationality": "FRA",
      "shirt": 25,
      "position": "ST",
@@ -2608,7 +2608,7 @@
     {
      "player_id": "P0421",
      "name": "Jules Fontaine",
-     "short_name": "Fontaine",
+     "short_name": "J. Fontaine",
      "nationality": "FRA",
      "shirt": 32,
      "position": "CB",
@@ -2664,7 +2664,7 @@
     {
      "player_id": "P0423",
      "name": "Kelechi Afolabi",
-     "short_name": "Afolabi",
+     "short_name": "K. Afolabi",
      "nationality": "NGA",
      "shirt": 21,
      "position": "GK",
@@ -2776,7 +2776,7 @@
     {
      "player_id": "P0503",
      "name": "Jonas Krämer",
-     "short_name": "Krämer",
+     "short_name": "J. Krämer",
      "nationality": "GER",
      "shirt": 4,
      "position": "CB",
@@ -3000,7 +3000,7 @@
     {
      "player_id": "P0511",
      "name": "Niklas Krämer",
-     "short_name": "Krämer",
+     "short_name": "N. Krämer",
      "nationality": "GER",
      "shirt": 11,
      "position": "LW",
@@ -3056,7 +3056,7 @@
     {
      "player_id": "P0513",
      "name": "Jonas Ostermann",
-     "short_name": "Ostermann",
+     "short_name": "J. Ostermann",
      "nationality": "GER",
      "shirt": 14,
      "position": "CB",
@@ -3168,7 +3168,7 @@
     {
      "player_id": "P0517",
      "name": "Finn Albrecht",
-     "short_name": "Albrecht",
+     "short_name": "Finn Albrecht",
      "nationality": "GER",
      "shirt": 15,
      "position": "CAM",
@@ -3280,7 +3280,7 @@
     {
      "player_id": "P0521",
      "name": "Felix Albrecht",
-     "short_name": "Albrecht",
+     "short_name": "Felix Albrecht",
      "nationality": "GER",
      "shirt": 44,
      "position": "CB",
@@ -3308,7 +3308,7 @@
     {
      "player_id": "P0522",
      "name": "Tim Ostermann",
-     "short_name": "Ostermann",
+     "short_name": "T. Ostermann",
      "nationality": "GER",
      "shirt": 20,
      "position": "RW",
@@ -3392,7 +3392,7 @@
     {
      "player_id": "P0601",
      "name": "Riccardo Ferraresi",
-     "short_name": "Ferraresi",
+     "short_name": "R. Ferraresi",
      "nationality": "ITA",
      "shirt": 1,
      "position": "GK",
@@ -3448,7 +3448,7 @@
     {
      "player_id": "P0603",
      "name": "Davide Santoro",
-     "short_name": "Santoro",
+     "short_name": "D. Santoro",
      "nationality": "ITA",
      "shirt": 4,
      "position": "CB",
@@ -3532,7 +3532,7 @@
     {
      "player_id": "P0606",
      "name": "Nicolò Ferraresi",
-     "short_name": "Ferraresi",
+     "short_name": "N. Ferraresi",
      "nationality": "ITA",
      "shirt": 8,
      "position": "RCM",
@@ -3588,7 +3588,7 @@
     {
      "player_id": "P0608",
      "name": "Marco Lombardo",
-     "short_name": "Lombardo",
+     "short_name": "M. Lombardo",
      "nationality": "ITA",
      "shirt": 10,
      "position": "LCM",
@@ -3700,7 +3700,7 @@
     {
      "player_id": "P0612",
      "name": "Simone Galvani",
-     "short_name": "Galvani",
+     "short_name": "S. Galvani",
      "nationality": "ITA",
      "shirt": 13,
      "position": "GK",
@@ -3840,7 +3840,7 @@
     {
      "player_id": "P0617",
      "name": "Simone Ferraresi",
-     "short_name": "Ferraresi",
+     "short_name": "S. Ferraresi",
      "nationality": "ITA",
      "shirt": 19,
      "position": "CAM",
@@ -3868,7 +3868,7 @@
     {
      "player_id": "P0618",
      "name": "Nicolò Lombardo",
-     "short_name": "Lombardo",
+     "short_name": "N. Lombardo",
      "nationality": "ITA",
      "shirt": 22,
      "position": "RW",
@@ -3924,7 +3924,7 @@
     {
      "player_id": "P0620",
      "name": "Simone Santoro",
-     "short_name": "Santoro",
+     "short_name": "S. Santoro",
      "nationality": "ITA",
      "shirt": 44,
      "position": "RCM",
@@ -3952,7 +3952,7 @@
     {
      "player_id": "P0621",
      "name": "Gianluca Lombardo",
-     "short_name": "Lombardo",
+     "short_name": "G. Lombardo",
      "nationality": "ITA",
      "shirt": 14,
      "position": "CB",
@@ -4008,7 +4008,7 @@
     {
      "player_id": "P0623",
      "name": "Andrea Galvani",
-     "short_name": "Galvani",
+     "short_name": "A. Galvani",
      "nationality": "ITA",
      "shirt": 15,
      "position": "GK",
@@ -4064,7 +4064,7 @@
     {
      "player_id": "P0701",
      "name": "Álvaro Valcárcel",
-     "short_name": "Valcárcel",
+     "short_name": "Á. Valcárcel",
      "nationality": "ESP",
      "shirt": 1,
      "position": "GK",
@@ -4148,7 +4148,7 @@
     {
      "player_id": "P0704",
      "name": "Francisco Lobato",
-     "short_name": "Lobato",
+     "short_name": "F. Lobato",
      "nationality": "POR",
      "shirt": 6,
      "position": "LCB",
@@ -4204,7 +4204,7 @@
     {
      "player_id": "P0706",
      "name": "Gonçalo Lobato",
-     "short_name": "Lobato",
+     "short_name": "G. Lobato",
      "nationality": "POR",
      "shirt": 7,
      "position": "RM",
@@ -4316,7 +4316,7 @@
     {
      "player_id": "P0710",
      "name": "Rúben Lobato",
-     "short_name": "Lobato",
+     "short_name": "R. Lobato",
      "nationality": "POR",
      "shirt": 9,
      "position": "RST",
@@ -4400,7 +4400,7 @@
     {
      "player_id": "P0713",
      "name": "Vítor Lobato",
-     "short_name": "Lobato",
+     "short_name": "V. Lobato",
      "nationality": "POR",
      "shirt": 19,
      "position": "CB",
@@ -4484,7 +4484,7 @@
     {
      "player_id": "P0716",
      "name": "Miguel Mendonça",
-     "short_name": "Mendonça",
+     "short_name": "M. Mendonça",
      "nationality": "POR",
      "shirt": 35,
      "position": "RCM",
@@ -4596,7 +4596,7 @@
     {
      "player_id": "P0720",
      "name": "Hugo Valcárcel",
-     "short_name": "Valcárcel",
+     "short_name": "H. Valcárcel",
      "nationality": "ESP",
      "shirt": 27,
      "position": "RCM",
@@ -4652,7 +4652,7 @@
     {
      "player_id": "P0722",
      "name": "André Mendonça",
-     "short_name": "Mendonça",
+     "short_name": "A. Mendonça",
      "nationality": "POR",
      "shirt": 30,
      "position": "RW",
@@ -4680,7 +4680,7 @@
     {
      "player_id": "P0723",
      "name": "Nuno Lobato",
-     "short_name": "Lobato",
+     "short_name": "N. Lobato",
      "nationality": "POR",
      "shirt": 16,
      "position": "GK",
@@ -4736,7 +4736,7 @@
     {
      "player_id": "P0801",
      "name": "Charlie Bramley",
-     "short_name": "Bramley",
+     "short_name": "C. Bramley",
      "nationality": "ENG",
      "shirt": 1,
      "position": "GK",
@@ -4764,7 +4764,7 @@
     {
      "player_id": "P0802",
      "name": "Harry Marlow",
-     "short_name": "Marlow",
+     "short_name": "H. Marlow",
      "nationality": "ENG",
      "shirt": 2,
      "position": "RB",
@@ -4820,7 +4820,7 @@
     {
      "player_id": "P0804",
      "name": "Musa Olatunji",
-     "short_name": "Olatunji",
+     "short_name": "M. Olatunji",
      "nationality": "NGA",
      "shirt": 6,
      "position": "LCB",
@@ -4904,7 +4904,7 @@
     {
      "player_id": "P0807",
      "name": "Femi Olatunji",
-     "short_name": "Olatunji",
+     "short_name": "F. Olatunji",
      "nationality": "NGA",
      "shirt": 8,
      "position": "RCM",
@@ -4960,7 +4960,7 @@
     {
      "player_id": "P0809",
      "name": "George Marlow",
-     "short_name": "Marlow",
+     "short_name": "G. Marlow",
      "nationality": "ENG",
      "shirt": 11,
      "position": "LM",
@@ -4988,7 +4988,7 @@
     {
      "player_id": "P0810",
      "name": "Harry Bramley",
-     "short_name": "Bramley",
+     "short_name": "H. Bramley",
      "nationality": "ENG",
      "shirt": 9,
      "position": "RST",
@@ -5156,7 +5156,7 @@
     {
      "player_id": "P0816",
      "name": "Charlie Whitfield",
-     "short_name": "Whitfield",
+     "short_name": "C. Whitfield",
      "nationality": "ENG",
      "shirt": 25,
      "position": "RCM",
@@ -5212,7 +5212,7 @@
     {
      "player_id": "P0818",
      "name": "Owen Marlow",
-     "short_name": "Marlow",
+     "short_name": "O. Marlow",
      "nationality": "ENG",
      "shirt": 16,
      "position": "RW",
@@ -5268,7 +5268,7 @@
     {
      "player_id": "P0820",
      "name": "Tunde Nwosu",
-     "short_name": "Nwosu",
+     "short_name": "T. Nwosu",
      "nationality": "NGA",
      "shirt": 19,
      "position": "RCM",
@@ -5296,7 +5296,7 @@
     {
      "player_id": "P0821",
      "name": "Lewis Whitfield",
-     "short_name": "Whitfield",
+     "short_name": "L. Whitfield",
      "nationality": "ENG",
      "shirt": 17,
      "position": "CB",
@@ -5352,7 +5352,7 @@
     {
      "player_id": "P0823",
      "name": "Ifeanyi Nwosu",
-     "short_name": "Nwosu",
+     "short_name": "I. Nwosu",
      "nationality": "NGA",
      "shirt": 29,
      "position": "GK",
@@ -5520,7 +5520,7 @@
     {
      "player_id": "P0905",
      "name": "Zakaria Kettani",
-     "short_name": "Kettani",
+     "short_name": "Z. Kettani",
      "nationality": "MAR",
      "shirt": 3,
      "position": "LB",
@@ -5576,7 +5576,7 @@
     {
      "player_id": "P0907",
      "name": "Bram Visser",
-     "short_name": "Visser",
+     "short_name": "B. Visser",
      "nationality": "NED",
      "shirt": 4,
      "position": "DM",
@@ -5632,7 +5632,7 @@
     {
      "player_id": "P0909",
      "name": "Sofiane Kettani",
-     "short_name": "Kettani",
+     "short_name": "S. Kettani",
      "nationality": "MAR",
      "shirt": 7,
      "position": "RW",
@@ -5660,7 +5660,7 @@
     {
      "player_id": "P0910",
      "name": "Daan Verhoef",
-     "short_name": "Verhoef",
+     "short_name": "D. Verhoef",
      "nationality": "NED",
      "shirt": 9,
      "position": "ST",
@@ -5744,7 +5744,7 @@
     {
      "player_id": "P0913",
      "name": "Luuk Visser",
-     "short_name": "Visser",
+     "short_name": "L. Visser",
      "nationality": "NED",
      "shirt": 12,
      "position": "CB",
@@ -5856,7 +5856,7 @@
     {
      "player_id": "P0917",
      "name": "Bram van Rijn",
-     "short_name": "van Rijn",
+     "short_name": "B. van Rijn",
      "nationality": "NED",
      "shirt": 15,
      "position": "CAM",
@@ -5884,7 +5884,7 @@
     {
      "player_id": "P0918",
      "name": "Stijn Verhoef",
-     "short_name": "Verhoef",
+     "short_name": "S. Verhoef",
      "nationality": "NED",
      "shirt": 40,
      "position": "RW",
@@ -6024,7 +6024,7 @@
     {
      "player_id": "P0923",
      "name": "Luuk van Rijn",
-     "short_name": "van Rijn",
+     "short_name": "L. van Rijn",
      "nationality": "NED",
      "shirt": 34,
      "position": "GK",
@@ -6136,7 +6136,7 @@
     {
      "player_id": "P1003",
      "name": "Harry Cartwright",
-     "short_name": "Cartwright",
+     "short_name": "H. Cartwright",
      "nationality": "ENG",
      "shirt": 4,
      "position": "CB",
@@ -6164,7 +6164,7 @@
     {
      "player_id": "P1004",
      "name": "Ren Tanabe",
-     "short_name": "Tanabe",
+     "short_name": "R. Tanabe",
      "nationality": "JPN",
      "shirt": 6,
      "position": "LCB",
@@ -6220,7 +6220,7 @@
     {
      "player_id": "P1006",
      "name": "Owen Cartwright",
-     "short_name": "Cartwright",
+     "short_name": "O. Cartwright",
      "nationality": "ENG",
      "shirt": 8,
      "position": "RCM",
@@ -6248,7 +6248,7 @@
     {
      "player_id": "P1007",
      "name": "Brandon Crawford",
-     "short_name": "Crawford",
+     "short_name": "B. Crawford",
      "nationality": "USA",
      "shirt": 3,
      "position": "DM",
@@ -6276,7 +6276,7 @@
     {
      "player_id": "P1008",
      "name": "George Calloway",
-     "short_name": "Calloway",
+     "short_name": "G. Calloway",
      "nationality": "ENG",
      "shirt": 10,
      "position": "LCM",
@@ -6304,7 +6304,7 @@
     {
      "player_id": "P1009",
      "name": "Alfie Thorne",
-     "short_name": "Thorne",
+     "short_name": "A. Thorne",
      "nationality": "ENG",
      "shirt": 7,
      "position": "LWB",
@@ -6332,7 +6332,7 @@
     {
      "player_id": "P1010",
      "name": "Grant Crawford",
-     "short_name": "Crawford",
+     "short_name": "G. Crawford",
      "nationality": "USA",
      "shirt": 9,
      "position": "RST",
@@ -6416,7 +6416,7 @@
     {
      "player_id": "P1013",
      "name": "Callum Thorne",
-     "short_name": "Thorne",
+     "short_name": "C. Thorne",
      "nationality": "ENG",
      "shirt": 34,
      "position": "CB",
@@ -6472,7 +6472,7 @@
     {
      "player_id": "P1015",
      "name": "Callum Calloway",
-     "short_name": "Calloway",
+     "short_name": "C. Calloway",
      "nationality": "ENG",
      "shirt": 22,
      "position": "DM",
@@ -6528,7 +6528,7 @@
     {
      "player_id": "P1017",
      "name": "Reece Thorne",
-     "short_name": "Thorne",
+     "short_name": "R. Thorne",
      "nationality": "ENG",
      "shirt": 20,
      "position": "CAM",
@@ -6584,7 +6584,7 @@
     {
      "player_id": "P1019",
      "name": "Lewis Calloway",
-     "short_name": "Calloway",
+     "short_name": "L. Calloway",
      "nationality": "ENG",
      "shirt": 37,
      "position": "ST",
@@ -6612,7 +6612,7 @@
     {
      "player_id": "P1020",
      "name": "Takumi Tanabe",
-     "short_name": "Tanabe",
+     "short_name": "T. Tanabe",
      "nationality": "JPN",
      "shirt": 35,
      "position": "RCM",

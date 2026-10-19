@@ -67,7 +67,7 @@
    "distance_m": 9589,
    "top_speed_kmh": 34.1,
    "sprints": 25,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "home"
   },
   "P0907": {
@@ -79,7 +79,7 @@
    "distance_m": 11351,
    "top_speed_kmh": 29.3,
    "sprints": 6,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "home"
   },
   "P0904": {
@@ -116,7 +116,7 @@
    "distance_m": 9863,
    "top_speed_kmh": 35.6,
    "sprints": 17,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "home"
   },
   "P0810": {
@@ -129,7 +129,7 @@
    "distance_m": 6292,
    "top_speed_kmh": 33.5,
    "sprints": 8,
-   "name": "Bramley",
+   "name": "H. Bramley",
    "side": "away"
   },
   "P0802": {
@@ -143,7 +143,7 @@
    "distance_m": 10025,
    "top_speed_kmh": 32.8,
    "sprints": 13,
-   "name": "Marlow",
+   "name": "H. Marlow",
    "side": "away"
   },
   "P0807": {
@@ -155,7 +155,7 @@
    "distance_m": 11016,
    "top_speed_kmh": 32.3,
    "sprints": 25,
-   "name": "Olatunji",
+   "name": "F. Olatunji",
    "side": "away"
   },
   "P0908": {
@@ -224,7 +224,7 @@
    "distance_m": 10495,
    "top_speed_kmh": 32.9,
    "sprints": 7,
-   "name": "Marlow",
+   "name": "G. Marlow",
    "side": "away"
   },
   "P0911": {
@@ -295,7 +295,7 @@
    "distance_m": 7804,
    "top_speed_kmh": 30.2,
    "sprints": 4,
-   "name": "Olatunji",
+   "name": "M. Olatunji",
    "side": "away"
   },
   "P0801": {
@@ -304,7 +304,7 @@
    "distance_m": 5008,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Bramley",
+   "name": "C. Bramley",
    "side": "away"
   },
   "P0803": {
@@ -351,7 +351,7 @@
    "distance_m": 1349,
    "top_speed_kmh": 29.1,
    "sprints": 1,
-   "name": "Whitfield",
+   "name": "L. Whitfield",
    "side": "away"
   },
   "P0814": {
@@ -392,7 +392,7 @@
    "distance_m": 229,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "home"
   },
   "P0917": {
@@ -400,7 +400,7 @@
    "distance_m": 282,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "home"
   },
   "P0813": {

@@ -301,6 +301,19 @@ def build_league(seed: int = 2026) -> list[Club]:
         for p in club.squad[11:]:
             p.shirt = 13 if p.group == "GK" and 13 not in taken else pool.pop()
             taken.add(p.shirt)
+        # Team-mates who share a display name get a first initial ("J. Whitfield") so graphics stay unambiguous
+        counts = {}
+        for p in club.squad:
+            counts[p.short_name] = counts.get(p.short_name, 0) + 1
+        for p in club.squad:
+            if counts[p.short_name] > 1 and " " in p.name:
+                p.short_name = f"{p.name.split(' ')[0][0]}. {p.short_name}"
+        counts = {}
+        for p in club.squad:
+            counts[p.short_name] = counts.get(p.short_name, 0) + 1
+        for p in club.squad:                     # same initial too: fall back to the full name
+            if counts[p.short_name] > 1:
+                p.short_name = p.name
         clubs.append(club)
     return clubs
 

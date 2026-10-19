@@ -734,7 +734,7 @@
       {
         "player_id": "P0701",
         "name": "Álvaro Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "Á. Valcárcel",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0713",
         "name": "Vítor Lobato",
-        "short_name": "Lobato",
+        "short_name": "V. Lobato",
         "shirt": 19,
         "position": "RCB",
         "group": "CB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P0706",
         "name": "Gonçalo Lobato",
-        "short_name": "Lobato",
+        "short_name": "G. Lobato",
         "shirt": 7,
         "position": "RM",
         "group": "WM",
@@ -902,7 +902,7 @@
       {
         "player_id": "P0720",
         "name": "Hugo Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "H. Valcárcel",
         "shirt": 27,
         "position": "RCM",
         "group": "CM",
@@ -986,7 +986,7 @@
       {
         "player_id": "P0710",
         "name": "Rúben Lobato",
-        "short_name": "Lobato",
+        "short_name": "R. Lobato",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0704",
         "name": "Francisco Lobato",
-        "short_name": "Lobato",
+        "short_name": "F. Lobato",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -1212,7 +1212,7 @@
       {
         "player_id": "P0716",
         "name": "Miguel Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "M. Mendonça",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -1324,7 +1324,7 @@
       {
         "player_id": "P0722",
         "name": "André Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "A. Mendonça",
         "shirt": 30,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0723",
         "name": "Nuno Lobato",
-        "short_name": "Lobato",
+        "short_name": "N. Lobato",
         "shirt": 16,
         "position": "GK",
         "group": "GK",
@@ -1884,7 +1884,7 @@
       },
       {
         "player_id": "P0701",
-        "name": "Valcárcel",
+        "name": "Á. Valcárcel",
         "season": {
           "apps": 4,
           "minutes": 395,
@@ -1944,7 +1944,7 @@
       },
       {
         "player_id": "P0704",
-        "name": "Lobato",
+        "name": "F. Lobato",
         "season": {
           "apps": 4,
           "minutes": 301,
@@ -1984,7 +1984,7 @@
       },
       {
         "player_id": "P0706",
-        "name": "Lobato",
+        "name": "G. Lobato",
         "season": {
           "apps": 4,
           "minutes": 370,
@@ -2064,7 +2064,7 @@
       },
       {
         "player_id": "P0710",
-        "name": "Lobato",
+        "name": "R. Lobato",
         "season": {
           "apps": 4,
           "minutes": 239,
@@ -2124,7 +2124,7 @@
       },
       {
         "player_id": "P0713",
-        "name": "Lobato",
+        "name": "V. Lobato",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2184,7 +2184,7 @@
       },
       {
         "player_id": "P0716",
-        "name": "Mendonça",
+        "name": "M. Mendonça",
         "season": {
           "apps": 1,
           "minutes": 17,
@@ -2271,7 +2271,7 @@
       },
       {
         "player_id": "P0720",
-        "name": "Valcárcel",
+        "name": "H. Valcárcel",
         "season": {
           "apps": 2,
           "minutes": 117,
@@ -2311,7 +2311,7 @@
       },
       {
         "player_id": "P0722",
-        "name": "Mendonça",
+        "name": "A. Mendonça",
         "season": {
           "apps": 3,
           "minutes": 88,
@@ -2331,7 +2331,7 @@
       },
       {
         "player_id": "P0723",
-        "name": "Lobato",
+        "name": "N. Lobato",
         "season": {
           "apps": 0,
           "minutes": 0,

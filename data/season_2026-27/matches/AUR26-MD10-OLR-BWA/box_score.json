@@ -138,7 +138,7 @@
    "distance_m": 7181,
    "top_speed_kmh": 31.3,
    "sprints": 9,
-   "name": "Olatunji",
+   "name": "F. Olatunji",
    "side": "away"
   },
   "P0406": {
@@ -165,7 +165,7 @@
    "distance_m": 6988,
    "top_speed_kmh": 32.4,
    "sprints": 6,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "home"
   },
   "P0405": {
@@ -175,7 +175,7 @@
    "distance_m": 10595,
    "top_speed_kmh": 34.5,
    "sprints": 14,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "home"
   },
   "P0808": {
@@ -220,7 +220,7 @@
    "distance_m": 10222,
    "top_speed_kmh": 31.3,
    "sprints": 14,
-   "name": "Marlow",
+   "name": "H. Marlow",
    "side": "away"
   },
   "P0810": {
@@ -233,7 +233,7 @@
    "distance_m": 7781,
    "top_speed_kmh": 32.2,
    "sprints": 11,
-   "name": "Bramley",
+   "name": "H. Bramley",
    "side": "away"
   },
   "P0402": {
@@ -255,7 +255,7 @@
    "distance_m": 10667,
    "top_speed_kmh": 33.6,
    "sprints": 10,
-   "name": "Marlow",
+   "name": "G. Marlow",
    "side": "away"
   },
   "P0814": {
@@ -285,7 +285,7 @@
    "distance_m": 7412,
    "top_speed_kmh": 29.8,
    "sprints": 2,
-   "name": "Olatunji",
+   "name": "M. Olatunji",
    "side": "away"
   },
   "P0801": {
@@ -294,7 +294,7 @@
    "distance_m": 5023,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Bramley",
+   "name": "C. Bramley",
    "side": "away"
   },
   "P0403": {
@@ -304,7 +304,7 @@
    "distance_m": 7707,
    "top_speed_kmh": 30.1,
    "sprints": 9,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "home"
   },
   "P0401": {
@@ -313,7 +313,7 @@
    "distance_m": 5169,
    "top_speed_kmh": 24.5,
    "sprints": 1,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "home"
   },
   "P0416": {
@@ -346,7 +346,7 @@
    "distance_m": 4101,
    "top_speed_kmh": 27.7,
    "sprints": 4,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "home"
   },
   "P0811": {
@@ -368,7 +368,7 @@
    "distance_m": 1809,
    "top_speed_kmh": 29.6,
    "sprints": 1,
-   "name": "Fontaine",
+   "name": "J. Fontaine",
    "side": "home"
   },
   "P0817": {
@@ -393,7 +393,7 @@
    "distance_m": 1807,
    "top_speed_kmh": 30.6,
    "sprints": 4,
-   "name": "Lefèvre",
+   "name": "L. Lefèvre",
    "side": "home"
   },
   "P0822": {
@@ -415,7 +415,7 @@
    "distance_m": 1908,
    "top_speed_kmh": 25.5,
    "sprints": 1,
-   "name": "Marlow",
+   "name": "O. Marlow",
    "side": "away"
   },
   "P0805": {

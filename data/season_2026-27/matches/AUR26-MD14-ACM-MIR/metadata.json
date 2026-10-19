@@ -63,7 +63,7 @@
       {
         "player_id": "P0601",
         "name": "Riccardo Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "R. Ferraresi",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -119,7 +119,7 @@
       {
         "player_id": "P0603",
         "name": "Davide Santoro",
-        "short_name": "Santoro",
+        "short_name": "D. Santoro",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -203,7 +203,7 @@
       {
         "player_id": "P0606",
         "name": "Nicolò Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "N. Ferraresi",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -259,7 +259,7 @@
       {
         "player_id": "P0608",
         "name": "Marco Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "M. Lombardo",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -401,7 +401,7 @@
       {
         "player_id": "P0612",
         "name": "Simone Galvani",
-        "short_name": "Galvani",
+        "short_name": "S. Galvani",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0617",
         "name": "Simone Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "S. Ferraresi",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0618",
         "name": "Nicolò Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "N. Lombardo",
         "shirt": 22,
         "position": "RW",
         "group": "W",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0620",
         "name": "Simone Santoro",
-        "short_name": "Santoro",
+        "short_name": "S. Santoro",
         "shirt": 44,
         "position": "RCM",
         "group": "CM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0621",
         "name": "Gianluca Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "G. Lombardo",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0623",
         "name": "Andrea Galvani",
-        "short_name": "Galvani",
+        "short_name": "A. Galvani",
         "shirt": 15,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0313",
         "name": "Dani Arteche",
-        "short_name": "Arteche",
+        "short_name": "D. Arteche",
         "shirt": 35,
         "position": "RCB",
         "group": "CB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0304",
         "name": "Tomás Villalba",
-        "short_name": "Villalba",
+        "short_name": "T. Villalba",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0305",
         "name": "Dani Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "D. Mendívil",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -902,7 +902,7 @@
       {
         "player_id": "P0315",
         "name": "Nacho Arteche",
-        "short_name": "Arteche",
+        "short_name": "N. Arteche",
         "shirt": 36,
         "position": "DM",
         "group": "DM",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0309",
         "name": "Javi Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "J. Mendívil",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0302",
         "name": "Javi Lozano",
-        "short_name": "Lozano",
+        "short_name": "J. Lozano",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0312",
         "name": "Nacho Lozano",
-        "short_name": "Lozano",
+        "short_name": "N. Lozano",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0320",
         "name": "Rubén Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "R. Mendívil",
         "shirt": 41,
         "position": "RCM",
         "group": "CM",
@@ -1324,7 +1324,7 @@
       {
         "player_id": "P0322",
         "name": "Nahuel Villalba",
-        "short_name": "Villalba",
+        "short_name": "N. Villalba",
         "shirt": 14,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0323",
         "name": "Hugo Arteche",
-        "short_name": "Arteche",
+        "short_name": "H. Arteche",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1425,7 +1425,7 @@
     "players": [
       {
         "player_id": "P0601",
-        "name": "Ferraresi",
+        "name": "R. Ferraresi",
         "season": {
           "apps": 13,
           "minutes": 1279,
@@ -1465,7 +1465,7 @@
       },
       {
         "player_id": "P0603",
-        "name": "Santoro",
+        "name": "D. Santoro",
         "season": {
           "apps": 13,
           "minutes": 1052,
@@ -1525,7 +1525,7 @@
       },
       {
         "player_id": "P0606",
-        "name": "Ferraresi",
+        "name": "N. Ferraresi",
         "season": {
           "apps": 13,
           "minutes": 1144,
@@ -1565,7 +1565,7 @@
       },
       {
         "player_id": "P0608",
-        "name": "Lombardo",
+        "name": "M. Lombardo",
         "season": {
           "apps": 10,
           "minutes": 909,
@@ -1645,7 +1645,7 @@
       },
       {
         "player_id": "P0612",
-        "name": "Galvani",
+        "name": "S. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1752,7 +1752,7 @@
       },
       {
         "player_id": "P0617",
-        "name": "Ferraresi",
+        "name": "S. Ferraresi",
         "season": {
           "apps": 8,
           "minutes": 122,
@@ -1772,7 +1772,7 @@
       },
       {
         "player_id": "P0618",
-        "name": "Lombardo",
+        "name": "N. Lombardo",
         "season": {
           "apps": 9,
           "minutes": 216,
@@ -1812,7 +1812,7 @@
       },
       {
         "player_id": "P0620",
-        "name": "Santoro",
+        "name": "S. Santoro",
         "season": {
           "apps": 6,
           "minutes": 289,
@@ -1832,7 +1832,7 @@
       },
       {
         "player_id": "P0621",
-        "name": "Lombardo",
+        "name": "G. Lombardo",
         "season": {
           "apps": 5,
           "minutes": 167,
@@ -1872,7 +1872,7 @@
       },
       {
         "player_id": "P0623",
-        "name": "Galvani",
+        "name": "A. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1912,7 +1912,7 @@
       },
       {
         "player_id": "P0302",
-        "name": "Lozano",
+        "name": "J. Lozano",
         "season": {
           "apps": 13,
           "minutes": 1101,
@@ -1952,7 +1952,7 @@
       },
       {
         "player_id": "P0304",
-        "name": "Villalba",
+        "name": "T. Villalba",
         "season": {
           "apps": 12,
           "minutes": 1157,
@@ -1972,7 +1972,7 @@
       },
       {
         "player_id": "P0305",
-        "name": "Mendívil",
+        "name": "D. Mendívil",
         "season": {
           "apps": 12,
           "minutes": 1088,
@@ -2052,7 +2052,7 @@
       },
       {
         "player_id": "P0309",
-        "name": "Mendívil",
+        "name": "J. Mendívil",
         "season": {
           "apps": 12,
           "minutes": 880,
@@ -2112,7 +2112,7 @@
       },
       {
         "player_id": "P0312",
-        "name": "Lozano",
+        "name": "N. Lozano",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2132,7 +2132,7 @@
       },
       {
         "player_id": "P0313",
-        "name": "Arteche",
+        "name": "D. Arteche",
         "season": {
           "apps": 8,
           "minutes": 117,
@@ -2172,7 +2172,7 @@
       },
       {
         "player_id": "P0315",
-        "name": "Arteche",
+        "name": "N. Arteche",
         "season": {
           "apps": 5,
           "minutes": 309,
@@ -2272,7 +2272,7 @@
       },
       {
         "player_id": "P0320",
-        "name": "Mendívil",
+        "name": "R. Mendívil",
         "season": {
           "apps": 5,
           "minutes": 244,
@@ -2319,7 +2319,7 @@
       },
       {
         "player_id": "P0322",
-        "name": "Villalba",
+        "name": "N. Villalba",
         "season": {
           "apps": 9,
           "minutes": 448,
@@ -2339,7 +2339,7 @@
       },
       {
         "player_id": "P0323",
-        "name": "Arteche",
+        "name": "H. Arteche",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2368,7 +2368,7 @@
       },
       {
         "player_id": "P0320",
-        "name": "Mendívil",
+        "name": "R. Mendívil",
         "type": "career_apps",
         "target": 100,
         "needed": 1

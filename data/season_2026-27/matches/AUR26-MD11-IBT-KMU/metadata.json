@@ -119,7 +119,7 @@
       {
         "player_id": "P1003",
         "name": "Harry Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "H. Cartwright",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -147,7 +147,7 @@
       {
         "player_id": "P1004",
         "name": "Ren Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "R. Tanabe",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -203,7 +203,7 @@
       {
         "player_id": "P1006",
         "name": "Owen Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "O. Cartwright",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -231,7 +231,7 @@
       {
         "player_id": "P1007",
         "name": "Brandon Crawford",
-        "short_name": "Crawford",
+        "short_name": "B. Crawford",
         "shirt": 3,
         "position": "DM",
         "group": "DM",
@@ -259,7 +259,7 @@
       {
         "player_id": "P1008",
         "name": "George Calloway",
-        "short_name": "Calloway",
+        "short_name": "G. Calloway",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P1009",
         "name": "Alfie Thorne",
-        "short_name": "Thorne",
+        "short_name": "A. Thorne",
         "shirt": 7,
         "position": "LWB",
         "group": "FB",
@@ -315,7 +315,7 @@
       {
         "player_id": "P1010",
         "name": "Grant Crawford",
-        "short_name": "Crawford",
+        "short_name": "G. Crawford",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -401,7 +401,7 @@
       {
         "player_id": "P1013",
         "name": "Callum Thorne",
-        "short_name": "Thorne",
+        "short_name": "C. Thorne",
         "shirt": 34,
         "position": "CB",
         "group": "CB",
@@ -457,7 +457,7 @@
       {
         "player_id": "P1015",
         "name": "Callum Calloway",
-        "short_name": "Calloway",
+        "short_name": "C. Calloway",
         "shirt": 22,
         "position": "DM",
         "group": "DM",
@@ -513,7 +513,7 @@
       {
         "player_id": "P1017",
         "name": "Reece Thorne",
-        "short_name": "Thorne",
+        "short_name": "R. Thorne",
         "shirt": 20,
         "position": "CAM",
         "group": "AM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P1019",
         "name": "Lewis Calloway",
-        "short_name": "Calloway",
+        "short_name": "L. Calloway",
         "shirt": 37,
         "position": "ST",
         "group": "ST",
@@ -597,7 +597,7 @@
       {
         "player_id": "P1020",
         "name": "Takumi Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "T. Tanabe",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -1465,7 +1465,7 @@
       },
       {
         "player_id": "P1003",
-        "name": "Cartwright",
+        "name": "H. Cartwright",
         "season": {
           "apps": 9,
           "minutes": 633,
@@ -1485,7 +1485,7 @@
       },
       {
         "player_id": "P1004",
-        "name": "Tanabe",
+        "name": "R. Tanabe",
         "season": {
           "apps": 10,
           "minutes": 975,
@@ -1525,7 +1525,7 @@
       },
       {
         "player_id": "P1006",
-        "name": "Cartwright",
+        "name": "O. Cartwright",
         "season": {
           "apps": 10,
           "minutes": 975,
@@ -1545,7 +1545,7 @@
       },
       {
         "player_id": "P1007",
-        "name": "Crawford",
+        "name": "B. Crawford",
         "season": {
           "apps": 8,
           "minutes": 684,
@@ -1565,7 +1565,7 @@
       },
       {
         "player_id": "P1008",
-        "name": "Calloway",
+        "name": "G. Calloway",
         "season": {
           "apps": 9,
           "minutes": 790,
@@ -1585,7 +1585,7 @@
       },
       {
         "player_id": "P1009",
-        "name": "Thorne",
+        "name": "A. Thorne",
         "season": {
           "apps": 10,
           "minutes": 975,
@@ -1605,7 +1605,7 @@
       },
       {
         "player_id": "P1010",
-        "name": "Crawford",
+        "name": "G. Crawford",
         "season": {
           "apps": 10,
           "minutes": 644,
@@ -1665,7 +1665,7 @@
       },
       {
         "player_id": "P1013",
-        "name": "Thorne",
+        "name": "C. Thorne",
         "season": {
           "apps": 3,
           "minutes": 105,
@@ -1705,7 +1705,7 @@
       },
       {
         "player_id": "P1015",
-        "name": "Calloway",
+        "name": "C. Calloway",
         "season": {
           "apps": 3,
           "minutes": 228,
@@ -1745,7 +1745,7 @@
       },
       {
         "player_id": "P1017",
-        "name": "Thorne",
+        "name": "R. Thorne",
         "season": {
           "apps": 4,
           "minutes": 69,
@@ -1785,7 +1785,7 @@
       },
       {
         "player_id": "P1019",
-        "name": "Calloway",
+        "name": "L. Calloway",
         "season": {
           "apps": 9,
           "minutes": 415,
@@ -1805,7 +1805,7 @@
       },
       {
         "player_id": "P1020",
-        "name": "Tanabe",
+        "name": "T. Tanabe",
         "season": {
           "apps": 3,
           "minutes": 182,

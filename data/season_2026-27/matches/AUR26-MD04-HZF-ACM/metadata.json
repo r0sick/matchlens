@@ -147,7 +147,7 @@
       {
         "player_id": "P0913",
         "name": "Luuk Visser",
-        "short_name": "Visser",
+        "short_name": "L. Visser",
         "shirt": 12,
         "position": "LCB",
         "group": "CB",
@@ -315,7 +315,7 @@
       {
         "player_id": "P0910",
         "name": "Daan Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "D. Verhoef",
         "shirt": 9,
         "position": "ST",
         "group": "ST",
@@ -429,7 +429,7 @@
       {
         "player_id": "P0905",
         "name": "Zakaria Kettani",
-        "short_name": "Kettani",
+        "short_name": "Z. Kettani",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -457,7 +457,7 @@
       {
         "player_id": "P0907",
         "name": "Bram Visser",
-        "short_name": "Visser",
+        "short_name": "B. Visser",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -485,7 +485,7 @@
       {
         "player_id": "P0909",
         "name": "Sofiane Kettani",
-        "short_name": "Kettani",
+        "short_name": "S. Kettani",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0917",
         "name": "Bram van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "B. van Rijn",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0918",
         "name": "Stijn Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "S. Verhoef",
         "shirt": 40,
         "position": "RW",
         "group": "W",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0923",
         "name": "Luuk van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "L. van Rijn",
         "shirt": 34,
         "position": "GK",
         "group": "GK",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0601",
         "name": "Riccardo Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "R. Ferraresi",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0603",
         "name": "Davide Santoro",
-        "short_name": "Santoro",
+        "short_name": "D. Santoro",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0621",
         "name": "Gianluca Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "G. Lombardo",
         "shirt": 14,
         "position": "LCB",
         "group": "CB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P0606",
         "name": "Nicolò Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "N. Ferraresi",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -930,7 +930,7 @@
       {
         "player_id": "P0608",
         "name": "Marco Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "M. Lombardo",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0612",
         "name": "Simone Galvani",
-        "short_name": "Galvani",
+        "short_name": "S. Galvani",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1212,7 +1212,7 @@
       {
         "player_id": "P0617",
         "name": "Simone Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "S. Ferraresi",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P0618",
         "name": "Nicolò Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "N. Lombardo",
         "shirt": 22,
         "position": "RW",
         "group": "W",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0620",
         "name": "Simone Santoro",
-        "short_name": "Santoro",
+        "short_name": "S. Santoro",
         "shirt": 44,
         "position": "RCM",
         "group": "CM",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0623",
         "name": "Andrea Galvani",
-        "short_name": "Galvani",
+        "short_name": "A. Galvani",
         "shirt": 15,
         "position": "GK",
         "group": "GK",
@@ -1497,7 +1497,7 @@
       },
       {
         "player_id": "P0905",
-        "name": "Kettani",
+        "name": "Z. Kettani",
         "season": {
           "apps": 1,
           "minutes": 97,
@@ -1537,7 +1537,7 @@
       },
       {
         "player_id": "P0907",
-        "name": "Visser",
+        "name": "B. Visser",
         "season": {
           "apps": 3,
           "minutes": 293,
@@ -1577,7 +1577,7 @@
       },
       {
         "player_id": "P0909",
-        "name": "Kettani",
+        "name": "S. Kettani",
         "season": {
           "apps": 3,
           "minutes": 162,
@@ -1597,7 +1597,7 @@
       },
       {
         "player_id": "P0910",
-        "name": "Verhoef",
+        "name": "D. Verhoef",
         "season": {
           "apps": 3,
           "minutes": 115,
@@ -1657,7 +1657,7 @@
       },
       {
         "player_id": "P0913",
-        "name": "Visser",
+        "name": "L. Visser",
         "season": {
           "apps": 3,
           "minutes": 56,
@@ -1744,7 +1744,7 @@
       },
       {
         "player_id": "P0917",
-        "name": "van Rijn",
+        "name": "B. van Rijn",
         "season": {
           "apps": 1,
           "minutes": 25,
@@ -1764,7 +1764,7 @@
       },
       {
         "player_id": "P0918",
-        "name": "Verhoef",
+        "name": "S. Verhoef",
         "season": {
           "apps": 1,
           "minutes": 25,
@@ -1871,7 +1871,7 @@
       },
       {
         "player_id": "P0923",
-        "name": "van Rijn",
+        "name": "L. van Rijn",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1891,7 +1891,7 @@
       },
       {
         "player_id": "P0601",
-        "name": "Ferraresi",
+        "name": "R. Ferraresi",
         "season": {
           "apps": 3,
           "minutes": 295,
@@ -1931,7 +1931,7 @@
       },
       {
         "player_id": "P0603",
-        "name": "Santoro",
+        "name": "D. Santoro",
         "season": {
           "apps": 3,
           "minutes": 240,
@@ -1991,7 +1991,7 @@
       },
       {
         "player_id": "P0606",
-        "name": "Ferraresi",
+        "name": "N. Ferraresi",
         "season": {
           "apps": 3,
           "minutes": 201,
@@ -2031,7 +2031,7 @@
       },
       {
         "player_id": "P0608",
-        "name": "Lombardo",
+        "name": "M. Lombardo",
         "season": {
           "apps": 3,
           "minutes": 233,
@@ -2111,7 +2111,7 @@
       },
       {
         "player_id": "P0612",
-        "name": "Galvani",
+        "name": "S. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2211,7 +2211,7 @@
       },
       {
         "player_id": "P0617",
-        "name": "Ferraresi",
+        "name": "S. Ferraresi",
         "season": {
           "apps": 2,
           "minutes": 30,
@@ -2231,7 +2231,7 @@
       },
       {
         "player_id": "P0618",
-        "name": "Lombardo",
+        "name": "N. Lombardo",
         "season": {
           "apps": 2,
           "minutes": 32,
@@ -2271,7 +2271,7 @@
       },
       {
         "player_id": "P0620",
-        "name": "Santoro",
+        "name": "S. Santoro",
         "season": {
           "apps": 1,
           "minutes": 25,
@@ -2291,7 +2291,7 @@
       },
       {
         "player_id": "P0621",
-        "name": "Lombardo",
+        "name": "G. Lombardo",
         "season": {
           "apps": 1,
           "minutes": 20,
@@ -2331,7 +2331,7 @@
       },
       {
         "player_id": "P0623",
-        "name": "Galvani",
+        "name": "A. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,

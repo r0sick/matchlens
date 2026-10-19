@@ -123,7 +123,7 @@
    "distance_m": 8202,
    "top_speed_kmh": 31.6,
    "sprints": 11,
-   "name": "Mendívil",
+   "name": "J. Mendívil",
    "side": "away"
   },
   "P0314": {
@@ -164,7 +164,7 @@
    "distance_m": 9548,
    "top_speed_kmh": 28.7,
    "sprints": 6,
-   "name": "Arteche",
+   "name": "D. Arteche",
    "side": "away"
   },
   "P0308": {
@@ -187,7 +187,7 @@
    "distance_m": 10309,
    "top_speed_kmh": 34.2,
    "sprints": 17,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "away"
   },
   "P0306": {
@@ -215,7 +215,7 @@
    "distance_m": 11054,
    "top_speed_kmh": 33.3,
    "sprints": 9,
-   "name": "Arteche",
+   "name": "N. Arteche",
    "side": "away"
   },
   "P0304": {
@@ -227,7 +227,7 @@
    "distance_m": 9660,
    "top_speed_kmh": 29.9,
    "sprints": 6,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "away"
   },
   "P0608": {
@@ -242,7 +242,7 @@
    "distance_m": 10965,
    "top_speed_kmh": 32.0,
    "sprints": 9,
-   "name": "Lombardo",
+   "name": "M. Lombardo",
    "side": "home"
   },
   "P0606": {
@@ -254,7 +254,7 @@
    "distance_m": 10912,
    "top_speed_kmh": 31.2,
    "sprints": 12,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "home"
   },
   "P0614": {
@@ -304,7 +304,7 @@
    "distance_m": 7473,
    "top_speed_kmh": 29.4,
    "sprints": 7,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "home"
   },
   "P0601": {
@@ -313,7 +313,7 @@
    "distance_m": 4921,
    "top_speed_kmh": 25.5,
    "sprints": 1,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "home"
   },
   "P0604": {
@@ -369,7 +369,7 @@
    "distance_m": 1788,
    "top_speed_kmh": 33.4,
    "sprints": 4,
-   "name": "Lombardo",
+   "name": "N. Lombardo",
    "side": "home"
   },
   "P0318": {
@@ -398,7 +398,7 @@
    "distance_m": 1654,
    "top_speed_kmh": 29.2,
    "sprints": 4,
-   "name": "Lombardo",
+   "name": "G. Lombardo",
    "side": "home"
   },
   "P0322": {
@@ -408,7 +408,7 @@
    "distance_m": 2171,
    "top_speed_kmh": 34.8,
    "sprints": 4,
-   "name": "Villalba",
+   "name": "N. Villalba",
    "side": "away"
   }
  },

@@ -81,7 +81,7 @@
    "distance_m": 10966,
    "top_speed_kmh": 31.9,
    "sprints": 6,
-   "name": "Olatunji",
+   "name": "F. Olatunji",
    "side": "home"
   },
   "P0820": {
@@ -93,7 +93,7 @@
    "distance_m": 10918,
    "top_speed_kmh": 27.0,
    "sprints": 10,
-   "name": "Nwosu",
+   "name": "T. Nwosu",
    "side": "home"
   },
   "P0803": {
@@ -117,7 +117,7 @@
    "distance_m": 7506,
    "top_speed_kmh": 32.2,
    "sprints": 6,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "away"
   },
   "P0811": {
@@ -146,7 +146,7 @@
    "distance_m": 10422,
    "top_speed_kmh": 34.1,
    "sprints": 17,
-   "name": "Marlow",
+   "name": "G. Marlow",
    "side": "home"
   },
   "P0407": {
@@ -169,7 +169,7 @@
    "distance_m": 10004,
    "top_speed_kmh": 30.6,
    "sprints": 13,
-   "name": "Marlow",
+   "name": "H. Marlow",
    "side": "home"
   },
   "P0806": {
@@ -248,7 +248,7 @@
    "distance_m": 7743,
    "top_speed_kmh": 28.9,
    "sprints": 7,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   },
   "P0411": {
@@ -295,7 +295,7 @@
    "distance_m": 10663,
    "top_speed_kmh": 35.6,
    "sprints": 14,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0401": {
@@ -304,7 +304,7 @@
    "distance_m": 5190,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0801": {
@@ -313,7 +313,7 @@
    "distance_m": 4999,
    "top_speed_kmh": 23.4,
    "sprints": 1,
-   "name": "Bramley",
+   "name": "C. Bramley",
    "side": "home"
   },
   "P0805": {
@@ -379,7 +379,7 @@
    "distance_m": 2006,
    "top_speed_kmh": 29.1,
    "sprints": 3,
-   "name": "Lefèvre",
+   "name": "L. Lefèvre",
    "side": "away"
   },
   "P0816": {
@@ -389,7 +389,7 @@
    "distance_m": 100,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Whitfield",
+   "name": "C. Whitfield",
    "side": "home"
   },
   "P0808": {

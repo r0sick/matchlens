@@ -231,7 +231,7 @@
       {
         "player_id": "P0107",
         "name": "Jules Delattre",
-        "short_name": "Delattre",
+        "short_name": "J. Delattre",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0122",
         "name": "Mason Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "M. Cartwright",
         "shirt": 29,
         "position": "LW",
         "group": "W",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0117",
         "name": "Baptiste Delattre",
-        "short_name": "Delattre",
+        "short_name": "B. Delattre",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0118",
         "name": "Owen Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "O. Whitfield",
         "shirt": 17,
         "position": "RW",
         "group": "W",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0120",
         "name": "George Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "G. Cartwright",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0121",
         "name": "Callum Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 43,
         "position": "CB",
         "group": "CB",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0401",
         "name": "Enzo Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "E. Fontaine",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -762,7 +762,7 @@
       {
         "player_id": "P0414",
         "name": "Baptiste Brunet",
-        "short_name": "Brunet",
+        "short_name": "B. Brunet",
         "shirt": 38,
         "position": "RB",
         "group": "FB",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0403",
         "name": "Yanis Brunet",
-        "short_name": "Brunet",
+        "short_name": "Y. Brunet",
         "shirt": 5,
         "position": "RCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0405",
         "name": "Samuel Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "S. Afolabi",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P0415",
         "name": "Noah Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "N. Lefèvre",
         "shirt": 13,
         "position": "RDM",
         "group": "DM",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0409",
         "name": "Kylian Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "K. Fontaine",
         "shirt": 10,
         "position": "CAM",
         "group": "AM",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0412",
         "name": "Kylian Brunet",
-        "short_name": "Brunet",
+        "short_name": "K. Brunet",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P0419",
         "name": "Lucas Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "L. Lefèvre",
         "shirt": 25,
         "position": "ST",
         "group": "ST",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0421",
         "name": "Jules Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "J. Fontaine",
         "shirt": 32,
         "position": "CB",
         "group": "CB",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0423",
         "name": "Kelechi Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "K. Afolabi",
         "shirt": 21,
         "position": "GK",
         "group": "GK",
@@ -1537,7 +1537,7 @@
       },
       {
         "player_id": "P0107",
-        "name": "Delattre",
+        "name": "J. Delattre",
         "season": {
           "apps": 6,
           "minutes": 403,
@@ -1751,7 +1751,7 @@
       },
       {
         "player_id": "P0117",
-        "name": "Delattre",
+        "name": "B. Delattre",
         "season": {
           "apps": 1,
           "minutes": 16,
@@ -1771,7 +1771,7 @@
       },
       {
         "player_id": "P0118",
-        "name": "Whitfield",
+        "name": "O. Whitfield",
         "season": {
           "apps": 4,
           "minutes": 154,
@@ -1811,7 +1811,7 @@
       },
       {
         "player_id": "P0120",
-        "name": "Cartwright",
+        "name": "G. Cartwright",
         "season": {
           "apps": 3,
           "minutes": 92,
@@ -1831,7 +1831,7 @@
       },
       {
         "player_id": "P0121",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 2,
           "minutes": 33,
@@ -1851,7 +1851,7 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "season": {
           "apps": 3,
           "minutes": 161,
@@ -1898,7 +1898,7 @@
       },
       {
         "player_id": "P0401",
-        "name": "Fontaine",
+        "name": "E. Fontaine",
         "season": {
           "apps": 6,
           "minutes": 587,
@@ -1938,7 +1938,7 @@
       },
       {
         "player_id": "P0403",
-        "name": "Brunet",
+        "name": "Y. Brunet",
         "season": {
           "apps": 6,
           "minutes": 452,
@@ -1978,7 +1978,7 @@
       },
       {
         "player_id": "P0405",
-        "name": "Afolabi",
+        "name": "S. Afolabi",
         "season": {
           "apps": 6,
           "minutes": 587,
@@ -2058,7 +2058,7 @@
       },
       {
         "player_id": "P0409",
-        "name": "Fontaine",
+        "name": "K. Fontaine",
         "season": {
           "apps": 5,
           "minutes": 324,
@@ -2118,7 +2118,7 @@
       },
       {
         "player_id": "P0412",
-        "name": "Brunet",
+        "name": "K. Brunet",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2158,7 +2158,7 @@
       },
       {
         "player_id": "P0414",
-        "name": "Brunet",
+        "name": "B. Brunet",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2178,7 +2178,7 @@
       },
       {
         "player_id": "P0415",
-        "name": "Lefèvre",
+        "name": "N. Lefèvre",
         "season": {
           "apps": 5,
           "minutes": 266,
@@ -2258,7 +2258,7 @@
       },
       {
         "player_id": "P0419",
-        "name": "Lefèvre",
+        "name": "L. Lefèvre",
         "season": {
           "apps": 2,
           "minutes": 39,
@@ -2305,7 +2305,7 @@
       },
       {
         "player_id": "P0421",
-        "name": "Fontaine",
+        "name": "J. Fontaine",
         "season": {
           "apps": 2,
           "minutes": 173,
@@ -2345,7 +2345,7 @@
       },
       {
         "player_id": "P0423",
-        "name": "Afolabi",
+        "name": "K. Afolabi",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2381,14 +2381,14 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "type": "career_goals",
         "target": 25,
         "needed": 2
       },
       {
         "player_id": "P0419",
-        "name": "Lefèvre",
+        "name": "L. Lefèvre",
         "type": "career_apps",
         "target": 250,
         "needed": 1
@@ -2397,7 +2397,7 @@
     "scoring_streaks": [
       {
         "player_id": "P0409",
-        "name": "Fontaine",
+        "name": "K. Fontaine",
         "matches": 2
       }
     ]

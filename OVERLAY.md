@@ -13,6 +13,9 @@ ws://<host>/ws/{match_id}?speed=60&from_minute=0&restart=0
 
 Several clients can watch the same match; they share one session and receive identical messages.
 
+A reference renderer is included: `http://localhost:8000/?match=M000042&view=overlay` draws the score bug,
+win-probability strip, momentum ribbon and lower thirds on a transparent background (browser source in OBS / vMix).
+
 ## Envelope
 
 Every message has the same envelope, so a renderer can schedule it against the match clock:

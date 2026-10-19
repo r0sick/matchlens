@@ -63,7 +63,7 @@
       {
         "player_id": "P0701",
         "name": "Álvaro Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "Á. Valcárcel",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -147,7 +147,7 @@
       {
         "player_id": "P0704",
         "name": "Francisco Lobato",
-        "short_name": "Lobato",
+        "short_name": "F. Lobato",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -203,7 +203,7 @@
       {
         "player_id": "P0706",
         "name": "Gonçalo Lobato",
-        "short_name": "Lobato",
+        "short_name": "G. Lobato",
         "shirt": 7,
         "position": "RM",
         "group": "WM",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0710",
         "name": "Rúben Lobato",
-        "short_name": "Lobato",
+        "short_name": "R. Lobato",
         "shirt": 9,
         "position": "LST",
         "group": "ST",
@@ -457,7 +457,7 @@
       {
         "player_id": "P0713",
         "name": "Vítor Lobato",
-        "short_name": "Lobato",
+        "short_name": "V. Lobato",
         "shirt": 19,
         "position": "CB",
         "group": "CB",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0716",
         "name": "Miguel Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "M. Mendonça",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0720",
         "name": "Hugo Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "H. Valcárcel",
         "shirt": 27,
         "position": "RCM",
         "group": "CM",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0722",
         "name": "André Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "A. Mendonça",
         "shirt": 30,
         "position": "RW",
         "group": "W",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0723",
         "name": "Nuno Lobato",
-        "short_name": "Lobato",
+        "short_name": "N. Lobato",
         "shirt": 16,
         "position": "GK",
         "group": "GK",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0401",
         "name": "Enzo Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "E. Fontaine",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0403",
         "name": "Yanis Brunet",
-        "short_name": "Brunet",
+        "short_name": "Y. Brunet",
         "shirt": 5,
         "position": "RCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0405",
         "name": "Samuel Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "S. Afolabi",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0409",
         "name": "Kylian Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "K. Fontaine",
         "shirt": 10,
         "position": "CAM",
         "group": "AM",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0412",
         "name": "Kylian Brunet",
-        "short_name": "Brunet",
+        "short_name": "K. Brunet",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1100,7 +1100,7 @@
       {
         "player_id": "P0414",
         "name": "Baptiste Brunet",
-        "short_name": "Brunet",
+        "short_name": "B. Brunet",
         "shirt": 38,
         "position": "RB",
         "group": "FB",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0415",
         "name": "Noah Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "N. Lefèvre",
         "shirt": 13,
         "position": "DM",
         "group": "DM",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P0419",
         "name": "Lucas Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "L. Lefèvre",
         "shirt": 25,
         "position": "ST",
         "group": "ST",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0421",
         "name": "Jules Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "J. Fontaine",
         "shirt": 32,
         "position": "CB",
         "group": "CB",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0423",
         "name": "Kelechi Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "K. Afolabi",
         "shirt": 21,
         "position": "GK",
         "group": "GK",
@@ -1425,7 +1425,7 @@
     "players": [
       {
         "player_id": "P0701",
-        "name": "Valcárcel",
+        "name": "Á. Valcárcel",
         "season": {
           "apps": 16,
           "minutes": 1569,
@@ -1485,7 +1485,7 @@
       },
       {
         "player_id": "P0704",
-        "name": "Lobato",
+        "name": "F. Lobato",
         "season": {
           "apps": 15,
           "minutes": 1196,
@@ -1525,7 +1525,7 @@
       },
       {
         "player_id": "P0706",
-        "name": "Lobato",
+        "name": "G. Lobato",
         "season": {
           "apps": 16,
           "minutes": 1451,
@@ -1605,7 +1605,7 @@
       },
       {
         "player_id": "P0710",
-        "name": "Lobato",
+        "name": "R. Lobato",
         "season": {
           "apps": 16,
           "minutes": 1067,
@@ -1665,7 +1665,7 @@
       },
       {
         "player_id": "P0713",
-        "name": "Lobato",
+        "name": "V. Lobato",
         "season": {
           "apps": 3,
           "minutes": 196,
@@ -1725,7 +1725,7 @@
       },
       {
         "player_id": "P0716",
-        "name": "Mendonça",
+        "name": "M. Mendonça",
         "season": {
           "apps": 5,
           "minutes": 200,
@@ -1812,7 +1812,7 @@
       },
       {
         "player_id": "P0720",
-        "name": "Valcárcel",
+        "name": "H. Valcárcel",
         "season": {
           "apps": 6,
           "minutes": 384,
@@ -1852,7 +1852,7 @@
       },
       {
         "player_id": "P0722",
-        "name": "Mendonça",
+        "name": "A. Mendonça",
         "season": {
           "apps": 12,
           "minutes": 330,
@@ -1872,7 +1872,7 @@
       },
       {
         "player_id": "P0723",
-        "name": "Lobato",
+        "name": "N. Lobato",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1892,7 +1892,7 @@
       },
       {
         "player_id": "P0401",
-        "name": "Fontaine",
+        "name": "E. Fontaine",
         "season": {
           "apps": 16,
           "minutes": 1564,
@@ -1932,7 +1932,7 @@
       },
       {
         "player_id": "P0403",
-        "name": "Brunet",
+        "name": "Y. Brunet",
         "season": {
           "apps": 16,
           "minutes": 1328,
@@ -1972,7 +1972,7 @@
       },
       {
         "player_id": "P0405",
-        "name": "Afolabi",
+        "name": "S. Afolabi",
         "season": {
           "apps": 15,
           "minutes": 1467,
@@ -2052,7 +2052,7 @@
       },
       {
         "player_id": "P0409",
-        "name": "Fontaine",
+        "name": "K. Fontaine",
         "season": {
           "apps": 15,
           "minutes": 1064,
@@ -2119,7 +2119,7 @@
       },
       {
         "player_id": "P0412",
-        "name": "Brunet",
+        "name": "K. Brunet",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2159,7 +2159,7 @@
       },
       {
         "player_id": "P0414",
-        "name": "Brunet",
+        "name": "B. Brunet",
         "season": {
           "apps": 4,
           "minutes": 358,
@@ -2179,7 +2179,7 @@
       },
       {
         "player_id": "P0415",
-        "name": "Lefèvre",
+        "name": "N. Lefèvre",
         "season": {
           "apps": 12,
           "minutes": 558,
@@ -2259,7 +2259,7 @@
       },
       {
         "player_id": "P0419",
-        "name": "Lefèvre",
+        "name": "L. Lefèvre",
         "season": {
           "apps": 10,
           "minutes": 415,
@@ -2299,7 +2299,7 @@
       },
       {
         "player_id": "P0421",
-        "name": "Fontaine",
+        "name": "J. Fontaine",
         "season": {
           "apps": 7,
           "minutes": 317,
@@ -2339,7 +2339,7 @@
       },
       {
         "player_id": "P0423",
-        "name": "Afolabi",
+        "name": "K. Afolabi",
         "season": {
           "apps": 0,
           "minutes": 0,

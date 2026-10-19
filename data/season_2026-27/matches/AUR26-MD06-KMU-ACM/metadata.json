@@ -734,7 +734,7 @@
       {
         "player_id": "P0601",
         "name": "Riccardo Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "R. Ferraresi",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0603",
         "name": "Davide Santoro",
-        "short_name": "Santoro",
+        "short_name": "D. Santoro",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P0606",
         "name": "Nicolò Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "N. Ferraresi",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -930,7 +930,7 @@
       {
         "player_id": "P0608",
         "name": "Marco Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "M. Lombardo",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0612",
         "name": "Simone Galvani",
-        "short_name": "Galvani",
+        "short_name": "S. Galvani",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1184,7 +1184,7 @@
       {
         "player_id": "P0617",
         "name": "Simone Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "S. Ferraresi",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -1212,7 +1212,7 @@
       {
         "player_id": "P0618",
         "name": "Nicolò Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "N. Lombardo",
         "shirt": 22,
         "position": "RW",
         "group": "W",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0620",
         "name": "Simone Santoro",
-        "short_name": "Santoro",
+        "short_name": "S. Santoro",
         "shirt": 44,
         "position": "RCM",
         "group": "CM",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0621",
         "name": "Gianluca Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "G. Lombardo",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0623",
         "name": "Andrea Galvani",
-        "short_name": "Galvani",
+        "short_name": "A. Galvani",
         "shirt": 15,
         "position": "GK",
         "group": "GK",
@@ -1877,7 +1877,7 @@
       },
       {
         "player_id": "P0601",
-        "name": "Ferraresi",
+        "name": "R. Ferraresi",
         "season": {
           "apps": 5,
           "minutes": 492,
@@ -1917,7 +1917,7 @@
       },
       {
         "player_id": "P0603",
-        "name": "Santoro",
+        "name": "D. Santoro",
         "season": {
           "apps": 5,
           "minutes": 407,
@@ -1977,7 +1977,7 @@
       },
       {
         "player_id": "P0606",
-        "name": "Ferraresi",
+        "name": "N. Ferraresi",
         "season": {
           "apps": 5,
           "minutes": 398,
@@ -2017,7 +2017,7 @@
       },
       {
         "player_id": "P0608",
-        "name": "Lombardo",
+        "name": "M. Lombardo",
         "season": {
           "apps": 4,
           "minutes": 332,
@@ -2097,7 +2097,7 @@
       },
       {
         "player_id": "P0612",
-        "name": "Galvani",
+        "name": "S. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2197,7 +2197,7 @@
       },
       {
         "player_id": "P0617",
-        "name": "Ferraresi",
+        "name": "S. Ferraresi",
         "season": {
           "apps": 4,
           "minutes": 58,
@@ -2217,7 +2217,7 @@
       },
       {
         "player_id": "P0618",
-        "name": "Lombardo",
+        "name": "N. Lombardo",
         "season": {
           "apps": 4,
           "minutes": 77,
@@ -2257,7 +2257,7 @@
       },
       {
         "player_id": "P0620",
-        "name": "Santoro",
+        "name": "S. Santoro",
         "season": {
           "apps": 2,
           "minutes": 101,
@@ -2277,7 +2277,7 @@
       },
       {
         "player_id": "P0621",
-        "name": "Lombardo",
+        "name": "G. Lombardo",
         "season": {
           "apps": 2,
           "minutes": 96,
@@ -2317,7 +2317,7 @@
       },
       {
         "player_id": "P0623",
-        "name": "Galvani",
+        "name": "A. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,

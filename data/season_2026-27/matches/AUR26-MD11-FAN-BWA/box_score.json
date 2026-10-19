@@ -95,7 +95,7 @@
    "distance_m": 9656,
    "top_speed_kmh": 27.5,
    "sprints": 9,
-   "name": "Valcárcel",
+   "name": "H. Valcárcel",
    "side": "home"
   },
   "P0709": {
@@ -123,7 +123,7 @@
    "distance_m": 11284,
    "top_speed_kmh": 31.1,
    "sprints": 7,
-   "name": "Olatunji",
+   "name": "F. Olatunji",
    "side": "away"
   },
   "P0710": {
@@ -139,7 +139,7 @@
    "distance_m": 5972,
    "top_speed_kmh": 31.5,
    "sprints": 9,
-   "name": "Lobato",
+   "name": "R. Lobato",
    "side": "home"
   },
   "P0704": {
@@ -149,7 +149,7 @@
    "distance_m": 7265,
    "top_speed_kmh": 29.3,
    "sprints": 3,
-   "name": "Lobato",
+   "name": "F. Lobato",
    "side": "home"
   },
   "P0716": {
@@ -162,7 +162,7 @@
    "distance_m": 11515,
    "top_speed_kmh": 30.2,
    "sprints": 10,
-   "name": "Mendonça",
+   "name": "M. Mendonça",
    "side": "home"
   },
   "P0705": {
@@ -196,7 +196,7 @@
    "distance_m": 11002,
    "top_speed_kmh": 32.9,
    "sprints": 17,
-   "name": "Lobato",
+   "name": "G. Lobato",
    "side": "home"
   },
   "P0809": {
@@ -209,7 +209,7 @@
    "distance_m": 10607,
    "top_speed_kmh": 36.4,
    "sprints": 15,
-   "name": "Marlow",
+   "name": "G. Marlow",
    "side": "away"
   },
   "P0808": {
@@ -247,7 +247,7 @@
    "distance_m": 6949,
    "top_speed_kmh": 34.4,
    "sprints": 9,
-   "name": "Bramley",
+   "name": "H. Bramley",
    "side": "away"
   },
   "P0803": {
@@ -288,7 +288,7 @@
    "distance_m": 5096,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Bramley",
+   "name": "C. Bramley",
    "side": "away"
   },
   "P0821": {
@@ -298,7 +298,7 @@
    "distance_m": 6755,
    "top_speed_kmh": 29.4,
    "sprints": 5,
-   "name": "Whitfield",
+   "name": "L. Whitfield",
    "side": "away"
   },
   "P0701": {
@@ -307,7 +307,7 @@
    "distance_m": 5173,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Valcárcel",
+   "name": "Á. Valcárcel",
    "side": "home"
   },
   "P0802": {
@@ -318,7 +318,7 @@
    "distance_m": 10346,
    "top_speed_kmh": 31.2,
    "sprints": 14,
-   "name": "Marlow",
+   "name": "H. Marlow",
    "side": "away"
   },
   "P0819": {
@@ -358,7 +358,7 @@
    "distance_m": 2928,
    "top_speed_kmh": 28.2,
    "sprints": 1,
-   "name": "Olatunji",
+   "name": "M. Olatunji",
    "side": "away"
   },
   "P0820": {
@@ -369,7 +369,7 @@
    "distance_m": 3009,
    "top_speed_kmh": 26.8,
    "sprints": 5,
-   "name": "Nwosu",
+   "name": "T. Nwosu",
    "side": "away"
   },
   "P0813": {
@@ -393,7 +393,7 @@
    "distance_m": 2457,
    "top_speed_kmh": 31.5,
    "sprints": 3,
-   "name": "Mendonça",
+   "name": "A. Mendonça",
    "side": "home"
   },
   "P0718": {

@@ -77,7 +77,7 @@
    "distance_m": 8592,
    "top_speed_kmh": 29.3,
    "sprints": 7,
-   "name": "Delattre",
+   "name": "J. Delattre",
    "side": "home"
   },
   "P0120": {
@@ -91,7 +91,7 @@
    "distance_m": 11744,
    "top_speed_kmh": 31.1,
    "sprints": 12,
-   "name": "Cartwright",
+   "name": "G. Cartwright",
    "side": "home"
   },
   "P0108": {
@@ -172,7 +172,7 @@
    "distance_m": 10822,
    "top_speed_kmh": 31.1,
    "sprints": 17,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "away"
   },
   "P0614": {
@@ -215,7 +215,7 @@
    "distance_m": 4879,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "away"
   },
   "P0610": {
@@ -262,7 +262,7 @@
    "distance_m": 8283,
    "top_speed_kmh": 29.2,
    "sprints": 6,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "away"
   },
   "P0602": {
@@ -288,7 +288,7 @@
    "distance_m": 10872,
    "top_speed_kmh": 33.0,
    "sprints": 11,
-   "name": "Lombardo",
+   "name": "M. Lombardo",
    "side": "away"
   },
   "P0604": {
@@ -331,7 +331,7 @@
    "distance_m": 3765,
    "top_speed_kmh": 34.5,
    "sprints": 6,
-   "name": "Whitfield",
+   "name": "O. Whitfield",
    "side": "home"
   },
   "P0122": {
@@ -343,7 +343,7 @@
    "distance_m": 3741,
    "top_speed_kmh": 32.2,
    "sprints": 6,
-   "name": "Cartwright",
+   "name": "M. Cartwright",
    "side": "home"
   },
   "P0119": {
@@ -371,7 +371,7 @@
    "distance_m": 2318,
    "top_speed_kmh": 34.7,
    "sprints": 6,
-   "name": "Lombardo",
+   "name": "N. Lombardo",
    "side": "away"
   },
   "P0619": {
@@ -410,7 +410,7 @@
    "distance_m": 1045,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Lombardo",
+   "name": "G. Lombardo",
    "side": "away"
   },
   "P0605": {

@@ -119,7 +119,7 @@
       {
         "player_id": "P0503",
         "name": "Jonas Krämer",
-        "short_name": "Krämer",
+        "short_name": "J. Krämer",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0511",
         "name": "Niklas Krämer",
-        "short_name": "Krämer",
+        "short_name": "N. Krämer",
         "shirt": 11,
         "position": "LW",
         "group": "W",
@@ -457,7 +457,7 @@
       {
         "player_id": "P0513",
         "name": "Jonas Ostermann",
-        "short_name": "Ostermann",
+        "short_name": "J. Ostermann",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0517",
         "name": "Finn Albrecht",
-        "short_name": "Albrecht",
+        "short_name": "Finn Albrecht",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0521",
         "name": "Felix Albrecht",
-        "short_name": "Albrecht",
+        "short_name": "Felix Albrecht",
         "shirt": 44,
         "position": "CB",
         "group": "CB",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0522",
         "name": "Tim Ostermann",
-        "short_name": "Ostermann",
+        "short_name": "T. Ostermann",
         "shirt": 20,
         "position": "RW",
         "group": "W",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0701",
         "name": "Álvaro Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "Á. Valcárcel",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0704",
         "name": "Francisco Lobato",
-        "short_name": "Lobato",
+        "short_name": "F. Lobato",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P0706",
         "name": "Gonçalo Lobato",
-        "short_name": "Lobato",
+        "short_name": "G. Lobato",
         "shirt": 7,
         "position": "RM",
         "group": "WM",
@@ -986,7 +986,7 @@
       {
         "player_id": "P0710",
         "name": "Rúben Lobato",
-        "short_name": "Lobato",
+        "short_name": "R. Lobato",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0713",
         "name": "Vítor Lobato",
-        "short_name": "Lobato",
+        "short_name": "V. Lobato",
         "shirt": 19,
         "position": "CB",
         "group": "CB",
@@ -1156,7 +1156,7 @@
       {
         "player_id": "P0716",
         "name": "Miguel Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "M. Mendonça",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0720",
         "name": "Hugo Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "H. Valcárcel",
         "shirt": 27,
         "position": "RCM",
         "group": "CM",
@@ -1324,7 +1324,7 @@
       {
         "player_id": "P0722",
         "name": "André Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "A. Mendonça",
         "shirt": 30,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0723",
         "name": "Nuno Lobato",
-        "short_name": "Lobato",
+        "short_name": "N. Lobato",
         "shirt": 16,
         "position": "GK",
         "group": "GK",
@@ -1457,7 +1457,7 @@
       },
       {
         "player_id": "P0503",
-        "name": "Krämer",
+        "name": "J. Krämer",
         "season": {
           "apps": 6,
           "minutes": 438,
@@ -1617,7 +1617,7 @@
       },
       {
         "player_id": "P0511",
-        "name": "Krämer",
+        "name": "N. Krämer",
         "season": {
           "apps": 5,
           "minutes": 391,
@@ -1657,7 +1657,7 @@
       },
       {
         "player_id": "P0513",
-        "name": "Ostermann",
+        "name": "J. Ostermann",
         "season": {
           "apps": 4,
           "minutes": 295,
@@ -1737,7 +1737,7 @@
       },
       {
         "player_id": "P0517",
-        "name": "Albrecht",
+        "name": "Finn Albrecht",
         "season": {
           "apps": 2,
           "minutes": 45,
@@ -1817,7 +1817,7 @@
       },
       {
         "player_id": "P0521",
-        "name": "Albrecht",
+        "name": "Felix Albrecht",
         "season": {
           "apps": 5,
           "minutes": 216,
@@ -1837,7 +1837,7 @@
       },
       {
         "player_id": "P0522",
-        "name": "Ostermann",
+        "name": "T. Ostermann",
         "season": {
           "apps": 1,
           "minutes": 26,
@@ -1877,7 +1877,7 @@
       },
       {
         "player_id": "P0701",
-        "name": "Valcárcel",
+        "name": "Á. Valcárcel",
         "season": {
           "apps": 6,
           "minutes": 594,
@@ -1937,7 +1937,7 @@
       },
       {
         "player_id": "P0704",
-        "name": "Lobato",
+        "name": "F. Lobato",
         "season": {
           "apps": 5,
           "minutes": 373,
@@ -1977,7 +1977,7 @@
       },
       {
         "player_id": "P0706",
-        "name": "Lobato",
+        "name": "G. Lobato",
         "season": {
           "apps": 6,
           "minutes": 534,
@@ -2057,7 +2057,7 @@
       },
       {
         "player_id": "P0710",
-        "name": "Lobato",
+        "name": "R. Lobato",
         "season": {
           "apps": 6,
           "minutes": 368,
@@ -2117,7 +2117,7 @@
       },
       {
         "player_id": "P0713",
-        "name": "Lobato",
+        "name": "V. Lobato",
         "season": {
           "apps": 2,
           "minutes": 98,
@@ -2184,7 +2184,7 @@
       },
       {
         "player_id": "P0716",
-        "name": "Mendonça",
+        "name": "M. Mendonça",
         "season": {
           "apps": 3,
           "minutes": 81,
@@ -2271,7 +2271,7 @@
       },
       {
         "player_id": "P0720",
-        "name": "Valcárcel",
+        "name": "H. Valcárcel",
         "season": {
           "apps": 4,
           "minutes": 223,
@@ -2311,7 +2311,7 @@
       },
       {
         "player_id": "P0722",
-        "name": "Mendonça",
+        "name": "A. Mendonça",
         "season": {
           "apps": 4,
           "minutes": 123,
@@ -2331,7 +2331,7 @@
       },
       {
         "player_id": "P0723",
-        "name": "Lobato",
+        "name": "N. Lobato",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2353,7 +2353,7 @@
     "milestones_watch": [
       {
         "player_id": "P0713",
-        "name": "Lobato",
+        "name": "V. Lobato",
         "type": "career_apps",
         "target": 200,
         "needed": 1
@@ -2374,7 +2374,7 @@
       },
       {
         "player_id": "P0710",
-        "name": "Lobato",
+        "name": "R. Lobato",
         "matches": 2
       }
     ]

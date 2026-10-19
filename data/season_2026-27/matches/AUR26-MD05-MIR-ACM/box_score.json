@@ -90,7 +90,7 @@
    "distance_m": 8801,
    "top_speed_kmh": 32.3,
    "sprints": 19,
-   "name": "Mendívil",
+   "name": "J. Mendívil",
    "side": "home"
   },
   "P0308": {
@@ -113,7 +113,7 @@
    "distance_m": 10334,
    "top_speed_kmh": 31.9,
    "sprints": 12,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "home"
   },
   "P0304": {
@@ -123,7 +123,7 @@
    "distance_m": 9609,
    "top_speed_kmh": 28.4,
    "sprints": 5,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "home"
   },
   "P0315": {
@@ -136,7 +136,7 @@
    "distance_m": 11102,
    "top_speed_kmh": 32.4,
    "sprints": 9,
-   "name": "Arteche",
+   "name": "N. Arteche",
    "side": "home"
   },
   "P0611": {
@@ -192,7 +192,7 @@
    "distance_m": 10935,
    "top_speed_kmh": 30.9,
    "sprints": 13,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "away"
   },
   "P0620": {
@@ -205,7 +205,7 @@
    "distance_m": 8756,
    "top_speed_kmh": 30.0,
    "sprints": 2,
-   "name": "Santoro",
+   "name": "S. Santoro",
    "side": "away"
   },
   "P0609": {
@@ -225,7 +225,7 @@
    "distance_m": 7917,
    "top_speed_kmh": 29.9,
    "sprints": 2,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "away"
   },
   "P0604": {
@@ -272,7 +272,7 @@
    "distance_m": 10275,
    "top_speed_kmh": 31.1,
    "sprints": 12,
-   "name": "Lozano",
+   "name": "J. Lozano",
    "side": "home"
   },
   "P0301": {
@@ -311,7 +311,7 @@
    "distance_m": 5020,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "away"
   },
   "P0619": {
@@ -335,7 +335,7 @@
    "distance_m": 2458,
    "top_speed_kmh": 34.1,
    "sprints": 7,
-   "name": "Lombardo",
+   "name": "N. Lombardo",
    "side": "away"
   },
   "P0316": {
@@ -365,7 +365,7 @@
    "distance_m": 966,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "S. Ferraresi",
    "side": "away"
   },
   "P0313": {
@@ -374,7 +374,7 @@
    "distance_m": 899,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Arteche",
+   "name": "D. Arteche",
    "side": "home"
   },
   "P0613": {

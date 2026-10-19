@@ -63,7 +63,7 @@
       {
         "player_id": "P0801",
         "name": "Charlie Bramley",
-        "short_name": "Bramley",
+        "short_name": "C. Bramley",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -91,7 +91,7 @@
       {
         "player_id": "P0802",
         "name": "Harry Marlow",
-        "short_name": "Marlow",
+        "short_name": "H. Marlow",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -147,7 +147,7 @@
       {
         "player_id": "P0804",
         "name": "Musa Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "M. Olatunji",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -231,7 +231,7 @@
       {
         "player_id": "P0807",
         "name": "Femi Olatunji",
-        "short_name": "Olatunji",
+        "short_name": "F. Olatunji",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P0809",
         "name": "George Marlow",
-        "short_name": "Marlow",
+        "short_name": "G. Marlow",
         "shirt": 11,
         "position": "LM",
         "group": "WM",
@@ -315,7 +315,7 @@
       {
         "player_id": "P0810",
         "name": "Harry Bramley",
-        "short_name": "Bramley",
+        "short_name": "H. Bramley",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -485,7 +485,7 @@
       {
         "player_id": "P0816",
         "name": "Charlie Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0818",
         "name": "Owen Marlow",
-        "short_name": "Marlow",
+        "short_name": "O. Marlow",
         "shirt": 16,
         "position": "RW",
         "group": "W",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0820",
         "name": "Tunde Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "T. Nwosu",
         "shirt": 19,
         "position": "RCM",
         "group": "CM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0821",
         "name": "Lewis Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "L. Whitfield",
         "shirt": 17,
         "position": "CB",
         "group": "CB",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0823",
         "name": "Ifeanyi Nwosu",
-        "short_name": "Nwosu",
+        "short_name": "I. Nwosu",
         "shirt": 29,
         "position": "GK",
         "group": "GK",
@@ -1425,7 +1425,7 @@
     "players": [
       {
         "player_id": "P0801",
-        "name": "Bramley",
+        "name": "C. Bramley",
         "season": {
           "apps": 15,
           "minutes": 1477,
@@ -1452,7 +1452,7 @@
       },
       {
         "player_id": "P0802",
-        "name": "Marlow",
+        "name": "H. Marlow",
         "season": {
           "apps": 15,
           "minutes": 1477,
@@ -1492,7 +1492,7 @@
       },
       {
         "player_id": "P0804",
-        "name": "Olatunji",
+        "name": "M. Olatunji",
         "season": {
           "apps": 13,
           "minutes": 879,
@@ -1552,7 +1552,7 @@
       },
       {
         "player_id": "P0807",
-        "name": "Olatunji",
+        "name": "F. Olatunji",
         "season": {
           "apps": 13,
           "minutes": 1219,
@@ -1592,7 +1592,7 @@
       },
       {
         "player_id": "P0809",
-        "name": "Marlow",
+        "name": "G. Marlow",
         "season": {
           "apps": 15,
           "minutes": 1475,
@@ -1612,7 +1612,7 @@
       },
       {
         "player_id": "P0810",
-        "name": "Bramley",
+        "name": "H. Bramley",
         "season": {
           "apps": 14,
           "minutes": 790,
@@ -1739,7 +1739,7 @@
       },
       {
         "player_id": "P0816",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 7,
           "minutes": 372,
@@ -1779,7 +1779,7 @@
       },
       {
         "player_id": "P0818",
-        "name": "Marlow",
+        "name": "O. Marlow",
         "season": {
           "apps": 6,
           "minutes": 115,
@@ -1819,7 +1819,7 @@
       },
       {
         "player_id": "P0820",
-        "name": "Nwosu",
+        "name": "T. Nwosu",
         "season": {
           "apps": 8,
           "minutes": 519,
@@ -1839,7 +1839,7 @@
       },
       {
         "player_id": "P0821",
-        "name": "Whitfield",
+        "name": "L. Whitfield",
         "season": {
           "apps": 5,
           "minutes": 219,
@@ -1879,7 +1879,7 @@
       },
       {
         "player_id": "P0823",
-        "name": "Nwosu",
+        "name": "I. Nwosu",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2368,7 +2368,7 @@
     "milestones_watch": [
       {
         "player_id": "P0801",
-        "name": "Bramley",
+        "name": "C. Bramley",
         "type": "career_apps",
         "target": 100,
         "needed": 1

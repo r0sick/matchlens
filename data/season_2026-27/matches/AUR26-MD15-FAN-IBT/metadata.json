@@ -63,7 +63,7 @@
       {
         "player_id": "P0701",
         "name": "Álvaro Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "Á. Valcárcel",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -147,7 +147,7 @@
       {
         "player_id": "P0704",
         "name": "Francisco Lobato",
-        "short_name": "Lobato",
+        "short_name": "F. Lobato",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -203,7 +203,7 @@
       {
         "player_id": "P0706",
         "name": "Gonçalo Lobato",
-        "short_name": "Lobato",
+        "short_name": "G. Lobato",
         "shirt": 7,
         "position": "RM",
         "group": "WM",
@@ -315,7 +315,7 @@
       {
         "player_id": "P0710",
         "name": "Rúben Lobato",
-        "short_name": "Lobato",
+        "short_name": "R. Lobato",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -401,7 +401,7 @@
       {
         "player_id": "P0713",
         "name": "Vítor Lobato",
-        "short_name": "Lobato",
+        "short_name": "V. Lobato",
         "shirt": 19,
         "position": "CB",
         "group": "CB",
@@ -485,7 +485,7 @@
       {
         "player_id": "P0716",
         "name": "Miguel Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "M. Mendonça",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0720",
         "name": "Hugo Valcárcel",
-        "short_name": "Valcárcel",
+        "short_name": "H. Valcárcel",
         "shirt": 27,
         "position": "RCM",
         "group": "CM",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0722",
         "name": "André Mendonça",
-        "short_name": "Mendonça",
+        "short_name": "A. Mendonça",
         "shirt": 30,
         "position": "RW",
         "group": "W",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0723",
         "name": "Nuno Lobato",
-        "short_name": "Lobato",
+        "short_name": "N. Lobato",
         "shirt": 16,
         "position": "GK",
         "group": "GK",
@@ -762,7 +762,7 @@
       {
         "player_id": "P1013",
         "name": "Callum Thorne",
-        "short_name": "Thorne",
+        "short_name": "C. Thorne",
         "shirt": 34,
         "position": "RCB",
         "group": "CB",
@@ -790,7 +790,7 @@
       {
         "player_id": "P1003",
         "name": "Harry Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "H. Cartwright",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P1004",
         "name": "Ren Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "R. Tanabe",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -874,7 +874,7 @@
       {
         "player_id": "P1006",
         "name": "Owen Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "O. Cartwright",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -902,7 +902,7 @@
       {
         "player_id": "P1007",
         "name": "Brandon Crawford",
-        "short_name": "Crawford",
+        "short_name": "B. Crawford",
         "shirt": 3,
         "position": "DM",
         "group": "DM",
@@ -958,7 +958,7 @@
       {
         "player_id": "P1009",
         "name": "Alfie Thorne",
-        "short_name": "Thorne",
+        "short_name": "A. Thorne",
         "shirt": 7,
         "position": "LWB",
         "group": "FB",
@@ -986,7 +986,7 @@
       {
         "player_id": "P1010",
         "name": "Grant Crawford",
-        "short_name": "Crawford",
+        "short_name": "G. Crawford",
         "shirt": 9,
         "position": "RST",
         "group": "ST",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P1008",
         "name": "George Calloway",
-        "short_name": "Calloway",
+        "short_name": "G. Calloway",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -1156,7 +1156,7 @@
       {
         "player_id": "P1015",
         "name": "Callum Calloway",
-        "short_name": "Calloway",
+        "short_name": "C. Calloway",
         "shirt": 22,
         "position": "DM",
         "group": "DM",
@@ -1184,7 +1184,7 @@
       {
         "player_id": "P1017",
         "name": "Reece Thorne",
-        "short_name": "Thorne",
+        "short_name": "R. Thorne",
         "shirt": 20,
         "position": "CAM",
         "group": "AM",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P1019",
         "name": "Lewis Calloway",
-        "short_name": "Calloway",
+        "short_name": "L. Calloway",
         "shirt": 37,
         "position": "ST",
         "group": "ST",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P1020",
         "name": "Takumi Tanabe",
-        "short_name": "Tanabe",
+        "short_name": "T. Tanabe",
         "shirt": 35,
         "position": "RCM",
         "group": "CM",
@@ -1425,7 +1425,7 @@
     "players": [
       {
         "player_id": "P0701",
-        "name": "Valcárcel",
+        "name": "Á. Valcárcel",
         "season": {
           "apps": 14,
           "minutes": 1373,
@@ -1485,7 +1485,7 @@
       },
       {
         "player_id": "P0704",
-        "name": "Lobato",
+        "name": "F. Lobato",
         "season": {
           "apps": 13,
           "minutes": 1000,
@@ -1525,7 +1525,7 @@
       },
       {
         "player_id": "P0706",
-        "name": "Lobato",
+        "name": "G. Lobato",
         "season": {
           "apps": 14,
           "minutes": 1255,
@@ -1605,7 +1605,7 @@
       },
       {
         "player_id": "P0710",
-        "name": "Lobato",
+        "name": "R. Lobato",
         "season": {
           "apps": 14,
           "minutes": 871,
@@ -1665,7 +1665,7 @@
       },
       {
         "player_id": "P0713",
-        "name": "Lobato",
+        "name": "V. Lobato",
         "season": {
           "apps": 2,
           "minutes": 98,
@@ -1732,7 +1732,7 @@
       },
       {
         "player_id": "P0716",
-        "name": "Mendonça",
+        "name": "M. Mendonça",
         "season": {
           "apps": 4,
           "minutes": 180,
@@ -1819,7 +1819,7 @@
       },
       {
         "player_id": "P0720",
-        "name": "Valcárcel",
+        "name": "H. Valcárcel",
         "season": {
           "apps": 6,
           "minutes": 384,
@@ -1859,7 +1859,7 @@
       },
       {
         "player_id": "P0722",
-        "name": "Mendonça",
+        "name": "A. Mendonça",
         "season": {
           "apps": 12,
           "minutes": 330,
@@ -1879,7 +1879,7 @@
       },
       {
         "player_id": "P0723",
-        "name": "Lobato",
+        "name": "N. Lobato",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1939,7 +1939,7 @@
       },
       {
         "player_id": "P1003",
-        "name": "Cartwright",
+        "name": "H. Cartwright",
         "season": {
           "apps": 13,
           "minutes": 977,
@@ -1959,7 +1959,7 @@
       },
       {
         "player_id": "P1004",
-        "name": "Tanabe",
+        "name": "R. Tanabe",
         "season": {
           "apps": 13,
           "minutes": 1247,
@@ -1999,7 +1999,7 @@
       },
       {
         "player_id": "P1006",
-        "name": "Cartwright",
+        "name": "O. Cartwright",
         "season": {
           "apps": 13,
           "minutes": 1272,
@@ -2019,7 +2019,7 @@
       },
       {
         "player_id": "P1007",
-        "name": "Crawford",
+        "name": "B. Crawford",
         "season": {
           "apps": 11,
           "minutes": 944,
@@ -2039,7 +2039,7 @@
       },
       {
         "player_id": "P1008",
-        "name": "Calloway",
+        "name": "G. Calloway",
         "season": {
           "apps": 13,
           "minutes": 1165,
@@ -2059,7 +2059,7 @@
       },
       {
         "player_id": "P1009",
-        "name": "Thorne",
+        "name": "A. Thorne",
         "season": {
           "apps": 13,
           "minutes": 1272,
@@ -2079,7 +2079,7 @@
       },
       {
         "player_id": "P1010",
-        "name": "Crawford",
+        "name": "G. Crawford",
         "season": {
           "apps": 14,
           "minutes": 932,
@@ -2139,7 +2139,7 @@
       },
       {
         "player_id": "P1013",
-        "name": "Thorne",
+        "name": "C. Thorne",
         "season": {
           "apps": 4,
           "minutes": 130,
@@ -2179,7 +2179,7 @@
       },
       {
         "player_id": "P1015",
-        "name": "Calloway",
+        "name": "C. Calloway",
         "season": {
           "apps": 5,
           "minutes": 361,
@@ -2219,7 +2219,7 @@
       },
       {
         "player_id": "P1017",
-        "name": "Thorne",
+        "name": "R. Thorne",
         "season": {
           "apps": 6,
           "minutes": 124,
@@ -2259,7 +2259,7 @@
       },
       {
         "player_id": "P1019",
-        "name": "Calloway",
+        "name": "L. Calloway",
         "season": {
           "apps": 13,
           "minutes": 618,
@@ -2279,7 +2279,7 @@
       },
       {
         "player_id": "P1020",
-        "name": "Tanabe",
+        "name": "T. Tanabe",
         "season": {
           "apps": 3,
           "minutes": 182,
@@ -2361,7 +2361,7 @@
     "milestones_watch": [
       {
         "player_id": "P0713",
-        "name": "Lobato",
+        "name": "V. Lobato",
         "type": "career_apps",
         "target": 200,
         "needed": 1

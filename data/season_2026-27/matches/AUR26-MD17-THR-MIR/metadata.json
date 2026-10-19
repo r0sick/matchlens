@@ -231,7 +231,7 @@
       {
         "player_id": "P0107",
         "name": "Jules Delattre",
-        "short_name": "Delattre",
+        "short_name": "J. Delattre",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -343,7 +343,7 @@
       {
         "player_id": "P0122",
         "name": "Mason Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "M. Cartwright",
         "shirt": 29,
         "position": "LW",
         "group": "W",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0117",
         "name": "Baptiste Delattre",
-        "short_name": "Delattre",
+        "short_name": "B. Delattre",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0118",
         "name": "Owen Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "O. Whitfield",
         "shirt": 17,
         "position": "RW",
         "group": "W",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0120",
         "name": "George Cartwright",
-        "short_name": "Cartwright",
+        "short_name": "G. Cartwright",
         "shirt": 25,
         "position": "RCM",
         "group": "CM",
@@ -653,7 +653,7 @@
       {
         "player_id": "P0121",
         "name": "Callum Whitfield",
-        "short_name": "Whitfield",
+        "short_name": "C. Whitfield",
         "shirt": 43,
         "position": "CB",
         "group": "CB",
@@ -762,7 +762,7 @@
       {
         "player_id": "P0302",
         "name": "Javi Lozano",
-        "short_name": "Lozano",
+        "short_name": "J. Lozano",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0304",
         "name": "Tomás Villalba",
-        "short_name": "Villalba",
+        "short_name": "T. Villalba",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0305",
         "name": "Dani Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "D. Mendívil",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0309",
         "name": "Javi Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "J. Mendívil",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0312",
         "name": "Nacho Lozano",
-        "short_name": "Lozano",
+        "short_name": "N. Lozano",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0313",
         "name": "Dani Arteche",
-        "short_name": "Arteche",
+        "short_name": "D. Arteche",
         "shirt": 35,
         "position": "CB",
         "group": "CB",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0315",
         "name": "Nacho Arteche",
-        "short_name": "Arteche",
+        "short_name": "N. Arteche",
         "shirt": 36,
         "position": "DM",
         "group": "DM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0320",
         "name": "Rubén Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "R. Mendívil",
         "shirt": 41,
         "position": "RCM",
         "group": "CM",
@@ -1324,7 +1324,7 @@
       {
         "player_id": "P0322",
         "name": "Nahuel Villalba",
-        "short_name": "Villalba",
+        "short_name": "N. Villalba",
         "shirt": 14,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0323",
         "name": "Hugo Arteche",
-        "short_name": "Arteche",
+        "short_name": "H. Arteche",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1545,7 +1545,7 @@
       },
       {
         "player_id": "P0107",
-        "name": "Delattre",
+        "name": "J. Delattre",
         "season": {
           "apps": 16,
           "minutes": 1251,
@@ -1752,7 +1752,7 @@
       },
       {
         "player_id": "P0117",
-        "name": "Delattre",
+        "name": "B. Delattre",
         "season": {
           "apps": 1,
           "minutes": 16,
@@ -1772,7 +1772,7 @@
       },
       {
         "player_id": "P0118",
-        "name": "Whitfield",
+        "name": "O. Whitfield",
         "season": {
           "apps": 12,
           "minutes": 516,
@@ -1812,7 +1812,7 @@
       },
       {
         "player_id": "P0120",
-        "name": "Cartwright",
+        "name": "G. Cartwright",
         "season": {
           "apps": 10,
           "minutes": 384,
@@ -1832,7 +1832,7 @@
       },
       {
         "player_id": "P0121",
-        "name": "Whitfield",
+        "name": "C. Whitfield",
         "season": {
           "apps": 3,
           "minutes": 42,
@@ -1852,7 +1852,7 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "season": {
           "apps": 7,
           "minutes": 346,
@@ -1919,7 +1919,7 @@
       },
       {
         "player_id": "P0302",
-        "name": "Lozano",
+        "name": "J. Lozano",
         "season": {
           "apps": 15,
           "minutes": 1240,
@@ -1959,7 +1959,7 @@
       },
       {
         "player_id": "P0304",
-        "name": "Villalba",
+        "name": "T. Villalba",
         "season": {
           "apps": 15,
           "minutes": 1454,
@@ -1979,7 +1979,7 @@
       },
       {
         "player_id": "P0305",
-        "name": "Mendívil",
+        "name": "D. Mendívil",
         "season": {
           "apps": 15,
           "minutes": 1385,
@@ -2059,7 +2059,7 @@
       },
       {
         "player_id": "P0309",
-        "name": "Mendívil",
+        "name": "J. Mendívil",
         "season": {
           "apps": 15,
           "minutes": 1049,
@@ -2133,7 +2133,7 @@
       },
       {
         "player_id": "P0312",
-        "name": "Lozano",
+        "name": "N. Lozano",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2153,7 +2153,7 @@
       },
       {
         "player_id": "P0313",
-        "name": "Arteche",
+        "name": "D. Arteche",
         "season": {
           "apps": 11,
           "minutes": 277,
@@ -2193,7 +2193,7 @@
       },
       {
         "player_id": "P0315",
-        "name": "Arteche",
+        "name": "N. Arteche",
         "season": {
           "apps": 6,
           "minutes": 408,
@@ -2293,7 +2293,7 @@
       },
       {
         "player_id": "P0320",
-        "name": "Mendívil",
+        "name": "R. Mendívil",
         "season": {
           "apps": 6,
           "minutes": 343,
@@ -2333,7 +2333,7 @@
       },
       {
         "player_id": "P0322",
-        "name": "Villalba",
+        "name": "N. Villalba",
         "season": {
           "apps": 11,
           "minutes": 539,
@@ -2353,7 +2353,7 @@
       },
       {
         "player_id": "P0323",
-        "name": "Arteche",
+        "name": "H. Arteche",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2382,14 +2382,14 @@
       },
       {
         "player_id": "P0122",
-        "name": "Cartwright",
+        "name": "M. Cartwright",
         "type": "career_goals",
         "target": 25,
         "needed": 2
       },
       {
         "player_id": "P0309",
-        "name": "Mendívil",
+        "name": "J. Mendívil",
         "type": "career_apps",
         "target": 150,
         "needed": 1

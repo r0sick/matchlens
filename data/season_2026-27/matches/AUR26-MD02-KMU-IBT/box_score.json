@@ -127,7 +127,7 @@
    "distance_m": 8448,
    "top_speed_kmh": 30.5,
    "sprints": 17,
-   "name": "Calloway",
+   "name": "L. Calloway",
    "side": "away"
   },
   "P0203": {
@@ -150,7 +150,7 @@
    "distance_m": 10553,
    "top_speed_kmh": 32.4,
    "sprints": 12,
-   "name": "Thorne",
+   "name": "A. Thorne",
    "side": "away"
   },
   "P1008": {
@@ -161,7 +161,7 @@
    "distance_m": 11404,
    "top_speed_kmh": 31.3,
    "sprints": 8,
-   "name": "Calloway",
+   "name": "G. Calloway",
    "side": "away"
   },
   "P1005": {
@@ -211,7 +211,7 @@
    "distance_m": 11445,
    "top_speed_kmh": 30.8,
    "sprints": 13,
-   "name": "Cartwright",
+   "name": "O. Cartwright",
    "side": "away"
   },
   "P1010": {
@@ -225,7 +225,7 @@
    "distance_m": 9913,
    "top_speed_kmh": 31.9,
    "sprints": 27,
-   "name": "Crawford",
+   "name": "G. Crawford",
    "side": "away"
   },
   "P1007": {
@@ -237,7 +237,7 @@
    "distance_m": 11173,
    "top_speed_kmh": 29.9,
    "sprints": 6,
-   "name": "Crawford",
+   "name": "B. Crawford",
    "side": "away"
   },
   "P1002": {
@@ -290,7 +290,7 @@
    "distance_m": 9734,
    "top_speed_kmh": 29.0,
    "sprints": 10,
-   "name": "Tanabe",
+   "name": "R. Tanabe",
    "side": "away"
   },
   "P1003": {
@@ -301,7 +301,7 @@
    "distance_m": 9497,
    "top_speed_kmh": 26.4,
    "sprints": 7,
-   "name": "Cartwright",
+   "name": "H. Cartwright",
    "side": "away"
   },
   "P0201": {

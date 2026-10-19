@@ -95,7 +95,7 @@
    "distance_m": 10826,
    "top_speed_kmh": 32.4,
    "sprints": 11,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "away"
   },
   "P0408": {
@@ -116,7 +116,7 @@
    "distance_m": 8213,
    "top_speed_kmh": 30.5,
    "sprints": 6,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "home"
   },
   "P0922": {
@@ -139,7 +139,7 @@
    "distance_m": 10558,
    "top_speed_kmh": 35.0,
    "sprints": 11,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "home"
   },
   "P0417": {
@@ -176,7 +176,7 @@
    "distance_m": 6746,
    "top_speed_kmh": 30.6,
    "sprints": 11,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "away"
   },
   "P0915": {
@@ -234,7 +234,7 @@
    "distance_m": 7500,
    "top_speed_kmh": 33.5,
    "sprints": 21,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "away"
   },
   "P0406": {
@@ -298,7 +298,7 @@
    "distance_m": 5166,
    "top_speed_kmh": 23.4,
    "sprints": 1,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "home"
   },
   "P0416": {
@@ -327,7 +327,7 @@
    "distance_m": 4444,
    "top_speed_kmh": 31.4,
    "sprints": 3,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "home"
   },
   "P0920": {
@@ -361,7 +361,7 @@
    "distance_m": 3747,
    "top_speed_kmh": 33.3,
    "sprints": 4,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "away"
   },
   "P0919": {
@@ -397,7 +397,7 @@
    "distance_m": 915,
    "top_speed_kmh": 29.1,
    "sprints": 3,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "home"
   },
   "P0917": {
@@ -406,14 +406,14 @@
    "distance_m": 1636,
    "top_speed_kmh": 28.4,
    "sprints": 1,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "away"
   },
   "P0421": {
    "distance_m": 1510,
    "top_speed_kmh": 28.9,
    "sprints": 2,
-   "name": "Fontaine",
+   "name": "J. Fontaine",
    "side": "home"
   }
  },

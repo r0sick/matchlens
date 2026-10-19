@@ -106,7 +106,7 @@
    "distance_m": 8672,
    "top_speed_kmh": 26.5,
    "sprints": 1,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "away"
   },
   "P0211": {
@@ -200,7 +200,7 @@
    "distance_m": 9251,
    "top_speed_kmh": 33.8,
    "sprints": 9,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "away"
   },
   "P0903": {
@@ -235,7 +235,7 @@
    "distance_m": 11003,
    "top_speed_kmh": 33.9,
    "sprints": 20,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "away"
   },
   "P0203": {
@@ -312,7 +312,7 @@
    "distance_m": 10546,
    "top_speed_kmh": 35.2,
    "sprints": 19,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "away"
   },
   "P0201": {
@@ -403,7 +403,7 @@
    "distance_m": 1826,
    "top_speed_kmh": 29.6,
    "sprints": 1,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "away"
   },
   "P0213": {
@@ -423,7 +423,7 @@
    "distance_m": 1052,
    "top_speed_kmh": 29.5,
    "sprints": 3,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "away"
   }
  },

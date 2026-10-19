@@ -80,7 +80,7 @@
    "distance_m": 11236,
    "top_speed_kmh": 31.9,
    "sprints": 9,
-   "name": "Olatunji",
+   "name": "F. Olatunji",
    "side": "home"
   },
   "P0908": {
@@ -150,7 +150,7 @@
    "distance_m": 10640,
    "top_speed_kmh": 35.0,
    "sprints": 17,
-   "name": "Marlow",
+   "name": "G. Marlow",
    "side": "home"
   },
   "P0907": {
@@ -161,7 +161,7 @@
    "distance_m": 7401,
    "top_speed_kmh": 28.4,
    "sprints": 2,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "away"
   },
   "P0808": {
@@ -198,7 +198,7 @@
    "distance_m": 6603,
    "top_speed_kmh": 35.6,
    "sprints": 8,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "away"
   },
   "P0804": {
@@ -208,7 +208,7 @@
    "distance_m": 6701,
    "top_speed_kmh": 27.7,
    "sprints": 4,
-   "name": "Olatunji",
+   "name": "M. Olatunji",
    "side": "home"
   },
   "P0911": {
@@ -231,7 +231,7 @@
    "distance_m": 10931,
    "top_speed_kmh": 34.9,
    "sprints": 16,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "away"
   },
   "P0902": {
@@ -265,7 +265,7 @@
    "distance_m": 10314,
    "top_speed_kmh": 30.8,
    "sprints": 15,
-   "name": "Marlow",
+   "name": "H. Marlow",
    "side": "home"
   },
   "P0913": {
@@ -276,7 +276,7 @@
    "distance_m": 9950,
    "top_speed_kmh": 29.3,
    "sprints": 5,
-   "name": "Visser",
+   "name": "L. Visser",
    "side": "away"
   },
   "P0803": {
@@ -307,7 +307,7 @@
    "distance_m": 5079,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Bramley",
+   "name": "C. Bramley",
    "side": "home"
   },
   "P0901": {
@@ -328,7 +328,7 @@
    "distance_m": 3849,
    "top_speed_kmh": 33.6,
    "sprints": 3,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "away"
   },
   "P0919": {
@@ -354,7 +354,7 @@
    "distance_m": 3523,
    "top_speed_kmh": 30.6,
    "sprints": 8,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "away"
   },
   "P0918": {
@@ -367,7 +367,7 @@
    "distance_m": 3645,
    "top_speed_kmh": 31.4,
    "sprints": 6,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "away"
   },
   "P0820": {
@@ -380,7 +380,7 @@
    "distance_m": 2789,
    "top_speed_kmh": 28.1,
    "sprints": 5,
-   "name": "Nwosu",
+   "name": "T. Nwosu",
    "side": "home"
   },
   "P0904": {
@@ -409,7 +409,7 @@
    "distance_m": 1919,
    "top_speed_kmh": 32.3,
    "sprints": 3,
-   "name": "Bramley",
+   "name": "H. Bramley",
    "side": "home"
   },
   "P0814": {
@@ -427,7 +427,7 @@
    "distance_m": 1906,
    "top_speed_kmh": 30.2,
    "sprints": 2,
-   "name": "Whitfield",
+   "name": "L. Whitfield",
    "side": "home"
   }
  },

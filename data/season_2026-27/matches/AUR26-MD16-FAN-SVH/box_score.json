@@ -69,7 +69,7 @@
    "distance_m": 9776,
    "top_speed_kmh": 33.1,
    "sprints": 17,
-   "name": "Lobato",
+   "name": "R. Lobato",
    "side": "home"
   },
   "P0707": {
@@ -97,7 +97,7 @@
    "distance_m": 10784,
    "top_speed_kmh": 32.2,
    "sprints": 20,
-   "name": "Lobato",
+   "name": "G. Lobato",
    "side": "home"
   },
   "P0511": {
@@ -110,7 +110,7 @@
    "distance_m": 7564,
    "top_speed_kmh": 35.8,
    "sprints": 16,
-   "name": "Krämer",
+   "name": "N. Krämer",
    "side": "away"
   },
   "P0719": {
@@ -160,7 +160,7 @@
    "distance_m": 7056,
    "top_speed_kmh": 29.3,
    "sprints": 7,
-   "name": "Krämer",
+   "name": "J. Krämer",
    "side": "away"
   },
   "P0709": {
@@ -209,7 +209,7 @@
    "distance_m": 9322,
    "top_speed_kmh": 28.6,
    "sprints": 6,
-   "name": "Lobato",
+   "name": "V. Lobato",
    "side": "home"
   },
   "P0708": {
@@ -232,7 +232,7 @@
    "distance_m": 9454,
    "top_speed_kmh": 30.1,
    "sprints": 5,
-   "name": "Lobato",
+   "name": "F. Lobato",
    "side": "home"
   },
   "P0502": {
@@ -316,7 +316,7 @@
    "distance_m": 5021,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Valcárcel",
+   "name": "Á. Valcárcel",
    "side": "home"
   },
   "P0521": {
@@ -330,7 +330,7 @@
    "distance_m": 10267,
    "top_speed_kmh": 32.8,
    "sprints": 6,
-   "name": "Albrecht",
+   "name": "Felix Albrecht",
    "side": "away"
   },
   "P0513": {
@@ -340,7 +340,7 @@
    "distance_m": 3145,
    "top_speed_kmh": 29.6,
    "sprints": 4,
-   "name": "Ostermann",
+   "name": "J. Ostermann",
    "side": "away"
   },
   "P0518": {

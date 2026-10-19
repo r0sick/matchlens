@@ -79,7 +79,7 @@
    "distance_m": 11468,
    "top_speed_kmh": 28.3,
    "sprints": 8,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "home"
   },
   "P0908": {
@@ -131,7 +131,7 @@
    "distance_m": 10740,
    "top_speed_kmh": 34.2,
    "sprints": 24,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0407": {
@@ -157,7 +157,7 @@
    "distance_m": 6709,
    "top_speed_kmh": 32.2,
    "sprints": 8,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "away"
   },
   "P0410": {
@@ -217,7 +217,7 @@
    "distance_m": 8020,
    "top_speed_kmh": 32.4,
    "sprints": 13,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "home"
   },
   "P0401": {
@@ -226,7 +226,7 @@
    "distance_m": 5299,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0404": {
@@ -286,7 +286,7 @@
    "distance_m": 10945,
    "top_speed_kmh": 32.3,
    "sprints": 16,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "home"
   },
   "P0903": {
@@ -322,7 +322,7 @@
    "distance_m": 7426,
    "top_speed_kmh": 29.0,
    "sprints": 4,
-   "name": "Fontaine",
+   "name": "J. Fontaine",
    "side": "away"
   },
   "P0416": {
@@ -359,7 +359,7 @@
    "distance_m": 3780,
    "top_speed_kmh": 33.3,
    "sprints": 5,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "home"
   },
   "P0415": {
@@ -369,7 +369,7 @@
    "distance_m": 2864,
    "top_speed_kmh": 28.0,
    "sprints": 2,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "away"
   },
   "P0922": {
@@ -390,7 +390,7 @@
    "distance_m": 2522,
    "top_speed_kmh": 31.8,
    "sprints": 3,
-   "name": "van Rijn",
+   "name": "B. van Rijn",
    "side": "home"
   },
   "P0918": {
@@ -402,7 +402,7 @@
    "distance_m": 2657,
    "top_speed_kmh": 31.6,
    "sprints": 5,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "home"
   },
   "P0413": {
@@ -422,7 +422,7 @@
    "distance_m": 2283,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   }
  },

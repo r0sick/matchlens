@@ -486,15 +486,18 @@ class MatchState:
         """Simple, explainable live rating (6.0 baseline)."""
         if Q["group"] != "GK" and Q["passes"] + Q["shots"] + Q["tackles"] + Q["pressures"] == 0:
             return 6.0
-        r = 6.0
-        r += 1.0 * Q["goals"] + 0.7 * Q["assists"] + 0.15 * Q["key_passes"] + 0.6 * Q["xg"] + 0.4 * Q["xa"]
-        r += 0.12 * Q["shots_on_target"] + 0.10 * Q["tackles_won"] + 0.10 * Q["interceptions"]
-        r += 0.08 * Q["dribbles_complete"] + 0.05 * Q["aerials_won"] + 0.04 * Q["clearances"]
-        r += 0.04 * Q["progressive_passes"] + 0.03 * Q["progressive_carries"] + 0.05 * Q["passes_into_box"]
-        r += 0.004 * Q["passes_complete"] - 0.015 * (Q["passes"] - Q["passes_complete"])
-        r -= 0.06 * Q["dispossessed"] + 0.4 * Q["yellow"] + 1.5 * Q["red"]
+        # all-round contribution, damped so a normal game lands around 6.5-7.5 (calibrated on the simulated season)
+        perf = 0.15 * Q["key_passes"] + 0.6 * Q["xg"] + 0.4 * Q["xa"]
+        perf += 0.12 * Q["shots_on_target"] + 0.10 * Q["tackles_won"] + 0.10 * Q["interceptions"]
+        perf += 0.08 * Q["dribbles_complete"] + 0.05 * Q["aerials_won"] + 0.04 * Q["clearances"]
+        perf += 0.04 * Q["progressive_passes"] + 0.03 * Q["progressive_carries"] + 0.05 * Q["passes_into_box"]
+        perf += 0.004 * Q["passes_complete"] - 0.015 * (Q["passes"] - Q["passes_complete"]) - 0.06 * Q["dispossessed"]
         if Q["group"] == "GK":
-            r += 0.35 * Q["saves"] - 0.30 * Q["goals_conceded"]
+            perf += 0.35 * Q["saves"]
+        # decisive moments count in full
+        r = 6.0 + 0.55 * perf + 1.0 * Q["goals"] + 0.6 * Q["assists"] - 0.4 * Q["yellow"] - 1.5 * Q["red"]
+        if Q["group"] == "GK":
+            r -= 0.30 * Q["goals_conceded"]
         return round(max(3.0, min(10.0, r)), 1)
 
     def player_view(self, pid):

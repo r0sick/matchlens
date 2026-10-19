@@ -138,7 +138,7 @@
    "distance_m": 8270,
    "top_speed_kmh": 27.0,
    "sprints": 4,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "away"
   },
   "P0605": {
@@ -162,7 +162,7 @@
    "distance_m": 11452,
    "top_speed_kmh": 29.9,
    "sprints": 10,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "away"
   },
   "P0608": {
@@ -175,7 +175,7 @@
    "distance_m": 11589,
    "top_speed_kmh": 32.5,
    "sprints": 7,
-   "name": "Lombardo",
+   "name": "M. Lombardo",
    "side": "away"
   },
   "P0610": {
@@ -226,7 +226,7 @@
    "distance_m": 5220,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "away"
   },
   "P0611": {
@@ -360,7 +360,7 @@
    "distance_m": 1173,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "S. Ferraresi",
    "side": "away"
   },
   "P0207": {
@@ -384,7 +384,7 @@
    "distance_m": 1408,
    "top_speed_kmh": 34.9,
    "sprints": 4,
-   "name": "Lombardo",
+   "name": "N. Lombardo",
    "side": "away"
   },
   "P0208": {

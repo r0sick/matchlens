@@ -78,7 +78,7 @@
    "distance_m": 11174,
    "top_speed_kmh": 31.3,
    "sprints": 9,
-   "name": "Arteche",
+   "name": "N. Arteche",
    "side": "home"
   },
   "P0304": {
@@ -91,7 +91,7 @@
    "distance_m": 9676,
    "top_speed_kmh": 29.4,
    "sprints": 5,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "home"
   },
   "P0311": {
@@ -145,7 +145,7 @@
    "distance_m": 7227,
    "top_speed_kmh": 32.4,
    "sprints": 9,
-   "name": "Mendívil",
+   "name": "J. Mendívil",
    "side": "home"
   },
   "P0410": {
@@ -171,7 +171,7 @@
    "distance_m": 8368,
    "top_speed_kmh": 31.8,
    "sprints": 12,
-   "name": "Lozano",
+   "name": "J. Lozano",
    "side": "home"
   },
   "P0415": {
@@ -183,7 +183,7 @@
    "distance_m": 8018,
    "top_speed_kmh": 29.9,
    "sprints": 2,
-   "name": "Lefèvre",
+   "name": "N. Lefèvre",
    "side": "away"
   },
   "P0408": {
@@ -207,7 +207,7 @@
    "distance_m": 10650,
    "top_speed_kmh": 31.9,
    "sprints": 12,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "home"
   },
   "P0411": {
@@ -233,7 +233,7 @@
    "distance_m": 11019,
    "top_speed_kmh": 35.5,
    "sprints": 16,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0303": {
@@ -273,7 +273,7 @@
    "distance_m": 5368,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0407": {
@@ -299,7 +299,7 @@
    "distance_m": 7795,
    "top_speed_kmh": 33.3,
    "sprints": 18,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "away"
   },
   "P0403": {
@@ -312,7 +312,7 @@
    "distance_m": 9845,
    "top_speed_kmh": 29.5,
    "sprints": 6,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   },
   "P0301": {
@@ -346,7 +346,7 @@
    "distance_m": 3170,
    "top_speed_kmh": 34.4,
    "sprints": 7,
-   "name": "Villalba",
+   "name": "N. Villalba",
    "side": "home"
   },
   "P0406": {
@@ -426,7 +426,7 @@
    "distance_m": 2152,
    "top_speed_kmh": 29.7,
    "sprints": 2,
-   "name": "Arteche",
+   "name": "D. Arteche",
    "side": "home"
   }
  },

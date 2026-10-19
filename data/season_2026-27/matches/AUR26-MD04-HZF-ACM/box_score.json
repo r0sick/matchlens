@@ -64,7 +64,7 @@
    "distance_m": 6458,
    "top_speed_kmh": 35.4,
    "sprints": 16,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "home"
   },
   "P0915": {
@@ -170,7 +170,7 @@
    "distance_m": 10803,
    "top_speed_kmh": 33.7,
    "sprints": 5,
-   "name": "Lombardo",
+   "name": "M. Lombardo",
    "side": "away"
   },
   "P0606": {
@@ -182,7 +182,7 @@
    "distance_m": 10947,
    "top_speed_kmh": 30.5,
    "sprints": 13,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "away"
   },
   "P0609": {
@@ -203,7 +203,7 @@
    "distance_m": 7130,
    "top_speed_kmh": 29.7,
    "sprints": 9,
-   "name": "Lombardo",
+   "name": "G. Lombardo",
    "side": "away"
   },
   "P0908": {
@@ -294,7 +294,7 @@
    "distance_m": 7663,
    "top_speed_kmh": 28.7,
    "sprints": 5,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "away"
   },
   "P0913": {
@@ -307,7 +307,7 @@
    "distance_m": 9675,
    "top_speed_kmh": 28.5,
    "sprints": 3,
-   "name": "Visser",
+   "name": "L. Visser",
    "side": "home"
   },
   "P0601": {
@@ -316,7 +316,7 @@
    "distance_m": 4921,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "away"
   },
   "P0907": {
@@ -327,7 +327,7 @@
    "distance_m": 6016,
    "top_speed_kmh": 28.0,
    "sprints": 5,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "home"
   },
   "P0619": {
@@ -366,7 +366,7 @@
    "distance_m": 3904,
    "top_speed_kmh": 33.6,
    "sprints": 8,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "home"
   },
   "P0618": {
@@ -378,7 +378,7 @@
    "distance_m": 2079,
    "top_speed_kmh": 33.8,
    "sprints": 3,
-   "name": "Lombardo",
+   "name": "N. Lombardo",
    "side": "away"
   },
   "P0918": {
@@ -394,7 +394,7 @@
    "distance_m": 1708,
    "top_speed_kmh": 30.5,
    "sprints": 6,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "home"
   },
   "P0617": {
@@ -403,7 +403,7 @@
    "distance_m": 1330,
    "top_speed_kmh": 29.7,
    "sprints": 2,
-   "name": "Ferraresi",
+   "name": "S. Ferraresi",
    "side": "away"
   },
   "P0904": {

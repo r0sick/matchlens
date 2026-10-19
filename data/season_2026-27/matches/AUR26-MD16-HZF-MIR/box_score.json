@@ -99,7 +99,7 @@
    "distance_m": 6804,
    "top_speed_kmh": 33.7,
    "sprints": 11,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "home"
   },
   "P0307": {
@@ -171,7 +171,7 @@
    "distance_m": 7101,
    "top_speed_kmh": 36.1,
    "sprints": 11,
-   "name": "Villalba",
+   "name": "N. Villalba",
    "side": "away"
   },
   "P0304": {
@@ -183,7 +183,7 @@
    "distance_m": 9543,
    "top_speed_kmh": 29.1,
    "sprints": 8,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "away"
   },
   "P0302": {
@@ -194,7 +194,7 @@
    "distance_m": 7270,
    "top_speed_kmh": 31.8,
    "sprints": 14,
-   "name": "Lozano",
+   "name": "J. Lozano",
    "side": "away"
   },
   "P0303": {
@@ -247,7 +247,7 @@
    "distance_m": 11467,
    "top_speed_kmh": 28.7,
    "sprints": 5,
-   "name": "Visser",
+   "name": "B. Visser",
    "side": "home"
   },
   "P0903": {
@@ -282,7 +282,7 @@
    "distance_m": 10415,
    "top_speed_kmh": 31.4,
    "sprints": 14,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "away"
   },
   "P0902": {
@@ -340,7 +340,7 @@
    "distance_m": 3994,
    "top_speed_kmh": 34.4,
    "sprints": 9,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "home"
   },
   "P0905": {
@@ -350,7 +350,7 @@
    "distance_m": 4217,
    "top_speed_kmh": 33.1,
    "sprints": 4,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "home"
   },
   "P0922": {
@@ -372,7 +372,7 @@
    "distance_m": 3674,
    "top_speed_kmh": 29.7,
    "sprints": 1,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "home"
   },
   "P0313": {
@@ -381,7 +381,7 @@
    "distance_m": 3041,
    "top_speed_kmh": 28.0,
    "sprints": 1,
-   "name": "Arteche",
+   "name": "D. Arteche",
    "side": "away"
   },
   "P0314": {
@@ -403,7 +403,7 @@
    "distance_m": 3204,
    "top_speed_kmh": 31.1,
    "sprints": 10,
-   "name": "Mendívil",
+   "name": "J. Mendívil",
    "side": "away"
   },
   "P0318": {
@@ -422,7 +422,7 @@
    "distance_m": 3182,
    "top_speed_kmh": 28.4,
    "sprints": 2,
-   "name": "Visser",
+   "name": "L. Visser",
    "side": "home"
   }
  },

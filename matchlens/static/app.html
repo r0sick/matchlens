@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MatchLens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body data-mode="broadcast">
+<header class="topbar">
+  <div class="brand">Match<span>Lens</span></div>
+  <select id="match" aria-label="Match"></select>
+  <select id="speed" aria-label="Replay speed">
+    <option value="1">Real time</option><option value="10">10×</option><option value="30">30×</option>
+    <option value="60" selected>60×</option><option value="120">120×</option><option value="600">600×</option>
+  </select>
+  <select id="from" aria-label="Start from minute">
+    <option value="0">From kick-off</option><option value="45">From half-time</option>
+    <option value="60">From 60'</option><option value="75">From 75'</option>
+  </select>
+  <button class="primary" id="watch" data-i18n="watch">Watch</button>
+  <button id="pause" data-i18n="pause">Pause</button>
+  <div class="modes" role="group" aria-label="View">
+    <button data-mode="broadcast" aria-pressed="true" data-i18n="broadcast">Broadcast</button>
+    <button data-mode="analyst" aria-pressed="false" data-i18n="analyst">Analyst</button>
+    <button data-mode="fan" aria-pressed="false" data-i18n="fan">Fan</button>
+  </div>
+  <span class="spacer"></span>
+  <span class="conn" id="conn"></span>
+  <button id="prefs" data-i18n="preferences">Preferences</button>
+</header>
+
+<main>
+  <!-- ============================== BROADCAST ============================== -->
+  <section id="broadcast" class="view">
+    <div class="stage" id="stage">
+      <div class="pitch-wrap" id="pitchwrap">
+        <svg class="pitch" id="pitch" viewBox="-2 -2 109 72" preserveAspectRatio="none" aria-label="Pitch event view"></svg>
+        <div class="tags" id="tags"></div>
+      </div>
+      <div class="bugwrap">
+        <div class="bug" id="bug" aria-live="polite">
+          <div class="t h" id="bugHc"><span id="bugH">HOME</span></div>
+          <div class="sc num" id="bugSc">0–0</div>
+          <div class="t a" id="bugAc"><span id="bugA">AWAY</span></div>
+          <div class="clk num" id="bugClk">0'</div>
+        </div>
+        <div class="wpstrip" id="wpstrip"><div id="wsH"></div><div id="wsD" style="background:#9AA3AE"></div><div id="wsA"></div></div>
+        <div class="wplabel num" id="wplabel"></div>
+      </div>
+      <div class="momo" id="momo"><span id="momoTxt"></span><div class="bar"><b></b><i id="momoBar"></i></div></div>
+      <div class="lower" id="lower" role="status"><div class="k" id="lowK"></div><div class="body"><div class="title" id="lowT"></div><div class="sub" id="lowS"></div></div></div>
+    </div>
+    <div class="below">
+      <div class="card"><h2 data-i18n="key_moments">Key moments</h2><ul class="feed" id="feedB"></ul></div>
+      <div class="card"><h2 data-i18n="match_stats">Match stats</h2><table class="statgrid" id="statsB"></table></div>
+      <div class="card"><h2 data-i18n="on_the_ball">On the ball</h2><ul class="feed" id="liveEvents"></ul>
+        <p class="hint" data-i18n="overlay_hint">Add <code>?view=overlay</code> to the address for a transparent graphics layer you can put over a video feed in OBS or vMix.</p></div>
+    </div>
+  </section>
+
+  <!-- ============================== ANALYST ============================== -->
+  <section id="analyst" class="view">
+    <div class="agrid">
+      <div class="card">
+        <h2 data-i18n="win_prob">Win probability</h2>
+        <svg class="chart" id="cWP" viewBox="0 0 640 200"></svg>
+        <div class="legend" id="lWP"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="xg_race">xG race</h2>
+        <svg class="chart" id="cXG" viewBox="0 0 560 200"></svg>
+        <div class="legend" id="lXG"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="momentum_chaos">Momentum and chaos</h2>
+        <svg class="chart" id="cMO" viewBox="0 0 640 200"></svg>
+        <div class="legend" id="lMO"></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="team_stats">Team stats</h2>
+        <table class="statgrid" id="statsA"></table>
+      </div>
+      <div class="card">
+        <h2 data-i18n="shot_map">Shot map</h2>
+        <svg class="mini-pitch" id="shotmap" viewBox="-2 -2 109 72"></svg>
+        <div class="legend" data-i18n="shot_legend">Circle size = xG. Filled = goal.</div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="pass_map">Completed passes, last 10 minutes</h2>
+        <div class="seg" role="group" id="passTeam"><button data-side="home" aria-pressed="true">Home</button><button data-side="away" aria-pressed="false">Away</button></div>
+        <svg class="mini-pitch" id="passmap" viewBox="-2 -2 109 72"></svg>
+        <div class="legend" data-i18n="pass_legend">Line colour = pass difficulty: green easy, yellow medium, red hard.</div>
+      </div>
+      <div class="card full">
+        <h2 data-i18n="players">Players</h2>
+        <div class="ptable-wrap"><table class="ptable" id="ptable"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FAN ============================== -->
+  <section id="fan" class="view">
+    <div class="fan-wrap">
+      <div class="card fanscore">
+        <div class="team"><div class="crest" id="crH"></div><span id="fnH"></span></div>
+        <div><div class="big" id="fScore">0 – 0</div><div class="min" id="fMin"></div></div>
+        <div class="team"><div class="crest" id="crA"></div><span id="fnA"></span></div>
+      </div>
+      <p class="headline" id="fHeadline"></p>
+      <div class="tug" id="tug"><div id="tugH"></div><div id="tugD" style="background:#C9CFD6"></div><div id="tugA"></div></div>
+      <div class="tugl"><span id="tugLH"></span><span id="tugLD"></span><span id="tugLA"></span></div>
+      <div class="card" id="focusCard" style="margin-top:18px"></div>
+      <div class="card" style="margin-top:18px">
+        <h2 data-i18n="story">The story so far</h2>
+        <ul class="timeline" id="timeline"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="prefsDlg">
+  <h2 data-i18n="preferences">Preferences</h2>
+  <label for="pLang" data-i18n="language">Language</label>
+  <select id="pLang"><option value="en">English</option><option value="es">Español</option></select>
+  <label for="pClub" data-i18n="fav_club">Favourite club</label>
+  <select id="pClub"></select>
+  <label for="pPlayer" data-i18n="fav_player">Player to follow</label>
+  <select id="pPlayer"></select>
+  <div class="actions"><button id="pCancel" data-i18n="cancel">Cancel</button><button class="primary" id="pSave" data-i18n="save">Save</button></div>
+</dialog>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

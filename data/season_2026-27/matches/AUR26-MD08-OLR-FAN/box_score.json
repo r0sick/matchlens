@@ -65,7 +65,7 @@
    "distance_m": 9363,
    "top_speed_kmh": 33.9,
    "sprints": 7,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "home"
   },
   "P0407": {
@@ -187,7 +187,7 @@
    "distance_m": 9485,
    "top_speed_kmh": 30.2,
    "sprints": 18,
-   "name": "Lefèvre",
+   "name": "L. Lefèvre",
    "side": "home"
   },
   "P0703": {
@@ -212,7 +212,7 @@
    "distance_m": 8724,
    "top_speed_kmh": 33.2,
    "sprints": 9,
-   "name": "Lobato",
+   "name": "G. Lobato",
    "side": "away"
   },
   "P0704": {
@@ -222,7 +222,7 @@
    "distance_m": 9119,
    "top_speed_kmh": 29.8,
    "sprints": 7,
-   "name": "Lobato",
+   "name": "F. Lobato",
    "side": "away"
   },
   "P0711": {
@@ -245,7 +245,7 @@
    "distance_m": 9183,
    "top_speed_kmh": 30.4,
    "sprints": 9,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "home"
   },
   "P0705": {
@@ -287,7 +287,7 @@
    "distance_m": 5027,
    "top_speed_kmh": 25.8,
    "sprints": 1,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "home"
   },
   "P0709": {
@@ -311,7 +311,7 @@
    "distance_m": 10204,
    "top_speed_kmh": 34.8,
    "sprints": 17,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "home"
   },
   "P0701": {
@@ -320,7 +320,7 @@
    "distance_m": 4908,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Valcárcel",
+   "name": "Á. Valcárcel",
    "side": "away"
   },
   "P0416": {
@@ -345,7 +345,7 @@
    "distance_m": 1531,
    "top_speed_kmh": 33.4,
    "sprints": 5,
-   "name": "Lobato",
+   "name": "R. Lobato",
    "side": "away"
   },
   "P0718": {
@@ -375,7 +375,7 @@
    "distance_m": 2099,
    "top_speed_kmh": 30.4,
    "sprints": 2,
-   "name": "Mendonça",
+   "name": "A. Mendonça",
    "side": "away"
   }
  },

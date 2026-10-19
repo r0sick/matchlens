@@ -66,7 +66,7 @@
    "distance_m": 9547,
    "top_speed_kmh": 33.6,
    "sprints": 20,
-   "name": "Verhoef",
+   "name": "D. Verhoef",
    "side": "home"
   },
   "P0906": {
@@ -142,7 +142,7 @@
    "distance_m": 9808,
    "top_speed_kmh": 35.1,
    "sprints": 16,
-   "name": "Kettani",
+   "name": "S. Kettani",
    "side": "home"
   },
   "P0106": {
@@ -231,7 +231,7 @@
    "distance_m": 10676,
    "top_speed_kmh": 33.2,
    "sprints": 6,
-   "name": "Delattre",
+   "name": "J. Delattre",
    "side": "away"
   },
   "P0101": {
@@ -289,7 +289,7 @@
    "distance_m": 10107,
    "top_speed_kmh": 33.2,
    "sprints": 17,
-   "name": "Kettani",
+   "name": "Z. Kettani",
    "side": "home"
   },
   "P0111": {
@@ -338,7 +338,7 @@
    "distance_m": 4434,
    "top_speed_kmh": 35.4,
    "sprints": 4,
-   "name": "Whitfield",
+   "name": "O. Whitfield",
    "side": "away"
   },
   "P0119": {
@@ -382,7 +382,7 @@
    "distance_m": 467,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Verhoef",
+   "name": "S. Verhoef",
    "side": "home"
   },
   "P0120": {
@@ -390,7 +390,7 @@
    "distance_m": 444,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Cartwright",
+   "name": "G. Cartwright",
    "side": "away"
   },
   "P0922": {

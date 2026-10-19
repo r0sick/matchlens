@@ -65,7 +65,7 @@
    "distance_m": 6765,
    "top_speed_kmh": 30.2,
    "sprints": 13,
-   "name": "Crawford",
+   "name": "G. Crawford",
    "side": "home"
   },
   "P1007": {
@@ -76,7 +76,7 @@
    "distance_m": 10817,
    "top_speed_kmh": 28.5,
    "sprints": 2,
-   "name": "Crawford",
+   "name": "B. Crawford",
    "side": "home"
   },
   "P0616": {
@@ -105,7 +105,7 @@
    "distance_m": 6764,
    "top_speed_kmh": 29.7,
    "sprints": 8,
-   "name": "Calloway",
+   "name": "L. Calloway",
    "side": "home"
   },
   "P0619": {
@@ -132,7 +132,7 @@
    "distance_m": 11036,
    "top_speed_kmh": 31.0,
    "sprints": 7,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "away"
   },
   "P0607": {
@@ -179,7 +179,7 @@
    "distance_m": 6370,
    "top_speed_kmh": 26.9,
    "sprints": 3,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "away"
   },
   "P1009": {
@@ -190,7 +190,7 @@
    "distance_m": 10225,
    "top_speed_kmh": 32.8,
    "sprints": 15,
-   "name": "Thorne",
+   "name": "A. Thorne",
    "side": "home"
   },
   "P0614": {
@@ -213,7 +213,7 @@
    "distance_m": 11021,
    "top_speed_kmh": 32.1,
    "sprints": 8,
-   "name": "Cartwright",
+   "name": "O. Cartwright",
    "side": "home"
   },
   "P0609": {
@@ -284,7 +284,7 @@
    "distance_m": 9398,
    "top_speed_kmh": 29.1,
    "sprints": 5,
-   "name": "Tanabe",
+   "name": "R. Tanabe",
    "side": "home"
   },
   "P1008": {
@@ -297,7 +297,7 @@
    "distance_m": 11143,
    "top_speed_kmh": 31.0,
    "sprints": 5,
-   "name": "Calloway",
+   "name": "G. Calloway",
    "side": "home"
   },
   "P0601": {
@@ -306,7 +306,7 @@
    "distance_m": 4975,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "away"
   },
   "P0618": {
@@ -320,7 +320,7 @@
    "distance_m": 3761,
    "top_speed_kmh": 34.7,
    "sprints": 5,
-   "name": "Lombardo",
+   "name": "N. Lombardo",
    "side": "away"
   },
   "P0610": {
@@ -342,7 +342,7 @@
    "distance_m": 3109,
    "top_speed_kmh": 30.0,
    "sprints": 2,
-   "name": "Ferraresi",
+   "name": "S. Ferraresi",
    "side": "away"
   },
   "P1020": {
@@ -356,7 +356,7 @@
    "distance_m": 3193,
    "top_speed_kmh": 29.5,
    "sprints": 7,
-   "name": "Tanabe",
+   "name": "T. Tanabe",
    "side": "home"
   },
   "P0622": {
@@ -399,7 +399,7 @@
    "distance_m": 2872,
    "top_speed_kmh": 27.4,
    "sprints": 2,
-   "name": "Cartwright",
+   "name": "H. Cartwright",
    "side": "home"
   }
  },

@@ -211,7 +211,7 @@
    "distance_m": 9099,
    "top_speed_kmh": 30.5,
    "sprints": 9,
-   "name": "Lozano",
+   "name": "J. Lozano",
    "side": "away"
   },
   "P0303": {
@@ -248,7 +248,7 @@
    "distance_m": 10668,
    "top_speed_kmh": 31.9,
    "sprints": 16,
-   "name": "Mendívil",
+   "name": "D. Mendívil",
    "side": "away"
   },
   "P0309": {
@@ -262,7 +262,7 @@
    "distance_m": 7916,
    "top_speed_kmh": 33.4,
    "sprints": 16,
-   "name": "Mendívil",
+   "name": "J. Mendívil",
    "side": "away"
   },
   "P0201": {
@@ -316,7 +316,7 @@
    "distance_m": 10014,
    "top_speed_kmh": 29.5,
    "sprints": 8,
-   "name": "Villalba",
+   "name": "T. Villalba",
    "side": "away"
   },
   "P0213": {
@@ -358,7 +358,7 @@
    "distance_m": 2599,
    "top_speed_kmh": 36.6,
    "sprints": 4,
-   "name": "Villalba",
+   "name": "N. Villalba",
    "side": "away"
   },
   "P0314": {

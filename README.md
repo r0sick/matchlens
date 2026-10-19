@@ -42,6 +42,23 @@ messages over a WebSocket (`/ws/{match_id}?speed=60`): `hello`, `state`, `event`
 speed and restart work over the socket or REST. The full message spec is in `OVERLAY.md`; the page at `/`
 is a test client showing the scoreboard, win probability, stats and alert feed.
 
+## Stage 3 – the app (`http://localhost:8000`)
+
+One stream, three ways to watch it (switch at the top right):
+
+- **Broadcast** – a live 2D "event cam" of the pitch with broadcast graphics: score bug, win-probability strip,
+  momentum ribbon, player name tags with speed and pass-difficulty indicators, and lower thirds for goals, cards,
+  substitutions, rocket shots, top speeds and win-probability swings.
+  Add `?view=overlay` for the graphics alone on a transparent background, ready to layer over video in OBS or vMix.
+- **Analyst** – win probability, xG race, momentum and chaos charts, shot map, pass map coloured by difficulty,
+  team stats and a sortable player table with live ratings.
+- **Fan** – the score, a plain-language headline of who is on top and why, a win-probability tug of war,
+  the story of the match with "why it matters" context, and a card for the player you follow.
+
+**Preferences** (saved in the browser): language (English, Spanish), favourite club, player to follow. The
+followed player gets a ★ on the pitch tags, in the feeds and timeline, and their own stats card.
+Links can carry settings: `/?match=M000042&mode=fan&speed=60&from=60&lang=es`.
+
 In code, the ingest stage can consume the same feed:
 
 ```python

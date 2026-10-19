@@ -762,7 +762,7 @@
       {
         "player_id": "P0302",
         "name": "Javi Lozano",
-        "short_name": "Lozano",
+        "short_name": "J. Lozano",
         "shirt": 2,
         "position": "RB",
         "group": "FB",
@@ -818,7 +818,7 @@
       {
         "player_id": "P0304",
         "name": "Tomás Villalba",
-        "short_name": "Villalba",
+        "short_name": "T. Villalba",
         "shirt": 6,
         "position": "LCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0305",
         "name": "Dani Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "D. Mendívil",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0309",
         "name": "Javi Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "J. Mendívil",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0312",
         "name": "Nacho Lozano",
-        "short_name": "Lozano",
+        "short_name": "N. Lozano",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1100,7 +1100,7 @@
       {
         "player_id": "P0313",
         "name": "Dani Arteche",
-        "short_name": "Arteche",
+        "short_name": "D. Arteche",
         "shirt": 35,
         "position": "CB",
         "group": "CB",
@@ -1156,7 +1156,7 @@
       {
         "player_id": "P0315",
         "name": "Nacho Arteche",
-        "short_name": "Arteche",
+        "short_name": "N. Arteche",
         "shirt": 36,
         "position": "DM",
         "group": "DM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0320",
         "name": "Rubén Mendívil",
-        "short_name": "Mendívil",
+        "short_name": "R. Mendívil",
         "shirt": 41,
         "position": "RCM",
         "group": "CM",
@@ -1324,7 +1324,7 @@
       {
         "player_id": "P0322",
         "name": "Nahuel Villalba",
-        "short_name": "Villalba",
+        "short_name": "N. Villalba",
         "shirt": 14,
         "position": "RW",
         "group": "W",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0323",
         "name": "Hugo Arteche",
-        "short_name": "Arteche",
+        "short_name": "H. Arteche",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1904,7 +1904,7 @@
       },
       {
         "player_id": "P0302",
-        "name": "Lozano",
+        "name": "J. Lozano",
         "season": {
           "apps": 8,
           "minutes": 663,
@@ -1944,7 +1944,7 @@
       },
       {
         "player_id": "P0304",
-        "name": "Villalba",
+        "name": "T. Villalba",
         "season": {
           "apps": 8,
           "minutes": 772,
@@ -1964,7 +1964,7 @@
       },
       {
         "player_id": "P0305",
-        "name": "Mendívil",
+        "name": "D. Mendívil",
         "season": {
           "apps": 8,
           "minutes": 702,
@@ -2044,7 +2044,7 @@
       },
       {
         "player_id": "P0309",
-        "name": "Mendívil",
+        "name": "J. Mendívil",
         "season": {
           "apps": 7,
           "minutes": 532,
@@ -2104,7 +2104,7 @@
       },
       {
         "player_id": "P0312",
-        "name": "Lozano",
+        "name": "N. Lozano",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2124,7 +2124,7 @@
       },
       {
         "player_id": "P0313",
-        "name": "Arteche",
+        "name": "D. Arteche",
         "season": {
           "apps": 5,
           "minutes": 90,
@@ -2164,7 +2164,7 @@
       },
       {
         "player_id": "P0315",
-        "name": "Arteche",
+        "name": "N. Arteche",
         "season": {
           "apps": 5,
           "minutes": 309,
@@ -2271,7 +2271,7 @@
       },
       {
         "player_id": "P0320",
-        "name": "Mendívil",
+        "name": "R. Mendívil",
         "season": {
           "apps": 4,
           "minutes": 211,
@@ -2311,7 +2311,7 @@
       },
       {
         "player_id": "P0322",
-        "name": "Villalba",
+        "name": "N. Villalba",
         "season": {
           "apps": 7,
           "minutes": 386,
@@ -2331,7 +2331,7 @@
       },
       {
         "player_id": "P0323",
-        "name": "Arteche",
+        "name": "H. Arteche",
         "season": {
           "apps": 0,
           "minutes": 0,

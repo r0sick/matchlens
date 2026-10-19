@@ -63,7 +63,7 @@
       {
         "player_id": "P0601",
         "name": "Riccardo Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "R. Ferraresi",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -203,7 +203,7 @@
       {
         "player_id": "P0606",
         "name": "Nicolò Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "N. Ferraresi",
         "shirt": 8,
         "position": "RCM",
         "group": "CM",
@@ -259,7 +259,7 @@
       {
         "player_id": "P0608",
         "name": "Marco Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "M. Lombardo",
         "shirt": 10,
         "position": "LCM",
         "group": "CM",
@@ -373,7 +373,7 @@
       {
         "player_id": "P0603",
         "name": "Davide Santoro",
-        "short_name": "Santoro",
+        "short_name": "D. Santoro",
         "shirt": 4,
         "position": "CB",
         "group": "CB",
@@ -429,7 +429,7 @@
       {
         "player_id": "P0612",
         "name": "Simone Galvani",
-        "short_name": "Galvani",
+        "short_name": "S. Galvani",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -513,7 +513,7 @@
       {
         "player_id": "P0617",
         "name": "Simone Ferraresi",
-        "short_name": "Ferraresi",
+        "short_name": "S. Ferraresi",
         "shirt": 19,
         "position": "CAM",
         "group": "AM",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0618",
         "name": "Nicolò Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "N. Lombardo",
         "shirt": 22,
         "position": "RW",
         "group": "W",
@@ -597,7 +597,7 @@
       {
         "player_id": "P0620",
         "name": "Simone Santoro",
-        "short_name": "Santoro",
+        "short_name": "S. Santoro",
         "shirt": 44,
         "position": "RCM",
         "group": "CM",
@@ -625,7 +625,7 @@
       {
         "player_id": "P0621",
         "name": "Gianluca Lombardo",
-        "short_name": "Lombardo",
+        "short_name": "G. Lombardo",
         "shirt": 14,
         "position": "CB",
         "group": "CB",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0623",
         "name": "Andrea Galvani",
-        "short_name": "Galvani",
+        "short_name": "A. Galvani",
         "shirt": 15,
         "position": "GK",
         "group": "GK",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0401",
         "name": "Enzo Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "E. Fontaine",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0403",
         "name": "Yanis Brunet",
-        "short_name": "Brunet",
+        "short_name": "Y. Brunet",
         "shirt": 5,
         "position": "RCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0405",
         "name": "Samuel Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "S. Afolabi",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -986,7 +986,7 @@
       {
         "player_id": "P0409",
         "name": "Kylian Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "K. Fontaine",
         "shirt": 10,
         "position": "LAM",
         "group": "AM",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0412",
         "name": "Kylian Brunet",
-        "short_name": "Brunet",
+        "short_name": "K. Brunet",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0414",
         "name": "Baptiste Brunet",
-        "short_name": "Brunet",
+        "short_name": "B. Brunet",
         "shirt": 38,
         "position": "RB",
         "group": "FB",
@@ -1156,7 +1156,7 @@
       {
         "player_id": "P0415",
         "name": "Noah Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "N. Lefèvre",
         "shirt": 13,
         "position": "DM",
         "group": "DM",
@@ -1240,7 +1240,7 @@
       {
         "player_id": "P0419",
         "name": "Lucas Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "L. Lefèvre",
         "shirt": 25,
         "position": "ST",
         "group": "ST",
@@ -1296,7 +1296,7 @@
       {
         "player_id": "P0421",
         "name": "Jules Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "J. Fontaine",
         "shirt": 32,
         "position": "CB",
         "group": "CB",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0423",
         "name": "Kelechi Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "K. Afolabi",
         "shirt": 21,
         "position": "GK",
         "group": "GK",
@@ -1425,7 +1425,7 @@
     "players": [
       {
         "player_id": "P0601",
-        "name": "Ferraresi",
+        "name": "R. Ferraresi",
         "season": {
           "apps": 17,
           "minutes": 1671,
@@ -1465,7 +1465,7 @@
       },
       {
         "player_id": "P0603",
-        "name": "Santoro",
+        "name": "D. Santoro",
         "season": {
           "apps": 17,
           "minutes": 1370,
@@ -1525,7 +1525,7 @@
       },
       {
         "player_id": "P0606",
-        "name": "Ferraresi",
+        "name": "N. Ferraresi",
         "season": {
           "apps": 16,
           "minutes": 1360,
@@ -1565,7 +1565,7 @@
       },
       {
         "player_id": "P0608",
-        "name": "Lombardo",
+        "name": "M. Lombardo",
         "season": {
           "apps": 14,
           "minutes": 1243,
@@ -1645,7 +1645,7 @@
       },
       {
         "player_id": "P0612",
-        "name": "Galvani",
+        "name": "S. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1745,7 +1745,7 @@
       },
       {
         "player_id": "P0617",
-        "name": "Ferraresi",
+        "name": "S. Ferraresi",
         "season": {
           "apps": 9,
           "minutes": 137,
@@ -1765,7 +1765,7 @@
       },
       {
         "player_id": "P0618",
-        "name": "Lombardo",
+        "name": "N. Lombardo",
         "season": {
           "apps": 12,
           "minutes": 285,
@@ -1805,7 +1805,7 @@
       },
       {
         "player_id": "P0620",
-        "name": "Santoro",
+        "name": "S. Santoro",
         "season": {
           "apps": 8,
           "minutes": 486,
@@ -1825,7 +1825,7 @@
       },
       {
         "player_id": "P0621",
-        "name": "Lombardo",
+        "name": "G. Lombardo",
         "season": {
           "apps": 7,
           "minutes": 258,
@@ -1865,7 +1865,7 @@
       },
       {
         "player_id": "P0623",
-        "name": "Galvani",
+        "name": "A. Galvani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1885,7 +1885,7 @@
       },
       {
         "player_id": "P0401",
-        "name": "Fontaine",
+        "name": "E. Fontaine",
         "season": {
           "apps": 17,
           "minutes": 1661,
@@ -1925,7 +1925,7 @@
       },
       {
         "player_id": "P0403",
-        "name": "Brunet",
+        "name": "Y. Brunet",
         "season": {
           "apps": 17,
           "minutes": 1406,
@@ -1965,7 +1965,7 @@
       },
       {
         "player_id": "P0405",
-        "name": "Afolabi",
+        "name": "S. Afolabi",
         "season": {
           "apps": 16,
           "minutes": 1564,
@@ -2045,7 +2045,7 @@
       },
       {
         "player_id": "P0409",
-        "name": "Fontaine",
+        "name": "K. Fontaine",
         "season": {
           "apps": 16,
           "minutes": 1130,
@@ -2105,7 +2105,7 @@
       },
       {
         "player_id": "P0412",
-        "name": "Brunet",
+        "name": "K. Brunet",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2145,7 +2145,7 @@
       },
       {
         "player_id": "P0414",
-        "name": "Brunet",
+        "name": "B. Brunet",
         "season": {
           "apps": 4,
           "minutes": 358,
@@ -2165,7 +2165,7 @@
       },
       {
         "player_id": "P0415",
-        "name": "Lefèvre",
+        "name": "N. Lefèvre",
         "season": {
           "apps": 13,
           "minutes": 582,
@@ -2245,7 +2245,7 @@
       },
       {
         "player_id": "P0419",
-        "name": "Lefèvre",
+        "name": "L. Lefèvre",
         "season": {
           "apps": 11,
           "minutes": 435,
@@ -2285,7 +2285,7 @@
       },
       {
         "player_id": "P0421",
-        "name": "Fontaine",
+        "name": "J. Fontaine",
         "season": {
           "apps": 8,
           "minutes": 336,
@@ -2325,7 +2325,7 @@
       },
       {
         "player_id": "P0423",
-        "name": "Afolabi",
+        "name": "K. Afolabi",
         "season": {
           "apps": 0,
           "minutes": 0,

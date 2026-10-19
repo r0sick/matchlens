@@ -42,7 +42,8 @@ STATE_NOW = {"goal", "card", "substitution", "period_start", "period_end", "matc
 # fields on pass events that are only known after the fact – never sent live
 LOOKAHEAD_FIELDS = {"key_pass", "assist", "provider_completion_prob"}
 STATE_INTERVAL_S = 1.0
-PLAYERS_INTERVAL_S = 10.0
+PLAYERS_INTERVAL_S = 5.0
+KEY_EVENT_TYPES = {"shot", "goal", "card", "substitution"}
 
 MODELS = load_models()
 
@@ -116,6 +117,8 @@ class MatchSession:
         self._last_players_wall = 0.0
         self._last_minute = None
         self.recent_alerts.clear()
+        self.key_events: list = []                 # shots, goals, cards, subs so far (for late joiners)
+        self.recent_passes: deque = deque(maxlen=400)
         self.done = False
 
     # ---- messaging
@@ -163,17 +166,28 @@ class MatchSession:
             "state": self.state_payload(),
             "series": self.state.series,
             "recent_alerts": list(self.recent_alerts),
+            "key_events": self.key_events,
+            "recent_passes": list(self.recent_passes),
+            "players": self.state.snapshot()["players"],
         })
 
     # ---- processing
     def process(self, ev: dict, live: bool = True):
         signals = self.state.update(ev)
         self.idx += 1
+        se = None
+        if ev["type"] != "physical_snapshot":
+            se = slim_event(ev)
+            se["display_minute"], se["match_time_s"] = ev["display_minute"], ev["match_time_s"]
+            if ev["type"] in KEY_EVENT_TYPES:          # kept even while fast-forwarding, for late joiners
+                self.key_events.append(se)
+            elif ev["type"] == "pass" and ev["outcome"] == "complete":
+                self.recent_passes.append(se)
         if not live:
             return
         now = time.monotonic()
-        if ev["type"] != "physical_snapshot":
-            self.broadcast("event", slim_event(ev))
+        if se:
+            self.broadcast("event", se)
         for s in signals:
             self.broadcast("win_prob_swing" if s["kind"] == "win_prob_swing" else "alert", s)
         if ev["type"] in STATE_NOW or now - self._last_state_wall >= STATE_INTERVAL_S:
@@ -283,6 +297,11 @@ class Control(BaseModel):
 
 @app.get("/")
 def index():
+    return FileResponse(STATIC / "app.html")
+
+
+@app.get("/test")
+def test_page():
     return FileResponse(STATIC / "index.html")
 
 

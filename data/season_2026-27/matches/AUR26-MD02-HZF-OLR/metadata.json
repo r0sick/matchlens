@@ -175,7 +175,7 @@
       {
         "player_id": "P0905",
         "name": "Zakaria Kettani",
-        "short_name": "Kettani",
+        "short_name": "Z. Kettani",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -231,7 +231,7 @@
       {
         "player_id": "P0907",
         "name": "Bram Visser",
-        "short_name": "Visser",
+        "short_name": "B. Visser",
         "shirt": 4,
         "position": "DM",
         "group": "DM",
@@ -287,7 +287,7 @@
       {
         "player_id": "P0909",
         "name": "Sofiane Kettani",
-        "short_name": "Kettani",
+        "short_name": "S. Kettani",
         "shirt": 7,
         "position": "RW",
         "group": "W",
@@ -373,7 +373,7 @@
       {
         "player_id": "P0910",
         "name": "Daan Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "D. Verhoef",
         "shirt": 9,
         "position": "ST",
         "group": "ST",
@@ -429,7 +429,7 @@
       {
         "player_id": "P0913",
         "name": "Luuk Visser",
-        "short_name": "Visser",
+        "short_name": "L. Visser",
         "shirt": 12,
         "position": "CB",
         "group": "CB",
@@ -541,7 +541,7 @@
       {
         "player_id": "P0917",
         "name": "Bram van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "B. van Rijn",
         "shirt": 15,
         "position": "CAM",
         "group": "AM",
@@ -569,7 +569,7 @@
       {
         "player_id": "P0918",
         "name": "Stijn Verhoef",
-        "short_name": "Verhoef",
+        "short_name": "S. Verhoef",
         "shirt": 40,
         "position": "RW",
         "group": "W",
@@ -681,7 +681,7 @@
       {
         "player_id": "P0923",
         "name": "Luuk van Rijn",
-        "short_name": "van Rijn",
+        "short_name": "L. van Rijn",
         "shirt": 34,
         "position": "GK",
         "group": "GK",
@@ -734,7 +734,7 @@
       {
         "player_id": "P0401",
         "name": "Enzo Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "E. Fontaine",
         "shirt": 1,
         "position": "GK",
         "group": "GK",
@@ -790,7 +790,7 @@
       {
         "player_id": "P0421",
         "name": "Jules Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "J. Fontaine",
         "shirt": 32,
         "position": "RCB",
         "group": "CB",
@@ -846,7 +846,7 @@
       {
         "player_id": "P0405",
         "name": "Samuel Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "S. Afolabi",
         "shirt": 3,
         "position": "LB",
         "group": "FB",
@@ -958,7 +958,7 @@
       {
         "player_id": "P0409",
         "name": "Kylian Fontaine",
-        "short_name": "Fontaine",
+        "short_name": "K. Fontaine",
         "shirt": 10,
         "position": "CAM",
         "group": "AM",
@@ -1044,7 +1044,7 @@
       {
         "player_id": "P0403",
         "name": "Yanis Brunet",
-        "short_name": "Brunet",
+        "short_name": "Y. Brunet",
         "shirt": 5,
         "position": "RCB",
         "group": "CB",
@@ -1072,7 +1072,7 @@
       {
         "player_id": "P0412",
         "name": "Kylian Brunet",
-        "short_name": "Brunet",
+        "short_name": "K. Brunet",
         "shirt": 13,
         "position": "GK",
         "group": "GK",
@@ -1128,7 +1128,7 @@
       {
         "player_id": "P0414",
         "name": "Baptiste Brunet",
-        "short_name": "Brunet",
+        "short_name": "B. Brunet",
         "shirt": 38,
         "position": "RB",
         "group": "FB",
@@ -1156,7 +1156,7 @@
       {
         "player_id": "P0415",
         "name": "Noah Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "N. Lefèvre",
         "shirt": 13,
         "position": "DM",
         "group": "DM",
@@ -1268,7 +1268,7 @@
       {
         "player_id": "P0419",
         "name": "Lucas Lefèvre",
-        "short_name": "Lefèvre",
+        "short_name": "L. Lefèvre",
         "shirt": 25,
         "position": "ST",
         "group": "ST",
@@ -1352,7 +1352,7 @@
       {
         "player_id": "P0423",
         "name": "Kelechi Afolabi",
-        "short_name": "Afolabi",
+        "short_name": "K. Afolabi",
         "shirt": 21,
         "position": "GK",
         "group": "GK",
@@ -1497,7 +1497,7 @@
       },
       {
         "player_id": "P0905",
-        "name": "Kettani",
+        "name": "Z. Kettani",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1537,7 +1537,7 @@
       },
       {
         "player_id": "P0907",
-        "name": "Visser",
+        "name": "B. Visser",
         "season": {
           "apps": 1,
           "minutes": 98,
@@ -1577,7 +1577,7 @@
       },
       {
         "player_id": "P0909",
-        "name": "Kettani",
+        "name": "S. Kettani",
         "season": {
           "apps": 1,
           "minutes": 34,
@@ -1597,7 +1597,7 @@
       },
       {
         "player_id": "P0910",
-        "name": "Verhoef",
+        "name": "D. Verhoef",
         "season": {
           "apps": 1,
           "minutes": 45,
@@ -1657,7 +1657,7 @@
       },
       {
         "player_id": "P0913",
-        "name": "Visser",
+        "name": "L. Visser",
         "season": {
           "apps": 1,
           "minutes": 12,
@@ -1744,7 +1744,7 @@
       },
       {
         "player_id": "P0917",
-        "name": "van Rijn",
+        "name": "B. van Rijn",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1764,7 +1764,7 @@
       },
       {
         "player_id": "P0918",
-        "name": "Verhoef",
+        "name": "S. Verhoef",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1864,7 +1864,7 @@
       },
       {
         "player_id": "P0923",
-        "name": "van Rijn",
+        "name": "L. van Rijn",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -1884,7 +1884,7 @@
       },
       {
         "player_id": "P0401",
-        "name": "Fontaine",
+        "name": "E. Fontaine",
         "season": {
           "apps": 1,
           "minutes": 97,
@@ -1924,7 +1924,7 @@
       },
       {
         "player_id": "P0403",
-        "name": "Brunet",
+        "name": "Y. Brunet",
         "season": {
           "apps": 1,
           "minutes": 77,
@@ -1964,7 +1964,7 @@
       },
       {
         "player_id": "P0405",
-        "name": "Afolabi",
+        "name": "S. Afolabi",
         "season": {
           "apps": 1,
           "minutes": 97,
@@ -2044,7 +2044,7 @@
       },
       {
         "player_id": "P0409",
-        "name": "Fontaine",
+        "name": "K. Fontaine",
         "season": {
           "apps": 1,
           "minutes": 67,
@@ -2104,7 +2104,7 @@
       },
       {
         "player_id": "P0412",
-        "name": "Brunet",
+        "name": "K. Brunet",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2144,7 +2144,7 @@
       },
       {
         "player_id": "P0414",
-        "name": "Brunet",
+        "name": "B. Brunet",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2164,7 +2164,7 @@
       },
       {
         "player_id": "P0415",
-        "name": "Lefèvre",
+        "name": "N. Lefèvre",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2244,7 +2244,7 @@
       },
       {
         "player_id": "P0419",
-        "name": "Lefèvre",
+        "name": "L. Lefèvre",
         "season": {
           "apps": 1,
           "minutes": 20,
@@ -2284,7 +2284,7 @@
       },
       {
         "player_id": "P0421",
-        "name": "Fontaine",
+        "name": "J. Fontaine",
         "season": {
           "apps": 0,
           "minutes": 0,
@@ -2324,7 +2324,7 @@
       },
       {
         "player_id": "P0423",
-        "name": "Afolabi",
+        "name": "K. Afolabi",
         "season": {
           "apps": 0,
           "minutes": 0,

@@ -82,7 +82,7 @@
    "distance_m": 10991,
    "top_speed_kmh": 30.0,
    "sprints": 7,
-   "name": "Ferraresi",
+   "name": "N. Ferraresi",
    "side": "home"
   },
   "P0614": {
@@ -106,7 +106,7 @@
    "distance_m": 10977,
    "top_speed_kmh": 33.7,
    "sprints": 11,
-   "name": "Lombardo",
+   "name": "M. Lombardo",
    "side": "home"
   },
   "P0408": {
@@ -171,7 +171,7 @@
    "distance_m": 7648,
    "top_speed_kmh": 32.9,
    "sprints": 14,
-   "name": "Fontaine",
+   "name": "K. Fontaine",
    "side": "away"
   },
   "P0602": {
@@ -209,7 +209,7 @@
    "distance_m": 9742,
    "top_speed_kmh": 29.0,
    "sprints": 8,
-   "name": "Brunet",
+   "name": "Y. Brunet",
    "side": "away"
   },
   "P0406": {
@@ -270,7 +270,7 @@
    "distance_m": 10902,
    "top_speed_kmh": 34.8,
    "sprints": 14,
-   "name": "Afolabi",
+   "name": "S. Afolabi",
    "side": "away"
   },
   "P0613": {
@@ -289,7 +289,7 @@
    "distance_m": 4957,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Ferraresi",
+   "name": "R. Ferraresi",
    "side": "home"
   },
   "P0402": {
@@ -319,7 +319,7 @@
    "distance_m": 5345,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Fontaine",
+   "name": "E. Fontaine",
    "side": "away"
   },
   "P0419": {
@@ -330,7 +330,7 @@
    "distance_m": 4413,
    "top_speed_kmh": 29.5,
    "sprints": 2,
-   "name": "Lefèvre",
+   "name": "L. Lefèvre",
    "side": "away"
   },
   "P0410": {
@@ -357,7 +357,7 @@
    "distance_m": 3374,
    "top_speed_kmh": 29.4,
    "sprints": 5,
-   "name": "Santoro",
+   "name": "S. Santoro",
    "side": "home"
   },
   "P0609": {
@@ -403,7 +403,7 @@
    "distance_m": 2126,
    "top_speed_kmh": 0.0,
    "sprints": 0,
-   "name": "Santoro",
+   "name": "D. Santoro",
    "side": "home"
   },
   "P0420": {
