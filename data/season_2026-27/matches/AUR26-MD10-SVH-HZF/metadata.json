@@ -1,0 +1,2375 @@
+{
+  "schema_version": "1.0",
+  "match_id": "AUR26-MD10-SVH-HZF",
+  "seed": 2026104,
+  "synthetic": true,
+  "competition": {
+    "name": "Aurora League",
+    "season": "2026/27",
+    "matchday": 10
+  },
+  "kickoff_utc": "2026-10-18T13:00:00Z",
+  "venue": {
+    "stadium": "Kranhaus-Arena",
+    "city": "Hafenberg",
+    "capacity": 47000
+  },
+  "attendance": 46057,
+  "referee": {
+    "name": "Tobias Rennert",
+    "nationality": "GER",
+    "strictness": 0.49
+  },
+  "weather": {
+    "condition": "clear",
+    "temp_c": 22.0,
+    "wind_kmh": 8.5
+  },
+  "pitch": {
+    "length_m": 105.0,
+    "width_m": 68.0
+  },
+  "coordinates": {
+    "location": "acting team's attacking frame: x 0->105 toward opponent goal, y 0->68 left->right",
+    "location_abs": "broadcast frame: x 0 = left goal line on screen, y 0 = far touchline",
+    "home_attacks_right_in_period": {
+      "1": true,
+      "2": false
+    }
+  },
+  "home": {
+    "team_id": "C05",
+    "name": "SV Hafenberg",
+    "short_name": "Hafenberg",
+    "abbr": "SVH",
+    "nickname": "Die Kraniche",
+    "city": "Hafenberg",
+    "market": "de",
+    "colors": {
+      "primary": "#0F7B3F",
+      "secondary": "#FFFFFF",
+      "text": "#FFFFFF"
+    },
+    "formation": "3-4-3",
+    "style_profile": {
+      "possession": 0.5,
+      "press": 0.9,
+      "directness": 0.6,
+      "tempo": 0.85,
+      "width": 0.75,
+      "line_height": 0.8
+    },
+    "starting_xi": [
+      {
+        "player_id": "P0501",
+        "name": "Lukas Vogt",
+        "short_name": "Vogt",
+        "shirt": 1,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "GER",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 189,
+        "overall": 80,
+        "is_star": false,
+        "attributes": {
+          "passing": 67,
+          "vision": 71,
+          "dribbling": 46,
+          "finishing": 26,
+          "shot_power": 61,
+          "pace": 52,
+          "stamina": 63,
+          "tackling": 37,
+          "positioning": 75,
+          "composure": 78,
+          "aerial": 84,
+          "keeping": 85
+        }
+      },
+      {
+        "player_id": "P0502",
+        "name": "Elias Kessler",
+        "short_name": "Kessler",
+        "shirt": 5,
+        "position": "RCB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 24,
+        "foot": "right",
+        "height_cm": 183,
+        "overall": 80,
+        "is_star": false,
+        "attributes": {
+          "passing": 67,
+          "vision": 66,
+          "dribbling": 68,
+          "finishing": 46,
+          "shot_power": 71,
+          "pace": 78,
+          "stamina": 77,
+          "tackling": 87,
+          "positioning": 82,
+          "composure": 80,
+          "aerial": 83,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0503",
+        "name": "Jonas Krämer",
+        "short_name": "Krämer",
+        "shirt": 4,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 27,
+        "foot": "left",
+        "height_cm": 195,
+        "overall": 78,
+        "is_star": false,
+        "attributes": {
+          "passing": 64,
+          "vision": 61,
+          "dribbling": 63,
+          "finishing": 44,
+          "shot_power": 75,
+          "pace": 64,
+          "stamina": 71,
+          "tackling": 79,
+          "positioning": 83,
+          "composure": 75,
+          "aerial": 88,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P0504",
+        "name": "Felix Wendel",
+        "short_name": "Wendel",
+        "shirt": 6,
+        "position": "LCB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 24,
+        "foot": "right",
+        "height_cm": 184,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 66,
+          "vision": 74,
+          "dribbling": 49,
+          "finishing": 53,
+          "shot_power": 70,
+          "pace": 65,
+          "stamina": 73,
+          "tackling": 82,
+          "positioning": 78,
+          "composure": 75,
+          "aerial": 77,
+          "keeping": 10
+        }
+      },
+      {
+        "player_id": "P0505",
+        "name": "Woo-jin Oh",
+        "short_name": "Oh",
+        "shirt": 2,
+        "position": "RWB",
+        "group": "FB",
+        "nationality": "KOR",
+        "age": 22,
+        "foot": "right",
+        "height_cm": 179,
+        "overall": 77,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 67,
+          "dribbling": 71,
+          "finishing": 57,
+          "shot_power": 74,
+          "pace": 83,
+          "stamina": 81,
+          "tackling": 76,
+          "positioning": 81,
+          "composure": 69,
+          "aerial": 70,
+          "keeping": 23
+        }
+      },
+      {
+        "player_id": "P0506",
+        "name": "Emeka Chukwu",
+        "short_name": "Chukwu",
+        "shirt": 8,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "NGA",
+        "age": 35,
+        "foot": "right",
+        "height_cm": 173,
+        "overall": 82,
+        "is_star": false,
+        "attributes": {
+          "passing": 88,
+          "vision": 80,
+          "dribbling": 79,
+          "finishing": 65,
+          "shot_power": 70,
+          "pace": 74,
+          "stamina": 83,
+          "tackling": 73,
+          "positioning": 80,
+          "composure": 79,
+          "aerial": 79,
+          "keeping": 19
+        }
+      },
+      {
+        "player_id": "P0507",
+        "name": "Lukas Lindner",
+        "short_name": "Lindner",
+        "shirt": 10,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "GER",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 176,
+        "overall": 86,
+        "is_star": false,
+        "attributes": {
+          "passing": 82,
+          "vision": 91,
+          "dribbling": 74,
+          "finishing": 72,
+          "shot_power": 71,
+          "pace": 82,
+          "stamina": 88,
+          "tackling": 75,
+          "positioning": 86,
+          "composure": 82,
+          "aerial": 81,
+          "keeping": 20
+        }
+      },
+      {
+        "player_id": "P0508",
+        "name": "Sota Takeda",
+        "short_name": "Takeda",
+        "shirt": 3,
+        "position": "LWB",
+        "group": "FB",
+        "nationality": "JPN",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 183,
+        "overall": 91,
+        "is_star": true,
+        "attributes": {
+          "passing": 87,
+          "vision": 88,
+          "dribbling": 84,
+          "finishing": 68,
+          "shot_power": 88,
+          "pace": 92,
+          "stamina": 95,
+          "tackling": 89,
+          "positioning": 83,
+          "composure": 89,
+          "aerial": 81,
+          "keeping": 17
+        }
+      },
+      {
+        "player_id": "P0509",
+        "name": "Noah Lambert",
+        "short_name": "Lambert",
+        "shirt": 7,
+        "position": "RW",
+        "group": "W",
+        "nationality": "FRA",
+        "age": 31,
+        "foot": "right",
+        "height_cm": 187,
+        "overall": 83,
+        "is_star": false,
+        "attributes": {
+          "passing": 84,
+          "vision": 88,
+          "dribbling": 85,
+          "finishing": 83,
+          "shot_power": 85,
+          "pace": 81,
+          "stamina": 79,
+          "tackling": 61,
+          "positioning": 85,
+          "composure": 80,
+          "aerial": 69,
+          "keeping": 14
+        }
+      },
+      {
+        "player_id": "P0510",
+        "name": "Hiroki Yoshimura",
+        "short_name": "Yoshimura",
+        "shirt": 9,
+        "position": "ST",
+        "group": "ST",
+        "nationality": "JPN",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 188,
+        "overall": 87,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 70,
+          "dribbling": 77,
+          "finishing": 82,
+          "shot_power": 87,
+          "pace": 82,
+          "stamina": 72,
+          "tackling": 58,
+          "positioning": 92,
+          "composure": 86,
+          "aerial": 83,
+          "keeping": 18
+        }
+      },
+      {
+        "player_id": "P0511",
+        "name": "Niklas Krämer",
+        "short_name": "Krämer",
+        "shirt": 11,
+        "position": "LW",
+        "group": "W",
+        "nationality": "GER",
+        "age": 28,
+        "foot": "both",
+        "height_cm": 180,
+        "overall": 90,
+        "is_star": true,
+        "attributes": {
+          "passing": 85,
+          "vision": 88,
+          "dribbling": 94,
+          "finishing": 82,
+          "shot_power": 86,
+          "pace": 97,
+          "stamina": 83,
+          "tackling": 72,
+          "positioning": 91,
+          "composure": 86,
+          "aerial": 79,
+          "keeping": 17
+        }
+      }
+    ],
+    "bench": [
+      {
+        "player_id": "P0512",
+        "name": "Luuk Mulder",
+        "short_name": "Mulder",
+        "shirt": 13,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "NED",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 180,
+        "overall": 72,
+        "is_star": false,
+        "attributes": {
+          "passing": 58,
+          "vision": 55,
+          "dribbling": 49,
+          "finishing": 26,
+          "shot_power": 46,
+          "pace": 48,
+          "stamina": 63,
+          "tackling": 30,
+          "positioning": 70,
+          "composure": 66,
+          "aerial": 70,
+          "keeping": 80
+        }
+      },
+      {
+        "player_id": "P0513",
+        "name": "Jonas Ostermann",
+        "short_name": "Ostermann",
+        "shirt": 14,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 194,
+        "overall": 80,
+        "is_star": false,
+        "attributes": {
+          "passing": 73,
+          "vision": 68,
+          "dribbling": 66,
+          "finishing": 52,
+          "shot_power": 76,
+          "pace": 68,
+          "stamina": 77,
+          "tackling": 76,
+          "positioning": 82,
+          "composure": 74,
+          "aerial": 87,
+          "keeping": 13
+        }
+      },
+      {
+        "player_id": "P0514",
+        "name": "Jun-seo Seo",
+        "short_name": "Seo",
+        "shirt": 30,
+        "position": "RB",
+        "group": "FB",
+        "nationality": "KOR",
+        "age": 23,
+        "foot": "right",
+        "height_cm": 178,
+        "overall": 88,
+        "is_star": false,
+        "attributes": {
+          "passing": 89,
+          "vision": 75,
+          "dribbling": 88,
+          "finishing": 58,
+          "shot_power": 73,
+          "pace": 87,
+          "stamina": 89,
+          "tackling": 87,
+          "positioning": 81,
+          "composure": 87,
+          "aerial": 78,
+          "keeping": 11
+        }
+      },
+      {
+        "player_id": "P0515",
+        "name": "Bram Bosman",
+        "short_name": "Bosman",
+        "shirt": 34,
+        "position": "DM",
+        "group": "DM",
+        "nationality": "NED",
+        "age": 32,
+        "foot": "left",
+        "height_cm": 182,
+        "overall": 84,
+        "is_star": false,
+        "attributes": {
+          "passing": 75,
+          "vision": 83,
+          "dribbling": 74,
+          "finishing": 58,
+          "shot_power": 76,
+          "pace": 69,
+          "stamina": 86,
+          "tackling": 88,
+          "positioning": 85,
+          "composure": 83,
+          "aerial": 86,
+          "keeping": 23
+        }
+      },
+      {
+        "player_id": "P0516",
+        "name": "Hunter Sutton",
+        "short_name": "Sutton",
+        "shirt": 42,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "USA",
+        "age": 18,
+        "foot": "right",
+        "height_cm": 173,
+        "overall": 86,
+        "is_star": false,
+        "attributes": {
+          "passing": 79,
+          "vision": 89,
+          "dribbling": 70,
+          "finishing": 73,
+          "shot_power": 74,
+          "pace": 86,
+          "stamina": 91,
+          "tackling": 80,
+          "positioning": 80,
+          "composure": 85,
+          "aerial": 74,
+          "keeping": 22
+        }
+      },
+      {
+        "player_id": "P0517",
+        "name": "Finn Albrecht",
+        "short_name": "Albrecht",
+        "shirt": 15,
+        "position": "CAM",
+        "group": "AM",
+        "nationality": "GER",
+        "age": 20,
+        "foot": "right",
+        "height_cm": 182,
+        "overall": 89,
+        "is_star": false,
+        "attributes": {
+          "passing": 85,
+          "vision": 88,
+          "dribbling": 94,
+          "finishing": 79,
+          "shot_power": 72,
+          "pace": 84,
+          "stamina": 86,
+          "tackling": 73,
+          "positioning": 85,
+          "composure": 90,
+          "aerial": 77,
+          "keeping": 15
+        }
+      },
+      {
+        "player_id": "P0518",
+        "name": "Bruno Paredes",
+        "short_name": "Paredes",
+        "shirt": 27,
+        "position": "RW",
+        "group": "W",
+        "nationality": "ARG",
+        "age": 24,
+        "foot": "right",
+        "height_cm": 166,
+        "overall": 89,
+        "is_star": false,
+        "attributes": {
+          "passing": 84,
+          "vision": 86,
+          "dribbling": 92,
+          "finishing": 83,
+          "shot_power": 92,
+          "pace": 97,
+          "stamina": 84,
+          "tackling": 72,
+          "positioning": 83,
+          "composure": 92,
+          "aerial": 73,
+          "keeping": 14
+        }
+      },
+      {
+        "player_id": "P0519",
+        "name": "Felix Hofmann",
+        "short_name": "Hofmann",
+        "shirt": 17,
+        "position": "ST",
+        "group": "ST",
+        "nationality": "GER",
+        "age": 31,
+        "foot": "left",
+        "height_cm": 182,
+        "overall": 80,
+        "is_star": false,
+        "attributes": {
+          "passing": 72,
+          "vision": 73,
+          "dribbling": 75,
+          "finishing": 81,
+          "shot_power": 78,
+          "pace": 78,
+          "stamina": 81,
+          "tackling": 57,
+          "positioning": 88,
+          "composure": 75,
+          "aerial": 83,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0520",
+        "name": "Tim Steiner",
+        "short_name": "Steiner",
+        "shirt": 24,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "GER",
+        "age": 30,
+        "foot": "left",
+        "height_cm": 173,
+        "overall": 85,
+        "is_star": false,
+        "attributes": {
+          "passing": 87,
+          "vision": 89,
+          "dribbling": 80,
+          "finishing": 71,
+          "shot_power": 82,
+          "pace": 85,
+          "stamina": 85,
+          "tackling": 84,
+          "positioning": 76,
+          "composure": 79,
+          "aerial": 73,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P0521",
+        "name": "Felix Albrecht",
+        "short_name": "Albrecht",
+        "shirt": 44,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 22,
+        "foot": "right",
+        "height_cm": 196,
+        "overall": 86,
+        "is_star": false,
+        "attributes": {
+          "passing": 71,
+          "vision": 74,
+          "dribbling": 71,
+          "finishing": 57,
+          "shot_power": 71,
+          "pace": 81,
+          "stamina": 84,
+          "tackling": 88,
+          "positioning": 88,
+          "composure": 80,
+          "aerial": 95,
+          "keeping": 18
+        }
+      },
+      {
+        "player_id": "P0522",
+        "name": "Tim Ostermann",
+        "short_name": "Ostermann",
+        "shirt": 20,
+        "position": "RW",
+        "group": "W",
+        "nationality": "GER",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 175,
+        "overall": 78,
+        "is_star": false,
+        "attributes": {
+          "passing": 76,
+          "vision": 67,
+          "dribbling": 85,
+          "finishing": 71,
+          "shot_power": 79,
+          "pace": 78,
+          "stamina": 76,
+          "tackling": 61,
+          "positioning": 75,
+          "composure": 82,
+          "aerial": 57,
+          "keeping": 13
+        }
+      },
+      {
+        "player_id": "P0523",
+        "name": "Min-jun Ryu",
+        "short_name": "Ryu",
+        "shirt": 33,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "KOR",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 190,
+        "overall": 81,
+        "is_star": false,
+        "attributes": {
+          "passing": 61,
+          "vision": 56,
+          "dribbling": 46,
+          "finishing": 26,
+          "shot_power": 53,
+          "pace": 53,
+          "stamina": 67,
+          "tackling": 29,
+          "positioning": 79,
+          "composure": 74,
+          "aerial": 84,
+          "keeping": 88
+        }
+      }
+    ]
+  },
+  "away": {
+    "team_id": "C09",
+    "name": "Haven Zeeland FC",
+    "short_name": "Haven Zeeland",
+    "abbr": "HZF",
+    "nickname": "De Dijkers",
+    "city": "Zeelhaven",
+    "market": "nl",
+    "colors": {
+      "primary": "#E4002B",
+      "secondary": "#003DA5",
+      "text": "#FFFFFF"
+    },
+    "formation": "4-3-3",
+    "style_profile": {
+      "possession": 0.7,
+      "press": 0.7,
+      "directness": 0.35,
+      "tempo": 0.7,
+      "width": 0.75,
+      "line_height": 0.65
+    },
+    "starting_xi": [
+      {
+        "player_id": "P0901",
+        "name": "Ruben de Graaf",
+        "short_name": "de Graaf",
+        "shirt": 1,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "NED",
+        "age": 17,
+        "foot": "left",
+        "height_cm": 198,
+        "overall": 82,
+        "is_star": false,
+        "attributes": {
+          "passing": 62,
+          "vision": 57,
+          "dribbling": 46,
+          "finishing": 25,
+          "shot_power": 54,
+          "pace": 59,
+          "stamina": 59,
+          "tackling": 37,
+          "positioning": 80,
+          "composure": 71,
+          "aerial": 91,
+          "keeping": 84
+        }
+      },
+      {
+        "player_id": "P0902",
+        "name": "Gabriel Queiroz",
+        "short_name": "Gabriel",
+        "shirt": 2,
+        "position": "RB",
+        "group": "FB",
+        "nationality": "BRA",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 183,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 66,
+          "vision": 72,
+          "dribbling": 78,
+          "finishing": 55,
+          "shot_power": 74,
+          "pace": 75,
+          "stamina": 78,
+          "tackling": 77,
+          "positioning": 70,
+          "composure": 80,
+          "aerial": 70,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0903",
+        "name": "Ifeanyi Okafor",
+        "short_name": "Okafor",
+        "shirt": 5,
+        "position": "RCB",
+        "group": "CB",
+        "nationality": "NGA",
+        "age": 20,
+        "foot": "right",
+        "height_cm": 193,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 66,
+          "vision": 59,
+          "dribbling": 58,
+          "finishing": 38,
+          "shot_power": 64,
+          "pace": 65,
+          "stamina": 72,
+          "tackling": 80,
+          "positioning": 77,
+          "composure": 68,
+          "aerial": 83,
+          "keeping": 14
+        }
+      },
+      {
+        "player_id": "P0904",
+        "name": "Lukas Albrecht",
+        "short_name": "Albrecht",
+        "shirt": 6,
+        "position": "LCB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 28,
+        "foot": "left",
+        "height_cm": 174,
+        "overall": 78,
+        "is_star": false,
+        "attributes": {
+          "passing": 72,
+          "vision": 64,
+          "dribbling": 60,
+          "finishing": 51,
+          "shot_power": 72,
+          "pace": 72,
+          "stamina": 73,
+          "tackling": 78,
+          "positioning": 79,
+          "composure": 79,
+          "aerial": 85,
+          "keeping": 13
+        }
+      },
+      {
+        "player_id": "P0905",
+        "name": "Zakaria Kettani",
+        "short_name": "Kettani",
+        "shirt": 3,
+        "position": "LB",
+        "group": "FB",
+        "nationality": "MAR",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 179,
+        "overall": 75,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 64,
+          "dribbling": 76,
+          "finishing": 53,
+          "shot_power": 67,
+          "pace": 82,
+          "stamina": 84,
+          "tackling": 66,
+          "positioning": 71,
+          "composure": 71,
+          "aerial": 62,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P0906",
+        "name": "Luuk Kuipers",
+        "short_name": "Kuipers",
+        "shirt": 8,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "NED",
+        "age": 33,
+        "foot": "left",
+        "height_cm": 174,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 79,
+          "dribbling": 67,
+          "finishing": 64,
+          "shot_power": 70,
+          "pace": 73,
+          "stamina": 73,
+          "tackling": 73,
+          "positioning": 60,
+          "composure": 76,
+          "aerial": 66,
+          "keeping": 10
+        }
+      },
+      {
+        "player_id": "P0907",
+        "name": "Bram Visser",
+        "short_name": "Visser",
+        "shirt": 4,
+        "position": "DM",
+        "group": "DM",
+        "nationality": "NED",
+        "age": 17,
+        "foot": "left",
+        "height_cm": 182,
+        "overall": 79,
+        "is_star": false,
+        "attributes": {
+          "passing": 78,
+          "vision": 79,
+          "dribbling": 67,
+          "finishing": 60,
+          "shot_power": 74,
+          "pace": 65,
+          "stamina": 79,
+          "tackling": 78,
+          "positioning": 80,
+          "composure": 72,
+          "aerial": 66,
+          "keeping": 15
+        }
+      },
+      {
+        "player_id": "P0920",
+        "name": "Emeka Okonkwo",
+        "short_name": "Okonkwo",
+        "shirt": 41,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "NGA",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 178,
+        "overall": 82,
+        "is_star": false,
+        "attributes": {
+          "passing": 86,
+          "vision": 82,
+          "dribbling": 79,
+          "finishing": 65,
+          "shot_power": 73,
+          "pace": 74,
+          "stamina": 76,
+          "tackling": 74,
+          "positioning": 73,
+          "composure": 83,
+          "aerial": 72,
+          "keeping": 14
+        }
+      },
+      {
+        "player_id": "P0909",
+        "name": "Sofiane Kettani",
+        "short_name": "Kettani",
+        "shirt": 7,
+        "position": "RW",
+        "group": "W",
+        "nationality": "MAR",
+        "age": 30,
+        "foot": "right",
+        "height_cm": 173,
+        "overall": 78,
+        "is_star": false,
+        "attributes": {
+          "passing": 63,
+          "vision": 74,
+          "dribbling": 87,
+          "finishing": 73,
+          "shot_power": 66,
+          "pace": 87,
+          "stamina": 72,
+          "tackling": 65,
+          "positioning": 69,
+          "composure": 78,
+          "aerial": 53,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P0910",
+        "name": "Daan Verhoef",
+        "short_name": "Verhoef",
+        "shirt": 9,
+        "position": "ST",
+        "group": "ST",
+        "nationality": "NED",
+        "age": 31,
+        "foot": "right",
+        "height_cm": 186,
+        "overall": 88,
+        "is_star": true,
+        "attributes": {
+          "passing": 79,
+          "vision": 77,
+          "dribbling": 78,
+          "finishing": 95,
+          "shot_power": 84,
+          "pace": 88,
+          "stamina": 75,
+          "tackling": 64,
+          "positioning": 84,
+          "composure": 87,
+          "aerial": 84,
+          "keeping": 23
+        }
+      },
+      {
+        "player_id": "P0922",
+        "name": "Zakaria Alaoui",
+        "short_name": "Alaoui",
+        "shirt": 19,
+        "position": "LW",
+        "group": "W",
+        "nationality": "MAR",
+        "age": 24,
+        "foot": "right",
+        "height_cm": 177,
+        "overall": 83,
+        "is_star": false,
+        "attributes": {
+          "passing": 76,
+          "vision": 74,
+          "dribbling": 93,
+          "finishing": 77,
+          "shot_power": 75,
+          "pace": 86,
+          "stamina": 65,
+          "tackling": 53,
+          "positioning": 80,
+          "composure": 84,
+          "aerial": 65,
+          "keeping": 10
+        }
+      }
+    ],
+    "bench": [
+      {
+        "player_id": "P0908",
+        "name": "Tobi Afolabi",
+        "short_name": "Afolabi",
+        "shirt": 10,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "NGA",
+        "age": 25,
+        "foot": "left",
+        "height_cm": 177,
+        "overall": 83,
+        "is_star": false,
+        "attributes": {
+          "passing": 85,
+          "vision": 82,
+          "dribbling": 83,
+          "finishing": 72,
+          "shot_power": 79,
+          "pace": 82,
+          "stamina": 89,
+          "tackling": 85,
+          "positioning": 81,
+          "composure": 77,
+          "aerial": 74,
+          "keeping": 25
+        }
+      },
+      {
+        "player_id": "P0911",
+        "name": "Ruben Bakker",
+        "short_name": "Bakker",
+        "shirt": 11,
+        "position": "LW",
+        "group": "W",
+        "nationality": "NED",
+        "age": 31,
+        "foot": "left",
+        "height_cm": 185,
+        "overall": 84,
+        "is_star": true,
+        "attributes": {
+          "passing": 82,
+          "vision": 75,
+          "dribbling": 84,
+          "finishing": 77,
+          "shot_power": 77,
+          "pace": 91,
+          "stamina": 85,
+          "tackling": 60,
+          "positioning": 87,
+          "composure": 72,
+          "aerial": 65,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0912",
+        "name": "Do-yun Lim",
+        "short_name": "Lim",
+        "shirt": 13,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "KOR",
+        "age": 28,
+        "foot": "left",
+        "height_cm": 191,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 65,
+          "vision": 59,
+          "dribbling": 44,
+          "finishing": 25,
+          "shot_power": 54,
+          "pace": 58,
+          "stamina": 60,
+          "tackling": 27,
+          "positioning": 78,
+          "composure": 67,
+          "aerial": 77,
+          "keeping": 84
+        }
+      },
+      {
+        "player_id": "P0913",
+        "name": "Luuk Visser",
+        "short_name": "Visser",
+        "shirt": 12,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "NED",
+        "age": 22,
+        "foot": "right",
+        "height_cm": 192,
+        "overall": 77,
+        "is_star": false,
+        "attributes": {
+          "passing": 61,
+          "vision": 65,
+          "dribbling": 64,
+          "finishing": 45,
+          "shot_power": 67,
+          "pace": 68,
+          "stamina": 71,
+          "tackling": 79,
+          "positioning": 82,
+          "composure": 77,
+          "aerial": 85,
+          "keeping": 13
+        }
+      },
+      {
+        "player_id": "P0914",
+        "name": "Milan de Wit",
+        "short_name": "de Wit",
+        "shirt": 36,
+        "position": "RB",
+        "group": "FB",
+        "nationality": "NED",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 179,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 68,
+          "vision": 69,
+          "dribbling": 80,
+          "finishing": 50,
+          "shot_power": 70,
+          "pace": 81,
+          "stamina": 79,
+          "tackling": 77,
+          "positioning": 77,
+          "composure": 77,
+          "aerial": 71,
+          "keeping": 13
+        }
+      },
+      {
+        "player_id": "P0915",
+        "name": "Stijn Mulder",
+        "short_name": "Mulder",
+        "shirt": 21,
+        "position": "DM",
+        "group": "DM",
+        "nationality": "NED",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 171,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 79,
+          "vision": 65,
+          "dribbling": 70,
+          "finishing": 54,
+          "shot_power": 68,
+          "pace": 62,
+          "stamina": 74,
+          "tackling": 69,
+          "positioning": 76,
+          "composure": 71,
+          "aerial": 68,
+          "keeping": 19
+        }
+      },
+      {
+        "player_id": "P0916",
+        "name": "Austin Lindqvist",
+        "short_name": "Lindqvist",
+        "shirt": 16,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "USA",
+        "age": 32,
+        "foot": "right",
+        "height_cm": 181,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 78,
+          "vision": 77,
+          "dribbling": 77,
+          "finishing": 63,
+          "shot_power": 73,
+          "pace": 77,
+          "stamina": 76,
+          "tackling": 75,
+          "positioning": 72,
+          "composure": 73,
+          "aerial": 71,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0917",
+        "name": "Bram van Rijn",
+        "short_name": "van Rijn",
+        "shirt": 15,
+        "position": "CAM",
+        "group": "AM",
+        "nationality": "NED",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 177,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 79,
+          "vision": 72,
+          "dribbling": 66,
+          "finishing": 67,
+          "shot_power": 69,
+          "pace": 70,
+          "stamina": 68,
+          "tackling": 55,
+          "positioning": 69,
+          "composure": 78,
+          "aerial": 51,
+          "keeping": 14
+        }
+      },
+      {
+        "player_id": "P0918",
+        "name": "Stijn Verhoef",
+        "short_name": "Verhoef",
+        "shirt": 40,
+        "position": "RW",
+        "group": "W",
+        "nationality": "NED",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 174,
+        "overall": 71,
+        "is_star": false,
+        "attributes": {
+          "passing": 71,
+          "vision": 63,
+          "dribbling": 75,
+          "finishing": 64,
+          "shot_power": 66,
+          "pace": 75,
+          "stamina": 69,
+          "tackling": 52,
+          "positioning": 68,
+          "composure": 69,
+          "aerial": 56,
+          "keeping": 23
+        }
+      },
+      {
+        "player_id": "P0919",
+        "name": "Igor Moraes",
+        "short_name": "Igor",
+        "shirt": 23,
+        "position": "ST",
+        "group": "ST",
+        "nationality": "BRA",
+        "age": 21,
+        "foot": "left",
+        "height_cm": 184,
+        "overall": 72,
+        "is_star": false,
+        "attributes": {
+          "passing": 61,
+          "vision": 60,
+          "dribbling": 67,
+          "finishing": 73,
+          "shot_power": 74,
+          "pace": 70,
+          "stamina": 63,
+          "tackling": 48,
+          "positioning": 73,
+          "composure": 68,
+          "aerial": 77,
+          "keeping": 20
+        }
+      },
+      {
+        "player_id": "P0921",
+        "name": "Moritz Hofmann",
+        "short_name": "Hofmann",
+        "shirt": 24,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 27,
+        "foot": "left",
+        "height_cm": 187,
+        "overall": 72,
+        "is_star": false,
+        "attributes": {
+          "passing": 63,
+          "vision": 54,
+          "dribbling": 58,
+          "finishing": 40,
+          "shot_power": 66,
+          "pace": 70,
+          "stamina": 69,
+          "tackling": 78,
+          "positioning": 69,
+          "composure": 66,
+          "aerial": 79,
+          "keeping": 22
+        }
+      },
+      {
+        "player_id": "P0923",
+        "name": "Luuk van Rijn",
+        "short_name": "van Rijn",
+        "shirt": 34,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "NED",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 192,
+        "overall": 70,
+        "is_star": false,
+        "attributes": {
+          "passing": 58,
+          "vision": 53,
+          "dribbling": 36,
+          "finishing": 25,
+          "shot_power": 48,
+          "pace": 51,
+          "stamina": 53,
+          "tackling": 26,
+          "positioning": 65,
+          "composure": 74,
+          "aerial": 68,
+          "keeping": 73
+        }
+      }
+    ]
+  },
+  "pre_match": {
+    "matchday": 10,
+    "standings": {
+      "home": {
+        "team_id": "C05",
+        "name": "SV Hafenberg",
+        "abbr": "SVH",
+        "played": 9,
+        "won": 6,
+        "drawn": 0,
+        "lost": 3,
+        "gf": 31,
+        "ga": 12,
+        "gd": 19,
+        "points": 18,
+        "form": "LLWWW",
+        "position": 4
+      },
+      "away": {
+        "team_id": "C09",
+        "name": "Haven Zeeland FC",
+        "abbr": "HZF",
+        "played": 9,
+        "won": 5,
+        "drawn": 1,
+        "lost": 3,
+        "gf": 13,
+        "ga": 22,
+        "gd": -9,
+        "points": 16,
+        "form": "WLLDW",
+        "position": 6
+      }
+    },
+    "head_to_head_this_season": [
+      {
+        "match_id": "AUR26-MD01-HZF-SVH",
+        "matchday": 1,
+        "home": "C09",
+        "away": "C05",
+        "score": "2-7"
+      }
+    ],
+    "players": [
+      {
+        "player_id": "P0501",
+        "name": "Vogt",
+        "season": {
+          "apps": 9,
+          "minutes": 882,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 273,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 50
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0502",
+        "name": "Kessler",
+        "season": {
+          "apps": 8,
+          "minutes": 651,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 165,
+          "goals": 6,
+          "assists": 3,
+          "international_caps": 25
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0503",
+        "name": "Krämer",
+        "season": {
+          "apps": 9,
+          "minutes": 680,
+          "goals": 1,
+          "assists": 0,
+          "xg": 0.44,
+          "shots": 2,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 204,
+          "goals": 10,
+          "assists": 3,
+          "international_caps": 26
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0504",
+        "name": "Wendel",
+        "season": {
+          "apps": 8,
+          "minutes": 739,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 198,
+          "goals": 6,
+          "assists": 4,
+          "international_caps": 6
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0505",
+        "name": "Oh",
+        "season": {
+          "apps": 7,
+          "minutes": 687,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.01,
+          "shots": 1,
+          "key_passes": 7
+        },
+        "career": {
+          "apps": 58,
+          "goals": 1,
+          "assists": 5,
+          "international_caps": 3
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0506",
+        "name": "Chukwu",
+        "season": {
+          "apps": 9,
+          "minutes": 731,
+          "goals": 2,
+          "assists": 3,
+          "xg": 0.75,
+          "shots": 8,
+          "key_passes": 17
+        },
+        "career": {
+          "apps": 480,
+          "goals": 42,
+          "assists": 52,
+          "international_caps": 110
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0507",
+        "name": "Lindner",
+        "season": {
+          "apps": 9,
+          "minutes": 743,
+          "goals": 0,
+          "assists": 2,
+          "xg": 1.17,
+          "shots": 10,
+          "key_passes": 15
+        },
+        "career": {
+          "apps": 217,
+          "goals": 20,
+          "assists": 20,
+          "international_caps": 21
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0508",
+        "name": "Takeda",
+        "season": {
+          "apps": 8,
+          "minutes": 748,
+          "goals": 0,
+          "assists": 2,
+          "xg": 0.16,
+          "shots": 4,
+          "key_passes": 19
+        },
+        "career": {
+          "apps": 268,
+          "goals": 12,
+          "assists": 41,
+          "international_caps": 59
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0509",
+        "name": "Lambert",
+        "season": {
+          "apps": 8,
+          "minutes": 548,
+          "goals": 0,
+          "assists": 3,
+          "xg": 0.32,
+          "shots": 10,
+          "key_passes": 20
+        },
+        "career": {
+          "apps": 382,
+          "goals": 104,
+          "assists": 61,
+          "international_caps": 46
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0510",
+        "name": "Yoshimura",
+        "season": {
+          "apps": 9,
+          "minutes": 616,
+          "goals": 16,
+          "assists": 0,
+          "xg": 12.0,
+          "shots": 72,
+          "key_passes": 7
+        },
+        "career": {
+          "apps": 282,
+          "goals": 110,
+          "assists": 32,
+          "international_caps": 42
+        },
+        "scoring_streak_matches": 3
+      },
+      {
+        "player_id": "P0511",
+        "name": "Krämer",
+        "season": {
+          "apps": 8,
+          "minutes": 575,
+          "goals": 0,
+          "assists": 3,
+          "xg": 2.09,
+          "shots": 25,
+          "key_passes": 19
+        },
+        "career": {
+          "apps": 320,
+          "goals": 89,
+          "assists": 71,
+          "international_caps": 29
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0512",
+        "name": "Mulder",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 185,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0513",
+        "name": "Ostermann",
+        "season": {
+          "apps": 6,
+          "minutes": 320,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.22,
+          "shots": 2,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 377,
+          "goals": 21,
+          "assists": 7,
+          "international_caps": 55
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0514",
+        "name": "Seo",
+        "season": {
+          "apps": 4,
+          "minutes": 329,
+          "goals": 0,
+          "assists": 2,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 8
+        },
+        "career": {
+          "apps": 81,
+          "goals": 1,
+          "assists": 10,
+          "international_caps": 34
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0515",
+        "name": "Bosman",
+        "season": {
+          "apps": 6,
+          "minutes": 156,
+          "goals": 3,
+          "assists": 2,
+          "xg": 1.33,
+          "shots": 13,
+          "key_passes": 5
+        },
+        "career": {
+          "apps": 429,
+          "goals": 22,
+          "assists": 22,
+          "international_caps": 75
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0516",
+        "name": "Sutton",
+        "season": {
+          "apps": 6,
+          "minutes": 323,
+          "goals": 4,
+          "assists": 2,
+          "xg": 2.42,
+          "shots": 12,
+          "key_passes": 14
+        },
+        "career": {
+          "apps": 8,
+          "goals": 4,
+          "assists": 2,
+          "international_caps": 1
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0517",
+        "name": "Albrecht",
+        "season": {
+          "apps": 2,
+          "minutes": 67,
+          "goals": 1,
+          "assists": 1,
+          "xg": 0.82,
+          "shots": 3,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 26,
+          "goals": 4,
+          "assists": 6,
+          "international_caps": 11
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0518",
+        "name": "Paredes",
+        "season": {
+          "apps": 5,
+          "minutes": 164,
+          "goals": 1,
+          "assists": 1,
+          "xg": 0.88,
+          "shots": 5,
+          "key_passes": 6
+        },
+        "career": {
+          "apps": 191,
+          "goals": 36,
+          "assists": 25,
+          "international_caps": 71
+        },
+        "scoring_streak_matches": 1
+      },
+      {
+        "player_id": "P0519",
+        "name": "Hofmann",
+        "season": {
+          "apps": 3,
+          "minutes": 82,
+          "goals": 1,
+          "assists": 0,
+          "xg": 0.98,
+          "shots": 3,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 373,
+          "goals": 154,
+          "assists": 34,
+          "international_caps": 66
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0520",
+        "name": "Steiner",
+        "season": {
+          "apps": 6,
+          "minutes": 294,
+          "goals": 2,
+          "assists": 2,
+          "xg": 1.4,
+          "shots": 11,
+          "key_passes": 11
+        },
+        "career": {
+          "apps": 317,
+          "goals": 29,
+          "assists": 42,
+          "international_caps": 123
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0521",
+        "name": "Albrecht",
+        "season": {
+          "apps": 5,
+          "minutes": 201,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.05,
+          "shots": 1,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 109,
+          "goals": 5,
+          "assists": 1,
+          "international_caps": 28
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0522",
+        "name": "Ostermann",
+        "season": {
+          "apps": 4,
+          "minutes": 166,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.29,
+          "shots": 8,
+          "key_passes": 6
+        },
+        "career": {
+          "apps": 210,
+          "goals": 50,
+          "assists": 34,
+          "international_caps": 40
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0523",
+        "name": "Ryu",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 307,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 27
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0901",
+        "name": "de Graaf",
+        "season": {
+          "apps": 9,
+          "minutes": 884,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 9,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0902",
+        "name": "Gabriel",
+        "season": {
+          "apps": 8,
+          "minutes": 727,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 4
+        },
+        "career": {
+          "apps": 217,
+          "goals": 7,
+          "assists": 23,
+          "international_caps": 6
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0903",
+        "name": "Okafor",
+        "season": {
+          "apps": 6,
+          "minutes": 508,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.05,
+          "shots": 1,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 17,
+          "goals": 0,
+          "assists": 1,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0904",
+        "name": "Albrecht",
+        "season": {
+          "apps": 8,
+          "minutes": 694,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 240,
+          "goals": 10,
+          "assists": 5,
+          "international_caps": 32
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0905",
+        "name": "Kettani",
+        "season": {
+          "apps": 5,
+          "minutes": 448,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 207,
+          "goals": 6,
+          "assists": 18,
+          "international_caps": 9
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0906",
+        "name": "Kuipers",
+        "season": {
+          "apps": 9,
+          "minutes": 822,
+          "goals": 1,
+          "assists": 1,
+          "xg": 0.7,
+          "shots": 6,
+          "key_passes": 9
+        },
+        "career": {
+          "apps": 500,
+          "goals": 36,
+          "assists": 58,
+          "international_caps": 18
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0907",
+        "name": "Visser",
+        "season": {
+          "apps": 8,
+          "minutes": 696,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 6
+        },
+        "career": {
+          "apps": 8,
+          "goals": 0,
+          "assists": 1,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0908",
+        "name": "Afolabi",
+        "season": {
+          "apps": 9,
+          "minutes": 835,
+          "goals": 0,
+          "assists": 3,
+          "xg": 0.29,
+          "shots": 7,
+          "key_passes": 10
+        },
+        "career": {
+          "apps": 161,
+          "goals": 11,
+          "assists": 20,
+          "international_caps": 62
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0909",
+        "name": "Kettani",
+        "season": {
+          "apps": 7,
+          "minutes": 518,
+          "goals": 0,
+          "assists": 3,
+          "xg": 0.05,
+          "shots": 2,
+          "key_passes": 9
+        },
+        "career": {
+          "apps": 338,
+          "goals": 79,
+          "assists": 56,
+          "international_caps": 53
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0910",
+        "name": "Verhoef",
+        "season": {
+          "apps": 8,
+          "minutes": 566,
+          "goals": 8,
+          "assists": 1,
+          "xg": 5.1,
+          "shots": 46,
+          "key_passes": 5
+        },
+        "career": {
+          "apps": 367,
+          "goals": 158,
+          "assists": 57,
+          "international_caps": 110
+        },
+        "scoring_streak_matches": 1
+      },
+      {
+        "player_id": "P0911",
+        "name": "Bakker",
+        "season": {
+          "apps": 9,
+          "minutes": 793,
+          "goals": 1,
+          "assists": 1,
+          "xg": 0.31,
+          "shots": 3,
+          "key_passes": 14
+        },
+        "career": {
+          "apps": 337,
+          "goals": 126,
+          "assists": 84,
+          "international_caps": 39
+        },
+        "scoring_streak_matches": 1
+      },
+      {
+        "player_id": "P0912",
+        "name": "Lim",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 217,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 24
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0913",
+        "name": "Visser",
+        "season": {
+          "apps": 6,
+          "minutes": 289,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 90,
+          "goals": 3,
+          "assists": 1,
+          "international_caps": 2
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0914",
+        "name": "de Wit",
+        "season": {
+          "apps": 6,
+          "minutes": 533,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 4
+        },
+        "career": {
+          "apps": 183,
+          "goals": 4,
+          "assists": 11,
+          "international_caps": 16
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0915",
+        "name": "Mulder",
+        "season": {
+          "apps": 3,
+          "minutes": 213,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.22,
+          "shots": 1,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 286,
+          "goals": 14,
+          "assists": 14,
+          "international_caps": 5
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0916",
+        "name": "Lindqvist",
+        "season": {
+          "apps": 3,
+          "minutes": 66,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 285,
+          "goals": 23,
+          "assists": 36,
+          "international_caps": 36
+        },
+        "scoring_streak_matches": 0,
+        "milestone_watch": [
+          {
+            "type": "career_goals",
+            "target": 25,
+            "needed": 2
+          }
+        ]
+      },
+      {
+        "player_id": "P0917",
+        "name": "van Rijn",
+        "season": {
+          "apps": 3,
+          "minutes": 68,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 139,
+          "goals": 32,
+          "assists": 23,
+          "international_caps": 4
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0918",
+        "name": "Verhoef",
+        "season": {
+          "apps": 5,
+          "minutes": 212,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.09,
+          "shots": 1,
+          "key_passes": 5
+        },
+        "career": {
+          "apps": 321,
+          "goals": 93,
+          "assists": 66,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0919",
+        "name": "Igor",
+        "season": {
+          "apps": 7,
+          "minutes": 282,
+          "goals": 2,
+          "assists": 0,
+          "xg": 1.37,
+          "shots": 12,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 54,
+          "goals": 15,
+          "assists": 7,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 1
+      },
+      {
+        "player_id": "P0920",
+        "name": "Okonkwo",
+        "season": {
+          "apps": 5,
+          "minutes": 106,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 221,
+          "goals": 18,
+          "assists": 30,
+          "international_caps": 44
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0921",
+        "name": "Hofmann",
+        "season": {
+          "apps": 4,
+          "minutes": 245,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 229,
+          "goals": 12,
+          "assists": 5,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0922",
+        "name": "Alaoui",
+        "season": {
+          "apps": 6,
+          "minutes": 207,
+          "goals": 1,
+          "assists": 1,
+          "xg": 1.96,
+          "shots": 8,
+          "key_passes": 5
+        },
+        "career": {
+          "apps": 120,
+          "goals": 20,
+          "assists": 21,
+          "international_caps": 17
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0923",
+        "name": "van Rijn",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 285,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      }
+    ],
+    "milestones_watch": [
+      {
+        "player_id": "P0916",
+        "name": "Lindqvist",
+        "type": "career_goals",
+        "target": 25,
+        "needed": 2
+      }
+    ],
+    "scoring_streaks": [
+      {
+        "player_id": "P0510",
+        "name": "Yoshimura",
+        "matches": 3
+      }
+    ]
+  },
+  "final_score": {
+    "home": 4,
+    "away": 0
+  }
+}

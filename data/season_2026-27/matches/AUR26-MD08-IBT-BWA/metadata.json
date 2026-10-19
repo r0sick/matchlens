@@ -1,0 +1,2389 @@
+{
+  "schema_version": "1.0",
+  "match_id": "AUR26-MD08-IBT-BWA",
+  "seed": 2026084,
+  "synthetic": true,
+  "competition": {
+    "name": "Aurora League",
+    "season": "2026/27",
+    "matchday": 8
+  },
+  "kickoff_utc": "2026-10-04T13:00:00Z",
+  "venue": {
+    "stadium": "Furnace Road",
+    "city": "Ironbridge",
+    "capacity": 24000
+  },
+  "attendance": 23602,
+  "referee": {
+    "name": "Grace Adeyemi-Holt",
+    "nationality": "ENG",
+    "strictness": 0.63
+  },
+  "weather": {
+    "condition": "clear",
+    "temp_c": 16.3,
+    "wind_kmh": 8.6
+  },
+  "pitch": {
+    "length_m": 105.0,
+    "width_m": 68.0
+  },
+  "coordinates": {
+    "location": "acting team's attacking frame: x 0->105 toward opponent goal, y 0->68 left->right",
+    "location_abs": "broadcast frame: x 0 = left goal line on screen, y 0 = far touchline",
+    "home_attacks_right_in_period": {
+      "1": true,
+      "2": false
+    }
+  },
+  "home": {
+    "team_id": "C10",
+    "name": "Ironbridge Town",
+    "short_name": "Ironbridge",
+    "abbr": "IBT",
+    "nickname": "The Smelters",
+    "city": "Ironbridge",
+    "market": "en",
+    "colors": {
+      "primary": "#7A1F2B",
+      "secondary": "#7FC8F8",
+      "text": "#FFFFFF"
+    },
+    "formation": "3-5-2",
+    "style_profile": {
+      "possession": 0.4,
+      "press": 0.55,
+      "directness": 0.7,
+      "tempo": 0.55,
+      "width": 0.55,
+      "line_height": 0.45
+    },
+    "starting_xi": [
+      {
+        "player_id": "P1001",
+        "name": "Reece Kettering",
+        "short_name": "Kettering",
+        "shirt": 1,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "ENG",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 189,
+        "overall": 72,
+        "is_star": false,
+        "attributes": {
+          "passing": 62,
+          "vision": 48,
+          "dribbling": 40,
+          "finishing": 25,
+          "shot_power": 53,
+          "pace": 53,
+          "stamina": 59,
+          "tackling": 28,
+          "positioning": 70,
+          "composure": 68,
+          "aerial": 74,
+          "keeping": 75
+        }
+      },
+      {
+        "player_id": "P1002",
+        "name": "Nahuel Funes",
+        "short_name": "Funes",
+        "shirt": 5,
+        "position": "RCB",
+        "group": "CB",
+        "nationality": "ARG",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 191,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 65,
+          "vision": 62,
+          "dribbling": 60,
+          "finishing": 52,
+          "shot_power": 66,
+          "pace": 68,
+          "stamina": 64,
+          "tackling": 78,
+          "positioning": 77,
+          "composure": 75,
+          "aerial": 86,
+          "keeping": 23
+        }
+      },
+      {
+        "player_id": "P1021",
+        "name": "Alessandro Lombardo",
+        "short_name": "Lombardo",
+        "shirt": 19,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "ITA",
+        "age": 24,
+        "foot": "right",
+        "height_cm": 196,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 56,
+          "vision": 50,
+          "dribbling": 54,
+          "finishing": 46,
+          "shot_power": 60,
+          "pace": 68,
+          "stamina": 62,
+          "tackling": 76,
+          "positioning": 76,
+          "composure": 62,
+          "aerial": 89,
+          "keeping": 19
+        }
+      },
+      {
+        "player_id": "P1004",
+        "name": "Ren Tanabe",
+        "short_name": "Tanabe",
+        "shirt": 6,
+        "position": "LCB",
+        "group": "CB",
+        "nationality": "JPN",
+        "age": 32,
+        "foot": "right",
+        "height_cm": 194,
+        "overall": 73,
+        "is_star": false,
+        "attributes": {
+          "passing": 59,
+          "vision": 67,
+          "dribbling": 61,
+          "finishing": 50,
+          "shot_power": 67,
+          "pace": 69,
+          "stamina": 72,
+          "tackling": 69,
+          "positioning": 79,
+          "composure": 71,
+          "aerial": 86,
+          "keeping": 20
+        }
+      },
+      {
+        "player_id": "P1014",
+        "name": "Kaito Yoshimura",
+        "short_name": "Yoshimura",
+        "shirt": 32,
+        "position": "RWB",
+        "group": "FB",
+        "nationality": "JPN",
+        "age": 32,
+        "foot": "right",
+        "height_cm": 175,
+        "overall": 68,
+        "is_star": false,
+        "attributes": {
+          "passing": 65,
+          "vision": 63,
+          "dribbling": 68,
+          "finishing": 51,
+          "shot_power": 62,
+          "pace": 67,
+          "stamina": 71,
+          "tackling": 70,
+          "positioning": 65,
+          "composure": 65,
+          "aerial": 60,
+          "keeping": 20
+        }
+      },
+      {
+        "player_id": "P1006",
+        "name": "Owen Cartwright",
+        "short_name": "Cartwright",
+        "shirt": 8,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "ENG",
+        "age": 30,
+        "foot": "right",
+        "height_cm": 170,
+        "overall": 82,
+        "is_star": true,
+        "attributes": {
+          "passing": 81,
+          "vision": 84,
+          "dribbling": 78,
+          "finishing": 70,
+          "shot_power": 81,
+          "pace": 75,
+          "stamina": 82,
+          "tackling": 72,
+          "positioning": 82,
+          "composure": 81,
+          "aerial": 69,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P1007",
+        "name": "Brandon Crawford",
+        "short_name": "Crawford",
+        "shirt": 3,
+        "position": "DM",
+        "group": "DM",
+        "nationality": "USA",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 177,
+        "overall": 77,
+        "is_star": false,
+        "attributes": {
+          "passing": 81,
+          "vision": 68,
+          "dribbling": 55,
+          "finishing": 56,
+          "shot_power": 72,
+          "pace": 65,
+          "stamina": 75,
+          "tackling": 72,
+          "positioning": 80,
+          "composure": 74,
+          "aerial": 75,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P1020",
+        "name": "Takumi Tanabe",
+        "short_name": "Tanabe",
+        "shirt": 35,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "JPN",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 173,
+        "overall": 76,
+        "is_star": false,
+        "attributes": {
+          "passing": 79,
+          "vision": 74,
+          "dribbling": 77,
+          "finishing": 64,
+          "shot_power": 75,
+          "pace": 67,
+          "stamina": 76,
+          "tackling": 73,
+          "positioning": 72,
+          "composure": 75,
+          "aerial": 71,
+          "keeping": 19
+        }
+      },
+      {
+        "player_id": "P1009",
+        "name": "Alfie Thorne",
+        "short_name": "Thorne",
+        "shirt": 7,
+        "position": "LWB",
+        "group": "FB",
+        "nationality": "ENG",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 180,
+        "overall": 72,
+        "is_star": false,
+        "attributes": {
+          "passing": 61,
+          "vision": 70,
+          "dribbling": 66,
+          "finishing": 54,
+          "shot_power": 65,
+          "pace": 82,
+          "stamina": 76,
+          "tackling": 71,
+          "positioning": 67,
+          "composure": 64,
+          "aerial": 67,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P1010",
+        "name": "Grant Crawford",
+        "short_name": "Crawford",
+        "shirt": 9,
+        "position": "RST",
+        "group": "ST",
+        "nationality": "USA",
+        "age": 21,
+        "foot": "right",
+        "height_cm": 180,
+        "overall": 83,
+        "is_star": false,
+        "attributes": {
+          "passing": 70,
+          "vision": 73,
+          "dribbling": 73,
+          "finishing": 86,
+          "shot_power": 80,
+          "pace": 73,
+          "stamina": 74,
+          "tackling": 60,
+          "positioning": 84,
+          "composure": 83,
+          "aerial": 79,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P1011",
+        "name": "Nacho Quesada",
+        "short_name": "Quesada",
+        "shirt": 11,
+        "position": "LST",
+        "group": "ST",
+        "nationality": "ESP",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 191,
+        "overall": 82,
+        "is_star": false,
+        "attributes": {
+          "passing": 71,
+          "vision": 71,
+          "dribbling": 73,
+          "finishing": 82,
+          "shot_power": 81,
+          "pace": 76,
+          "stamina": 73,
+          "tackling": 52,
+          "positioning": 85,
+          "composure": 80,
+          "aerial": 81,
+          "keeping": 14
+        }
+      }
+    ],
+    "bench": [
+      {
+        "player_id": "P1003",
+        "name": "Harry Cartwright",
+        "short_name": "Cartwright",
+        "shirt": 4,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "ENG",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 188,
+        "overall": 73,
+        "is_star": false,
+        "attributes": {
+          "passing": 61,
+          "vision": 63,
+          "dribbling": 58,
+          "finishing": 44,
+          "shot_power": 62,
+          "pace": 58,
+          "stamina": 67,
+          "tackling": 80,
+          "positioning": 76,
+          "composure": 71,
+          "aerial": 74,
+          "keeping": 18
+        }
+      },
+      {
+        "player_id": "P1005",
+        "name": "Tommaso Monteleone",
+        "short_name": "Monteleone",
+        "shirt": 2,
+        "position": "RWB",
+        "group": "FB",
+        "nationality": "ITA",
+        "age": 35,
+        "foot": "right",
+        "height_cm": 176,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 64,
+          "dribbling": 60,
+          "finishing": 50,
+          "shot_power": 61,
+          "pace": 74,
+          "stamina": 82,
+          "tackling": 72,
+          "positioning": 69,
+          "composure": 71,
+          "aerial": 56,
+          "keeping": 11
+        }
+      },
+      {
+        "player_id": "P1008",
+        "name": "George Calloway",
+        "short_name": "Calloway",
+        "shirt": 10,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "ENG",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 175,
+        "overall": 85,
+        "is_star": true,
+        "attributes": {
+          "passing": 84,
+          "vision": 86,
+          "dribbling": 79,
+          "finishing": 65,
+          "shot_power": 74,
+          "pace": 76,
+          "stamina": 83,
+          "tackling": 76,
+          "positioning": 87,
+          "composure": 88,
+          "aerial": 81,
+          "keeping": 22
+        }
+      },
+      {
+        "player_id": "P1012",
+        "name": "Jack Fenwick",
+        "short_name": "Fenwick",
+        "shirt": 13,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "ENG",
+        "age": 31,
+        "foot": "right",
+        "height_cm": 188,
+        "overall": 75,
+        "is_star": false,
+        "attributes": {
+          "passing": 57,
+          "vision": 54,
+          "dribbling": 36,
+          "finishing": 25,
+          "shot_power": 44,
+          "pace": 45,
+          "stamina": 61,
+          "tackling": 30,
+          "positioning": 75,
+          "composure": 72,
+          "aerial": 74,
+          "keeping": 78
+        }
+      },
+      {
+        "player_id": "P1013",
+        "name": "Callum Thorne",
+        "short_name": "Thorne",
+        "shirt": 34,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "ENG",
+        "age": 27,
+        "foot": "left",
+        "height_cm": 185,
+        "overall": 64,
+        "is_star": false,
+        "attributes": {
+          "passing": 55,
+          "vision": 56,
+          "dribbling": 49,
+          "finishing": 38,
+          "shot_power": 54,
+          "pace": 61,
+          "stamina": 65,
+          "tackling": 65,
+          "positioning": 65,
+          "composure": 65,
+          "aerial": 71,
+          "keeping": 15
+        }
+      },
+      {
+        "player_id": "P1015",
+        "name": "Callum Calloway",
+        "short_name": "Calloway",
+        "shirt": 22,
+        "position": "DM",
+        "group": "DM",
+        "nationality": "ENG",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 176,
+        "overall": 80,
+        "is_star": false,
+        "attributes": {
+          "passing": 75,
+          "vision": 82,
+          "dribbling": 73,
+          "finishing": 56,
+          "shot_power": 73,
+          "pace": 66,
+          "stamina": 82,
+          "tackling": 85,
+          "positioning": 76,
+          "composure": 78,
+          "aerial": 73,
+          "keeping": 18
+        }
+      },
+      {
+        "player_id": "P1016",
+        "name": "Victor Nwosu",
+        "short_name": "Nwosu",
+        "shirt": 27,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "NGA",
+        "age": 25,
+        "foot": "left",
+        "height_cm": 181,
+        "overall": 69,
+        "is_star": false,
+        "attributes": {
+          "passing": 68,
+          "vision": 77,
+          "dribbling": 71,
+          "finishing": 54,
+          "shot_power": 78,
+          "pace": 73,
+          "stamina": 63,
+          "tackling": 66,
+          "positioning": 67,
+          "composure": 67,
+          "aerial": 61,
+          "keeping": 19
+        }
+      },
+      {
+        "player_id": "P1017",
+        "name": "Reece Thorne",
+        "short_name": "Thorne",
+        "shirt": 20,
+        "position": "CAM",
+        "group": "AM",
+        "nationality": "ENG",
+        "age": 30,
+        "foot": "both",
+        "height_cm": 181,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 74,
+          "vision": 74,
+          "dribbling": 77,
+          "finishing": 63,
+          "shot_power": 73,
+          "pace": 65,
+          "stamina": 64,
+          "tackling": 54,
+          "positioning": 75,
+          "composure": 70,
+          "aerial": 67,
+          "keeping": 11
+        }
+      },
+      {
+        "player_id": "P1018",
+        "name": "Lautaro Paredes",
+        "short_name": "Paredes",
+        "shirt": 17,
+        "position": "RW",
+        "group": "W",
+        "nationality": "ARG",
+        "age": 30,
+        "foot": "left",
+        "height_cm": 176,
+        "overall": 69,
+        "is_star": false,
+        "attributes": {
+          "passing": 67,
+          "vision": 66,
+          "dribbling": 71,
+          "finishing": 65,
+          "shot_power": 72,
+          "pace": 74,
+          "stamina": 67,
+          "tackling": 39,
+          "positioning": 69,
+          "composure": 75,
+          "aerial": 55,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P1019",
+        "name": "Lewis Calloway",
+        "short_name": "Calloway",
+        "shirt": 37,
+        "position": "ST",
+        "group": "ST",
+        "nationality": "ENG",
+        "age": 29,
+        "foot": "left",
+        "height_cm": 181,
+        "overall": 77,
+        "is_star": false,
+        "attributes": {
+          "passing": 65,
+          "vision": 76,
+          "dribbling": 76,
+          "finishing": 75,
+          "shot_power": 75,
+          "pace": 70,
+          "stamina": 67,
+          "tackling": 54,
+          "positioning": 77,
+          "composure": 80,
+          "aerial": 66,
+          "keeping": 22
+        }
+      },
+      {
+        "player_id": "P1022",
+        "name": "George Ashworth",
+        "short_name": "Ashworth",
+        "shirt": 44,
+        "position": "RW",
+        "group": "W",
+        "nationality": "ENG",
+        "age": 29,
+        "foot": "right",
+        "height_cm": 174,
+        "overall": 75,
+        "is_star": false,
+        "attributes": {
+          "passing": 64,
+          "vision": 71,
+          "dribbling": 76,
+          "finishing": 77,
+          "shot_power": 74,
+          "pace": 84,
+          "stamina": 73,
+          "tackling": 49,
+          "positioning": 68,
+          "composure": 70,
+          "aerial": 59,
+          "keeping": 12
+        }
+      },
+      {
+        "player_id": "P1023",
+        "name": "Grant Prescott",
+        "short_name": "Prescott",
+        "shirt": 18,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "USA",
+        "age": 28,
+        "foot": "left",
+        "height_cm": 189,
+        "overall": 73,
+        "is_star": false,
+        "attributes": {
+          "passing": 58,
+          "vision": 57,
+          "dribbling": 39,
+          "finishing": 25,
+          "shot_power": 48,
+          "pace": 44,
+          "stamina": 61,
+          "tackling": 28,
+          "positioning": 68,
+          "composure": 75,
+          "aerial": 77,
+          "keeping": 73
+        }
+      }
+    ]
+  },
+  "away": {
+    "team_id": "C08",
+    "name": "Blackwater Athletic",
+    "short_name": "Blackwater",
+    "abbr": "BWA",
+    "nickname": "The Millers",
+    "city": "Blackwater",
+    "market": "en",
+    "colors": {
+      "primary": "#2E2E2E",
+      "secondary": "#E85D04",
+      "text": "#E85D04"
+    },
+    "formation": "4-4-2",
+    "style_profile": {
+      "possession": 0.35,
+      "press": 0.45,
+      "directness": 0.85,
+      "tempo": 0.65,
+      "width": 0.7,
+      "line_height": 0.4
+    },
+    "starting_xi": [
+      {
+        "player_id": "P0801",
+        "name": "Charlie Bramley",
+        "short_name": "Bramley",
+        "shirt": 1,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "ENG",
+        "age": 23,
+        "foot": "right",
+        "height_cm": 184,
+        "overall": 70,
+        "is_star": false,
+        "attributes": {
+          "passing": 60,
+          "vision": 57,
+          "dribbling": 47,
+          "finishing": 25,
+          "shot_power": 51,
+          "pace": 45,
+          "stamina": 62,
+          "tackling": 27,
+          "positioning": 72,
+          "composure": 68,
+          "aerial": 66,
+          "keeping": 72
+        }
+      },
+      {
+        "player_id": "P0802",
+        "name": "Harry Marlow",
+        "short_name": "Marlow",
+        "shirt": 2,
+        "position": "RB",
+        "group": "FB",
+        "nationality": "ENG",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 174,
+        "overall": 70,
+        "is_star": false,
+        "attributes": {
+          "passing": 62,
+          "vision": 59,
+          "dribbling": 72,
+          "finishing": 51,
+          "shot_power": 59,
+          "pace": 75,
+          "stamina": 76,
+          "tackling": 68,
+          "positioning": 75,
+          "composure": 64,
+          "aerial": 66,
+          "keeping": 19
+        }
+      },
+      {
+        "player_id": "P0803",
+        "name": "Sem Verhoef",
+        "short_name": "Verhoef",
+        "shirt": 5,
+        "position": "RCB",
+        "group": "CB",
+        "nationality": "NED",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 185,
+        "overall": 73,
+        "is_star": false,
+        "attributes": {
+          "passing": 64,
+          "vision": 59,
+          "dribbling": 54,
+          "finishing": 39,
+          "shot_power": 65,
+          "pace": 67,
+          "stamina": 70,
+          "tackling": 77,
+          "positioning": 69,
+          "composure": 69,
+          "aerial": 81,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0813",
+        "name": "Jonas Vogt",
+        "short_name": "Vogt",
+        "shirt": 32,
+        "position": "LCB",
+        "group": "CB",
+        "nationality": "GER",
+        "age": 22,
+        "foot": "left",
+        "height_cm": 205,
+        "overall": 79,
+        "is_star": false,
+        "attributes": {
+          "passing": 72,
+          "vision": 66,
+          "dribbling": 62,
+          "finishing": 50,
+          "shot_power": 73,
+          "pace": 70,
+          "stamina": 75,
+          "tackling": 77,
+          "positioning": 72,
+          "composure": 71,
+          "aerial": 96,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P0805",
+        "name": "Lewis Cartwright",
+        "short_name": "Cartwright",
+        "shirt": 3,
+        "position": "LB",
+        "group": "FB",
+        "nationality": "ENG",
+        "age": 28,
+        "foot": "both",
+        "height_cm": 177,
+        "overall": 72,
+        "is_star": false,
+        "attributes": {
+          "passing": 63,
+          "vision": 53,
+          "dribbling": 65,
+          "finishing": 42,
+          "shot_power": 62,
+          "pace": 80,
+          "stamina": 70,
+          "tackling": 76,
+          "positioning": 65,
+          "composure": 64,
+          "aerial": 59,
+          "keeping": 15
+        }
+      },
+      {
+        "player_id": "P0806",
+        "name": "Tyler Lindqvist",
+        "short_name": "Lindqvist",
+        "shirt": 7,
+        "position": "RM",
+        "group": "WM",
+        "nationality": "USA",
+        "age": 26,
+        "foot": "right",
+        "height_cm": 185,
+        "overall": 79,
+        "is_star": false,
+        "attributes": {
+          "passing": 78,
+          "vision": 78,
+          "dribbling": 80,
+          "finishing": 69,
+          "shot_power": 76,
+          "pace": 81,
+          "stamina": 76,
+          "tackling": 72,
+          "positioning": 84,
+          "composure": 73,
+          "aerial": 76,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P0807",
+        "name": "Femi Olatunji",
+        "short_name": "Olatunji",
+        "shirt": 8,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "NGA",
+        "age": 30,
+        "foot": "right",
+        "height_cm": 177,
+        "overall": 82,
+        "is_star": true,
+        "attributes": {
+          "passing": 77,
+          "vision": 84,
+          "dribbling": 79,
+          "finishing": 70,
+          "shot_power": 82,
+          "pace": 79,
+          "stamina": 85,
+          "tackling": 80,
+          "positioning": 74,
+          "composure": 82,
+          "aerial": 81,
+          "keeping": 13
+        }
+      },
+      {
+        "player_id": "P0820",
+        "name": "Tunde Nwosu",
+        "short_name": "Nwosu",
+        "shirt": 19,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "NGA",
+        "age": 24,
+        "foot": "left",
+        "height_cm": 174,
+        "overall": 75,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 81,
+          "dribbling": 64,
+          "finishing": 64,
+          "shot_power": 62,
+          "pace": 62,
+          "stamina": 74,
+          "tackling": 74,
+          "positioning": 74,
+          "composure": 76,
+          "aerial": 68,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P0809",
+        "name": "George Marlow",
+        "short_name": "Marlow",
+        "shirt": 11,
+        "position": "LM",
+        "group": "WM",
+        "nationality": "ENG",
+        "age": 26,
+        "foot": "both",
+        "height_cm": 176,
+        "overall": 86,
+        "is_star": false,
+        "attributes": {
+          "passing": 84,
+          "vision": 83,
+          "dribbling": 86,
+          "finishing": 78,
+          "shot_power": 78,
+          "pace": 88,
+          "stamina": 85,
+          "tackling": 77,
+          "positioning": 75,
+          "composure": 79,
+          "aerial": 66,
+          "keeping": 17
+        }
+      },
+      {
+        "player_id": "P0819",
+        "name": "Daan de Graaf",
+        "short_name": "de Graaf",
+        "shirt": 31,
+        "position": "RST",
+        "group": "ST",
+        "nationality": "NED",
+        "age": 24,
+        "foot": "right",
+        "height_cm": 183,
+        "overall": 79,
+        "is_star": false,
+        "attributes": {
+          "passing": 65,
+          "vision": 72,
+          "dribbling": 79,
+          "finishing": 78,
+          "shot_power": 78,
+          "pace": 80,
+          "stamina": 79,
+          "tackling": 53,
+          "positioning": 82,
+          "composure": 77,
+          "aerial": 70,
+          "keeping": 16
+        }
+      },
+      {
+        "player_id": "P0810",
+        "name": "Harry Bramley",
+        "short_name": "Bramley",
+        "shirt": 9,
+        "position": "LST",
+        "group": "ST",
+        "nationality": "ENG",
+        "age": 23,
+        "foot": "left",
+        "height_cm": 178,
+        "overall": 92,
+        "is_star": true,
+        "attributes": {
+          "passing": 77,
+          "vision": 84,
+          "dribbling": 81,
+          "finishing": 94,
+          "shot_power": 91,
+          "pace": 84,
+          "stamina": 78,
+          "tackling": 63,
+          "positioning": 96,
+          "composure": 87,
+          "aerial": 75,
+          "keeping": 12
+        }
+      }
+    ],
+    "bench": [
+      {
+        "player_id": "P0804",
+        "name": "Musa Olatunji",
+        "short_name": "Olatunji",
+        "shirt": 6,
+        "position": "LCB",
+        "group": "CB",
+        "nationality": "NGA",
+        "age": 20,
+        "foot": "right",
+        "height_cm": 187,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 60,
+          "vision": 52,
+          "dribbling": 59,
+          "finishing": 46,
+          "shot_power": 68,
+          "pace": 70,
+          "stamina": 62,
+          "tackling": 85,
+          "positioning": 73,
+          "composure": 70,
+          "aerial": 76,
+          "keeping": 10
+        }
+      },
+      {
+        "player_id": "P0808",
+        "name": "Hugo Bonnaud",
+        "short_name": "Bonnaud",
+        "shirt": 10,
+        "position": "LCM",
+        "group": "CM",
+        "nationality": "FRA",
+        "age": 23,
+        "foot": "right",
+        "height_cm": 173,
+        "overall": 73,
+        "is_star": false,
+        "attributes": {
+          "passing": 70,
+          "vision": 72,
+          "dribbling": 69,
+          "finishing": 55,
+          "shot_power": 68,
+          "pace": 66,
+          "stamina": 78,
+          "tackling": 68,
+          "positioning": 66,
+          "composure": 71,
+          "aerial": 66,
+          "keeping": 22
+        }
+      },
+      {
+        "player_id": "P0811",
+        "name": "Callum Ashworth",
+        "short_name": "Ashworth",
+        "shirt": 4,
+        "position": "LST",
+        "group": "ST",
+        "nationality": "ENG",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 178,
+        "overall": 86,
+        "is_star": false,
+        "attributes": {
+          "passing": 76,
+          "vision": 84,
+          "dribbling": 79,
+          "finishing": 88,
+          "shot_power": 86,
+          "pace": 79,
+          "stamina": 74,
+          "tackling": 56,
+          "positioning": 82,
+          "composure": 87,
+          "aerial": 74,
+          "keeping": 18
+        }
+      },
+      {
+        "player_id": "P0812",
+        "name": "Tyler Crawford",
+        "short_name": "Crawford",
+        "shirt": 13,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "USA",
+        "age": 30,
+        "foot": "right",
+        "height_cm": 197,
+        "overall": 68,
+        "is_star": false,
+        "attributes": {
+          "passing": 56,
+          "vision": 50,
+          "dribbling": 38,
+          "finishing": 25,
+          "shot_power": 43,
+          "pace": 39,
+          "stamina": 57,
+          "tackling": 25,
+          "positioning": 64,
+          "composure": 71,
+          "aerial": 72,
+          "keeping": 66
+        }
+      },
+      {
+        "player_id": "P0814",
+        "name": "Owen Drayton",
+        "short_name": "Drayton",
+        "shirt": 20,
+        "position": "RB",
+        "group": "FB",
+        "nationality": "ENG",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 182,
+        "overall": 66,
+        "is_star": false,
+        "attributes": {
+          "passing": 62,
+          "vision": 56,
+          "dribbling": 60,
+          "finishing": 51,
+          "shot_power": 54,
+          "pace": 74,
+          "stamina": 68,
+          "tackling": 60,
+          "positioning": 70,
+          "composure": 71,
+          "aerial": 63,
+          "keeping": 17
+        }
+      },
+      {
+        "player_id": "P0815",
+        "name": "Harry Thorne",
+        "short_name": "Thorne",
+        "shirt": 41,
+        "position": "DM",
+        "group": "DM",
+        "nationality": "ENG",
+        "age": 28,
+        "foot": "right",
+        "height_cm": 180,
+        "overall": 66,
+        "is_star": false,
+        "attributes": {
+          "passing": 66,
+          "vision": 69,
+          "dribbling": 63,
+          "finishing": 52,
+          "shot_power": 64,
+          "pace": 65,
+          "stamina": 68,
+          "tackling": 66,
+          "positioning": 64,
+          "composure": 71,
+          "aerial": 63,
+          "keeping": 18
+        }
+      },
+      {
+        "player_id": "P0816",
+        "name": "Charlie Whitfield",
+        "short_name": "Whitfield",
+        "shirt": 25,
+        "position": "RCM",
+        "group": "CM",
+        "nationality": "ENG",
+        "age": 25,
+        "foot": "right",
+        "height_cm": 174,
+        "overall": 73,
+        "is_star": false,
+        "attributes": {
+          "passing": 69,
+          "vision": 71,
+          "dribbling": 67,
+          "finishing": 55,
+          "shot_power": 75,
+          "pace": 72,
+          "stamina": 73,
+          "tackling": 69,
+          "positioning": 79,
+          "composure": 78,
+          "aerial": 77,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P0817",
+        "name": "George Pembridge",
+        "short_name": "Pembridge",
+        "shirt": 13,
+        "position": "CAM",
+        "group": "AM",
+        "nationality": "ENG",
+        "age": 27,
+        "foot": "left",
+        "height_cm": 168,
+        "overall": 84,
+        "is_star": false,
+        "attributes": {
+          "passing": 85,
+          "vision": 81,
+          "dribbling": 86,
+          "finishing": 77,
+          "shot_power": 73,
+          "pace": 79,
+          "stamina": 82,
+          "tackling": 73,
+          "positioning": 82,
+          "composure": 84,
+          "aerial": 73,
+          "keeping": 24
+        }
+      },
+      {
+        "player_id": "P0818",
+        "name": "Owen Marlow",
+        "short_name": "Marlow",
+        "shirt": 16,
+        "position": "RW",
+        "group": "W",
+        "nationality": "ENG",
+        "age": 23,
+        "foot": "left",
+        "height_cm": 173,
+        "overall": 68,
+        "is_star": false,
+        "attributes": {
+          "passing": 70,
+          "vision": 70,
+          "dribbling": 73,
+          "finishing": 60,
+          "shot_power": 60,
+          "pace": 70,
+          "stamina": 63,
+          "tackling": 42,
+          "positioning": 70,
+          "composure": 65,
+          "aerial": 50,
+          "keeping": 23
+        }
+      },
+      {
+        "player_id": "P0821",
+        "name": "Lewis Whitfield",
+        "short_name": "Whitfield",
+        "shirt": 17,
+        "position": "CB",
+        "group": "CB",
+        "nationality": "ENG",
+        "age": 27,
+        "foot": "right",
+        "height_cm": 183,
+        "overall": 69,
+        "is_star": false,
+        "attributes": {
+          "passing": 58,
+          "vision": 56,
+          "dribbling": 49,
+          "finishing": 42,
+          "shot_power": 57,
+          "pace": 65,
+          "stamina": 68,
+          "tackling": 79,
+          "positioning": 72,
+          "composure": 62,
+          "aerial": 66,
+          "keeping": 21
+        }
+      },
+      {
+        "player_id": "P0822",
+        "name": "Hunter Harlan",
+        "short_name": "Harlan",
+        "shirt": 22,
+        "position": "RW",
+        "group": "W",
+        "nationality": "USA",
+        "age": 22,
+        "foot": "right",
+        "height_cm": 178,
+        "overall": 80,
+        "is_star": false,
+        "attributes": {
+          "passing": 76,
+          "vision": 71,
+          "dribbling": 84,
+          "finishing": 77,
+          "shot_power": 71,
+          "pace": 81,
+          "stamina": 72,
+          "tackling": 56,
+          "positioning": 73,
+          "composure": 72,
+          "aerial": 59,
+          "keeping": 12
+        }
+      },
+      {
+        "player_id": "P0823",
+        "name": "Ifeanyi Nwosu",
+        "short_name": "Nwosu",
+        "shirt": 29,
+        "position": "GK",
+        "group": "GK",
+        "nationality": "NGA",
+        "age": 17,
+        "foot": "right",
+        "height_cm": 200,
+        "overall": 74,
+        "is_star": false,
+        "attributes": {
+          "passing": 48,
+          "vision": 56,
+          "dribbling": 38,
+          "finishing": 25,
+          "shot_power": 43,
+          "pace": 48,
+          "stamina": 50,
+          "tackling": 31,
+          "positioning": 68,
+          "composure": 72,
+          "aerial": 84,
+          "keeping": 70
+        }
+      }
+    ]
+  },
+  "pre_match": {
+    "matchday": 8,
+    "standings": {
+      "home": {
+        "team_id": "C10",
+        "name": "Ironbridge Town",
+        "abbr": "IBT",
+        "played": 7,
+        "won": 0,
+        "drawn": 2,
+        "lost": 5,
+        "gf": 6,
+        "ga": 18,
+        "gd": -12,
+        "points": 2,
+        "form": "DLLDL",
+        "position": 10
+      },
+      "away": {
+        "team_id": "C08",
+        "name": "Blackwater Athletic",
+        "abbr": "BWA",
+        "played": 7,
+        "won": 0,
+        "drawn": 3,
+        "lost": 4,
+        "gf": 7,
+        "ga": 15,
+        "gd": -8,
+        "points": 3,
+        "form": "DLLDL",
+        "position": 9
+      }
+    },
+    "head_to_head_this_season": [],
+    "players": [
+      {
+        "player_id": "P1001",
+        "name": "Kettering",
+        "season": {
+          "apps": 7,
+          "minutes": 680,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 265,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1002",
+        "name": "Funes",
+        "season": {
+          "apps": 6,
+          "minutes": 511,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.35,
+          "shots": 2,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 153,
+          "goals": 7,
+          "assists": 2,
+          "international_caps": 2
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1003",
+        "name": "Cartwright",
+        "season": {
+          "apps": 7,
+          "minutes": 472,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 327,
+          "goals": 11,
+          "assists": 5,
+          "international_caps": 3
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1004",
+        "name": "Tanabe",
+        "season": {
+          "apps": 7,
+          "minutes": 643,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.56,
+          "shots": 3,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 474,
+          "goals": 15,
+          "assists": 10,
+          "international_caps": 5
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1005",
+        "name": "Monteleone",
+        "season": {
+          "apps": 7,
+          "minutes": 680,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 14
+        },
+        "career": {
+          "apps": 385,
+          "goals": 11,
+          "assists": 43,
+          "international_caps": 17
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1006",
+        "name": "Cartwright",
+        "season": {
+          "apps": 7,
+          "minutes": 680,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 14
+        },
+        "career": {
+          "apps": 412,
+          "goals": 37,
+          "assists": 43,
+          "international_caps": 32
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1007",
+        "name": "Crawford",
+        "season": {
+          "apps": 5,
+          "minutes": 485,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 3
+        },
+        "career": {
+          "apps": 230,
+          "goals": 8,
+          "assists": 11,
+          "international_caps": 6
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1008",
+        "name": "Calloway",
+        "season": {
+          "apps": 7,
+          "minutes": 680,
+          "goals": 0,
+          "assists": 2,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 17
+        },
+        "career": {
+          "apps": 272,
+          "goals": 33,
+          "assists": 36,
+          "international_caps": 78
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1009",
+        "name": "Thorne",
+        "season": {
+          "apps": 7,
+          "minutes": 658,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 10
+        },
+        "career": {
+          "apps": 169,
+          "goals": 3,
+          "assists": 14,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1010",
+        "name": "Crawford",
+        "season": {
+          "apps": 7,
+          "minutes": 527,
+          "goals": 3,
+          "assists": 0,
+          "xg": 4.56,
+          "shots": 41,
+          "key_passes": 6
+        },
+        "career": {
+          "apps": 102,
+          "goals": 46,
+          "assists": 10,
+          "international_caps": 15
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1011",
+        "name": "Quesada",
+        "season": {
+          "apps": 7,
+          "minutes": 412,
+          "goals": 1,
+          "assists": 2,
+          "xg": 2.98,
+          "shots": 17,
+          "key_passes": 3
+        },
+        "career": {
+          "apps": 233,
+          "goals": 74,
+          "assists": 21,
+          "international_caps": 38
+        },
+        "scoring_streak_matches": 0,
+        "milestone_watch": [
+          {
+            "type": "career_goals",
+            "target": 75,
+            "needed": 1
+          }
+        ]
+      },
+      {
+        "player_id": "P1012",
+        "name": "Fenwick",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 271,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 10
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1013",
+        "name": "Thorne",
+        "season": {
+          "apps": 1,
+          "minutes": 82,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 233,
+          "goals": 10,
+          "assists": 3,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1014",
+        "name": "Yoshimura",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 391,
+          "goals": 14,
+          "assists": 36,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1015",
+        "name": "Calloway",
+        "season": {
+          "apps": 2,
+          "minutes": 195,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 207,
+          "goals": 6,
+          "assists": 7,
+          "international_caps": 27
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1016",
+        "name": "Nwosu",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 165,
+          "goals": 14,
+          "assists": 20,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1017",
+        "name": "Thorne",
+        "season": {
+          "apps": 6,
+          "minutes": 55,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 266,
+          "goals": 37,
+          "assists": 58,
+          "international_caps": 14
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1018",
+        "name": "Paredes",
+        "season": {
+          "apps": 6,
+          "minutes": 87,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.1,
+          "shots": 3,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 360,
+          "goals": 89,
+          "assists": 50,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1019",
+        "name": "Calloway",
+        "season": {
+          "apps": 6,
+          "minutes": 329,
+          "goals": 1,
+          "assists": 0,
+          "xg": 1.13,
+          "shots": 12,
+          "key_passes": 7
+        },
+        "career": {
+          "apps": 301,
+          "goals": 137,
+          "assists": 43,
+          "international_caps": 9
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1020",
+        "name": "Tanabe",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 230,
+          "goals": 17,
+          "assists": 32,
+          "international_caps": 8
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1021",
+        "name": "Lombardo",
+        "season": {
+          "apps": 5,
+          "minutes": 191,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.14,
+          "shots": 1,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 159,
+          "goals": 6,
+          "assists": 3,
+          "international_caps": 6
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1022",
+        "name": "Ashworth",
+        "season": {
+          "apps": 6,
+          "minutes": 113,
+          "goals": 1,
+          "assists": 0,
+          "xg": 0.82,
+          "shots": 9,
+          "key_passes": 4
+        },
+        "career": {
+          "apps": 229,
+          "goals": 68,
+          "assists": 32,
+          "international_caps": 7
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P1023",
+        "name": "Prescott",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 317,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 4
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0801",
+        "name": "Bramley",
+        "season": {
+          "apps": 7,
+          "minutes": 681,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 91,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0802",
+        "name": "Marlow",
+        "season": {
+          "apps": 7,
+          "minutes": 681,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.01,
+          "shots": 1,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 253,
+          "goals": 6,
+          "assists": 17,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0803",
+        "name": "Verhoef",
+        "season": {
+          "apps": 7,
+          "minutes": 610,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.04,
+          "shots": 1,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 306,
+          "goals": 16,
+          "assists": 4,
+          "international_caps": 2
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0804",
+        "name": "Olatunji",
+        "season": {
+          "apps": 5,
+          "minutes": 388,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 42,
+          "goals": 1,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0805",
+        "name": "Cartwright",
+        "season": {
+          "apps": 6,
+          "minutes": 514,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 2
+        },
+        "career": {
+          "apps": 210,
+          "goals": 5,
+          "assists": 20,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0806",
+        "name": "Lindqvist",
+        "season": {
+          "apps": 7,
+          "minutes": 681,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.07,
+          "shots": 1,
+          "key_passes": 16
+        },
+        "career": {
+          "apps": 171,
+          "goals": 22,
+          "assists": 27,
+          "international_caps": 13
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0807",
+        "name": "Olatunji",
+        "season": {
+          "apps": 7,
+          "minutes": 674,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.45,
+          "shots": 6,
+          "key_passes": 11
+        },
+        "career": {
+          "apps": 299,
+          "goals": 22,
+          "assists": 40,
+          "international_caps": 79
+        },
+        "scoring_streak_matches": 0,
+        "milestone_watch": [
+          {
+            "type": "career_apps",
+            "target": 300,
+            "needed": 1
+          }
+        ]
+      },
+      {
+        "player_id": "P0808",
+        "name": "Bonnaud",
+        "season": {
+          "apps": 5,
+          "minutes": 486,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.02,
+          "shots": 1,
+          "key_passes": 4
+        },
+        "career": {
+          "apps": 134,
+          "goals": 11,
+          "assists": 14,
+          "international_caps": 2
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0809",
+        "name": "Marlow",
+        "season": {
+          "apps": 7,
+          "minutes": 681,
+          "goals": 0,
+          "assists": 2,
+          "xg": 0.04,
+          "shots": 3,
+          "key_passes": 21
+        },
+        "career": {
+          "apps": 169,
+          "goals": 19,
+          "assists": 26,
+          "international_caps": 16
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0810",
+        "name": "Bramley",
+        "season": {
+          "apps": 7,
+          "minutes": 412,
+          "goals": 1,
+          "assists": 0,
+          "xg": 1.74,
+          "shots": 24,
+          "key_passes": 11
+        },
+        "career": {
+          "apps": 157,
+          "goals": 81,
+          "assists": 27,
+          "international_caps": 54
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0811",
+        "name": "Ashworth",
+        "season": {
+          "apps": 7,
+          "minutes": 470,
+          "goals": 2,
+          "assists": 0,
+          "xg": 3.8,
+          "shots": 34,
+          "key_passes": 10
+        },
+        "career": {
+          "apps": 296,
+          "goals": 120,
+          "assists": 42,
+          "international_caps": 75
+        },
+        "scoring_streak_matches": 1
+      },
+      {
+        "player_id": "P0812",
+        "name": "Crawford",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 299,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0,
+        "milestone_watch": [
+          {
+            "type": "career_apps",
+            "target": 300,
+            "needed": 1
+          }
+        ]
+      },
+      {
+        "player_id": "P0813",
+        "name": "Vogt",
+        "season": {
+          "apps": 4,
+          "minutes": 162,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 80,
+          "goals": 2,
+          "assists": 1,
+          "international_caps": 17
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0814",
+        "name": "Drayton",
+        "season": {
+          "apps": 3,
+          "minutes": 124,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 271,
+          "goals": 5,
+          "assists": 19,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0815",
+        "name": "Thorne",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 232,
+          "goals": 9,
+          "assists": 10,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0816",
+        "name": "Whitfield",
+        "season": {
+          "apps": 1,
+          "minutes": 17,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 172,
+          "goals": 11,
+          "assists": 24,
+          "international_caps": 1
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0817",
+        "name": "Pembridge",
+        "season": {
+          "apps": 4,
+          "minutes": 71,
+          "goals": 1,
+          "assists": 0,
+          "xg": 0.78,
+          "shots": 1,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 212,
+          "goals": 43,
+          "assists": 39,
+          "international_caps": 51
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0818",
+        "name": "Marlow",
+        "season": {
+          "apps": 5,
+          "minutes": 113,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.22,
+          "shots": 4,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 113,
+          "goals": 25,
+          "assists": 21,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0819",
+        "name": "de Graaf",
+        "season": {
+          "apps": 6,
+          "minutes": 332,
+          "goals": 2,
+          "assists": 2,
+          "xg": 1.75,
+          "shots": 15,
+          "key_passes": 8
+        },
+        "career": {
+          "apps": 169,
+          "goals": 68,
+          "assists": 21,
+          "international_caps": 4
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0820",
+        "name": "Nwosu",
+        "season": {
+          "apps": 3,
+          "minutes": 185,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.05,
+          "shots": 2,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 153,
+          "goals": 9,
+          "assists": 14,
+          "international_caps": 3
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0821",
+        "name": "Whitfield",
+        "season": {
+          "apps": 1,
+          "minutes": 75,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 201,
+          "goals": 8,
+          "assists": 3,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0822",
+        "name": "Harlan",
+        "season": {
+          "apps": 6,
+          "minutes": 134,
+          "goals": 1,
+          "assists": 0,
+          "xg": 0.49,
+          "shots": 7,
+          "key_passes": 1
+        },
+        "career": {
+          "apps": 94,
+          "goals": 21,
+          "assists": 14,
+          "international_caps": 7
+        },
+        "scoring_streak_matches": 0
+      },
+      {
+        "player_id": "P0823",
+        "name": "Nwosu",
+        "season": {
+          "apps": 0,
+          "minutes": 0,
+          "goals": 0,
+          "assists": 0,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
+        },
+        "career": {
+          "apps": 0,
+          "goals": 0,
+          "assists": 0,
+          "international_caps": 0
+        },
+        "scoring_streak_matches": 0
+      }
+    ],
+    "milestones_watch": [
+      {
+        "player_id": "P1011",
+        "name": "Quesada",
+        "type": "career_goals",
+        "target": 75,
+        "needed": 1
+      },
+      {
+        "player_id": "P0807",
+        "name": "Olatunji",
+        "type": "career_apps",
+        "target": 300,
+        "needed": 1
+      },
+      {
+        "player_id": "P0812",
+        "name": "Crawford",
+        "type": "career_apps",
+        "target": 300,
+        "needed": 1
+      }
+    ],
+    "scoring_streaks": []
+  },
+  "final_score": {
+    "home": 3,
+    "away": 0
+  }
+}

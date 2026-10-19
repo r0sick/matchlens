@@ -1,0 +1,2956 @@
+{
+ "match_id": "AUR26-MD17-FAN-OLR",
+ "description": "Latent variables that drove the simulation. momentum_home in [-1,1] (+ = home on top); chaos in [0,1] (turnover-heavy, stretched play). Styles are live tactical intents.",
+ "timeline": [
+  {
+   "minute": 1,
+   "period": 1,
+   "momentum_home": 0.08,
+   "chaos": 0.158,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 99.1,
+   "away_avg_stamina": 99.1,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 2,
+   "period": 1,
+   "momentum_home": 0.033,
+   "chaos": 0.165,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 98.2,
+   "away_avg_stamina": 98.2,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 3,
+   "period": 1,
+   "momentum_home": 0.003,
+   "chaos": 0.171,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 97.3,
+   "away_avg_stamina": 97.3,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 4,
+   "period": 1,
+   "momentum_home": 0.056,
+   "chaos": 0.133,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 96.4,
+   "away_avg_stamina": 96.4,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 5,
+   "period": 1,
+   "momentum_home": 0.104,
+   "chaos": 0.164,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 95.5,
+   "away_avg_stamina": 95.5,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 6,
+   "period": 1,
+   "momentum_home": 0.047,
+   "chaos": 0.141,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 94.6,
+   "away_avg_stamina": 94.6,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 7,
+   "period": 1,
+   "momentum_home": 0.045,
+   "chaos": 0.168,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 93.7,
+   "away_avg_stamina": 93.7,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 8,
+   "period": 1,
+   "momentum_home": -0.039,
+   "chaos": 0.202,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 92.9,
+   "away_avg_stamina": 92.8,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 9,
+   "period": 1,
+   "momentum_home": -0.048,
+   "chaos": 0.215,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 92.0,
+   "away_avg_stamina": 91.9,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 10,
+   "period": 1,
+   "momentum_home": -0.16,
+   "chaos": 0.212,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 91.2,
+   "away_avg_stamina": 91.0,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 11,
+   "period": 1,
+   "momentum_home": -0.066,
+   "chaos": 0.202,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 90.3,
+   "away_avg_stamina": 90.1,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 12,
+   "period": 1,
+   "momentum_home": -0.148,
+   "chaos": 0.218,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 89.4,
+   "away_avg_stamina": 89.2,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 13,
+   "period": 1,
+   "momentum_home": -0.156,
+   "chaos": 0.242,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 88.5,
+   "away_avg_stamina": 88.4,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 14,
+   "period": 1,
+   "momentum_home": -0.094,
+   "chaos": 0.199,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 87.7,
+   "away_avg_stamina": 87.5,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 15,
+   "period": 1,
+   "momentum_home": 0.011,
+   "chaos": 0.167,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 86.8,
+   "away_avg_stamina": 86.6,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 16,
+   "period": 1,
+   "momentum_home": 0.047,
+   "chaos": 0.194,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 85.9,
+   "away_avg_stamina": 85.7,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 17,
+   "period": 1,
+   "momentum_home": -0.14,
+   "chaos": 0.201,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 85.0,
+   "away_avg_stamina": 84.9,
+   "score": [
+    0,
+    0
+   ]
+  },
+  {
+   "minute": 18,
+   "period": 1,
+   "momentum_home": -0.482,
+   "chaos": 0.434,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 84.1,
+   "away_avg_stamina": 84.0,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 19,
+   "period": 1,
+   "momentum_home": -0.447,
+   "chaos": 0.4,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 83.3,
+   "away_avg_stamina": 83.0,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 20,
+   "period": 1,
+   "momentum_home": -0.258,
+   "chaos": 0.351,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 82.4,
+   "away_avg_stamina": 82.2,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 21,
+   "period": 1,
+   "momentum_home": -0.207,
+   "chaos": 0.36,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 81.5,
+   "away_avg_stamina": 81.3,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 22,
+   "period": 1,
+   "momentum_home": -0.238,
+   "chaos": 0.362,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 80.6,
+   "away_avg_stamina": 80.4,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 23,
+   "period": 1,
+   "momentum_home": -0.212,
+   "chaos": 0.345,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 79.8,
+   "away_avg_stamina": 79.5,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 24,
+   "period": 1,
+   "momentum_home": -0.35,
+   "chaos": 0.347,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 78.9,
+   "away_avg_stamina": 78.6,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 25,
+   "period": 1,
+   "momentum_home": -0.319,
+   "chaos": 0.325,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 78.0,
+   "away_avg_stamina": 77.7,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 26,
+   "period": 1,
+   "momentum_home": -0.283,
+   "chaos": 0.367,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 77.1,
+   "away_avg_stamina": 76.8,
+   "score": [
+    0,
+    1
+   ]
+  },
+  {
+   "minute": 27,
+   "period": 1,
+   "momentum_home": -0.636,
+   "chaos": 0.508,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 76.3,
+   "away_avg_stamina": 75.9,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 28,
+   "period": 1,
+   "momentum_home": -0.563,
+   "chaos": 0.488,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 75.4,
+   "away_avg_stamina": 75.1,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 29,
+   "period": 1,
+   "momentum_home": -0.412,
+   "chaos": 0.419,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 74.5,
+   "away_avg_stamina": 74.2,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 30,
+   "period": 1,
+   "momentum_home": -0.282,
+   "chaos": 0.433,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 73.6,
+   "away_avg_stamina": 73.3,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 31,
+   "period": 1,
+   "momentum_home": -0.282,
+   "chaos": 0.44,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 72.7,
+   "away_avg_stamina": 72.4,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 32,
+   "period": 1,
+   "momentum_home": -0.182,
+   "chaos": 0.436,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 71.9,
+   "away_avg_stamina": 71.5,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 33,
+   "period": 1,
+   "momentum_home": -0.108,
+   "chaos": 0.419,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 71.0,
+   "away_avg_stamina": 70.6,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 34,
+   "period": 1,
+   "momentum_home": -0.217,
+   "chaos": 0.378,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 70.1,
+   "away_avg_stamina": 69.8,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 35,
+   "period": 1,
+   "momentum_home": -0.224,
+   "chaos": 0.362,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 69.3,
+   "away_avg_stamina": 68.9,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 36,
+   "period": 1,
+   "momentum_home": -0.204,
+   "chaos": 0.323,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 68.4,
+   "away_avg_stamina": 68.1,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 37,
+   "period": 1,
+   "momentum_home": -0.076,
+   "chaos": 0.33,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 67.6,
+   "away_avg_stamina": 67.2,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 38,
+   "period": 1,
+   "momentum_home": -0.208,
+   "chaos": 0.317,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 66.8,
+   "away_avg_stamina": 66.4,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 39,
+   "period": 1,
+   "momentum_home": -0.242,
+   "chaos": 0.287,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 65.9,
+   "away_avg_stamina": 65.5,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 40,
+   "period": 1,
+   "momentum_home": -0.183,
+   "chaos": 0.264,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 65.1,
+   "away_avg_stamina": 64.7,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 41,
+   "period": 1,
+   "momentum_home": -0.144,
+   "chaos": 0.259,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 64.3,
+   "away_avg_stamina": 63.8,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 42,
+   "period": 1,
+   "momentum_home": -0.038,
+   "chaos": 0.23,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 63.4,
+   "away_avg_stamina": 63.0,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 43,
+   "period": 1,
+   "momentum_home": -0.036,
+   "chaos": 0.183,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 62.6,
+   "away_avg_stamina": 62.1,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 44,
+   "period": 1,
+   "momentum_home": -0.002,
+   "chaos": 0.211,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 61.7,
+   "away_avg_stamina": 61.3,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 45,
+   "period": 1,
+   "momentum_home": 0.131,
+   "chaos": 0.241,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 60.9,
+   "away_avg_stamina": 60.5,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 46,
+   "period": 1,
+   "momentum_home": 0.011,
+   "chaos": 0.24,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 60.1,
+   "away_avg_stamina": 59.6,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 47,
+   "period": 1,
+   "momentum_home": 0.092,
+   "chaos": 0.274,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 59.2,
+   "away_avg_stamina": 58.8,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 48,
+   "period": 1,
+   "momentum_home": 0.043,
+   "chaos": 0.257,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 58.4,
+   "away_avg_stamina": 58.0,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 46,
+   "period": 2,
+   "momentum_home": 0.029,
+   "chaos": 0.251,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 68.5,
+   "away_avg_stamina": 65.1,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 47,
+   "period": 2,
+   "momentum_home": -0.001,
+   "chaos": 0.24,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 67.6,
+   "away_avg_stamina": 64.3,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 48,
+   "period": 2,
+   "momentum_home": -0.001,
+   "chaos": 0.257,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 66.8,
+   "away_avg_stamina": 63.4,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 49,
+   "period": 2,
+   "momentum_home": -0.008,
+   "chaos": 0.285,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 65.9,
+   "away_avg_stamina": 62.6,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 50,
+   "period": 2,
+   "momentum_home": 0.016,
+   "chaos": 0.263,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 65.0,
+   "away_avg_stamina": 61.8,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 51,
+   "period": 2,
+   "momentum_home": -0.048,
+   "chaos": 0.259,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 64.2,
+   "away_avg_stamina": 60.9,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 52,
+   "period": 2,
+   "momentum_home": -0.002,
+   "chaos": 0.238,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 63.3,
+   "away_avg_stamina": 60.1,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 53,
+   "period": 2,
+   "momentum_home": -0.063,
+   "chaos": 0.209,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 62.5,
+   "away_avg_stamina": 59.3,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 54,
+   "period": 2,
+   "momentum_home": -0.211,
+   "chaos": 0.226,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.5,
+    "directness": 0.5,
+    "tempo": 0.6,
+    "width": 0.8,
+    "line_height": 0.5
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 61.7,
+   "away_avg_stamina": 58.4,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 55,
+   "period": 2,
+   "momentum_home": -0.086,
+   "chaos": 0.212,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.52,
+    "directness": 0.52,
+    "tempo": 0.61,
+    "width": 0.8,
+    "line_height": 0.52
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 60.8,
+   "away_avg_stamina": 57.6,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 56,
+   "period": 2,
+   "momentum_home": -0.024,
+   "chaos": 0.201,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.52,
+    "directness": 0.53,
+    "tempo": 0.62,
+    "width": 0.8,
+    "line_height": 0.52
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 60.0,
+   "away_avg_stamina": 56.8,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 57,
+   "period": 2,
+   "momentum_home": 0.083,
+   "chaos": 0.19,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.53,
+    "directness": 0.53,
+    "tempo": 0.62,
+    "width": 0.8,
+    "line_height": 0.52
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 59.2,
+   "away_avg_stamina": 55.9,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 58,
+   "period": 2,
+   "momentum_home": 0.038,
+   "chaos": 0.162,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.53,
+    "directness": 0.54,
+    "tempo": 0.62,
+    "width": 0.8,
+    "line_height": 0.52
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 58.4,
+   "away_avg_stamina": 55.1,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 59,
+   "period": 2,
+   "momentum_home": 0.009,
+   "chaos": 0.166,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.53,
+    "directness": 0.54,
+    "tempo": 0.63,
+    "width": 0.8,
+    "line_height": 0.53
+   },
+   "away_style": {
+    "possession": 0.55,
+    "press": 0.65,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.55
+   },
+   "home_avg_stamina": 57.5,
+   "away_avg_stamina": 54.3,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 60,
+   "period": 2,
+   "momentum_home": -0.029,
+   "chaos": 0.194,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.54,
+    "directness": 0.54,
+    "tempo": 0.63,
+    "width": 0.8,
+    "line_height": 0.53
+   },
+   "away_style": {
+    "possession": 0.54,
+    "press": 0.62,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.52
+   },
+   "home_avg_stamina": 56.7,
+   "away_avg_stamina": 53.5,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 61,
+   "period": 2,
+   "momentum_home": -0.057,
+   "chaos": 0.165,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.54,
+    "directness": 0.55,
+    "tempo": 0.63,
+    "width": 0.8,
+    "line_height": 0.53
+   },
+   "away_style": {
+    "possession": 0.54,
+    "press": 0.62,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.51
+   },
+   "home_avg_stamina": 68.2,
+   "away_avg_stamina": 52.6,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 62,
+   "period": 2,
+   "momentum_home": -0.123,
+   "chaos": 0.132,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.54,
+    "directness": 0.55,
+    "tempo": 0.64,
+    "width": 0.8,
+    "line_height": 0.54
+   },
+   "away_style": {
+    "possession": 0.54,
+    "press": 0.61,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.51
+   },
+   "home_avg_stamina": 67.3,
+   "away_avg_stamina": 51.8,
+   "score": [
+    0,
+    2
+   ]
+  },
+  {
+   "minute": 63,
+   "period": 2,
+   "momentum_home": -0.284,
+   "chaos": 0.31,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.55,
+    "directness": 0.56,
+    "tempo": 0.64,
+    "width": 0.8,
+    "line_height": 0.54
+   },
+   "away_style": {
+    "possession": 0.54,
+    "press": 0.61,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.5
+   },
+   "home_avg_stamina": 66.4,
+   "away_avg_stamina": 51.0,
+   "score": [
+    0,
+    3
+   ]
+  },
+  {
+   "minute": 64,
+   "period": 2,
+   "momentum_home": -0.248,
+   "chaos": 0.285,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.55,
+    "directness": 0.56,
+    "tempo": 0.64,
+    "width": 0.8,
+    "line_height": 0.54
+   },
+   "away_style": {
+    "possession": 0.54,
+    "press": 0.6,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.5
+   },
+   "home_avg_stamina": 65.5,
+   "away_avg_stamina": 50.2,
+   "score": [
+    0,
+    3
+   ]
+  },
+  {
+   "minute": 65,
+   "period": 2,
+   "momentum_home": -0.268,
+   "chaos": 0.248,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.55,
+    "directness": 0.57,
+    "tempo": 0.65,
+    "width": 0.8,
+    "line_height": 0.55
+   },
+   "away_style": {
+    "possession": 0.53,
+    "press": 0.6,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.49
+   },
+   "home_avg_stamina": 64.7,
+   "away_avg_stamina": 49.4,
+   "score": [
+    0,
+    3
+   ]
+  },
+  {
+   "minute": 66,
+   "period": 2,
+   "momentum_home": -0.352,
+   "chaos": 0.263,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.56,
+    "directness": 0.57,
+    "tempo": 0.65,
+    "width": 0.8,
+    "line_height": 0.55
+   },
+   "away_style": {
+    "possession": 0.53,
+    "press": 0.59,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.48
+   },
+   "home_avg_stamina": 68.6,
+   "away_avg_stamina": 48.6,
+   "score": [
+    0,
+    3
+   ]
+  },
+  {
+   "minute": 67,
+   "period": 2,
+   "momentum_home": -0.368,
+   "chaos": 0.244,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.56,
+    "directness": 0.57,
+    "tempo": 0.65,
+    "width": 0.8,
+    "line_height": 0.55
+   },
+   "away_style": {
+    "possession": 0.53,
+    "press": 0.59,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.48
+   },
+   "home_avg_stamina": 67.7,
+   "away_avg_stamina": 47.8,
+   "score": [
+    0,
+    3
+   ]
+  },
+  {
+   "minute": 68,
+   "period": 2,
+   "momentum_home": -0.741,
+   "chaos": 0.41,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.56,
+    "directness": 0.58,
+    "tempo": 0.65,
+    "width": 0.8,
+    "line_height": 0.55
+   },
+   "away_style": {
+    "possession": 0.53,
+    "press": 0.58,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.47
+   },
+   "home_avg_stamina": 66.8,
+   "away_avg_stamina": 46.9,
+   "score": [
+    0,
+    4
+   ]
+  },
+  {
+   "minute": 69,
+   "period": 2,
+   "momentum_home": -0.734,
+   "chaos": 0.372,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.57,
+    "directness": 0.58,
+    "tempo": 0.66,
+    "width": 0.8,
+    "line_height": 0.56
+   },
+   "away_style": {
+    "possession": 0.53,
+    "press": 0.58,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.47
+   },
+   "home_avg_stamina": 65.9,
+   "away_avg_stamina": 46.1,
+   "score": [
+    0,
+    4
+   ]
+  },
+  {
+   "minute": 70,
+   "period": 2,
+   "momentum_home": -0.675,
+   "chaos": 0.305,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.57,
+    "directness": 0.59,
+    "tempo": 0.66,
+    "width": 0.8,
+    "line_height": 0.56
+   },
+   "away_style": {
+    "possession": 0.53,
+    "press": 0.58,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.46
+   },
+   "home_avg_stamina": 65.1,
+   "away_avg_stamina": 45.3,
+   "score": [
+    0,
+    4
+   ]
+  },
+  {
+   "minute": 71,
+   "period": 2,
+   "momentum_home": -0.542,
+   "chaos": 0.296,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.58,
+    "directness": 0.59,
+    "tempo": 0.66,
+    "width": 0.8,
+    "line_height": 0.56
+   },
+   "away_style": {
+    "possession": 0.52,
+    "press": 0.57,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.45
+   },
+   "home_avg_stamina": 64.2,
+   "away_avg_stamina": 44.5,
+   "score": [
+    0,
+    4
+   ]
+  },
+  {
+   "minute": 72,
+   "period": 2,
+   "momentum_home": -0.611,
+   "chaos": 0.296,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.58,
+    "directness": 0.6,
+    "tempo": 0.67,
+    "width": 0.8,
+    "line_height": 0.57
+   },
+   "away_style": {
+    "possession": 0.52,
+    "press": 0.57,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.45
+   },
+   "home_avg_stamina": 63.3,
+   "away_avg_stamina": 43.7,
+   "score": [
+    0,
+    4
+   ]
+  },
+  {
+   "minute": 73,
+   "period": 2,
+   "momentum_home": -0.841,
+   "chaos": 0.488,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.58,
+    "directness": 0.6,
+    "tempo": 0.67,
+    "width": 0.8,
+    "line_height": 0.57
+   },
+   "away_style": {
+    "possession": 0.52,
+    "press": 0.56,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.44
+   },
+   "home_avg_stamina": 62.4,
+   "away_avg_stamina": 42.9,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 74,
+   "period": 2,
+   "momentum_home": -0.823,
+   "chaos": 0.471,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.59,
+    "directness": 0.61,
+    "tempo": 0.67,
+    "width": 0.8,
+    "line_height": 0.57
+   },
+   "away_style": {
+    "possession": 0.52,
+    "press": 0.56,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.44
+   },
+   "home_avg_stamina": 61.5,
+   "away_avg_stamina": 42.1,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 75,
+   "period": 2,
+   "momentum_home": -0.735,
+   "chaos": 0.45,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.59,
+    "directness": 0.61,
+    "tempo": 0.67,
+    "width": 0.8,
+    "line_height": 0.57
+   },
+   "away_style": {
+    "possession": 0.52,
+    "press": 0.55,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.43
+   },
+   "home_avg_stamina": 60.6,
+   "away_avg_stamina": 41.3,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 76,
+   "period": 2,
+   "momentum_home": -0.656,
+   "chaos": 0.429,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.59,
+    "directness": 0.61,
+    "tempo": 0.68,
+    "width": 0.8,
+    "line_height": 0.58
+   },
+   "away_style": {
+    "possession": 0.52,
+    "press": 0.55,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.42
+   },
+   "home_avg_stamina": 59.7,
+   "away_avg_stamina": 40.4,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 77,
+   "period": 2,
+   "momentum_home": -0.616,
+   "chaos": 0.401,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.6,
+    "directness": 0.62,
+    "tempo": 0.68,
+    "width": 0.8,
+    "line_height": 0.58
+   },
+   "away_style": {
+    "possession": 0.51,
+    "press": 0.54,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.42
+   },
+   "home_avg_stamina": 58.9,
+   "away_avg_stamina": 39.6,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 78,
+   "period": 2,
+   "momentum_home": -0.479,
+   "chaos": 0.38,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.6,
+    "directness": 0.62,
+    "tempo": 0.68,
+    "width": 0.8,
+    "line_height": 0.58
+   },
+   "away_style": {
+    "possession": 0.51,
+    "press": 0.54,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.41
+   },
+   "home_avg_stamina": 58.0,
+   "away_avg_stamina": 49.6,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 79,
+   "period": 2,
+   "momentum_home": -0.466,
+   "chaos": 0.398,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.6,
+    "directness": 0.63,
+    "tempo": 0.69,
+    "width": 0.8,
+    "line_height": 0.59
+   },
+   "away_style": {
+    "possession": 0.51,
+    "press": 0.53,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.41
+   },
+   "home_avg_stamina": 57.1,
+   "away_avg_stamina": 48.8,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 80,
+   "period": 2,
+   "momentum_home": -0.435,
+   "chaos": 0.366,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.61,
+    "directness": 0.63,
+    "tempo": 0.69,
+    "width": 0.8,
+    "line_height": 0.59
+   },
+   "away_style": {
+    "possession": 0.51,
+    "press": 0.53,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.4
+   },
+   "home_avg_stamina": 56.2,
+   "away_avg_stamina": 47.9,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 81,
+   "period": 2,
+   "momentum_home": -0.384,
+   "chaos": 0.349,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.61,
+    "directness": 0.64,
+    "tempo": 0.69,
+    "width": 0.8,
+    "line_height": 0.59
+   },
+   "away_style": {
+    "possession": 0.51,
+    "press": 0.52,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.39
+   },
+   "home_avg_stamina": 55.4,
+   "away_avg_stamina": 47.1,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 82,
+   "period": 2,
+   "momentum_home": -0.58,
+   "chaos": 0.359,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.62,
+    "directness": 0.64,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.51,
+    "press": 0.52,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.39
+   },
+   "home_avg_stamina": 54.5,
+   "away_avg_stamina": 46.3,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 83,
+   "period": 2,
+   "momentum_home": -0.517,
+   "chaos": 0.354,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.62,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.51,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.38
+   },
+   "home_avg_stamina": 53.6,
+   "away_avg_stamina": 45.4,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 84,
+   "period": 2,
+   "momentum_home": -0.527,
+   "chaos": 0.306,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.62,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.51,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.38
+   },
+   "home_avg_stamina": 52.7,
+   "away_avg_stamina": 44.6,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 85,
+   "period": 2,
+   "momentum_home": -0.628,
+   "chaos": 0.258,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 51.8,
+   "away_avg_stamina": 43.8,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 86,
+   "period": 2,
+   "momentum_home": -0.538,
+   "chaos": 0.238,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 51.0,
+   "away_avg_stamina": 43.0,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 87,
+   "period": 2,
+   "momentum_home": -0.525,
+   "chaos": 0.247,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 50.1,
+   "away_avg_stamina": 42.2,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 88,
+   "period": 2,
+   "momentum_home": -0.409,
+   "chaos": 0.267,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 49.2,
+   "away_avg_stamina": 41.4,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 89,
+   "period": 2,
+   "momentum_home": -0.28,
+   "chaos": 0.304,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 48.4,
+   "away_avg_stamina": 40.6,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 90,
+   "period": 2,
+   "momentum_home": -0.263,
+   "chaos": 0.304,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 47.5,
+   "away_avg_stamina": 39.7,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 91,
+   "period": 2,
+   "momentum_home": -0.327,
+   "chaos": 0.28,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 46.6,
+   "away_avg_stamina": 38.9,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 92,
+   "period": 2,
+   "momentum_home": -0.278,
+   "chaos": 0.25,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 45.8,
+   "away_avg_stamina": 38.1,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 93,
+   "period": 2,
+   "momentum_home": -0.281,
+   "chaos": 0.217,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 44.9,
+   "away_avg_stamina": 37.3,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 94,
+   "period": 2,
+   "momentum_home": -0.451,
+   "chaos": 0.216,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 44.0,
+   "away_avg_stamina": 36.5,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 95,
+   "period": 2,
+   "momentum_home": -0.284,
+   "chaos": 0.236,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 43.2,
+   "away_avg_stamina": 35.7,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 96,
+   "period": 2,
+   "momentum_home": -0.169,
+   "chaos": 0.249,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 42.3,
+   "away_avg_stamina": 34.9,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 97,
+   "period": 2,
+   "momentum_home": -0.215,
+   "chaos": 0.219,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 41.5,
+   "away_avg_stamina": 34.1,
+   "score": [
+    0,
+    5
+   ]
+  },
+  {
+   "minute": 98,
+   "period": 2,
+   "momentum_home": -0.305,
+   "chaos": 0.194,
+   "home_style": {
+    "possession": 0.55,
+    "press": 0.63,
+    "directness": 0.65,
+    "tempo": 0.7,
+    "width": 0.8,
+    "line_height": 0.6
+   },
+   "away_style": {
+    "possession": 0.5,
+    "press": 0.5,
+    "directness": 0.55,
+    "tempo": 0.7,
+    "width": 0.55,
+    "line_height": 0.37
+   },
+   "home_avg_stamina": 40.7,
+   "away_avg_stamina": 33.3,
+   "score": [
+    0,
+    5
+   ]
+  }
+ ],
+ "possession_seconds": {
+  "home": 1417.0,
+  "away": 2235.0
+ },
+ "minutes_played": {
+  "P0701": {
+   "on": 0,
+   "off": 99
+  },
+  "P0702": {
+   "on": 0,
+   "off": 99
+  },
+  "P0721": {
+   "on": 0,
+   "off": 99
+  },
+  "P0704": {
+   "on": 0,
+   "off": 65
+  },
+  "P0705": {
+   "on": 0,
+   "off": 99
+  },
+  "P0706": {
+   "on": 0,
+   "off": 99
+  },
+  "P0707": {
+   "on": 0,
+   "off": 60
+  },
+  "P0708": {
+   "on": 0,
+   "off": 45
+  },
+  "P0709": {
+   "on": 0,
+   "off": 99
+  },
+  "P0719": {
+   "on": 0,
+   "off": 60
+  },
+  "P0710": {
+   "on": 0,
+   "off": 60
+  },
+  "P0711": {
+   "on": 45,
+   "off": 99
+  },
+  "P0722": {
+   "on": 60,
+   "off": 99
+  },
+  "P0718": {
+   "on": 60,
+   "off": 99
+  },
+  "P0717": {
+   "on": 60,
+   "off": 99
+  },
+  "P0703": {
+   "on": 65,
+   "off": 99
+  },
+  "P0401": {
+   "on": 0,
+   "off": 99
+  },
+  "P0402": {
+   "on": 0,
+   "off": 99
+  },
+  "P0403": {
+   "on": 0,
+   "off": 99
+  },
+  "P0404": {
+   "on": 0,
+   "off": 99
+  },
+  "P0405": {
+   "on": 0,
+   "off": 99
+  },
+  "P0406": {
+   "on": 0,
+   "off": 77
+  },
+  "P0407": {
+   "on": 0,
+   "off": 99
+  },
+  "P0408": {
+   "on": 0,
+   "off": 78
+  },
+  "P0409": {
+   "on": 0,
+   "off": 99
+  },
+  "P0410": {
+   "on": 0,
+   "off": 99
+  },
+  "P0411": {
+   "on": 0,
+   "off": 99
+  },
+  "P0415": {
+   "on": 77,
+   "off": 99
+  },
+  "P0416": {
+   "on": 78,
+   "off": 99
+  }
+ }
+}

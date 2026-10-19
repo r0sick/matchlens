@@ -1,0 +1,722 @@
+[
+ {
+  "match_id": "AUR26-MD01-THR-KMU",
+  "matchday": 1,
+  "kickoff_utc": "2026-08-15T11:30:00Z",
+  "home": "C01",
+  "away": "C02",
+  "score": "2-2"
+ },
+ {
+  "match_id": "AUR26-MD01-ACM-FAN",
+  "matchday": 1,
+  "kickoff_utc": "2026-08-15T14:00:00Z",
+  "home": "C06",
+  "away": "C07",
+  "score": "0-3"
+ },
+ {
+  "match_id": "AUR26-MD01-MIR-IBT",
+  "matchday": 1,
+  "kickoff_utc": "2026-08-15T14:00:00Z",
+  "home": "C03",
+  "away": "C10",
+  "score": "3-1"
+ },
+ {
+  "match_id": "AUR26-MD01-BWA-OLR",
+  "matchday": 1,
+  "kickoff_utc": "2026-08-15T16:30:00Z",
+  "home": "C08",
+  "away": "C04",
+  "score": "1-2"
+ },
+ {
+  "match_id": "AUR26-MD01-HZF-SVH",
+  "matchday": 1,
+  "kickoff_utc": "2026-08-16T13:00:00Z",
+  "home": "C09",
+  "away": "C05",
+  "score": "2-7"
+ },
+ {
+  "match_id": "AUR26-MD02-ACM-THR",
+  "matchday": 2,
+  "kickoff_utc": "2026-08-22T11:30:00Z",
+  "home": "C06",
+  "away": "C01",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD02-KMU-IBT",
+  "matchday": 2,
+  "kickoff_utc": "2026-08-22T14:00:00Z",
+  "home": "C02",
+  "away": "C10",
+  "score": "3-0"
+ },
+ {
+  "match_id": "AUR26-MD02-BWA-FAN",
+  "matchday": 2,
+  "kickoff_utc": "2026-08-22T14:00:00Z",
+  "home": "C08",
+  "away": "C07",
+  "score": "1-1"
+ },
+ {
+  "match_id": "AUR26-MD02-MIR-SVH",
+  "matchday": 2,
+  "kickoff_utc": "2026-08-22T16:30:00Z",
+  "home": "C03",
+  "away": "C05",
+  "score": "0-2"
+ },
+ {
+  "match_id": "AUR26-MD02-HZF-OLR",
+  "matchday": 2,
+  "kickoff_utc": "2026-08-23T13:00:00Z",
+  "home": "C09",
+  "away": "C04",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD03-THR-IBT",
+  "matchday": 3,
+  "kickoff_utc": "2026-08-29T11:30:00Z",
+  "home": "C01",
+  "away": "C10",
+  "score": "1-1"
+ },
+ {
+  "match_id": "AUR26-MD03-BWA-ACM",
+  "matchday": 3,
+  "kickoff_utc": "2026-08-29T14:00:00Z",
+  "home": "C08",
+  "away": "C06",
+  "score": "2-2"
+ },
+ {
+  "match_id": "AUR26-MD03-KMU-SVH",
+  "matchday": 3,
+  "kickoff_utc": "2026-08-29T14:00:00Z",
+  "home": "C02",
+  "away": "C05",
+  "score": "5-2"
+ },
+ {
+  "match_id": "AUR26-MD03-HZF-FAN",
+  "matchday": 3,
+  "kickoff_utc": "2026-08-29T16:30:00Z",
+  "home": "C09",
+  "away": "C07",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD03-MIR-OLR",
+  "matchday": 3,
+  "kickoff_utc": "2026-08-30T13:00:00Z",
+  "home": "C03",
+  "away": "C04",
+  "score": "4-0"
+ },
+ {
+  "match_id": "AUR26-MD04-BWA-THR",
+  "matchday": 4,
+  "kickoff_utc": "2026-09-05T11:30:00Z",
+  "home": "C08",
+  "away": "C01",
+  "score": "1-5"
+ },
+ {
+  "match_id": "AUR26-MD04-IBT-SVH",
+  "matchday": 4,
+  "kickoff_utc": "2026-09-05T14:00:00Z",
+  "home": "C10",
+  "away": "C05",
+  "score": "0-4"
+ },
+ {
+  "match_id": "AUR26-MD04-HZF-ACM",
+  "matchday": 4,
+  "kickoff_utc": "2026-09-05T14:00:00Z",
+  "home": "C09",
+  "away": "C06",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD04-KMU-OLR",
+  "matchday": 4,
+  "kickoff_utc": "2026-09-05T16:30:00Z",
+  "home": "C02",
+  "away": "C04",
+  "score": "3-3"
+ },
+ {
+  "match_id": "AUR26-MD04-MIR-FAN",
+  "matchday": 4,
+  "kickoff_utc": "2026-09-06T13:00:00Z",
+  "home": "C03",
+  "away": "C07",
+  "score": "1-1"
+ },
+ {
+  "match_id": "AUR26-MD05-THR-SVH",
+  "matchday": 5,
+  "kickoff_utc": "2026-09-12T11:30:00Z",
+  "home": "C01",
+  "away": "C05",
+  "score": "3-1"
+ },
+ {
+  "match_id": "AUR26-MD05-HZF-BWA",
+  "matchday": 5,
+  "kickoff_utc": "2026-09-12T14:00:00Z",
+  "home": "C09",
+  "away": "C08",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD05-IBT-OLR",
+  "matchday": 5,
+  "kickoff_utc": "2026-09-12T14:00:00Z",
+  "home": "C10",
+  "away": "C04",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD05-MIR-ACM",
+  "matchday": 5,
+  "kickoff_utc": "2026-09-12T16:30:00Z",
+  "home": "C03",
+  "away": "C06",
+  "score": "5-1"
+ },
+ {
+  "match_id": "AUR26-MD05-KMU-FAN",
+  "matchday": 5,
+  "kickoff_utc": "2026-09-13T13:00:00Z",
+  "home": "C02",
+  "away": "C07",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD06-HZF-THR",
+  "matchday": 6,
+  "kickoff_utc": "2026-09-19T11:30:00Z",
+  "home": "C09",
+  "away": "C01",
+  "score": "0-9"
+ },
+ {
+  "match_id": "AUR26-MD06-SVH-OLR",
+  "matchday": 6,
+  "kickoff_utc": "2026-09-19T14:00:00Z",
+  "home": "C05",
+  "away": "C04",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD06-MIR-BWA",
+  "matchday": 6,
+  "kickoff_utc": "2026-09-19T14:00:00Z",
+  "home": "C03",
+  "away": "C08",
+  "score": "1-1"
+ },
+ {
+  "match_id": "AUR26-MD06-IBT-FAN",
+  "matchday": 6,
+  "kickoff_utc": "2026-09-19T16:30:00Z",
+  "home": "C10",
+  "away": "C07",
+  "score": "4-4"
+ },
+ {
+  "match_id": "AUR26-MD06-KMU-ACM",
+  "matchday": 6,
+  "kickoff_utc": "2026-09-20T13:00:00Z",
+  "home": "C02",
+  "away": "C06",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD07-THR-OLR",
+  "matchday": 7,
+  "kickoff_utc": "2026-09-26T11:30:00Z",
+  "home": "C01",
+  "away": "C04",
+  "score": "0-0"
+ },
+ {
+  "match_id": "AUR26-MD07-MIR-HZF",
+  "matchday": 7,
+  "kickoff_utc": "2026-09-26T14:00:00Z",
+  "home": "C03",
+  "away": "C09",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD07-SVH-FAN",
+  "matchday": 7,
+  "kickoff_utc": "2026-09-26T14:00:00Z",
+  "home": "C05",
+  "away": "C07",
+  "score": "7-0"
+ },
+ {
+  "match_id": "AUR26-MD07-KMU-BWA",
+  "matchday": 7,
+  "kickoff_utc": "2026-09-26T16:30:00Z",
+  "home": "C02",
+  "away": "C08",
+  "score": "3-1"
+ },
+ {
+  "match_id": "AUR26-MD07-IBT-ACM",
+  "matchday": 7,
+  "kickoff_utc": "2026-09-27T13:00:00Z",
+  "home": "C10",
+  "away": "C06",
+  "score": "0-2"
+ },
+ {
+  "match_id": "AUR26-MD08-MIR-THR",
+  "matchday": 8,
+  "kickoff_utc": "2026-10-03T11:30:00Z",
+  "home": "C03",
+  "away": "C01",
+  "score": "0-4"
+ },
+ {
+  "match_id": "AUR26-MD08-OLR-FAN",
+  "matchday": 8,
+  "kickoff_utc": "2026-10-03T14:00:00Z",
+  "home": "C04",
+  "away": "C07",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD08-KMU-HZF",
+  "matchday": 8,
+  "kickoff_utc": "2026-10-03T14:00:00Z",
+  "home": "C02",
+  "away": "C09",
+  "score": "3-3"
+ },
+ {
+  "match_id": "AUR26-MD08-SVH-ACM",
+  "matchday": 8,
+  "kickoff_utc": "2026-10-03T16:30:00Z",
+  "home": "C05",
+  "away": "C06",
+  "score": "4-0"
+ },
+ {
+  "match_id": "AUR26-MD08-IBT-BWA",
+  "matchday": 8,
+  "kickoff_utc": "2026-10-04T13:00:00Z",
+  "home": "C10",
+  "away": "C08",
+  "score": "3-0"
+ },
+ {
+  "match_id": "AUR26-MD09-THR-FAN",
+  "matchday": 9,
+  "kickoff_utc": "2026-10-10T11:30:00Z",
+  "home": "C01",
+  "away": "C07",
+  "score": "4-1"
+ },
+ {
+  "match_id": "AUR26-MD09-KMU-MIR",
+  "matchday": 9,
+  "kickoff_utc": "2026-10-10T14:00:00Z",
+  "home": "C02",
+  "away": "C03",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD09-OLR-ACM",
+  "matchday": 9,
+  "kickoff_utc": "2026-10-10T14:00:00Z",
+  "home": "C04",
+  "away": "C06",
+  "score": "3-0"
+ },
+ {
+  "match_id": "AUR26-MD09-IBT-HZF",
+  "matchday": 9,
+  "kickoff_utc": "2026-10-10T16:30:00Z",
+  "home": "C10",
+  "away": "C09",
+  "score": "0-2"
+ },
+ {
+  "match_id": "AUR26-MD09-SVH-BWA",
+  "matchday": 9,
+  "kickoff_utc": "2026-10-11T13:00:00Z",
+  "home": "C05",
+  "away": "C08",
+  "score": "4-1"
+ },
+ {
+  "match_id": "AUR26-MD10-KMU-THR",
+  "matchday": 10,
+  "kickoff_utc": "2026-10-17T11:30:00Z",
+  "home": "C02",
+  "away": "C01",
+  "score": "3-2"
+ },
+ {
+  "match_id": "AUR26-MD10-FAN-ACM",
+  "matchday": 10,
+  "kickoff_utc": "2026-10-17T14:00:00Z",
+  "home": "C07",
+  "away": "C06",
+  "score": "3-2"
+ },
+ {
+  "match_id": "AUR26-MD10-IBT-MIR",
+  "matchday": 10,
+  "kickoff_utc": "2026-10-17T14:00:00Z",
+  "home": "C10",
+  "away": "C03",
+  "score": "2-2"
+ },
+ {
+  "match_id": "AUR26-MD10-OLR-BWA",
+  "matchday": 10,
+  "kickoff_utc": "2026-10-17T16:30:00Z",
+  "home": "C04",
+  "away": "C08",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD10-SVH-HZF",
+  "matchday": 10,
+  "kickoff_utc": "2026-10-18T13:00:00Z",
+  "home": "C05",
+  "away": "C09",
+  "score": "4-0"
+ },
+ {
+  "match_id": "AUR26-MD11-THR-ACM",
+  "matchday": 11,
+  "kickoff_utc": "2026-10-24T11:30:00Z",
+  "home": "C01",
+  "away": "C06",
+  "score": "4-0"
+ },
+ {
+  "match_id": "AUR26-MD11-IBT-KMU",
+  "matchday": 11,
+  "kickoff_utc": "2026-10-24T14:00:00Z",
+  "home": "C10",
+  "away": "C02",
+  "score": "1-3"
+ },
+ {
+  "match_id": "AUR26-MD11-FAN-BWA",
+  "matchday": 11,
+  "kickoff_utc": "2026-10-24T14:00:00Z",
+  "home": "C07",
+  "away": "C08",
+  "score": "4-4"
+ },
+ {
+  "match_id": "AUR26-MD11-SVH-MIR",
+  "matchday": 11,
+  "kickoff_utc": "2026-10-24T16:30:00Z",
+  "home": "C05",
+  "away": "C03",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD11-OLR-HZF",
+  "matchday": 11,
+  "kickoff_utc": "2026-10-25T13:00:00Z",
+  "home": "C04",
+  "away": "C09",
+  "score": "3-2"
+ },
+ {
+  "match_id": "AUR26-MD12-IBT-THR",
+  "matchday": 12,
+  "kickoff_utc": "2026-10-31T11:30:00Z",
+  "home": "C10",
+  "away": "C01",
+  "score": "0-4"
+ },
+ {
+  "match_id": "AUR26-MD12-ACM-BWA",
+  "matchday": 12,
+  "kickoff_utc": "2026-10-31T14:00:00Z",
+  "home": "C06",
+  "away": "C08",
+  "score": "3-2"
+ },
+ {
+  "match_id": "AUR26-MD12-SVH-KMU",
+  "matchday": 12,
+  "kickoff_utc": "2026-10-31T14:00:00Z",
+  "home": "C05",
+  "away": "C02",
+  "score": "2-3"
+ },
+ {
+  "match_id": "AUR26-MD12-FAN-HZF",
+  "matchday": 12,
+  "kickoff_utc": "2026-10-31T16:30:00Z",
+  "home": "C07",
+  "away": "C09",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD12-OLR-MIR",
+  "matchday": 12,
+  "kickoff_utc": "2026-11-01T13:00:00Z",
+  "home": "C04",
+  "away": "C03",
+  "score": "0-0"
+ },
+ {
+  "match_id": "AUR26-MD13-THR-BWA",
+  "matchday": 13,
+  "kickoff_utc": "2026-11-07T11:30:00Z",
+  "home": "C01",
+  "away": "C08",
+  "score": "2-0"
+ },
+ {
+  "match_id": "AUR26-MD13-SVH-IBT",
+  "matchday": 13,
+  "kickoff_utc": "2026-11-07T14:00:00Z",
+  "home": "C05",
+  "away": "C10",
+  "score": "3-1"
+ },
+ {
+  "match_id": "AUR26-MD13-ACM-HZF",
+  "matchday": 13,
+  "kickoff_utc": "2026-11-07T14:00:00Z",
+  "home": "C06",
+  "away": "C09",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD13-OLR-KMU",
+  "matchday": 13,
+  "kickoff_utc": "2026-11-07T16:30:00Z",
+  "home": "C04",
+  "away": "C02",
+  "score": "2-2"
+ },
+ {
+  "match_id": "AUR26-MD13-FAN-MIR",
+  "matchday": 13,
+  "kickoff_utc": "2026-11-08T13:00:00Z",
+  "home": "C07",
+  "away": "C03",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD14-SVH-THR",
+  "matchday": 14,
+  "kickoff_utc": "2026-11-14T11:30:00Z",
+  "home": "C05",
+  "away": "C01",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD14-BWA-HZF",
+  "matchday": 14,
+  "kickoff_utc": "2026-11-14T14:00:00Z",
+  "home": "C08",
+  "away": "C09",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD14-OLR-IBT",
+  "matchday": 14,
+  "kickoff_utc": "2026-11-14T14:00:00Z",
+  "home": "C04",
+  "away": "C10",
+  "score": "6-1"
+ },
+ {
+  "match_id": "AUR26-MD14-ACM-MIR",
+  "matchday": 14,
+  "kickoff_utc": "2026-11-14T16:30:00Z",
+  "home": "C06",
+  "away": "C03",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD14-FAN-KMU",
+  "matchday": 14,
+  "kickoff_utc": "2026-11-15T13:00:00Z",
+  "home": "C07",
+  "away": "C02",
+  "score": "2-2"
+ },
+ {
+  "match_id": "AUR26-MD15-THR-HZF",
+  "matchday": 15,
+  "kickoff_utc": "2026-11-21T11:30:00Z",
+  "home": "C01",
+  "away": "C09",
+  "score": "1-0"
+ },
+ {
+  "match_id": "AUR26-MD15-OLR-SVH",
+  "matchday": 15,
+  "kickoff_utc": "2026-11-21T14:00:00Z",
+  "home": "C04",
+  "away": "C05",
+  "score": "0-0"
+ },
+ {
+  "match_id": "AUR26-MD15-BWA-MIR",
+  "matchday": 15,
+  "kickoff_utc": "2026-11-21T14:00:00Z",
+  "home": "C08",
+  "away": "C03",
+  "score": "2-4"
+ },
+ {
+  "match_id": "AUR26-MD15-FAN-IBT",
+  "matchday": 15,
+  "kickoff_utc": "2026-11-21T16:30:00Z",
+  "home": "C07",
+  "away": "C10",
+  "score": "4-1"
+ },
+ {
+  "match_id": "AUR26-MD15-ACM-KMU",
+  "matchday": 15,
+  "kickoff_utc": "2026-11-22T13:00:00Z",
+  "home": "C06",
+  "away": "C02",
+  "score": "0-2"
+ },
+ {
+  "match_id": "AUR26-MD16-OLR-THR",
+  "matchday": 16,
+  "kickoff_utc": "2026-11-28T11:30:00Z",
+  "home": "C04",
+  "away": "C01",
+  "score": "0-4"
+ },
+ {
+  "match_id": "AUR26-MD16-HZF-MIR",
+  "matchday": 16,
+  "kickoff_utc": "2026-11-28T14:00:00Z",
+  "home": "C09",
+  "away": "C03",
+  "score": "2-1"
+ },
+ {
+  "match_id": "AUR26-MD16-FAN-SVH",
+  "matchday": 16,
+  "kickoff_utc": "2026-11-28T14:00:00Z",
+  "home": "C07",
+  "away": "C05",
+  "score": "1-4"
+ },
+ {
+  "match_id": "AUR26-MD16-BWA-KMU",
+  "matchday": 16,
+  "kickoff_utc": "2026-11-28T16:30:00Z",
+  "home": "C08",
+  "away": "C02",
+  "score": "0-6"
+ },
+ {
+  "match_id": "AUR26-MD16-ACM-IBT",
+  "matchday": 16,
+  "kickoff_utc": "2026-11-29T13:00:00Z",
+  "home": "C06",
+  "away": "C10",
+  "score": "2-3"
+ },
+ {
+  "match_id": "AUR26-MD17-THR-MIR",
+  "matchday": 17,
+  "kickoff_utc": "2026-12-05T11:30:00Z",
+  "home": "C01",
+  "away": "C03",
+  "score": "4-0"
+ },
+ {
+  "match_id": "AUR26-MD17-FAN-OLR",
+  "matchday": 17,
+  "kickoff_utc": "2026-12-05T14:00:00Z",
+  "home": "C07",
+  "away": "C04",
+  "score": "0-5"
+ },
+ {
+  "match_id": "AUR26-MD17-HZF-KMU",
+  "matchday": 17,
+  "kickoff_utc": "2026-12-05T14:00:00Z",
+  "home": "C09",
+  "away": "C02",
+  "score": "1-2"
+ },
+ {
+  "match_id": "AUR26-MD17-ACM-SVH",
+  "matchday": 17,
+  "kickoff_utc": "2026-12-05T16:30:00Z",
+  "home": "C06",
+  "away": "C05",
+  "score": "2-2"
+ },
+ {
+  "match_id": "AUR26-MD17-BWA-IBT",
+  "matchday": 17,
+  "kickoff_utc": "2026-12-06T13:00:00Z",
+  "home": "C08",
+  "away": "C10",
+  "score": "4-0"
+ },
+ {
+  "match_id": "AUR26-MD18-FAN-THR",
+  "matchday": 18,
+  "kickoff_utc": "2026-12-12T11:30:00Z",
+  "home": "C07",
+  "away": "C01",
+  "score": "0-2"
+ },
+ {
+  "match_id": "AUR26-MD18-MIR-KMU",
+  "matchday": 18,
+  "kickoff_utc": "2026-12-12T14:00:00Z",
+  "home": "C03",
+  "away": "C02",
+  "score": "2-3"
+ },
+ {
+  "match_id": "AUR26-MD18-ACM-OLR",
+  "matchday": 18,
+  "kickoff_utc": "2026-12-12T14:00:00Z",
+  "home": "C06",
+  "away": "C04",
+  "score": "0-3"
+ },
+ {
+  "match_id": "AUR26-MD18-HZF-IBT",
+  "matchday": 18,
+  "kickoff_utc": "2026-12-12T16:30:00Z",
+  "home": "C09",
+  "away": "C10",
+  "score": "0-1"
+ },
+ {
+  "match_id": "AUR26-MD18-BWA-SVH",
+  "matchday": 18,
+  "kickoff_utc": "2026-12-13T13:00:00Z",
+  "home": "C08",
+  "away": "C05",
+  "score": "1-2"
+ }
+]
