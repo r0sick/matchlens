@@ -1,0 +1,10 @@
+{
+ "type": "linear",
+ "target": "latent chaos (0..1) from simulation ground truth",
+ "coef": {
+  "turnovers_pm": 0.017125,
+  "fouls_pm": 0.104797,
+  "pass_fail_rate": 0.815507
+ },
+ "intercept": 0.116469
+}

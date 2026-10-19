@@ -14,7 +14,7 @@
     "city": "Ironbridge",
     "capacity": 24000
   },
-  "attendance": 23602,
+  "attendance": 22769,
   "referee": {
     "name": "Grace Adeyemi-Holt",
     "nationality": "ENG",
@@ -1387,30 +1387,30 @@
         "name": "Ironbridge Town",
         "abbr": "IBT",
         "played": 7,
-        "won": 0,
+        "won": 1,
         "drawn": 2,
-        "lost": 5,
-        "gf": 6,
-        "ga": 18,
-        "gd": -12,
-        "points": 2,
-        "form": "DLLDL",
-        "position": 10
+        "lost": 4,
+        "gf": 5,
+        "ga": 16,
+        "gd": -11,
+        "points": 5,
+        "form": "DLDLW",
+        "position": 9
       },
       "away": {
         "team_id": "C08",
         "name": "Blackwater Athletic",
         "abbr": "BWA",
         "played": 7,
-        "won": 0,
-        "drawn": 3,
-        "lost": 4,
-        "gf": 7,
-        "ga": 15,
-        "gd": -8,
-        "points": 3,
-        "form": "DLLDL",
-        "position": 9
+        "won": 4,
+        "drawn": 1,
+        "lost": 2,
+        "gf": 13,
+        "ga": 13,
+        "gd": 0,
+        "points": 13,
+        "form": "WLWDL",
+        "position": 5
       }
     },
     "head_to_head_this_season": [],
@@ -1420,7 +1420,7 @@
         "name": "Kettering",
         "season": {
           "apps": 7,
-          "minutes": 680,
+          "minutes": 684,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1440,11 +1440,11 @@
         "name": "Funes",
         "season": {
           "apps": 6,
-          "minutes": 511,
+          "minutes": 530,
           "goals": 0,
           "assists": 0,
-          "xg": 0.35,
-          "shots": 2,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
@@ -1460,11 +1460,11 @@
         "name": "Cartwright",
         "season": {
           "apps": 7,
-          "minutes": 472,
+          "minutes": 497,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
+          "xg": 0.15,
+          "shots": 1,
           "key_passes": 0
         },
         "career": {
@@ -1480,12 +1480,12 @@
         "name": "Tanabe",
         "season": {
           "apps": 7,
-          "minutes": 643,
+          "minutes": 684,
           "goals": 0,
           "assists": 0,
-          "xg": 0.56,
-          "shots": 3,
-          "key_passes": 1
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 0
         },
         "career": {
           "apps": 474,
@@ -1500,12 +1500,12 @@
         "name": "Monteleone",
         "season": {
           "apps": 7,
-          "minutes": 680,
+          "minutes": 684,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 14
+          "key_passes": 4
         },
         "career": {
           "apps": 385,
@@ -1520,17 +1520,17 @@
         "name": "Cartwright",
         "season": {
           "apps": 7,
-          "minutes": 680,
+          "minutes": 684,
           "goals": 0,
-          "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 14
+          "assists": 1,
+          "xg": 0.15,
+          "shots": 2,
+          "key_passes": 8
         },
         "career": {
           "apps": 412,
           "goals": 37,
-          "assists": 43,
+          "assists": 44,
           "international_caps": 32
         },
         "scoring_streak_matches": 0
@@ -1540,7 +1540,7 @@
         "name": "Crawford",
         "season": {
           "apps": 5,
-          "minutes": 485,
+          "minutes": 393,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1560,17 +1560,17 @@
         "name": "Calloway",
         "season": {
           "apps": 7,
-          "minutes": 680,
+          "minutes": 598,
           "goals": 0,
-          "assists": 2,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 17
+          "assists": 1,
+          "xg": 0.09,
+          "shots": 2,
+          "key_passes": 10
         },
         "career": {
           "apps": 272,
           "goals": 33,
-          "assists": 36,
+          "assists": 35,
           "international_caps": 78
         },
         "scoring_streak_matches": 0
@@ -1580,12 +1580,12 @@
         "name": "Thorne",
         "season": {
           "apps": 7,
-          "minutes": 658,
+          "minutes": 684,
           "goals": 0,
           "assists": 1,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 10
+          "key_passes": 7
         },
         "career": {
           "apps": 169,
@@ -1600,12 +1600,12 @@
         "name": "Crawford",
         "season": {
           "apps": 7,
-          "minutes": 527,
+          "minutes": 439,
           "goals": 3,
           "assists": 0,
-          "xg": 4.56,
-          "shots": 41,
-          "key_passes": 6
+          "xg": 1.22,
+          "shots": 13,
+          "key_passes": 7
         },
         "career": {
           "apps": 102,
@@ -1613,27 +1613,27 @@
           "assists": 10,
           "international_caps": 15
         },
-        "scoring_streak_matches": 0
+        "scoring_streak_matches": 1
       },
       {
         "player_id": "P1011",
         "name": "Quesada",
         "season": {
-          "apps": 7,
-          "minutes": 412,
+          "apps": 6,
+          "minutes": 399,
           "goals": 1,
-          "assists": 2,
-          "xg": 2.98,
-          "shots": 17,
-          "key_passes": 3
+          "assists": 0,
+          "xg": 2.66,
+          "shots": 31,
+          "key_passes": 8
         },
         "career": {
-          "apps": 233,
+          "apps": 232,
           "goals": 74,
-          "assists": 21,
+          "assists": 19,
           "international_caps": 38
         },
-        "scoring_streak_matches": 0,
+        "scoring_streak_matches": 1,
         "milestone_watch": [
           {
             "type": "career_goals",
@@ -1666,8 +1666,8 @@
         "player_id": "P1013",
         "name": "Thorne",
         "season": {
-          "apps": 1,
-          "minutes": 82,
+          "apps": 2,
+          "minutes": 81,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1675,7 +1675,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 233,
+          "apps": 234,
           "goals": 10,
           "assists": 3,
           "international_caps": 0
@@ -1706,16 +1706,16 @@
         "player_id": "P1015",
         "name": "Calloway",
         "season": {
-          "apps": 2,
-          "minutes": 195,
+          "apps": 3,
+          "minutes": 228,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 2
+          "key_passes": 1
         },
         "career": {
-          "apps": 207,
+          "apps": 208,
           "goals": 6,
           "assists": 7,
           "international_caps": 27
@@ -1726,16 +1726,16 @@
         "player_id": "P1016",
         "name": "Nwosu",
         "season": {
-          "apps": 0,
-          "minutes": 0,
+          "apps": 1,
+          "minutes": 31,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
+          "xg": 0.36,
+          "shots": 4,
           "key_passes": 0
         },
         "career": {
-          "apps": 165,
+          "apps": 166,
           "goals": 14,
           "assists": 20,
           "international_caps": 0
@@ -1746,8 +1746,8 @@
         "player_id": "P1017",
         "name": "Thorne",
         "season": {
-          "apps": 6,
-          "minutes": 55,
+          "apps": 3,
+          "minutes": 43,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1755,7 +1755,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 266,
+          "apps": 263,
           "goals": 37,
           "assists": 58,
           "international_caps": 14
@@ -1766,16 +1766,16 @@
         "player_id": "P1018",
         "name": "Paredes",
         "season": {
-          "apps": 6,
-          "minutes": 87,
+          "apps": 4,
+          "minutes": 124,
           "goals": 0,
           "assists": 0,
-          "xg": 0.1,
-          "shots": 3,
-          "key_passes": 1
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 3
         },
         "career": {
-          "apps": 360,
+          "apps": 358,
           "goals": 89,
           "assists": 50,
           "international_caps": 0
@@ -1786,18 +1786,18 @@
         "player_id": "P1019",
         "name": "Calloway",
         "season": {
-          "apps": 6,
-          "minutes": 329,
-          "goals": 1,
-          "assists": 0,
-          "xg": 1.13,
-          "shots": 12,
+          "apps": 7,
+          "minutes": 369,
+          "goals": 0,
+          "assists": 1,
+          "xg": 0.65,
+          "shots": 8,
           "key_passes": 7
         },
         "career": {
-          "apps": 301,
-          "goals": 137,
-          "assists": 43,
+          "apps": 302,
+          "goals": 136,
+          "assists": 44,
           "international_caps": 9
         },
         "scoring_streak_matches": 0
@@ -1806,16 +1806,16 @@
         "player_id": "P1020",
         "name": "Tanabe",
         "season": {
-          "apps": 0,
-          "minutes": 0,
+          "apps": 1,
+          "minutes": 33,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 0
+          "xg": 0.06,
+          "shots": 1,
+          "key_passes": 1
         },
         "career": {
-          "apps": 230,
+          "apps": 231,
           "goals": 17,
           "assists": 32,
           "international_caps": 8
@@ -1827,11 +1827,11 @@
         "name": "Lombardo",
         "season": {
           "apps": 5,
-          "minutes": 191,
+          "minutes": 190,
           "goals": 0,
           "assists": 0,
-          "xg": 0.14,
-          "shots": 1,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
@@ -1847,12 +1847,12 @@
         "name": "Ashworth",
         "season": {
           "apps": 6,
-          "minutes": 113,
+          "minutes": 149,
           "goals": 1,
           "assists": 0,
-          "xg": 0.82,
-          "shots": 9,
-          "key_passes": 4
+          "xg": 0.53,
+          "shots": 6,
+          "key_passes": 1
         },
         "career": {
           "apps": 229,
@@ -1887,7 +1887,7 @@
         "name": "Bramley",
         "season": {
           "apps": 7,
-          "minutes": 681,
+          "minutes": 685,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1907,16 +1907,16 @@
         "name": "Marlow",
         "season": {
           "apps": 7,
-          "minutes": 681,
-          "goals": 0,
+          "minutes": 685,
+          "goals": 1,
           "assists": 0,
-          "xg": 0.01,
+          "xg": 0.57,
           "shots": 1,
           "key_passes": 2
         },
         "career": {
           "apps": 253,
-          "goals": 6,
+          "goals": 7,
           "assists": 17,
           "international_caps": 0
         },
@@ -1927,12 +1927,12 @@
         "name": "Verhoef",
         "season": {
           "apps": 7,
-          "minutes": 610,
+          "minutes": 628,
           "goals": 0,
           "assists": 0,
-          "xg": 0.04,
+          "xg": 0.1,
           "shots": 1,
-          "key_passes": 2
+          "key_passes": 0
         },
         "career": {
           "apps": 306,
@@ -1947,12 +1947,12 @@
         "name": "Olatunji",
         "season": {
           "apps": 5,
-          "minutes": 388,
+          "minutes": 370,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 0
+          "key_passes": 1
         },
         "career": {
           "apps": 42,
@@ -1966,18 +1966,18 @@
         "player_id": "P0805",
         "name": "Cartwright",
         "season": {
-          "apps": 6,
-          "minutes": 514,
+          "apps": 7,
+          "minutes": 555,
           "goals": 0,
-          "assists": 0,
+          "assists": 1,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 2
+          "key_passes": 3
         },
         "career": {
-          "apps": 210,
+          "apps": 211,
           "goals": 5,
-          "assists": 20,
+          "assists": 21,
           "international_caps": 0
         },
         "scoring_streak_matches": 0
@@ -1987,17 +1987,17 @@
         "name": "Lindqvist",
         "season": {
           "apps": 7,
-          "minutes": 681,
+          "minutes": 604,
           "goals": 0,
-          "assists": 1,
-          "xg": 0.07,
-          "shots": 1,
-          "key_passes": 16
+          "assists": 2,
+          "xg": 0.1,
+          "shots": 3,
+          "key_passes": 8
         },
         "career": {
           "apps": 171,
           "goals": 22,
-          "assists": 27,
+          "assists": 28,
           "international_caps": 13
         },
         "scoring_streak_matches": 0
@@ -2007,12 +2007,12 @@
         "name": "Olatunji",
         "season": {
           "apps": 7,
-          "minutes": 674,
+          "minutes": 682,
           "goals": 0,
           "assists": 0,
-          "xg": 0.45,
-          "shots": 6,
-          "key_passes": 11
+          "xg": 0.13,
+          "shots": 2,
+          "key_passes": 6
         },
         "career": {
           "apps": 299,
@@ -2033,18 +2033,18 @@
         "player_id": "P0808",
         "name": "Bonnaud",
         "season": {
-          "apps": 5,
-          "minutes": 486,
-          "goals": 0,
-          "assists": 0,
-          "xg": 0.02,
-          "shots": 1,
-          "key_passes": 4
+          "apps": 7,
+          "minutes": 523,
+          "goals": 1,
+          "assists": 1,
+          "xg": 0.29,
+          "shots": 3,
+          "key_passes": 8
         },
         "career": {
-          "apps": 134,
-          "goals": 11,
-          "assists": 14,
+          "apps": 136,
+          "goals": 12,
+          "assists": 15,
           "international_caps": 2
         },
         "scoring_streak_matches": 0
@@ -2054,17 +2054,17 @@
         "name": "Marlow",
         "season": {
           "apps": 7,
-          "minutes": 681,
+          "minutes": 683,
           "goals": 0,
-          "assists": 2,
-          "xg": 0.04,
-          "shots": 3,
-          "key_passes": 21
+          "assists": 4,
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 12
         },
         "career": {
           "apps": 169,
           "goals": 19,
-          "assists": 26,
+          "assists": 28,
           "international_caps": 16
         },
         "scoring_streak_matches": 0
@@ -2073,17 +2073,17 @@
         "player_id": "P0810",
         "name": "Bramley",
         "season": {
-          "apps": 7,
-          "minutes": 412,
-          "goals": 1,
+          "apps": 6,
+          "minutes": 272,
+          "goals": 3,
           "assists": 0,
-          "xg": 1.74,
-          "shots": 24,
-          "key_passes": 11
+          "xg": 2.64,
+          "shots": 21,
+          "key_passes": 4
         },
         "career": {
-          "apps": 157,
-          "goals": 81,
+          "apps": 156,
+          "goals": 83,
           "assists": 27,
           "international_caps": 54
         },
@@ -2094,20 +2094,20 @@
         "name": "Ashworth",
         "season": {
           "apps": 7,
-          "minutes": 470,
+          "minutes": 468,
           "goals": 2,
-          "assists": 0,
-          "xg": 3.8,
-          "shots": 34,
-          "key_passes": 10
+          "assists": 2,
+          "xg": 1.59,
+          "shots": 26,
+          "key_passes": 15
         },
         "career": {
           "apps": 296,
           "goals": 120,
-          "assists": 42,
+          "assists": 44,
           "international_caps": 75
         },
-        "scoring_streak_matches": 1
+        "scoring_streak_matches": 0
       },
       {
         "player_id": "P0812",
@@ -2140,8 +2140,8 @@
         "player_id": "P0813",
         "name": "Vogt",
         "season": {
-          "apps": 4,
-          "minutes": 162,
+          "apps": 5,
+          "minutes": 216,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -2149,7 +2149,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 80,
+          "apps": 81,
           "goals": 2,
           "assists": 1,
           "international_caps": 17
@@ -2160,16 +2160,16 @@
         "player_id": "P0814",
         "name": "Drayton",
         "season": {
-          "apps": 3,
-          "minutes": 124,
+          "apps": 5,
+          "minutes": 130,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 1
+          "xg": 0.02,
+          "shots": 1,
+          "key_passes": 2
         },
         "career": {
-          "apps": 271,
+          "apps": 273,
           "goals": 5,
           "assists": 19,
           "international_caps": 0
@@ -2180,8 +2180,8 @@
         "player_id": "P0815",
         "name": "Thorne",
         "season": {
-          "apps": 0,
-          "minutes": 0,
+          "apps": 1,
+          "minutes": 26,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -2189,7 +2189,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 232,
+          "apps": 233,
           "goals": 9,
           "assists": 10,
           "international_caps": 0
@@ -2200,16 +2200,16 @@
         "player_id": "P0816",
         "name": "Whitfield",
         "season": {
-          "apps": 1,
-          "minutes": 17,
+          "apps": 4,
+          "minutes": 134,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 0
+          "xg": 0.51,
+          "shots": 5,
+          "key_passes": 3
         },
         "career": {
-          "apps": 172,
+          "apps": 175,
           "goals": 11,
           "assists": 24,
           "international_caps": 1
@@ -2220,17 +2220,17 @@
         "player_id": "P0817",
         "name": "Pembridge",
         "season": {
-          "apps": 4,
-          "minutes": 71,
-          "goals": 1,
+          "apps": 2,
+          "minutes": 24,
+          "goals": 0,
           "assists": 0,
-          "xg": 0.78,
-          "shots": 1,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
-          "apps": 212,
-          "goals": 43,
+          "apps": 210,
+          "goals": 42,
           "assists": 39,
           "international_caps": 51
         },
@@ -2240,16 +2240,16 @@
         "player_id": "P0818",
         "name": "Marlow",
         "season": {
-          "apps": 5,
-          "minutes": 113,
+          "apps": 2,
+          "minutes": 24,
           "goals": 0,
           "assists": 0,
-          "xg": 0.22,
-          "shots": 4,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
-          "apps": 113,
+          "apps": 110,
           "goals": 25,
           "assists": 21,
           "international_caps": 0
@@ -2260,18 +2260,18 @@
         "player_id": "P0819",
         "name": "de Graaf",
         "season": {
-          "apps": 6,
-          "minutes": 332,
-          "goals": 2,
-          "assists": 2,
-          "xg": 1.75,
-          "shots": 15,
-          "key_passes": 8
+          "apps": 4,
+          "minutes": 301,
+          "goals": 4,
+          "assists": 0,
+          "xg": 3.31,
+          "shots": 16,
+          "key_passes": 1
         },
         "career": {
-          "apps": 169,
-          "goals": 68,
-          "assists": 21,
+          "apps": 167,
+          "goals": 70,
+          "assists": 19,
           "international_caps": 4
         },
         "scoring_streak_matches": 0
@@ -2280,17 +2280,17 @@
         "player_id": "P0820",
         "name": "Nwosu",
         "season": {
-          "apps": 3,
-          "minutes": 185,
-          "goals": 0,
+          "apps": 4,
+          "minutes": 276,
+          "goals": 2,
           "assists": 0,
-          "xg": 0.05,
-          "shots": 2,
-          "key_passes": 1
+          "xg": 0.48,
+          "shots": 5,
+          "key_passes": 5
         },
         "career": {
-          "apps": 153,
-          "goals": 9,
+          "apps": 154,
+          "goals": 11,
           "assists": 14,
           "international_caps": 3
         },
@@ -2300,8 +2300,8 @@
         "player_id": "P0821",
         "name": "Whitfield",
         "season": {
-          "apps": 1,
-          "minutes": 75,
+          "apps": 3,
+          "minutes": 132,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -2309,7 +2309,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 201,
+          "apps": 203,
           "goals": 8,
           "assists": 3,
           "international_caps": 0
@@ -2320,17 +2320,17 @@
         "player_id": "P0822",
         "name": "Harlan",
         "season": {
-          "apps": 6,
-          "minutes": 134,
-          "goals": 1,
+          "apps": 4,
+          "minutes": 117,
+          "goals": 0,
           "assists": 0,
-          "xg": 0.49,
-          "shots": 7,
+          "xg": 0.03,
+          "shots": 1,
           "key_passes": 1
         },
         "career": {
-          "apps": 94,
-          "goals": 21,
+          "apps": 92,
+          "goals": 20,
           "assists": 14,
           "international_caps": 7
         },
@@ -2383,7 +2383,7 @@
     "scoring_streaks": []
   },
   "final_score": {
-    "home": 3,
-    "away": 0
+    "home": 0,
+    "away": 1
   }
 }

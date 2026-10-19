@@ -14,7 +14,7 @@
     "city": "Mirasol de la Vega",
     "capacity": 34000
   },
-  "attendance": 30884,
+  "attendance": 31551,
   "referee": {
     "name": "Tobias Rennert",
     "nationality": "GER",
@@ -1387,30 +1387,30 @@
         "name": "CD Mirasol",
         "abbr": "MIR",
         "played": 4,
-        "won": 2,
-        "drawn": 1,
+        "won": 3,
+        "drawn": 0,
         "lost": 1,
-        "gf": 8,
-        "ga": 4,
-        "gd": 4,
-        "points": 7,
-        "form": "WLWD",
-        "position": 5
+        "gf": 9,
+        "ga": 3,
+        "gd": 6,
+        "points": 9,
+        "form": "WLWW",
+        "position": 3
       },
       "away": {
         "team_id": "C06",
         "name": "AC Montevio",
         "abbr": "ACM",
         "played": 4,
-        "won": 0,
-        "drawn": 1,
-        "lost": 3,
-        "gf": 2,
-        "ga": 7,
-        "gd": -5,
-        "points": 1,
-        "form": "LLDL",
-        "position": 9
+        "won": 2,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 8,
+        "ga": 6,
+        "gd": 2,
+        "points": 6,
+        "form": "LWLW",
+        "position": 6
       }
     },
     "head_to_head_this_season": [],
@@ -1420,7 +1420,7 @@
         "name": "Correa",
         "season": {
           "apps": 4,
-          "minutes": 394,
+          "minutes": 393,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1440,7 +1440,7 @@
         "name": "Lozano",
         "season": {
           "apps": 4,
-          "minutes": 281,
+          "minutes": 309,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1460,11 +1460,11 @@
         "name": "Marchetti",
         "season": {
           "apps": 4,
-          "minutes": 238,
+          "minutes": 306,
           "goals": 0,
           "assists": 0,
-          "xg": 0.06,
-          "shots": 1,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
@@ -1480,12 +1480,12 @@
         "name": "Villalba",
         "season": {
           "apps": 4,
-          "minutes": 349,
+          "minutes": 380,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 0
+          "key_passes": 1
         },
         "career": {
           "apps": 151,
@@ -1500,17 +1500,17 @@
         "name": "Mendívil",
         "season": {
           "apps": 4,
-          "minutes": 394,
+          "minutes": 393,
           "goals": 0,
-          "assists": 1,
+          "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 3
+          "key_passes": 0
         },
         "career": {
           "apps": 377,
           "goals": 9,
-          "assists": 24,
+          "assists": 23,
           "international_caps": 52
         },
         "scoring_streak_matches": 0
@@ -1520,27 +1520,27 @@
         "name": "Ledesma",
         "season": {
           "apps": 4,
-          "minutes": 394,
-          "goals": 1,
-          "assists": 1,
-          "xg": 0.07,
-          "shots": 2,
+          "minutes": 356,
+          "goals": 0,
+          "assists": 2,
+          "xg": 0.43,
+          "shots": 7,
           "key_passes": 9
         },
         "career": {
           "apps": 16,
-          "goals": 1,
-          "assists": 2,
+          "goals": 0,
+          "assists": 3,
           "international_caps": 3
         },
-        "scoring_streak_matches": 1
+        "scoring_streak_matches": 0
       },
       {
         "player_id": "P0307",
         "name": "Kettani",
         "season": {
           "apps": 3,
-          "minutes": 294,
+          "minutes": 270,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1559,18 +1559,18 @@
         "player_id": "P0308",
         "name": "Llorente",
         "season": {
-          "apps": 3,
-          "minutes": 254,
+          "apps": 4,
+          "minutes": 304,
           "goals": 0,
-          "assists": 1,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 4
+          "assists": 0,
+          "xg": 0.05,
+          "shots": 2,
+          "key_passes": 2
         },
         "career": {
-          "apps": 350,
+          "apps": 351,
           "goals": 30,
-          "assists": 32,
+          "assists": 31,
           "international_caps": 11
         },
         "scoring_streak_matches": 0
@@ -1580,17 +1580,17 @@
         "name": "Mendívil",
         "season": {
           "apps": 4,
-          "minutes": 227,
+          "minutes": 299,
           "goals": 0,
-          "assists": 1,
-          "xg": 0.02,
+          "assists": 0,
+          "xg": 0.04,
           "shots": 1,
-          "key_passes": 3
+          "key_passes": 6
         },
         "career": {
           "apps": 138,
           "goals": 34,
-          "assists": 20,
+          "assists": 19,
           "international_caps": 10
         },
         "scoring_streak_matches": 0
@@ -1600,36 +1600,36 @@
         "name": "Valente",
         "season": {
           "apps": 4,
-          "minutes": 300,
-          "goals": 4,
+          "minutes": 303,
+          "goals": 7,
           "assists": 1,
-          "xg": 5.33,
-          "shots": 33,
-          "key_passes": 5
+          "xg": 5.22,
+          "shots": 26,
+          "key_passes": 7
         },
         "career": {
           "apps": 211,
-          "goals": 116,
+          "goals": 119,
           "assists": 33,
           "international_caps": 83
         },
-        "scoring_streak_matches": 0
+        "scoring_streak_matches": 2
       },
       {
         "player_id": "P0311",
         "name": "Ortuño",
         "season": {
-          "apps": 4,
-          "minutes": 273,
-          "goals": 1,
+          "apps": 2,
+          "minutes": 165,
+          "goals": 0,
           "assists": 0,
-          "xg": 0.7,
-          "shots": 2,
-          "key_passes": 11
+          "xg": 0.17,
+          "shots": 4,
+          "key_passes": 4
         },
         "career": {
-          "apps": 154,
-          "goals": 47,
+          "apps": 152,
+          "goals": 46,
           "assists": 24,
           "international_caps": 29
         },
@@ -1660,7 +1660,7 @@
         "name": "Arteche",
         "season": {
           "apps": 3,
-          "minutes": 112,
+          "minutes": 56,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1679,18 +1679,18 @@
         "player_id": "P0314",
         "name": "Berrada",
         "season": {
-          "apps": 2,
-          "minutes": 74,
+          "apps": 4,
+          "minutes": 84,
           "goals": 0,
-          "assists": 1,
+          "assists": 0,
           "xg": 0.0,
           "shots": 0,
           "key_passes": 1
         },
         "career": {
-          "apps": 225,
+          "apps": 227,
           "goals": 7,
-          "assists": 26,
+          "assists": 25,
           "international_caps": 11
         },
         "scoring_streak_matches": 0
@@ -1699,18 +1699,18 @@
         "player_id": "P0315",
         "name": "Arteche",
         "season": {
-          "apps": 1,
-          "minutes": 100,
+          "apps": 2,
+          "minutes": 104,
           "goals": 0,
-          "assists": 1,
+          "assists": 0,
           "xg": 0.0,
           "shots": 0,
           "key_passes": 1
         },
         "career": {
-          "apps": 260,
+          "apps": 261,
           "goals": 8,
-          "assists": 17,
+          "assists": 16,
           "international_caps": 114
         },
         "scoring_streak_matches": 0
@@ -1719,8 +1719,8 @@
         "player_id": "P0316",
         "name": "Peiró",
         "season": {
-          "apps": 1,
-          "minutes": 33,
+          "apps": 2,
+          "minutes": 55,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1728,7 +1728,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 229,
+          "apps": 230,
           "goals": 17,
           "assists": 22,
           "international_caps": 41
@@ -1739,16 +1739,16 @@
         "player_id": "P0317",
         "name": "Renan",
         "season": {
-          "apps": 2,
-          "minutes": 35,
+          "apps": 1,
+          "minutes": 23,
           "goals": 0,
           "assists": 0,
-          "xg": 0.08,
-          "shots": 1,
-          "key_passes": 0
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 1
         },
         "career": {
-          "apps": 204,
+          "apps": 203,
           "goals": 33,
           "assists": 31,
           "international_caps": 8
@@ -1759,17 +1759,17 @@
         "player_id": "P0318",
         "name": "Nakagawa",
         "season": {
-          "apps": 3,
-          "minutes": 108,
-          "goals": 1,
+          "apps": 2,
+          "minutes": 56,
+          "goals": 0,
           "assists": 0,
-          "xg": 0.21,
-          "shots": 1,
-          "key_passes": 0
+          "xg": 0.14,
+          "shots": 2,
+          "key_passes": 2
         },
         "career": {
-          "apps": 103,
-          "goals": 19,
+          "apps": 102,
+          "goals": 18,
           "assists": 15,
           "international_caps": 4
         },
@@ -1779,17 +1779,17 @@
         "player_id": "P0319",
         "name": "Benítez",
         "season": {
-          "apps": 3,
-          "minutes": 147,
-          "goals": 1,
+          "apps": 2,
+          "minutes": 96,
+          "goals": 0,
           "assists": 0,
-          "xg": 1.38,
-          "shots": 9,
-          "key_passes": 1
+          "xg": 0.07,
+          "shots": 1,
+          "key_passes": 2
         },
         "career": {
-          "apps": 197,
-          "goals": 66,
+          "apps": 196,
+          "goals": 65,
           "assists": 18,
           "international_caps": 15
         },
@@ -1800,12 +1800,12 @@
         "name": "Mendívil",
         "season": {
           "apps": 2,
-          "minutes": 129,
+          "minutes": 87,
           "goals": 0,
           "assists": 1,
-          "xg": 0.04,
-          "shots": 2,
-          "key_passes": 4
+          "xg": 0.25,
+          "shots": 3,
+          "key_passes": 1
         },
         "career": {
           "apps": 96,
@@ -1820,7 +1820,7 @@
         "name": "Lefèvre",
         "season": {
           "apps": 1,
-          "minutes": 30,
+          "minutes": 13,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1839,21 +1839,21 @@
         "player_id": "P0322",
         "name": "Villalba",
         "season": {
-          "apps": 3,
-          "minutes": 168,
-          "goals": 0,
+          "apps": 4,
+          "minutes": 234,
+          "goals": 2,
           "assists": 0,
-          "xg": 0.09,
-          "shots": 2,
-          "key_passes": 6
+          "xg": 0.9,
+          "shots": 4,
+          "key_passes": 4
         },
         "career": {
-          "apps": 16,
-          "goals": 3,
+          "apps": 17,
+          "goals": 5,
           "assists": 2,
           "international_caps": 4
         },
-        "scoring_streak_matches": 0
+        "scoring_streak_matches": 2
       },
       {
         "player_id": "P0323",
@@ -1880,7 +1880,7 @@
         "name": "Ferraresi",
         "season": {
           "apps": 4,
-          "minutes": 391,
+          "minutes": 394,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -1900,12 +1900,12 @@
         "name": "Correa",
         "season": {
           "apps": 4,
-          "minutes": 391,
+          "minutes": 378,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 0
+          "key_passes": 1
         },
         "career": {
           "apps": 151,
@@ -1920,12 +1920,12 @@
         "name": "Santoro",
         "season": {
           "apps": 4,
-          "minutes": 311,
+          "minutes": 323,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
-          "key_passes": 0
+          "xg": 0.05,
+          "shots": 1,
+          "key_passes": 1
         },
         "career": {
           "apps": 338,
@@ -1939,16 +1939,16 @@
         "player_id": "P0604",
         "name": "Bassani",
         "season": {
-          "apps": 2,
-          "minutes": 155,
+          "apps": 4,
+          "minutes": 237,
           "goals": 0,
           "assists": 0,
-          "xg": 0.0,
-          "shots": 0,
+          "xg": 0.04,
+          "shots": 1,
           "key_passes": 0
         },
         "career": {
-          "apps": 137,
+          "apps": 139,
           "goals": 7,
           "assists": 2,
           "international_caps": 50
@@ -1960,12 +1960,12 @@
         "name": "Benedetti",
         "season": {
           "apps": 3,
-          "minutes": 242,
+          "minutes": 295,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 2
+          "key_passes": 3
         },
         "career": {
           "apps": 267,
@@ -1980,17 +1980,17 @@
         "name": "Ferraresi",
         "season": {
           "apps": 4,
-          "minutes": 387,
+          "minutes": 300,
           "goals": 0,
-          "assists": 0,
-          "xg": 0.04,
+          "assists": 1,
+          "xg": 0.22,
           "shots": 1,
-          "key_passes": 10
+          "key_passes": 6
         },
         "career": {
           "apps": 161,
           "goals": 13,
-          "assists": 20,
+          "assists": 21,
           "international_caps": 62
         },
         "scoring_streak_matches": 0
@@ -2000,17 +2000,17 @@
         "name": "Amaral",
         "season": {
           "apps": 4,
-          "minutes": 391,
+          "minutes": 394,
           "goals": 0,
-          "assists": 0,
+          "assists": 1,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 7
+          "key_passes": 6
         },
         "career": {
           "apps": 177,
           "goals": 8,
-          "assists": 6,
+          "assists": 7,
           "international_caps": 23
         },
         "scoring_streak_matches": 0
@@ -2020,12 +2020,12 @@
         "name": "Lombardo",
         "season": {
           "apps": 4,
-          "minutes": 297,
+          "minutes": 332,
           "goals": 0,
           "assists": 0,
-          "xg": 0.09,
-          "shots": 2,
-          "key_passes": 8
+          "xg": 0.0,
+          "shots": 0,
+          "key_passes": 3
         },
         "career": {
           "apps": 224,
@@ -2040,17 +2040,17 @@
         "name": "Garnier",
         "season": {
           "apps": 4,
-          "minutes": 368,
+          "minutes": 361,
           "goals": 0,
-          "assists": 0,
+          "assists": 1,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 6
+          "key_passes": 8
         },
         "career": {
           "apps": 209,
           "goals": 7,
-          "assists": 23,
+          "assists": 24,
           "international_caps": 18
         },
         "scoring_streak_matches": 0
@@ -2060,17 +2060,17 @@
         "name": "Adeyemi",
         "season": {
           "apps": 4,
-          "minutes": 231,
-          "goals": 1,
-          "assists": 0,
-          "xg": 0.89,
-          "shots": 15,
-          "key_passes": 8
+          "minutes": 314,
+          "goals": 3,
+          "assists": 3,
+          "xg": 2.04,
+          "shots": 18,
+          "key_passes": 19
         },
         "career": {
           "apps": 99,
-          "goals": 36,
-          "assists": 11,
+          "goals": 38,
+          "assists": 14,
           "international_caps": 15
         },
         "scoring_streak_matches": 0,
@@ -2087,17 +2087,17 @@
         "name": "Quesada",
         "season": {
           "apps": 4,
-          "minutes": 243,
+          "minutes": 178,
           "goals": 1,
-          "assists": 0,
-          "xg": 1.01,
+          "assists": 1,
+          "xg": 1.82,
           "shots": 20,
-          "key_passes": 3
+          "key_passes": 4
         },
         "career": {
           "apps": 132,
           "goals": 50,
-          "assists": 16,
+          "assists": 17,
           "international_caps": 38
         },
         "scoring_streak_matches": 0
@@ -2126,8 +2126,8 @@
         "player_id": "P0613",
         "name": "Ledesma",
         "season": {
-          "apps": 3,
-          "minutes": 167,
+          "apps": 1,
+          "minutes": 79,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -2135,7 +2135,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 206,
+          "apps": 204,
           "goals": 8,
           "assists": 4,
           "international_caps": 40
@@ -2146,8 +2146,8 @@
         "player_id": "P0614",
         "name": "Moraes",
         "season": {
-          "apps": 2,
-          "minutes": 105,
+          "apps": 1,
+          "minutes": 99,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -2155,7 +2155,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 396,
+          "apps": 395,
           "goals": 13,
           "assists": 28,
           "international_caps": 3
@@ -2166,16 +2166,16 @@
         "player_id": "P0615",
         "name": "Rinaldi",
         "season": {
-          "apps": 1,
-          "minutes": 32,
+          "apps": 0,
+          "minutes": 0,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 1
+          "key_passes": 0
         },
         "career": {
-          "apps": 241,
+          "apps": 240,
           "goals": 9,
           "assists": 9,
           "international_caps": 11
@@ -2186,18 +2186,18 @@
         "player_id": "P0616",
         "name": "Barbosa",
         "season": {
-          "apps": 1,
-          "minutes": 98,
+          "apps": 2,
+          "minutes": 148,
           "goals": 0,
-          "assists": 1,
-          "xg": 0.06,
-          "shots": 1,
+          "assists": 0,
+          "xg": 0.08,
+          "shots": 2,
           "key_passes": 4
         },
         "career": {
-          "apps": 161,
+          "apps": 162,
           "goals": 14,
-          "assists": 16,
+          "assists": 15,
           "international_caps": 28
         },
         "scoring_streak_matches": 0
@@ -2206,16 +2206,16 @@
         "player_id": "P0617",
         "name": "Ferraresi",
         "season": {
-          "apps": 2,
-          "minutes": 51,
+          "apps": 3,
+          "minutes": 46,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
           "shots": 0,
-          "key_passes": 1
+          "key_passes": 0
         },
         "career": {
-          "apps": 229,
+          "apps": 230,
           "goals": 47,
           "assists": 47,
           "international_caps": 5
@@ -2227,12 +2227,12 @@
         "name": "Lombardo",
         "season": {
           "apps": 3,
-          "minutes": 110,
+          "minutes": 55,
           "goals": 0,
           "assists": 0,
-          "xg": 0.35,
-          "shots": 4,
-          "key_passes": 1
+          "xg": 0.2,
+          "shots": 1,
+          "key_passes": 0
         },
         "career": {
           "apps": 186,
@@ -2247,31 +2247,31 @@
         "name": "Sosa",
         "season": {
           "apps": 3,
-          "minutes": 139,
-          "goals": 0,
+          "minutes": 172,
+          "goals": 4,
           "assists": 0,
-          "xg": 1.01,
-          "shots": 12,
-          "key_passes": 1
+          "xg": 2.88,
+          "shots": 23,
+          "key_passes": 2
         },
         "career": {
           "apps": 209,
-          "goals": 88,
+          "goals": 92,
           "assists": 28,
           "international_caps": 34
         },
-        "scoring_streak_matches": 0
+        "scoring_streak_matches": 3
       },
       {
         "player_id": "P0620",
         "name": "Santoro",
         "season": {
           "apps": 1,
-          "minutes": 32,
+          "minutes": 25,
           "goals": 0,
           "assists": 0,
-          "xg": 0.18,
-          "shots": 3,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
@@ -2286,8 +2286,8 @@
         "player_id": "P0621",
         "name": "Lombardo",
         "season": {
-          "apps": 1,
-          "minutes": 71,
+          "apps": 2,
+          "minutes": 96,
           "goals": 0,
           "assists": 0,
           "xg": 0.0,
@@ -2295,7 +2295,7 @@
           "key_passes": 0
         },
         "career": {
-          "apps": 107,
+          "apps": 108,
           "goals": 4,
           "assists": 2,
           "international_caps": 18
@@ -2307,11 +2307,11 @@
         "name": "Pellegrini",
         "season": {
           "apps": 3,
-          "minutes": 89,
+          "minutes": 46,
           "goals": 0,
           "assists": 0,
-          "xg": 0.28,
-          "shots": 3,
+          "xg": 0.0,
+          "shots": 0,
           "key_passes": 0
         },
         "career": {
@@ -2352,10 +2352,26 @@
         "needed": 1
       }
     ],
-    "scoring_streaks": []
+    "scoring_streaks": [
+      {
+        "player_id": "P0310",
+        "name": "Valente",
+        "matches": 2
+      },
+      {
+        "player_id": "P0322",
+        "name": "Villalba",
+        "matches": 2
+      },
+      {
+        "player_id": "P0619",
+        "name": "Sosa",
+        "matches": 3
+      }
+    ]
   },
   "final_score": {
-    "home": 5,
-    "away": 1
+    "home": 4,
+    "away": 2
   }
 }

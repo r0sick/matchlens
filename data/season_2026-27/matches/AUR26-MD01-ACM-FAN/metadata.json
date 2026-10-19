@@ -14,7 +14,7 @@
     "city": "Montevio",
     "capacity": 38000
   },
-  "attendance": 32894,
+  "attendance": 33871,
   "referee": {
     "name": "Tobias Rennert",
     "nationality": "GER",
@@ -1395,7 +1395,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 3
+        "position": 2
       },
       "away": {
         "team_id": "C07",
@@ -1410,7 +1410,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 6
+        "position": 5
       }
     },
     "head_to_head_this_season": [],
@@ -2383,7 +2383,7 @@
     "scoring_streaks": []
   },
   "final_score": {
-    "home": 0,
+    "home": 1,
     "away": 3
   }
 }

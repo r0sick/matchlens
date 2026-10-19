@@ -14,7 +14,7 @@
     "city": "Thornbury",
     "capacity": 52000
   },
-  "attendance": 46382,
+  "attendance": 49700,
   "referee": {
     "name": "Tobias Rennert",
     "nationality": "GER",
@@ -2395,7 +2395,7 @@
     "scoring_streaks": []
   },
   "final_score": {
-    "home": 2,
-    "away": 2
+    "home": 1,
+    "away": 0
   }
 }

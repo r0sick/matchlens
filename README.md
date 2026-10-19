@@ -15,6 +15,19 @@ python -m matchsim replay  data/matches/M000042 --speed 60 --format jsonl   # ra
 python tools/validate.py -n 200                                        # realism check
 ```
 
+## Stage 1 – live match intelligence (`matchlens/`)
+
+```bash
+python -m matchlens data/matches/M000042 --speed 60           # live dashboard: stats, win probability, alerts
+python -m matchlens data/matches/M000042 --speed 600 --alerts-only --no-minor
+python tools/match_report.py data/matches/M000042 --out report.png   # chart vs hidden ground truth
+python tools/train_models.py --matches 3000                   # retrain models (needs numpy + scikit-learn)
+```
+
+- `matchlens/state.py` – `MatchState.update(event)` keeps live team/player stats, possession (total and last 5 min), field tilt, PPDA, momentum index, chaos index, live player ratings, and emits alerts (goal, win-probability swing, sprint ≥ 33 km/h, shot ≥ 105 km/h, hard pass completed, 45 m+ pass, big chance missed, 10 km covered, cards, subs). Uses only events seen so far.
+- `matchlens/models.py` – pass difficulty (0–100 with reasons), win/draw/loss probability, next-goal probability and chaos index. All exported as JSON coefficients in `matchlens/model_files/`, so the live app needs no ML libraries and every number can be explained term by term.
+- `model_files/training_report.json` – held-out evaluation: log loss vs naive prior, calibration tables, and correlation of the momentum and chaos indices with the simulation's hidden ground truth.
+
 In code, the ingest stage can consume the same feed:
 
 ```python
@@ -36,16 +49,26 @@ for ev in iter_live(m["events"], speed=60):
 
 | metric | sim | typical top flight |
 |---|---|---|
-| goals | 1.68 | 1.4 |
-| xG | 1.64 | 1.4 |
-| shots / on target | 13.9 / 5.1 | 12.5 / 4.3 |
-| passes / accuracy | 496 / 81.5% | 470 / 81% |
-| corners / crosses | 4.2 / 17.7 | 5.0 / 16 |
-| fouls / yellows / offsides | 10.1 / 1.6 / 1.8 | 10.5 / 1.9 / 1.8 |
-| tackles / interceptions / dribbles | 18.5 / 10.8 / 9.0 | 17 / 9 / 9 |
-| distance / sprints | 109.6 km / 125 | 110 km / ~120 |
+| goals | 1.55 | 1.4 |
+| xG | 1.52 | 1.4 |
+| shots / on target | 13.2 / 4.8 | 12.5 / 4.3 |
+| passes / accuracy | 494 / 80.1% | 470 / 81% |
+| corners / crosses | 3.9 / 17.0 | 5.0 / 16 |
+| fouls / yellows / offsides | 10.5 / 1.7 / 2.0 | 10.5 / 1.9 / 1.8 |
+| tackles / interceptions / dribbles | 18.6 / 11.4 / 8.8 | 17 / 9 / 9 |
+| distance / sprints | 110.2 km / 125 | 110 km / ~120 |
 
-Home win / draw / away win: 44% / 22% / 34%. Ball in play ≈ 59 min. Reference values are approximate league-wide averages used as calibration targets.
+Home win / draw / away win over 400 matches: 43% / 22% / 35%. Ball in play ≈ 58 min. Reference values are approximate league-wide averages used as calibration targets.
+
+## Model quality (held-out 20% of 3,000 training matches)
+
+| model | metric | ours | scoreline + clock only | no information |
+|---|---|---|---|---|
+| win / draw / loss | log loss | **0.582** | 0.648 | 1.047 |
+| next goal | log loss | **0.873** | 0.925 | 1.099 |
+| pass difficulty | AUC | **0.79** | – | 0.50 |
+
+Momentum index vs the simulation's hidden momentum: correlation 0.64. Chaos index vs hidden chaos: 0.43 (it tracks the direction well but under-reads the most extreme spells). Full tables in `matchlens/model_files/training_report.json`.
 
 ## Files
 

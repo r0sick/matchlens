@@ -330,7 +330,7 @@ class MatchEngine:
         self.counter = 0
         if allow_counter and pattern == "regular_play" and x < 60:
             opp_line = old.style["line_height"]
-            p_counter = (0.06 + 0.30 * new.style["directness"]) * (0.4 + opp_line) * (1 + 0.5 * self.chaos)
+            p_counter = (0.06 + 0.30 * new.style["directness"]) * (0.4 + opp_line) * max(0.3, 1.14 + 2.0 * (self.chaos - 0.28))
             if self.rng.random() < p_counter:
                 self.counter = self.rng.randint(2, 5)
                 self.pattern = "from_counter"
@@ -362,7 +362,8 @@ class MatchEngine:
         self.mom = clamp(0.90 * self.mom + 0.1 * (self.home_adv + 0.35 * self.quality(self.home)) + rng.gauss(0, 0.08), -1, 1)
         base_chaos = 0.12 + 0.12 * (self.home.style["press"] + self.away.style["press"]) / 2
         late = 0.06 if abs_min > 78 and abs(self.home.goals - self.away.goals) <= 1 else 0
-        self.chaos = clamp(0.88 * self.chaos + 0.12 * base_chaos + late + rng.gauss(0, 0.02), 0, 1)
+        storm = rng.uniform(0.15, 0.35) if rng.random() < 0.03 else 0.0   # spontaneous scrappy spells
+        self.chaos = clamp(0.88 * self.chaos + 0.12 * base_chaos + late + storm + rng.gauss(0, 0.02), 0, 1)
         # tactical reactions (hidden intent)
         for ts in (self.home, self.away):
             diff = ts.goals - self.other(ts).goals
@@ -452,7 +453,10 @@ class MatchEngine:
     # ------------------------------------------------------------ substitutions
     def make_subs(self, ts: TeamState):
         n_planned = ts.pending_subs
-        forced = list(ts.forced_sub)
+        forced = []
+        for p in ts.forced_sub:                  # dedupe (a player can be hurt twice); skip if already off
+            if p in ts.on_pitch and all(p is not q for q in forced):
+                forced.append(p)
         ts.forced_sub = []
         if ts.subs_used >= 5 or (ts.sub_windows >= 3 and not forced):
             ts.pending_subs = 0
@@ -469,6 +473,8 @@ class MatchEngine:
         for off in outs:
             if ts.subs_used >= 5:
                 break
+            if off not in ts.on_pitch:
+                continue
             role = ts.role_of[off.player_id]
             g = ROLE_GROUP[role]
             want = [g]
@@ -528,7 +534,7 @@ class MatchEngine:
         st = dfn.style
         # high press is most visible when the opponent builds from the back
         zone = 1.25 if x < 35 else 1.0 if x < 70 else 0.9 if x < BOX_X else 1.5
-        p = (0.08 + 0.25 * st["press"] * zone) * (1 + 0.6 * self.chaos) + 0.06 * self.m_for(dfn)
+        p = (0.08 + 0.25 * st["press"] * zone) * max(0.4, 1.17 + 1.4 * (self.chaos - 0.28)) + 0.06 * self.m_for(dfn)
         return clamp(p, 0.03, 0.7)
 
     def pick(self, ts, groups, exclude=None, key="overall"):
@@ -691,7 +697,7 @@ class MatchEngine:
     def do_carry_and_pass(self, att, dfn, p, x, y, pressed):
         rng = self.rng
         st = att.style
-        tempo_f = 1.30 - 0.45 * st["tempo"]
+        tempo_f = (1.30 - 0.45 * st["tempo"]) * clamp(1 - 0.6 * (self.chaos - 0.28), 0.6, 1.2)
         if self.counter:
             tempo_f *= 0.65
         # ---- carry
@@ -731,7 +737,7 @@ class MatchEngine:
         rng = self.rng
         st = att.style
         m = self.m_for(att)
-        directness = clamp(st["directness"] + 0.15 * m, 0, 1)
+        directness = clamp(st["directness"] + 0.15 * m + 0.8 * (self.chaos - 0.28), 0, 1)
         # long ball / switch options
         p_long = 0.035 + 0.12 * directness + (0.15 if pressed and x < 35 else 0)
         if self.counter:
@@ -818,7 +824,7 @@ class MatchEngine:
         z -= 1.05 if (tx > BOX_X and BOX_Y0 - 3 < ty < BOX_Y1 + 3) else 0
         z -= 0.60 if ptype == "through_ball" else 0
         z += (p.attrs["passing"] - 75) * 0.045 + (p.attrs["vision"] - 75) * 0.012 * (ptype == "through_ball")
-        z += 0.30 * m - 0.55 * self.chaos - 0.55 * self.fatigue(att, p) + 0.22 * self.quality(att)
+        z += 0.30 * m - 0.154 - 1.6 * (self.chaos - 0.28) - 0.55 * self.fatigue(att, p) + 0.22 * self.quality(att)
         z -= self.weather["_penalty"] * (1.0 if height == "high" or ln > 25 else 0.5)
         if restart == "throw_in":
             z += 0.4

@@ -14,7 +14,7 @@
     "city": "Zeelhaven",
     "capacity": 26000
   },
-  "attendance": 25268,
+  "attendance": 25479,
   "referee": {
     "name": "Pieter Ruijsdael",
     "nationality": "NED",
@@ -1395,7 +1395,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 6
+        "position": 5
       },
       "away": {
         "team_id": "C05",
@@ -1410,7 +1410,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 7
+        "position": 6
       }
     },
     "head_to_head_this_season": [],
@@ -2355,7 +2355,7 @@
     "scoring_streaks": []
   },
   "final_score": {
-    "home": 2,
-    "away": 7
+    "home": 1,
+    "away": 2
   }
 }

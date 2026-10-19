@@ -14,7 +14,7 @@
     "city": "Blackwater",
     "capacity": 27000
   },
-  "attendance": 24306,
+  "attendance": 22630,
   "referee": {
     "name": "Luca Ferrandi",
     "nationality": "ITA",
@@ -1395,7 +1395,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 5
+        "position": 4
       },
       "away": {
         "team_id": "C04",
@@ -1410,7 +1410,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 7
+        "position": 6
       }
     },
     "head_to_head_this_season": [],
@@ -2369,7 +2369,7 @@
     "scoring_streaks": []
   },
   "final_score": {
-    "home": 1,
-    "away": 2
+    "home": 4,
+    "away": 0
   }
 }

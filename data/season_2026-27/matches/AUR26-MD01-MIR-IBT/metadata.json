@@ -14,7 +14,7 @@
     "city": "Mirasol de la Vega",
     "capacity": 34000
   },
-  "attendance": 32019,
+  "attendance": 29591,
   "referee": {
     "name": "Luca Ferrandi",
     "nationality": "ITA",
@@ -1395,7 +1395,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 5
+        "position": 4
       },
       "away": {
         "team_id": "C10",
@@ -1410,7 +1410,7 @@
         "gd": 0,
         "points": 0,
         "form": "",
-        "position": 7
+        "position": 6
       }
     },
     "head_to_head_this_season": [],
@@ -2356,6 +2356,6 @@
   },
   "final_score": {
     "home": 3,
-    "away": 1
+    "away": 0
   }
 }

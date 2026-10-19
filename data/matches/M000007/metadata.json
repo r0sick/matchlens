@@ -14,7 +14,7 @@
     "city": "Mirasol de la Vega",
     "capacity": 34000
   },
-  "attendance": 30497,
+  "attendance": 32667,
   "referee": {
     "name": "Tobias Rennert",
     "nationality": "GER",
@@ -2340,7 +2340,7 @@
     "scoring_streaks": []
   },
   "final_score": {
-    "home": 1,
-    "away": 3
+    "home": 0,
+    "away": 1
   }
 }

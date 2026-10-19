@@ -14,7 +14,7 @@
     "city": "Thornbury",
     "capacity": 52000
   },
-  "attendance": 51586,
+  "attendance": 48468,
   "referee": {
     "name": "Javier Ordóñez",
     "nationality": "ESP",
@@ -2396,6 +2396,6 @@
   },
   "final_score": {
     "home": 1,
-    "away": 3
+    "away": 0
   }
 }
