@@ -28,6 +28,20 @@ python tools/train_models.py --matches 3000                   # retrain models (
 - `matchlens/models.py` – pass difficulty (0–100 with reasons), win/draw/loss probability, next-goal probability and chaos index. All exported as JSON coefficients in `matchlens/model_files/`, so the live app needs no ML libraries and every number can be explained term by term.
 - `model_files/training_report.json` – held-out evaluation: log loss vs naive prior, calibration tables, and correlation of the momentum and chaos indices with the simulation's hidden ground truth.
 
+## Stage 2 – live server (`matchlens/server.py`)
+
+```bash
+pip install -r requirements.txt               # fastapi + uvicorn
+uvicorn matchlens.server:app --reload         # then open http://localhost:8000
+python -m pytest -q                           # end-to-end tests (pip install -r requirements-dev.txt)
+```
+
+The server replays any demo or season match through the live engine and streams timed, machine-readable
+messages over a WebSocket (`/ws/{match_id}?speed=60`): `hello`, `state`, `event`, `alert`,
+`win_prob_swing`, `minute`, `players`, `session`. Several screens can watch the same match. Pause, resume,
+speed and restart work over the socket or REST. The full message spec is in `OVERLAY.md`; the page at `/`
+is a test client showing the scoreboard, win probability, stats and alert feed.
+
 In code, the ingest stage can consume the same feed:
 
 ```python

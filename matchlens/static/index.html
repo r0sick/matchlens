@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MatchLens · live stream test</title>
+<style>
+  :root { --bg:#0e1116; --panel:#161b22; --line:#262d36; --text:#e6edf3; --muted:#8b949e; --home:#c8102e; --away:#1d3f8c; --accent:#2ea043; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  header { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); }
+  header h1 { font-size:15px; margin:0 12px 0 0; letter-spacing:.04em; }
+  select, input, button { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 8px; font:inherit; }
+  button { cursor:pointer; } button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  main { display:grid; grid-template-columns: 1.3fr 1fr; gap:16px; padding:16px; max-width:1200px; margin:auto; }
+  @media (max-width: 860px) { main { grid-template-columns:1fr; } }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; }
+  .scoreboard { display:grid; grid-template-columns: 1fr auto 1fr; align-items:center; gap:10px; }
+  .team { display:flex; align-items:center; gap:10px; font-size:20px; font-weight:700; }
+  .team.away { justify-content:flex-end; }
+  .chip { width:14px; height:28px; border-radius:3px; }
+  .score { font-size:40px; font-weight:800; font-variant-numeric:tabular-nums; text-align:center; }
+  .clock { text-align:center; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .wp { display:flex; height:26px; border-radius:6px; overflow:hidden; margin-top:14px; font-size:12px; font-weight:600; }
+  .wp div { display:flex; align-items:center; justify-content:center; transition:flex-grow .6s; min-width:0; white-space:nowrap; overflow:hidden; }
+  .wp .d { background:#555; }
+  .label { color:var(--muted); font-size:12px; margin-top:12px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; font-variant-numeric:tabular-nums; }
+  td { padding:5px 4px; border-bottom:1px solid var(--line); }
+  td:first-child, td:last-child { width:22%; font-weight:600; }
+  td:last-child { text-align:right; } td.m { text-align:center; color:var(--muted); }
+  .gauge { position:relative; height:10px; background:#222a33; border-radius:5px; margin-top:6px; }
+  .gauge .fill { position:absolute; top:0; bottom:0; border-radius:5px; transition:all .6s; }
+  .gauge .mid { position:absolute; left:50%; top:-3px; bottom:-3px; width:1px; background:var(--muted); }
+  #feed { list-style:none; margin:0; padding:0; max-height:560px; overflow:auto; }
+  #feed li { padding:7px 4px; border-bottom:1px solid var(--line); display:flex; gap:8px; }
+  #feed .t { color:var(--muted); width:52px; flex:none; font-variant-numeric:tabular-nums; }
+  #feed li.goal { background:rgba(46,160,67,.15); font-weight:700; }
+  footer { color:var(--muted); font-size:12px; padding:0 16px 16px; max-width:1200px; margin:auto; }
+</style>
+</head>
+<body>
+<header>
+  <h1>MATCHLENS · LIVE STREAM TEST</h1>
+  <select id="match"></select>
+  <label>speed <select id="speed"><option>1</option><option>10</option><option>30</option><option selected>60</option><option>120</option><option>600</option></select></label>
+  <label>from min <input id="from" type="number" value="0" min="0" max="95" style="width:60px"></label>
+  <button class="primary" id="go">Watch</button>
+  <button id="pause">Pause</button>
+  <button id="restart">Restart</button>
+  <span id="status" style="color:var(--muted)">not connected</span>
+</header>
+<main>
+  <section class="panel">
+    <div class="scoreboard">
+      <div class="team"><span class="chip" id="hc"></span><span id="hn">HOME</span></div>
+      <div><div class="score" id="sc">0 – 0</div><div class="clock" id="clk">–</div></div>
+      <div class="team away"><span id="an">AWAY</span><span class="chip" id="ac"></span></div>
+    </div>
+    <div class="label">Win probability</div>
+    <div class="wp"><div id="wph" style="flex-grow:1"></div><div class="d" id="wpd" style="flex-grow:1"></div><div id="wpa" style="flex-grow:1"></div></div>
+    <div class="label" id="ng">Next goal: –</div>
+    <table id="stats"></table>
+    <div class="label">Momentum <span id="momv"></span></div>
+    <div class="gauge"><div class="mid"></div><div class="fill" id="mom"></div></div>
+    <div class="label">Control ↔ chaos <span id="chv"></span></div>
+    <div class="gauge"><div class="fill" id="chaos" style="left:0;background:#a371f7"></div></div>
+  </section>
+  <section class="panel">
+    <div class="label" style="margin-top:0">Live alerts</div>
+    <ul id="feed"></ul>
+  </section>
+</main>
+<footer id="foot">messages: –</footer>
+<script>
+const $ = id => document.getElementById(id);
+let ws = null, meta = null, counts = {}, lastSeq = 0, paused = false;
+const pct = v => (100 * v).toFixed(0) + '%';
+const ICON = {goal:'⚽', card:'🟨', substitution:'🔁', speed:'⚡', rocket_shot:'🚀', hard_pass:'🎯', long_pass:'↗',
+              big_chance_missed:'😬', distance:'🏃'};
+
+async function loadMatches() {
+  const ms = await (await fetch('/api/matches')).json();
+  $('match').innerHTML = ms.map(m => `<option value="${m.match_id}">${m.source === 'demo' ? '★ ' : 'MD' + (m.competition.matchday || '') + ' '}${m.home.abbr} v ${m.away.abbr}${m.live ? ' (live)' : ''}</option>`).join('');
+}
+
+function connect(restart) {
+  if (ws) ws.close();
+  counts = {}; $('feed').innerHTML = '';
+  const id = $('match').value, sp = $('speed').value, fm = $('from').value;
+  ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws/${id}?speed=${sp}&from_minute=${fm}&restart=${restart ? 1 : 0}`);
+  ws.onopen = () => $('status').textContent = 'connected';
+  ws.onclose = () => $('status').textContent = 'disconnected';
+  ws.onmessage = e => handle(JSON.parse(e.data));
+}
+
+function handle(m) {
+  counts[m.type] = (counts[m.type] || 0) + 1; lastSeq = m.seq;
+  const lag = (Date.now() / 1000 - m.wall_ts).toFixed(2);
+  $('foot').textContent = `seq ${m.seq} · latency ${lag}s · ` + Object.entries(counts).map(([k, v]) => `${k}: ${v}`).join(' · ');
+  if (m.type === 'hello') {
+    meta = m.payload;
+    const h = meta.home, a = meta.away;
+    $('hn').textContent = h.name; $('an').textContent = a.name;
+    document.documentElement.style.setProperty('--home', h.colors.primary);
+    document.documentElement.style.setProperty('--away', a.colors.primary.toLowerCase() === h.colors.primary.toLowerCase() ? a.colors.secondary : a.colors.primary);
+    $('hc').style.background = 'var(--home)'; $('ac').style.background = 'var(--away)';
+    $('wph').style.background = 'var(--home)'; $('wpa').style.background = 'var(--away)';
+    renderState(meta.state);
+    meta.recent_alerts.forEach(addAlert);
+  } else if (m.type === 'state') renderState(m.payload);
+  else if (m.type === 'alert' || m.type === 'win_prob_swing') addAlert(m);
+  else if (m.type === 'session') { paused = m.payload.paused; $('pause').textContent = paused ? 'Resume' : 'Pause';
+    $('status').textContent = m.payload.done ? 'full time' : paused ? 'paused' : 'live ×' + m.payload.speed; }
+}
+
+function renderState(s) {
+  if (!meta) return;
+  $('sc').textContent = `${s.score.home} – ${s.score.away}`;
+  $('clk').textContent = `${s.display_minute} · ${s.period === 1 ? '1st half' : '2nd half'}${s.finished ? ' · FT' : ''}`;
+  if (s.win_prob) {
+    const w = s.win_prob;
+    [['wph', w.home, meta.home.abbr], ['wpd', w.draw, 'draw'], ['wpa', w.away, meta.away.abbr]].forEach(([id, v, l]) => {
+      $(id).style.flexGrow = Math.max(v, 0.001); $(id).textContent = v > 0.08 ? `${l} ${pct(v)}` : '';
+    });
+  }
+  if (s.next_goal) $('ng').textContent = `Next goal: ${meta.home.abbr} ${pct(s.next_goal.home)} · none ${pct(s.next_goal.none)} · ${meta.away.abbr} ${pct(s.next_goal.away)}`;
+  const H = s.teams.home, A = s.teams.away, f = (v, d = 0) => (v ?? 0).toFixed(d);
+  const rows = [
+    [f(H.xg, 2), 'xG', f(A.xg, 2)],
+    [`${f(H.shots)} (${f(H.shots_on_target)})`, 'shots (on target)', `${f(A.shots)} (${f(A.shots_on_target)})`],
+    [pct(s.possession.total[0] / 100), 'possession', pct(s.possession.total[1] / 100)],
+    [pct(s.possession.last5[0] / 100), 'possession · last 5 min', pct(s.possession.last5[1] / 100)],
+    [pct(s.field_tilt.last10[0] / 100), 'field tilt · last 10 min', pct(s.field_tilt.last10[1] / 100)],
+    [H.pass_accuracy_pct != null ? H.pass_accuracy_pct + '%' : '–', 'pass accuracy', A.pass_accuracy_pct != null ? A.pass_accuracy_pct + '%' : '–'],
+    [s.ppda.home, 'PPDA (lower = more pressing)', s.ppda.away],
+    [f(H.corners), 'corners', f(A.corners)],
+    [`${f(H.fouls)} / ${f(H.yellow)}`, 'fouls / yellows', `${f(A.fouls)} / ${f(A.yellow)}`],
+    [f(H.distance_km, 1), 'distance (km)', f(A.distance_km, 1)],
+  ];
+  $('stats').innerHTML = rows.map(r => `<tr><td>${r[0]}</td><td class="m">${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+  const mo = s.momentum / 100, el = $('mom');
+  el.style.left = mo >= 0 ? '50%' : `${50 + 50 * mo}%`; el.style.width = `${50 * Math.abs(mo)}%`;
+  el.style.background = mo >= 0 ? 'var(--home)' : 'var(--away)';
+  $('momv').textContent = `${s.momentum > 0 ? '+' : ''}${s.momentum.toFixed(0)} (${s.momentum >= 0 ? meta.home.abbr : meta.away.abbr})`;
+  $('chaos').style.width = `${s.chaos}%`; $('chv').textContent = s.chaos.toFixed(0);
+}
+
+function addAlert(m) {
+  const p = m.payload, li = document.createElement('li');
+  const abbr = side => side ? meta[side].abbr : '';
+  let txt;
+  if (m.type === 'win_prob_swing') {
+    const b = p.before, a = p.after;
+    txt = `⚖ Win prob after ${p.cause}: ${meta.home.abbr} ${pct(b.home)}→${pct(a.home)} · ${meta.away.abbr} ${pct(b.away)}→${pct(a.away)}`;
+  } else {
+    const d = p.data, who = `${p.player_name || ''} (${abbr(p.side)})`;
+    txt = {
+      goal: () => `GOAL ${who} · ${d.score.home}–${d.score.away}${d.assist ? ' · assist ' + d.assist : ''}`,
+      card: () => `${d.card.replace('_', ' ')} card · ${who}`,
+      substitution: () => `${abbr(p.side)}: ${d.on} on for ${d.off}`,
+      speed: () => `${who} hits ${d.top_speed_kmh} km/h${d.match_record ? ' · fastest of the match' : ''}`,
+      rocket_shot: () => `${who} shot at ${d.shot_speed_kmh} km/h (${d.outcome})`,
+      hard_pass: () => `${who} completes a difficulty-${d.difficulty} pass to ${d.recipient} (${d.reasons.join(', ')})`,
+      long_pass: () => `${who} finds ${d.recipient} with a ${d.length_m} m pass`,
+      big_chance_missed: () => `${who} misses a big chance (xG ${d.xg.toFixed(2)})`,
+      distance: () => `${who} passes ${d.km} km covered`,
+    }[p.alert]?.() ?? p.alert;
+    txt = `${ICON[p.alert] || '•'} ${txt}`;
+    if (p.alert === 'goal') li.className = 'goal';
+  }
+  li.innerHTML = `<span class="t">${m.display_minute}</span><span>${txt}</span>`;
+  $('feed').prepend(li);
+}
+
+$('go').onclick = () => connect(false);
+$('restart').onclick = () => connect(true);
+$('pause').onclick = () => ws && ws.send(JSON.stringify({action: paused ? 'resume' : 'pause'}));
+loadMatches();
+</script>
+</body>
+</html>
