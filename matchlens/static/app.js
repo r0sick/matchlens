@@ -46,6 +46,15 @@ const I18N = {
     f_rating: 'Rating', f_passes: 'Passes', f_xg: 'xG', f_shots: 'Shots', f_kp: 'Key passes', f_tk: 'Tackles won',
     f_dist: 'Distance', f_top: 'Top speed', not_in_match: '{name} is not in this match.',
     on_bench: 'On the bench', subbed_off: 'Substituted',
+    // newsroom
+    ai_badge: 'AI · fact-checked', auto_badge: 'Auto text', fallback_badge: 'Safe text (AI check failed)',
+    ai_on: 'AI newsroom: {src}', ai_off: 'AI newsroom off – template texts', sop_k: 'STATE OF PLAY',
+    ht_k: 'HALF TIME', ft_k: 'FULL TIME', analyst_notes: 'Analyst notes', match_report: 'Match report',
+    recap_wait: 'The report appears at half time and full time.', script: 'Studio script', article: 'Article',
+    social: 'Social post', potm: 'Player of the match', standout: 'Standout so far', how_made: 'How this was written',
+    lang_hint: 'Menus are in English or Spanish; match commentary is written in every listed language.',
+    st_analyst: 'Analyst', st_writer: 'Writer', st_fact_check: 'Fact check', st_recap_editor: 'Studio editor',
+    st_localiser: 'Translator', tools: 'tools', retry: 'retry', secs: 's',
   },
   es: {
     watch: 'Ver', pause: 'Pausa', resume: 'Reanudar', broadcast: 'Retransmisión', analyst: 'Analista', fan: 'Afición',
@@ -85,6 +94,14 @@ const I18N = {
     f_rating: 'Nota', f_passes: 'Pases', f_xg: 'xG', f_shots: 'Tiros', f_kp: 'Pases clave', f_tk: 'Entradas ganadas',
     f_dist: 'Distancia', f_top: 'Vel. máx.', not_in_match: '{name} no juega este partido.',
     on_bench: 'En el banquillo', subbed_off: 'Sustituido',
+    ai_badge: 'IA · verificado', auto_badge: 'Texto automático', fallback_badge: 'Texto seguro (falló la verificación)',
+    ai_on: 'Redacción IA: {src}', ai_off: 'Redacción IA desactivada: textos automáticos', sop_k: 'LECTURA',
+    ht_k: 'DESCANSO', ft_k: 'FINAL', analyst_notes: 'Notas del analista', match_report: 'Crónica',
+    recap_wait: 'La crónica aparece al descanso y al final.', script: 'Guion de plató', article: 'Crónica',
+    social: 'Redes sociales', potm: 'Jugador del partido', standout: 'El más destacado', how_made: 'Cómo se ha escrito',
+    lang_hint: 'Los menús están en inglés o español; los comentarios se escriben en todos los idiomas de la lista.',
+    st_analyst: 'Analista', st_writer: 'Redactor', st_fact_check: 'Verificación', st_recap_editor: 'Editor',
+    st_localiser: 'Traductor', tools: 'herramientas', retry: 'reintento', secs: 's',
   },
 };
 const CAUSE = { en: { goal: 'goal', card: 'card', shot: 'shot' }, es: { goal: 'gol', card: 'tarjeta', shot: 'tiro' } };
@@ -95,7 +112,7 @@ const params = new URLSearchParams(location.search);
 const S = {
   ws: null, meta: null, state: null, series: [], players: {}, keyEvents: [], passes: [], timeline: new Map(),
   mode: params.get('mode') || 'broadcast', paused: false, done: false, sort: { key: 'rating', dir: -1 },
-  passSide: 'home', clubs: [], catalogue: [],
+  passSide: 'home', clubs: [], catalogue: [], narr: new Map(), recaps: {}, newsroom: null,
 };
 const PREFS_KEY = 'matchlens.prefs';
 let prefs = { lang: params.get('lang') || 'en', favClub: null, favPlayer: null };
@@ -169,7 +186,7 @@ function connect(restart = false) {
   if (S.ws) { S.ws.onclose = null; S.ws.close(); }
   resetView();
   const id = $('match').value, proto = location.protocol === 'https:' ? 'wss' : 'ws';
-  const url = `${proto}://${location.host}/ws/${id}?speed=${+$('speed').value || 60}&from_minute=${+$('from').value || 0}&restart=${restart ? 1 : 0}`;
+  const url = `${proto}://${location.host}/ws/${id}?speed=${+$('speed').value || 60}&from_minute=${+$('from').value || 0}&restart=${restart ? 1 : 0}&lang=${prefs.lang}`;
   $('conn').textContent = t('connecting');
   const ws = new WebSocket(url);
   S.ws = ws;
@@ -179,6 +196,7 @@ function connect(restart = false) {
 
 function resetView() {
   S.meta = null; S.state = null; S.series = []; S.players = {}; S.keyEvents = []; S.passes = []; S.timeline = new Map(); S.done = false;
+  S.narr = new Map(); S.recaps = {}; if ($('notes')) $('notes').innerHTML = '';
   ['feedB', 'liveEvents', 'timeline'].forEach(id => { $(id).innerHTML = ''; });
   $('tags').innerHTML = ''; document.getElementById('trails')?.replaceChildren();
 }
@@ -193,6 +211,8 @@ function handle(m) {
     case 'minute': S.series.push(m.payload); if (S.mode === 'analyst') renderCharts(); break;
     case 'players': S.players = m.payload.players; if (S.mode === 'analyst') renderPlayers(); if (S.mode === 'fan') renderFocus(); break;
     case 'session': onSession(m.payload); break;
+    case 'narrative': onNarrative(m.payload); break;
+    case 'recap': onRecap(m.payload); break;
     case 'error': $('conn').textContent = m.payload.message; break;
   }
 }
@@ -216,6 +236,8 @@ function onHello(p) {
   segs[0].textContent = p.home.abbr; segs[1].textContent = p.away.abbr;
   (p.recent_alerts || []).forEach(env => (env.type === 'alert' ? onAlert(env, true) : onSwing(env, true)));
   fillPrefsPlayers();
+  S.newsroom = p.newsroom || null; renderAiBadge();
+  (p.narratives || []).forEach(n => (n.kind === 'half_time' || n.kind === 'full_time') ? onRecap(n, true) : onNarrative(n, true));
   const sess = p.state.session || {};
   onSession({ speed: sess.speed, paused: sess.paused, done: sess.done });
   renderState(); renderAll();
@@ -331,6 +353,7 @@ function onSwing(env, replay = false) {
 }
 function addFeed(id, item) {
   const li = document.createElement('li');
+  li.dataset.id = item.id;
   li.className = (item.kind === 'goal' ? 'goal ' : '') + (item.fav ? 'fav' : '');
   li.innerHTML = `<span class="m">${item.minute}</span><span class="x">${item.title}</span>`;
   $(id).prepend(li);
@@ -338,8 +361,13 @@ function addFeed(id, item) {
 function addTimeline(item) { S.timeline.set(item.id, item); renderTimeline(); }
 function renderTimeline() {
   const items = [...S.timeline.values()].reverse();
-  $('timeline').innerHTML = items.map(i => `<li class="${i.kind === 'goal' ? 'goal' : ''} ${i.fav ? 'fav' : ''}">
-    <span class="m">${i.minute}</span><div><div class="what">${i.title}</div>${i.why ? `<div class="why">${i.why}</div>` : ''}</div></li>`).join('');
+  $('timeline').innerHTML = items.map(i => {
+    const n = S.narr.get(i.id), tx = n && nt(n);
+    const title = (i.kind === 'read' && tx) ? tx.caption : i.title;
+    const why = tx ? esc(tx.fan) : i.why;
+    return `<li class="${i.kind === 'goal' ? 'goal' : ''} ${i.fav ? 'fav' : ''}">
+    <span class="m">${i.minute}</span><div><div class="what">${esc(title)}${n ? srcBadge(n) : ''}</div>${why ? `<div class="why">${why}</div>` : ''}</div></li>`;
+  }).join('');
 }
 function queueLower(item) { lowerQueue.push(item); if (lowerQueue.length > 4) lowerQueue.splice(0, lowerQueue.length - 4); if (!lowerBusy) nextLower(); }
 function nextLower() {
@@ -352,6 +380,81 @@ function nextLower() {
   $('lowK').textContent = item.key; $('lowT').textContent = item.title; $('lowS').textContent = item.sub || '';
   el.classList.add('show');
   setTimeout(() => { el.classList.remove('show'); setTimeout(nextLower, 500); }, item.goal ? 5000 : 3400);
+}
+
+// ------------------------------------------------------------------ newsroom narratives
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const nt = n => (n.texts && (n.texts[prefs.lang] || n.texts.en)) || {};
+function srcBadge(n) {
+  if (n.status !== 'final' || n.source === 'templates') return `<span class="src auto">${t('auto_badge')}</span>`;
+  if (n.fallback) return `<span class="src fb">${t('fallback_badge')}</span>`;
+  return `<span class="src" title="${esc(n.source)}${n.model ? ' · ' + esc(n.model) : ''}">${t('ai_badge')}</span>`;
+}
+function traceHtml(n) {
+  if (!n.trace || !n.trace.length) return '';
+  const steps = n.trace.map(s => {
+    const base = s.step.startsWith('localiser_') ? `${t('st_localiser')} (${s.step.slice(10)})` : t('st_' + s.step);
+    let extra = '';
+    if (s.tool_calls && s.tool_calls.length) extra += ` · ${t('tools')}: ${s.tool_calls.join(', ')}`;
+    if (s.attempt > 1) extra += ` · ${t('retry')} ${s.attempt - 1}`;
+    if (s.issues && s.issues.length) extra += ` · <span class="bad">${esc(s.issues[0])}</span>`;
+    if (s.ms) extra += ` · ${(s.ms / 1000).toFixed(1)} ${t('secs')}`;
+    return `<li>${s.ok ? '✓' : '✗'} ${esc(base)}${extra}</li>`;
+  }).join('');
+  return `<details class="trace"><summary>${t('how_made')} · ${esc(n.source)}${n.model ? ' · ' + esc(n.model) : ''} · ${(n.latency_ms / 1000).toFixed(1)} ${t('secs')}</summary><ol>${steps}</ol></details>`;
+}
+function renderAiBadge() {
+  const nr = S.newsroom;
+  $('aiBadge').textContent = nr && nr.enabled ? t('ai_on', { src: nr.source + (nr.model ? ' · ' + nr.model : '') }) : t('ai_off');
+}
+function onNarrative(n, replay = false) {
+  const first = !S.narr.has(n.moment_id);
+  S.narr.set(n.moment_id, n);
+  const tx = nt(n);
+  // fan story: AI explanation replaces the template "why"; a state-of-play read becomes its own entry
+  if (n.kind === 'state_of_play' && !S.timeline.has(n.moment_id))
+    S.timeline.set(n.moment_id, { id: n.moment_id, minute: n.display_minute, title: tx.caption, kind: 'read' });
+  renderTimeline();
+  // broadcast key moments: commentary under the matching moment
+  let li = $('feedB').querySelector(`li[data-id="${CSS.escape(n.moment_id)}"]`);
+  if (!li && n.kind === 'state_of_play') {
+    addFeed('feedB', { id: n.moment_id, minute: n.display_minute, title: tx.caption, kind: 'read' });
+    li = $('feedB').querySelector(`li[data-id="${CSS.escape(n.moment_id)}"]`);
+  }
+  if (li) {
+    let ai = li.querySelector('.ai');
+    if (!ai) { ai = document.createElement('div'); ai.className = 'ai'; li.appendChild(ai); }
+    ai.innerHTML = esc(tx.commentary) + srcBadge(n);
+  }
+  // analyst notes
+  renderNotes();
+  // on-screen graphic for a state-of-play read (the first, instant version)
+  if (!replay && first && n.kind === 'state_of_play')
+    queueLower({ key: t('sop_k'), title: tx.caption, sub: tx.fan, side: (S.state && S.state.momentum < 0) ? 'away' : 'home' });
+}
+function renderNotes() {
+  const items = [...S.narr.values()].reverse();
+  $('notes').innerHTML = items.map(n => { const tx = nt(n);
+    return `<li><span class="m">${esc(n.display_minute)}</span><span class="cap">${esc(tx.caption)}</span>${srcBadge(n)}
+      <p>${esc(tx.analyst)}</p>${n.status === 'final' ? traceHtml(n) : ''}</li>`; }).join('');
+}
+function onRecap(n, replay = false) {
+  const first = !S.recaps[n.kind];
+  S.recaps[n.kind] = n;
+  renderRecap();
+  const tx = nt(n);
+  if (!replay && first) queueLower({ key: t(n.kind === 'full_time' ? 'ft_k' : 'ht_k'), title: tx.headline, sub: (tx.player_of_the_match || {}).name ? `${t(n.kind === 'full_time' ? 'potm' : 'standout')}: ${tx.player_of_the_match.name}` : '', side: 'home' });
+}
+function renderRecap() {
+  const n = S.recaps.full_time || S.recaps.half_time;
+  if (!n) return;
+  const tx = nt(n), potm = tx.player_of_the_match || {};
+  const html = `<div class="recap"><h3>${esc(tx.headline)}${srcBadge(n)}</h3>
+    <p><strong>${t('script')}.</strong> ${esc(tx.studio_script)}</p>
+    ${potm.name ? `<div class="potm"><strong>${t(n.kind === 'full_time' ? 'potm' : 'standout')}: ${esc(potm.name)}</strong> – ${esc(potm.reason)}</div>` : ''}
+    ${tx.article && tx.article !== tx.studio_script ? `<p><strong>${t('article')}.</strong> ${esc(tx.article)}</p>` : ''}
+    <p class="social">${esc(tx.social)}</p>${n.status === 'final' ? traceHtml(n) : ''}</div>`;
+  $('recapA').innerHTML = html; $('recapF').innerHTML = html; $('recapFCard').hidden = false;
 }
 
 // ------------------------------------------------------------------ state rendering
@@ -571,7 +674,7 @@ setInterval(() => { if (S.mode === 'analyst' && S.meta) renderPassMap(); }, 2000
 
 function renderAll() {
   if (!S.meta) return;
-  renderState(); renderTimeline();
+  renderState(); renderTimeline(); renderNotes(); renderRecap(); renderAiBadge();
   if (S.mode === 'analyst') { renderCharts(); renderShotMap(); renderPassMap(); renderPlayers(); }
   if (S.mode === 'fan') renderFan();
 }
@@ -595,6 +698,7 @@ $('pCancel').onclick = () => $('prefsDlg').close();
 $('pSave').onclick = () => {
   prefs = { lang: $('pLang').value, favClub: $('pClub').value || null, favPlayer: $('pPlayer').value || null };
   try { localStorage.setItem(PREFS_KEY, JSON.stringify(prefs)); } catch (e) { /* storage unavailable */ }
+  if (S.ws && S.ws.readyState === 1) S.ws.send(JSON.stringify({ action: 'lang', lang: prefs.lang }));
   $('prefsDlg').close();
   applyI18n();
   if (S.meta) { $('fnH').textContent = S.meta.home.name + (prefs.favClub === S.meta.home.team_id ? ' ★' : '');

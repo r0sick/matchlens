@@ -18,7 +18,9 @@ Endpoints
 from __future__ import annotations
 
 import asyncio
+import contextlib
 import json
+import logging
 import time
 from collections import deque
 from pathlib import Path
@@ -29,8 +31,14 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from matchsim.replay import load_match
+from .facts import MomentDetector
+from .mcp_server import build_mcp
 from .models import load_models
+from .newsroom import Newsroom
+from .newsroom.service import NarrativeDesk
 from .state import MatchState
+
+log = logging.getLogger("matchlens")
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIRS = [ROOT / "data" / "matches", ROOT / "data" / "season_2026-27" / "matches"]
@@ -46,6 +54,7 @@ PLAYERS_INTERVAL_S = 5.0
 KEY_EVENT_TYPES = {"shot", "goal", "card", "substitution"}
 
 MODELS = load_models()
+NEWSROOM: Newsroom | None = None          # created at startup (needs the event loop)
 
 
 # --------------------------------------------------------------------------- catalogue
@@ -108,6 +117,8 @@ class MatchSession:
         self.recent_alerts: deque = deque(maxlen=40)
         self.done = False
         self.task: asyncio.Task | None = None
+        self.viewer_langs: dict[int, str] = {}       # one entry per connected viewer (non-English requests)
+        self.desk: NarrativeDesk | None = None
         self._reset_state()
 
     def _reset_state(self):
@@ -119,6 +130,10 @@ class MatchSession:
         self.recent_alerts.clear()
         self.key_events: list = []                 # shots, goals, cards, subs so far (for late joiners)
         self.recent_passes: deque = deque(maxlen=400)
+        self.detector = MomentDetector(self.meta)
+        if self.desk:
+            self.desk.stop()
+        self.desk = NarrativeDesk(self, NEWSROOM)
         self.done = False
 
     # ---- messaging
@@ -169,6 +184,8 @@ class MatchSession:
             "key_events": self.key_events,
             "recent_passes": list(self.recent_passes),
             "players": self.state.snapshot()["players"],
+            "narratives": self.desk.narratives,
+            "newsroom": newsroom_info(),
         })
 
     # ---- processing
@@ -183,13 +200,18 @@ class MatchSession:
                 self.key_events.append(se)
             elif ev["type"] == "pass" and ev["outcome"] == "complete":
                 self.recent_passes.append(se)
+        sheets = self.detector.observe(ev, signals, self.state, self.key_events)
         if not live:
+            for sheet in sheets:
+                self.desk.submit(sheet, live=False)     # past moments (fast-forward) keep template text only
             return
         now = time.monotonic()
         if se:
             self.broadcast("event", se)
         for s in signals:
             self.broadcast("win_prob_swing" if s["kind"] == "win_prob_swing" else "alert", s)
+        for sheet in sheets:
+            self.desk.submit(sheet)
         if ev["type"] in STATE_NOW or now - self._last_state_wall >= STATE_INTERVAL_S:
             self._last_state_wall = now
             self.broadcast("state", self.state_payload())
@@ -274,8 +296,12 @@ def get_session(match_id: str, speed=60.0, from_minute=0.0, restart=False) -> Ma
         if s and s.task:
             s.task.cancel()
         subs = s.subscribers if s else set()
+        langs = s.viewer_langs if s else {}
+        if s and s.desk:
+            s.desk.stop()
         s = MatchSession(match_id, speed, from_minute)
         s.subscribers = subs
+        s.viewer_langs = langs
         SESSIONS[match_id] = s
         s.start()
         for q in list(subs):                  # viewers already watching get a fresh hello after a restart
@@ -283,10 +309,35 @@ def get_session(match_id: str, speed=60.0, from_minute=0.0, restart=False) -> Ma
     return s
 
 
+def newsroom_info() -> dict:
+    nr = NEWSROOM
+    if not nr:
+        return {"enabled": False, "source": "templates"}
+    return {"enabled": nr.enabled, "source": nr.provider.name, "model": nr.provider.model,
+            "mcp_connected": nr._mcp is not None}
+
+
 # --------------------------------------------------------------------------- app
-app = FastAPI(title="MatchLens live", version="0.2.0")
+MCP = build_mcp(SESSIONS, CATALOGUE, lambda mid: SESSIONS[mid].desk.narratives if mid in SESSIONS else [])
+
+
+@contextlib.asynccontextmanager
+async def lifespan(app: FastAPI):
+    global NEWSROOM
+    for noisy in ("httpx", "mcp", "agent_framework", "azure"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
+    NEWSROOM = Newsroom()
+    log.warning("MatchLens newsroom: %s%s", NEWSROOM.provider.name,
+                f" ({NEWSROOM.provider.model})" if NEWSROOM.provider.model else " – set FOUNDRY_* in .env to enable AI")
+    async with MCP.session_manager.run():
+        yield
+    await NEWSROOM.aclose()
+
+
+app = FastAPI(title="MatchLens live", version="0.4.0", lifespan=lifespan)
 if STATIC.exists():
     app.mount("/static", StaticFiles(directory=STATIC), name="static")
+app.mount("/mcp", MCP.streamable_http_app())
 
 
 class Control(BaseModel):
@@ -324,6 +375,21 @@ def match_info(match_id: str):
     return {k: v for k, v in CATALOGUE[match_id].items() if k != "path"} | {"session": s.status() if s else None}
 
 
+@app.get("/api/newsroom")
+def newsroom_status():
+    return newsroom_info() | {"sessions": {mid: {"languages": s.desk.languages(), **s.desk.stats,
+                                                 "narratives": len(s.desk.narratives)}
+                                           for mid, s in SESSIONS.items()}}
+
+
+@app.get("/api/sessions/{match_id}/narratives")
+def session_narratives(match_id: str):
+    s = SESSIONS.get(match_id)
+    if not s:
+        raise HTTPException(404, "no session for this match")
+    return s.desk.narratives
+
+
 @app.get("/api/sessions/{match_id}/state")
 async def session_state(match_id: str):
     s = SESSIONS.get(match_id)
@@ -345,7 +411,8 @@ async def session_control(match_id: str, c: Control):
 
 
 @app.websocket("/ws/{match_id}")
-async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minute: float = 0.0, restart: int = 0):
+async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minute: float = 0.0, restart: int = 0,
+                   lang: str = "en"):
     await ws.accept()
     try:
         s = get_session(match_id, speed, from_minute, bool(restart))
@@ -355,6 +422,7 @@ async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minut
         return
     q: asyncio.Queue = asyncio.Queue(maxsize=2000)
     s.subscribers.add(q)
+    s.viewer_langs[id(q)] = lang[:5].lower()
     await ws.send_json(s.hello())
 
     async def pump():
@@ -367,7 +435,11 @@ async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minut
             data = await ws.receive_text()
             try:
                 cmd = json.loads(data)
-                SESSIONS[match_id].control(cmd.get("action", ""), cmd.get("speed"), cmd.get("from_minute"))
+                cur = SESSIONS[match_id]
+                if cmd.get("action") == "lang":
+                    cur.viewer_langs[id(q)] = str(cmd.get("lang", "en"))[:5].lower()
+                    continue
+                cur.control(cmd.get("action", ""), cmd.get("speed"), cmd.get("from_minute"))
             except (ValueError, KeyError) as e:
                 await ws.send_json({"v": PROTOCOL_VERSION, "type": "error", "payload": {"message": str(e)}})
 
@@ -379,4 +451,6 @@ async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minut
     finally:
         for t in tasks:
             t.cancel()
-        SESSIONS.get(match_id, s).subscribers.discard(q)
+        cur = SESSIONS.get(match_id, s)
+        cur.subscribers.discard(q)
+        cur.viewer_langs.pop(id(q), None)

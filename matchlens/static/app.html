@@ -29,6 +29,7 @@
     <button data-mode="fan" aria-pressed="false" data-i18n="fan">Fan</button>
   </div>
   <span class="spacer"></span>
+  <span class="conn" id="aiBadge"></span>
   <span class="conn" id="conn"></span>
   <button id="prefs" data-i18n="preferences">Preferences</button>
 </header>
@@ -95,6 +96,14 @@
         <svg class="mini-pitch" id="passmap" viewBox="-2 -2 109 72"></svg>
         <div class="legend" data-i18n="pass_legend">Line colour = pass difficulty: green easy, yellow medium, red hard.</div>
       </div>
+      <div class="card">
+        <h2 data-i18n="analyst_notes">Analyst notes</h2>
+        <ul class="notes" id="notes"></ul>
+      </div>
+      <div class="card">
+        <h2 data-i18n="match_report">Match report</h2>
+        <div id="recapA"><p class="hint" data-i18n="recap_wait">The report appears at half time and full time.</p></div>
+      </div>
       <div class="card full">
         <h2 data-i18n="players">Players</h2>
         <div class="ptable-wrap"><table class="ptable" id="ptable"></table></div>
@@ -114,6 +123,10 @@
       <div class="tug" id="tug"><div id="tugH"></div><div id="tugD" style="background:#C9CFD6"></div><div id="tugA"></div></div>
       <div class="tugl"><span id="tugLH"></span><span id="tugLD"></span><span id="tugLA"></span></div>
       <div class="card" id="focusCard" style="margin-top:18px"></div>
+      <div class="card" id="recapFCard" style="margin-top:18px" hidden>
+        <h2 data-i18n="match_report">Match report</h2>
+        <div id="recapF"></div>
+      </div>
       <div class="card" style="margin-top:18px">
         <h2 data-i18n="story">The story so far</h2>
         <ul class="timeline" id="timeline"></ul>
@@ -125,7 +138,8 @@
 <dialog id="prefsDlg">
   <h2 data-i18n="preferences">Preferences</h2>
   <label for="pLang" data-i18n="language">Language</label>
-  <select id="pLang"><option value="en">English</option><option value="es">Español</option></select>
+  <select id="pLang"><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="pt">Português</option><option value="nl">Nederlands</option></select>
+  <p class="hint" data-i18n="lang_hint">Menus are in English or Spanish; match commentary is written in every listed language.</p>
   <label for="pClub" data-i18n="fav_club">Favourite club</label>
   <select id="pClub"></select>
   <label for="pPlayer" data-i18n="fav_player">Player to follow</label>

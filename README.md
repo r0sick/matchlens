@@ -31,7 +31,7 @@ python tools/train_models.py --matches 3000                   # retrain models (
 ## Stage 2 – live server (`matchlens/server.py`)
 
 ```bash
-pip install -r requirements.txt               # fastapi + uvicorn
+pip install -r requirements.txt               # fastapi, uvicorn, Agent Framework, MCP
 uvicorn matchlens.server:app --reload         # then open http://localhost:8000
 python -m pytest -q                           # end-to-end tests (pip install -r requirements-dev.txt)
 ```
@@ -58,6 +58,46 @@ One stream, three ways to watch it (switch at the top right):
 **Preferences** (saved in the browser): language (English, Spanish), favourite club, player to follow. The
 followed player gets a ★ on the pitch tags, in the feeds and timeline, and their own stats card.
 Links can carry settings: `/?match=M000042&mode=fan&speed=60&from=60&lang=es`.
+
+## Stage 4 – AI newsroom: multi-agent narratives on Microsoft Foundry (`matchlens/newsroom/`)
+
+Every important moment (goals, red cards, big chances, a "state of play" read every 15 minutes,
+half time and full time) is turned into commentary, a plain-language fan line, a data-rich analyst
+line and, at half/full time, a studio script, article, social post and player of the match, in
+several languages. It is built with **Microsoft Agent Framework** on **Microsoft Foundry**:
+
+```
+ live engine ──► fact sheet ──► Analyst ──► Writer ──► Fact checker ──► Localisers ──► Publisher
+ (matchlens)   (every number     (calls the    (two       (code, not a    (one agent     (WebSocket
+               the AI may use)   MCP tools)    audiences)  model)  │       per language,  "narrative"
+                                       ▲                           │       concurrent)    message)
+                                       └──── retry with the exact problems (max 2) ───┘
+```
+
+- **Grounded by construction.** A deterministic fact sheet (`matchlens/facts.py`) holds every number
+  the writers may quote. The fact checker rejects any number that is not in the fact sheet or in a tool
+  result the agents actually received, jargon in fan texts, and goal stories that don't name the scorer.
+  Failures go back to the writer with the exact problems; after two retries the safe template text is used.
+- **MCP server over the live engine** (`matchlens/mcp_server.py`, mounted at `/mcp`): `list_matches`,
+  `get_match_state`, `get_player`, `get_timeline`, `get_pre_match`, `get_moments`. The analyst and recap
+  agents call it for context; GitHub Copilot in VS Code can use it too (`.vscode/mcp.json`), so you can ask
+  Copilot about the live match.
+- **Never blocks the broadcast.** Each moment is published instantly from templates (`status: "draft"`)
+  and upgraded in place when the agents finish (`status: "final"`). A bounded, deadline-aware queue drops
+  low-priority moments when the replay outruns the models; goals, red cards and recaps are never dropped.
+- **Transparent.** Each narrative ships with a trace (agents, tool calls, fact-check results, retries,
+  timings) shown in the app under "How this was written", and a badge: AI · fact-checked, or auto text.
+
+### Connect your Foundry project
+
+1. In the Foundry portal deploy a small chat model (e.g. a GPT "mini" model) in your project.
+2. Copy `.env.example` to `.env` and fill in `FOUNDRY_PROJECT_ENDPOINT` (project Overview page) and
+   `FOUNDRY_MODEL` (the deployment name).
+3. Sign in once with the Azure CLI: `az login` (or use the API-key option in `.env.example`).
+4. Check it: `python -m matchlens.newsroom` prints the agents' texts and the trace for one goal.
+5. Run the app as usual (`uvicorn matchlens.server:app`); the top bar shows "AI newsroom: Microsoft Foundry".
+
+Without a `.env` everything still works with template texts (English and Spanish).
 
 In code, the ingest stage can consume the same feed:
 

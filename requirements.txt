@@ -1,2 +1,10 @@
+# Live app
 fastapi>=0.110
 uvicorn[standard]>=0.29
+# AI newsroom (Microsoft Agent Framework + Microsoft Foundry) and MCP server
+agent-framework-core==1.22.0
+agent-framework-foundry==1.15.0
+agent-framework-openai==1.17.0
+azure-identity>=1.19
+mcp>=1.30,<2
+python-dotenv>=1.0

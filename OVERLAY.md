@@ -53,6 +53,8 @@ Every message has the same envelope, so a renderer can schedule it against the m
 | `win_prob_swing` | A goal, card or shot moves any outcome by 3 points or more | `cause`, `cause_event_id`, `before`, `after`, `swing_pts` |
 | `minute` | Once per match minute | Chart point: score, xG, momentum, chaos, possession, field tilt, win probability |
 | `players` | Every 10 s of wall time and at period end | Per-player live stats and rating (passes, accuracy, average pass difficulty, xG, xA, key passes, tackles, distance, top speed, rating …) |
+| `narrative` | A goal, red card, big chance or 15-minute state-of-play read. Sent twice with the same `moment_id`: first `status: "draft"` (instant template text), then `status: "final"` (AI newsroom) | `moment_id`, `kind`, `display_minute`, `status`, `source`, `model`, `fallback`, `texts` {lang: {`caption`, `commentary`, `fan`, `analyst`}}, `trace`, `latency_ms` |
+| `recap` | Half time and full time, draft then final, like `narrative` | `texts` {lang: {`headline`, `studio_script`, `article`, `social`, `player_of_the_match`}} |
 | `session` | On pause, resume, speed change, restart and full time | `speed`, `paused`, `done`, `progress`, `viewers` |
 | `error` | Bad match id or command | `message` |
 
@@ -85,7 +87,11 @@ Send JSON over the socket, or POST it to `/api/sessions/{match_id}/control`:
 {"action": "resume"}
 {"action": "speed", "speed": 120}
 {"action": "restart", "speed": 60, "from_minute": 70}
+{"action": "lang", "lang": "fr"}      // WebSocket only: also translate narratives into this language
 ```
+
+The WebSocket also accepts `?lang=fr`. The newsroom writes English plus the viewers' languages and the
+clubs' home-market languages (up to three).
 
 ## REST
 

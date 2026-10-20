@@ -155,6 +155,26 @@ table.ptable { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 #focusCard dt { font-size: 12px; color: var(--ink-2); }
 #focusCard dd { margin: 2px 0 0; font: 600 22px/1 var(--font-cond); }
 
+/* ---------------------------------------------------------------- newsroom (AI narratives) */
+.src { display: inline-block; font: 600 11px/1 var(--font); padding: 3px 6px; border-radius: 3px; margin-left: 6px;
+  vertical-align: 1px; background: #E7EEF9; color: #1D3F8C; white-space: nowrap; }
+.src.auto { background: #EEF0EC; color: var(--ink-2); }
+.src.fb { background: #FFF4D6; color: #7A5A00; }
+.feed li .ai { grid-column: 2; color: var(--ink-2); font-size: 13.5px; margin-top: 2px; }
+.notes { list-style: none; margin: 0; padding: 0; max-height: 420px; overflow: auto; }
+.notes li { padding: 9px 0; border-bottom: 1px solid var(--rule); }
+.notes .m { font: 600 15px/1 var(--font-cond); color: var(--ink-2); margin-right: 8px; }
+.notes .cap { font-weight: 600; }
+.notes p { margin: 4px 0 0; font-size: 14px; }
+details.trace { margin-top: 4px; font-size: 12.5px; color: var(--ink-2); }
+details.trace summary { cursor: pointer; }
+details.trace ol { margin: 4px 0 0 18px; padding: 0; }
+details.trace .bad { color: #A33; }
+.recap h3 { color: var(--ink); font-size: 18px; margin: 0 0 6px; }
+.recap .potm { margin: 10px 0; padding: 8px 10px; background: #F1F5EF; border-radius: var(--radius-s); font-size: 14px; }
+.recap p { margin: 0 0 8px; }
+.recap .social { font-size: 14px; color: var(--ink-2); border-left: 3px solid var(--rule); padding-left: 10px; }
+
 /* ---------------------------------------------------------------- settings dialog */
 dialog { border: 1px solid var(--rule); border-radius: var(--radius-m); padding: 18px 20px; max-width: 420px; width: calc(100% - 32px); color: var(--ink); }
 dialog::backdrop { background: rgba(20,33,61,.4); }
