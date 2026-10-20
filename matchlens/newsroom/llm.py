@@ -7,10 +7,10 @@ Configured through environment variables (a local `.env` file is loaded automati
       FOUNDRY_MODEL=<model deployment name>
       # authentication: `az login` (Azure CLI) or any credential DefaultAzureCredential can find
 
-  Azure OpenAI-compatible endpoint with an API key (fallback)
-      AZURE_OPENAI_ENDPOINT=https://<resource>.openai.azure.com
-      AZURE_OPENAI_API_KEY=<key>
-      AZURE_OPENAI_MODEL=<model deployment name>
+  API key instead of Azure sign-in (no Azure CLI needed; takes precedence when set)
+      FOUNDRY_PROJECT_ENDPOINT / FOUNDRY_MODEL as above, plus
+      AZURE_OPENAI_API_KEY=<key from the project Overview page>
+      # optional: AZURE_OPENAI_ENDPOINT to use a different resource, MATCHLENS_API=chat_completions
 
   MATCHLENS_AI=off   forces the deterministic template narrator (no model calls)
 
@@ -22,6 +22,7 @@ import logging
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.parse import urlsplit
 
 log = logging.getLogger("matchlens.newsroom")
 
@@ -45,11 +46,36 @@ def _load_env():
         pass
 
 
+def _resource_root(endpoint: str) -> str:
+    """https://x.services.ai.azure.com/api/projects/p -> https://x.services.ai.azure.com"""
+    parts = urlsplit(endpoint.strip())
+    return f"{parts.scheme}://{parts.netloc}" if parts.netloc else endpoint.strip()
+
+
 def make_provider() -> Provider:
     _load_env()
     if os.getenv("MATCHLENS_AI", "").lower() in ("off", "0", "false", "templates"):
         return Provider(None, "templates")
     endpoint, model = os.getenv("FOUNDRY_PROJECT_ENDPOINT"), os.getenv("FOUNDRY_MODEL")
+    key = os.getenv("AZURE_OPENAI_API_KEY")
+    key_model = os.getenv("AZURE_OPENAI_MODEL") or os.getenv("AZURE_OPENAI_CHAT_COMPLETION_MODEL") or model
+    key_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or (_resource_root(endpoint) if endpoint else None)
+
+    # 1) API key (no Azure CLI needed). Uses the Responses API of your Foundry resource,
+    #    or Chat Completions if MATCHLENS_API=chat_completions.
+    if key and key_endpoint and key_model:
+        try:
+            if os.getenv("MATCHLENS_API", "").lower() == "chat_completions":
+                from agent_framework.openai import OpenAIChatCompletionClient as Client
+            else:
+                from agent_framework.openai import OpenAIChatClient as Client
+            client = Client(model=key_model, azure_endpoint=_resource_root(key_endpoint), api_key=key)
+            return Provider(client, "Microsoft Foundry" if "services.ai.azure.com" in key_endpoint else "Azure OpenAI",
+                            key_model)
+        except Exception as e:
+            log.warning("API-key client unavailable (%s); trying Azure sign-in", e)
+
+    # 2) Microsoft Foundry with your Azure sign-in (az login, VS Code, or a managed identity in Azure)
     if endpoint and model:
         try:
             from azure.identity import DefaultAzureCredential
@@ -57,15 +83,6 @@ def make_provider() -> Provider:
             client = FoundryChatClient(project_endpoint=endpoint, model=model,
                                        credential=DefaultAzureCredential(exclude_interactive_browser_credential=True))
             return Provider(client, "Microsoft Foundry", model)
-        except Exception as e:  # missing package or bad configuration: fall through to the next option
-            log.warning("Foundry client unavailable (%s); trying API-key configuration", e)
-    az_endpoint, az_key = os.getenv("AZURE_OPENAI_ENDPOINT"), os.getenv("AZURE_OPENAI_API_KEY")
-    az_model = os.getenv("AZURE_OPENAI_MODEL") or os.getenv("AZURE_OPENAI_CHAT_COMPLETION_MODEL") or model
-    if az_endpoint and az_key and az_model:
-        try:
-            from agent_framework.openai import OpenAIChatCompletionClient
-            client = OpenAIChatCompletionClient(model=az_model, azure_endpoint=az_endpoint, api_key=az_key)
-            return Provider(client, "Azure OpenAI", az_model)
         except Exception as e:
-            log.warning("Azure OpenAI client unavailable (%s); using templates", e)
+            log.warning("Foundry client unavailable (%s); using templates", e)
     return Provider(None, "templates")
