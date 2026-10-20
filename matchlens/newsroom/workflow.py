@@ -68,6 +68,15 @@ def extract_json(text: str) -> dict | None:
     return None
 
 
+def err_text(e: BaseException) -> str:
+    """Short, user-readable error for the trace (exception type plus the service's message)."""
+    msg = str(e).strip().replace("\n", " ")
+    cause = e.__cause__ or e.__context__
+    if cause and str(cause) not in msg:
+        msg += f" | caused by {type(cause).__name__}: {str(cause).strip()}"
+    return f"{type(e).__name__}: {msg[:400]}" if msg else type(e).__name__
+
+
 def flatten_text(obj: Any) -> str:
     if isinstance(obj, dict):
         return " ".join(flatten_text(v) for v in obj.values())
@@ -256,7 +265,7 @@ class AnalystExecutor(Executor):
             _trace(ctx, {"step": "analyst", "ok": bool(r["data"]), "ms": r["ms"], "tool_calls": r["tool_calls"]})
         except Exception as e:                       # the writer can still work from the fact sheet alone
             brief = {}
-            _trace(ctx, {"step": "analyst", "ok": False, "error": type(e).__name__})
+            _trace(ctx, {"step": "analyst", "ok": False, "error": err_text(e)})
         await ctx.send_message({"brief": brief, "attempt": 0})
 
 
@@ -282,7 +291,7 @@ class WriterExecutor(Executor):
             _trace(ctx, {"step": "writer", "attempt": attempt, "ok": draft is not None, "ms": r["ms"]})
         except Exception as e:
             draft = None
-            _trace(ctx, {"step": "writer", "attempt": attempt, "ok": False, "error": type(e).__name__})
+            _trace(ctx, {"step": "writer", "attempt": attempt, "ok": False, "error": err_text(e)})
         await ctx.send_message({"draft": draft, "attempt": attempt})
 
 
@@ -313,7 +322,7 @@ class RecapEditorExecutor(Executor):
                          "tool_calls": r["tool_calls"]})
         except Exception as e:
             draft = None
-            _trace(ctx, {"step": "recap_editor", "attempt": attempt, "ok": False, "error": type(e).__name__})
+            _trace(ctx, {"step": "recap_editor", "attempt": attempt, "ok": False, "error": err_text(e)})
         await ctx.send_message({"draft": draft, "attempt": attempt})
 
 
@@ -364,7 +373,7 @@ class LocaliserExecutor(Executor):
             results = await asyncio.gather(*(one(l) for l in langs), return_exceptions=True)
             for res in results:
                 if isinstance(res, Exception):
-                    _trace(ctx, {"step": "localiser", "ok": False, "error": type(res).__name__})
+                    _trace(ctx, {"step": "localiser", "ok": False, "error": err_text(res)})
                     continue
                 lang, data = res
                 if data:
