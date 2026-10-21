@@ -33,7 +33,7 @@ class ScriptedChatClient(FunctionInvocationLayer, ChatMiddlewareLayer, BaseChatC
         sysmsg = _system_text(messages, options)
         user = next((m.text for m in reversed(messages) if str(m.role) in ("user", "Role.USER")), "") or ""
         has_tool_result = any(c.type == "function_result" for m in messages for c in m.contents)
-        role = ("analyst" if "match analyst" in sysmsg else "writer" if "lead writer" in sysmsg
+        role = ("advisor" if "Transfer Advisor" in sysmsg else "analyst" if "match analyst" in sysmsg else "writer" if "lead writer" in sysmsg
                 else "recap" if "studio editor" in sysmsg else "localiser" if "broadcaster and editor" in sysmsg else "?")
         self.calls.append(role)
         if role in self.fail_roles:
@@ -69,14 +69,25 @@ class ScriptedChatClient(FunctionInvocationLayer, ChatMiddlewareLayer, BaseChatC
                         "studio_script": script, "article": script + " " + script,
                         "social": f"#{sheet['home']['abbr']} {m['score']['home']}-{m['score']['away']} #{sheet['away']['abbr']}",
                         "player_of_the_match": {"name": top["name"], "reason": f"Rated {top['rating']}."}})
+        if role == "advisor":
+            sc = _sheet_from(user, "SCOUT SHEET")
+            p, word = sc["player"], sc["verdict"].capitalize()
+            if self.invent and "FACT-CHECK FEEDBACK" not in user:
+                return say({"headline": f"Hold {p['name']}", "explanation": "He has 99 goals.",
+                            "replacement_note": "Keep him."})
+            rep = sc["replacements"][0]["name"] if sc["replacements"] else "nobody"
+            return say({"headline": f"{word} {p['name']}",
+                        "explanation": f"Form {p['form_last3']} vs {p['expected_for_price']} expected; "
+                                       f"{p['minutes_last3']} minutes in the last 3 matchdays.",
+                        "replacement_note": f"Consider {rep}."})
         if role == "localiser":
             obj = json.loads(user)
             return say({k: (f"[es] {v}" if isinstance(v, str) else v) for k, v in obj.items()})
         return say({})
 
 
-def _sheet_from(user: str) -> dict | None:
-    m = re.search(r"FACT SHEET:\n(\{.*?\})(?:\n\n|$)", user, re.S)
+def _sheet_from(user: str, label: str = "FACT SHEET") -> dict | None:
+    m = re.search(label + r":\n(\{.*?\})(?:\n\n|$)", user, re.S)
     if not m:
         return None
     try:

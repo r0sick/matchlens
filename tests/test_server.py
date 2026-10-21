@@ -68,3 +68,23 @@ def test_from_minute_and_controls():
         run_to_end(ws)
     assert client.post("/api/sessions/M000007/control", json={"action": "fly"}).status_code == 400
     assert client.get("/api/matches/NOPE").status_code == 404
+
+
+def test_fantasy_live_points_and_calls():
+    meta = client.get("/api/fantasy/meta").json()
+    assert meta["budget"] == 100.0
+    sq = client.get("/api/fantasy/squad", params={"matchday": 10, "match_id": "AUR26-MD10-KMU-THR"}).json()
+    assert len(sq["squad"]) == 15 and sq["issues"] == [] and sq["cost"] <= 100
+    with client.websocket_connect("/ws/AUR26-MD10-KMU-THR?speed=5000&restart=1&viewer=tester") as ws:
+        hello = ws.receive_json()
+        assert hello["payload"]["fantasy"]["matchday"] == 10 and hello["payload"]["fantasy"]["quotes"]["open"]
+        ws.send_text(json.dumps({"action": "call", "kind": "next_goal", "target": "away"}))
+        msgs = run_to_end(ws)
+    calls = [m for m in msgs if m["type"] == "calls"]
+    assert any("placed" in m["payload"] for m in calls)
+    assert calls[-1]["payload"]["calls"][0]["status"] in ("won", "lost")
+    fantasy = [m for m in msgs if m["type"] == "fantasy"][-1]["payload"]
+    assert any(any(r["code"] == "goal" for r in p["reasons"]) for p in fantasy["points"].values())
+    advice = client.post("/api/fantasy/advice", json={"player_id": sq["squad"][0], "squad": sq["squad"],
+                                                      "matchday": 10, "lang": "es"}).json()
+    assert advice["verdict"] in ("HOLD", "WATCH", "SELL") and "es" in advice["texts"]

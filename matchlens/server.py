@@ -32,6 +32,10 @@ from pydantic import BaseModel
 
 from matchsim.replay import load_match
 from .facts import MomentDetector
+from .fantasy import season as fantasy_season
+from .fantasy.advisor import advise
+from .fantasy.calls import CallBook
+from .fantasy.scoring import FantasyScorer
 from .mcp_server import build_mcp
 from .models import load_models
 from .newsroom import Newsroom
@@ -52,6 +56,7 @@ LOOKAHEAD_FIELDS = {"key_pass", "assist", "provider_completion_prob"}
 STATE_INTERVAL_S = 1.0
 PLAYERS_INTERVAL_S = 5.0
 KEY_EVENT_TYPES = {"shot", "goal", "card", "substitution"}
+FANTASY_NOW = {"goal", "card", "substitution", "goalkeeper", "period_end", "match_end"}
 
 MODELS = load_models()
 NEWSROOM: Newsroom | None = None          # created at startup (needs the event loop)
@@ -118,6 +123,9 @@ class MatchSession:
         self.done = False
         self.task: asyncio.Task | None = None
         self.viewer_langs: dict[int, str] = {}       # one entry per connected viewer (non-English requests)
+        self.viewer_ids: dict[int, str] = {}         # queue id -> viewer token (for personal messages: calls)
+        fx = {f["match_id"]: f["matchday"] for f in (fantasy_season.load() or {}).get("fixtures", [])}
+        self.fantasy_md = fx.get(match_id)           # None for matches outside the Fantasy season
         self.desk: NarrativeDesk | None = None
         self._reset_state()
 
@@ -131,6 +139,11 @@ class MatchSession:
         self.key_events: list = []                 # shots, goals, cards, subs so far (for late joiners)
         self.recent_passes: deque = deque(maxlen=400)
         self.detector = MomentDetector(self.meta)
+        self.fantasy = FantasyScorer(self.state)
+        shares = (fantasy_season.xg_shares([self.meta["home"]["team_id"], self.meta["away"]["team_id"]],
+                                           self.fantasy_md) if self.fantasy_md else {})
+        self.calls = CallBook(self.state, shares)
+        self._last_fantasy_wall = 0.0
         if self.desk:
             self.desk.stop()
         self.desk = NarrativeDesk(self, NEWSROOM)
@@ -155,6 +168,17 @@ class MatchSession:
                 except asyncio.QueueEmpty:
                     pass
             q.put_nowait(msg)
+
+    def send_to(self, viewer: str, mtype: str, payload: dict):
+        """Personal message (e.g. a viewer's own calls) to every connection of that viewer."""
+        msg = self.envelope(mtype, payload)
+        for q in list(self.subscribers):
+            if self.viewer_ids.get(id(q)) == viewer and not q.full():
+                q.put_nowait(msg)
+
+    def fantasy_payload(self) -> dict:
+        return {"matchday": self.fantasy_md, "season": self.fantasy_md is not None,
+                "points": self.fantasy.table(), "quotes": self.calls.quotes()}
 
     def state_payload(self) -> dict:
         snap = self.state.snapshot(include_players=False)
@@ -186,11 +210,14 @@ class MatchSession:
             "players": self.state.snapshot()["players"],
             "narratives": self.desk.narratives,
             "newsroom": newsroom_info(),
+            "fantasy": self.fantasy_payload(),
         })
 
     # ---- processing
     def process(self, ev: dict, live: bool = True):
         signals = self.state.update(ev)
+        self.fantasy.update(ev)
+        settled = self.calls.settle(ev)
         self.idx += 1
         se = None
         if ev["type"] != "physical_snapshot":
@@ -218,6 +245,12 @@ class MatchSession:
         if self.state.series and self._last_minute != self.state.series[-1]["minute"]:
             self._last_minute = self.state.series[-1]["minute"]
             self.broadcast("minute", self.state.series[-1])
+        for viewer in {c.viewer for c in settled}:
+            self.send_to(viewer, "calls", self.calls.scoreboard(viewer) |
+                         {"settled": [c.view() for c in settled if c.viewer == viewer]})
+        if ev["type"] in FANTASY_NOW or now - self._last_fantasy_wall >= PLAYERS_INTERVAL_S:
+            self._last_fantasy_wall = now
+            self.broadcast("fantasy", self.fantasy_payload())     # points with reasons + live call odds
         if now - self._last_players_wall >= PLAYERS_INTERVAL_S or ev["type"] in ("period_end", "match_end"):
             self._last_players_wall = now
             self.broadcast("players", {"players": self.state.snapshot()["players"]})
@@ -297,11 +330,13 @@ def get_session(match_id: str, speed=60.0, from_minute=0.0, restart=False) -> Ma
             s.task.cancel()
         subs = s.subscribers if s else set()
         langs = s.viewer_langs if s else {}
+        vids = s.viewer_ids if s else {}
         if s and s.desk:
             s.desk.stop()
         s = MatchSession(match_id, speed, from_minute)
         s.subscribers = subs
         s.viewer_langs = langs
+        s.viewer_ids = vids
         SESSIONS[match_id] = s
         s.start()
         for q in list(subs):                  # viewers already watching get a fresh hello after a restart
@@ -410,9 +445,61 @@ async def session_control(match_id: str, c: Control):
     return s.status()
 
 
+# --------------------------------------------------------------------------- fantasy
+class AdviceRequest(BaseModel):
+    player_id: str
+    squad: list[str]
+    matchday: int
+    bank: float = 0.0
+    lang: str = "en"
+
+
+def _need_fantasy():
+    if not fantasy_season.available():
+        raise HTTPException(503, "Fantasy data not built: run python tools/build_fantasy.py")
+    return fantasy_season.load()
+
+
+@app.get("/api/fantasy/meta")
+def fantasy_meta():
+    F = _need_fantasy()
+    return {"season": F["season"], "budget": fantasy_season.BUDGET, "squad_shape": fantasy_season.SQUAD_SHAPE,
+            "max_per_club": fantasy_season.MAX_PER_CLUB, "last_matchday": F["last_matchday"],
+            "clubs": F["clubs"]}
+
+
+@app.get("/api/fantasy/players")
+def fantasy_players(matchday: int):
+    """Every player as of a matchday: price, points, form (only earlier matchdays are visible)."""
+    _need_fantasy()
+    return [r | {"projected": fantasy_season.projection(r["player_id"], matchday)}
+            for r in fantasy_season.all_players(matchday)]
+
+
+@app.get("/api/fantasy/squad")
+def fantasy_default_squad(matchday: int, match_id: str | None = None):
+    """A ready-made squad within budget, favouring players in the match being watched."""
+    _need_fantasy()
+    focus = ()
+    if match_id in CATALOGUE:
+        focus = (CATALOGUE[match_id]["home"]["team_id"], CATALOGUE[match_id]["away"]["team_id"])
+    squad = fantasy_season.default_squad(matchday, focus)
+    return {"matchday": matchday, "squad": squad, "issues": fantasy_season.validate(squad, matchday),
+            "cost": round(sum(fantasy_season.price(p, matchday) for p in squad), 1)}
+
+
+@app.post("/api/fantasy/advice")
+async def fantasy_advice(req: AdviceRequest):
+    """Transfer Advisor: HOLD / WATCH / SELL for one squad player, with replacements and an explanation."""
+    F = _need_fantasy()
+    if req.player_id not in F["players"] or req.player_id not in req.squad:
+        raise HTTPException(400, "player_id must be a player in your squad")
+    return await advise(NEWSROOM, req.player_id, req.squad, req.matchday, req.bank, req.lang[:5].lower())
+
+
 @app.websocket("/ws/{match_id}")
 async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minute: float = 0.0, restart: int = 0,
-                   lang: str = "en"):
+                   lang: str = "en", viewer: str = ""):
     await ws.accept()
     try:
         s = get_session(match_id, speed, from_minute, bool(restart))
@@ -423,7 +510,10 @@ async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minut
     q: asyncio.Queue = asyncio.Queue(maxsize=2000)
     s.subscribers.add(q)
     s.viewer_langs[id(q)] = lang[:5].lower()
+    viewer = (viewer or f"anon-{id(q)}")[:64]
+    s.viewer_ids[id(q)] = viewer
     await ws.send_json(s.hello())
+    q.put_nowait(s.envelope("calls", s.calls.scoreboard(viewer)))     # queued, so `seq` stays in order
 
     async def pump():
         while True:
@@ -438,6 +528,13 @@ async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minut
                 cur = SESSIONS[match_id]
                 if cmd.get("action") == "lang":
                     cur.viewer_langs[id(q)] = str(cmd.get("lang", "en"))[:5].lower()
+                    continue
+                if cmd.get("action") == "call":            # a fan's live prediction (never changes Fantasy points)
+                    c = cur.calls.place(viewer, str(cmd.get("kind", "")), str(cmd.get("target", "")))
+                    cur.send_to(viewer, "calls", cur.calls.scoreboard(viewer) | {"placed": c.view()})
+                    continue
+                if cmd.get("action") == "calls":
+                    cur.send_to(viewer, "calls", cur.calls.scoreboard(viewer))
                     continue
                 cur.control(cmd.get("action", ""), cmd.get("speed"), cmd.get("from_minute"))
             except (ValueError, KeyError) as e:
@@ -454,3 +551,4 @@ async def ws_match(ws: WebSocket, match_id: str, speed: float = 60.0, from_minut
         cur = SESSIONS.get(match_id, s)
         cur.subscribers.discard(q)
         cur.viewer_langs.pop(id(q), None)
+        cur.viewer_ids.pop(id(q), None)

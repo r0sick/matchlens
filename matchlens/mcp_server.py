@@ -143,4 +143,31 @@ def build_mcp(sessions: dict, catalogue: dict, narratives_of: Callable[[str], li
             out.append({k: n.get(k) for k in ("moment_id", "kind", "display_minute", "caption", "fan", "analyst")})
         return out
 
+    @mcp.tool()
+    def get_fantasy_player(player: str, matchday: int, club: str = "") -> dict:
+        """Fantasy view of a player before a matchday: price, points, form, goals vs expected goals,
+        minutes trend, next fixtures, projected points and the Transfer Advisor's HOLD/WATCH/SELL rules.
+        `player` is a name or player_id; `club` (abbreviation, e.g. THR) disambiguates shared surnames."""
+        from .fantasy import season as S
+        if not S.available():
+            raise ValueError("Fantasy data is not available on this server.")
+        players = S.load()["players"]
+        if player in players:
+            pid = player
+        else:
+            q = _norm(player)
+            hits = [k for k, P in players.items() if q in (_norm(P["name"]), _norm(P["full_name"]))
+                    and (not club or P["club"].lower() == club.lower())]
+            if not hits:
+                hits = [k for k, P in players.items() if q in _norm(P["full_name"])
+                        and (not club or P["club"].lower() == club.lower())]
+            if not hits:
+                raise ValueError(f"No player matches {player!r}.")
+            if len(hits) > 1:
+                return {"ambiguous": [{"player_id": k, "name": players[k]["full_name"], "club": players[k]["club"]}
+                                      for k in hits]}
+            pid = hits[0]
+        sig = S.signals(pid, matchday)
+        return sig | {"advisor_rules": S.verdict(sig)}
+
     return mcp
