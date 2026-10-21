@@ -6,6 +6,9 @@ Moment workflow (goals, red cards, big chances, 15-minute "state of play" reads)
      (MCP tools)   ▲            │                       (one agent per language,
                    └──(retry)───┘                         run concurrently)
 
+Big chances and state-of-play reads take a quick path (no Analyst call): Brief (code) ──► Writer ──► ...
+Set MATCHLENS_ANALYST_KINDS to choose which moments get the Analyst (default: goal,red_card).
+
 Recap workflow (half time, full time):
 
     RecapEditor ──► FactChecker ──(approved)──► Localisers ──► Publisher
@@ -42,6 +45,8 @@ log = logging.getLogger("matchlens.newsroom")
 
 MAX_RETRIES = 2
 AGENT_TIMEOUT_S = float(os.getenv("MATCHLENS_AGENT_TIMEOUT_S", "30"))
+# moments that get the full Analyst step (with MCP tools); others go straight to the Writer to save one or two model calls
+ANALYST_KINDS = set(filter(None, os.getenv("MATCHLENS_ANALYST_KINDS", "goal,red_card").split(",")))
 MOMENT_KEYS = ("caption", "commentary", "fan", "analyst")
 RECAP_KEYS = ("headline", "studio_script", "article", "social", "player_of_the_match")
 FAN_JARGON = re.compile(r"\b(xg|ppda|field tilt|momentum index|expected goals)\b", re.I)
@@ -219,7 +224,8 @@ class Newsroom:
                     "display_minute": sheet["display_minute"], "match_time_s": sheet["match_time_s"],
                     "status": "final", "source": "templates", "model": None, "latency_ms": 0}
         try:
-            wf = build_recap_workflow(self) if recap else build_moment_workflow(self)
+            wf = (build_recap_workflow(self) if recap else build_moment_workflow(self) if sheet["kind"] in ANALYST_KINDS
+                  else build_quick_workflow(self))
             result = await wf.run({"sheet": sheet, "langs": [l for l in langs if l != "en"]})
             out = result.get_outputs()
             payload = out[-1] if out else None
@@ -398,6 +404,32 @@ def build_moment_workflow(nr: Newsroom):
     localisers, publisher = LocaliserExecutor(nr), PublisherExecutor()
     return (WorkflowBuilder(name="moment_newsroom", start_executor=analyst, max_iterations=20)
             .add_edge(analyst, writer)
+            .add_edge(writer, checker)
+            .add_edge(checker, writer, condition=lambda m: bool(m.get("retry")))
+            .add_edge(checker, localisers, condition=lambda m: "approved" in m)
+            .add_edge(localisers, publisher)
+            .build())
+
+
+class BriefExecutor(Executor):
+    """Quick path: no model call. The fact sheet itself is the brief (used for big chances and state-of-play reads)."""
+
+    def __init__(self):
+        super().__init__(id="brief")
+
+    @handler
+    async def handle(self, job: dict, ctx: WorkflowContext[dict]) -> None:
+        ctx.set_state("sheet", job["sheet"])
+        ctx.set_state("langs", job["langs"])
+        ctx.set_state("evidence", [])
+        await ctx.send_message({"brief": {}, "attempt": 0})
+
+
+def build_quick_workflow(nr: Newsroom):
+    brief, writer, checker = BriefExecutor(), WriterExecutor(nr), FactCheckExecutor(recap=False)
+    localisers, publisher = LocaliserExecutor(nr), PublisherExecutor()
+    return (WorkflowBuilder(name="moment_newsroom_quick", start_executor=brief, max_iterations=20)
+            .add_edge(brief, writer)
             .add_edge(writer, checker)
             .add_edge(checker, writer, condition=lambda m: bool(m.get("retry")))
             .add_edge(checker, localisers, condition=lambda m: "approved" in m)

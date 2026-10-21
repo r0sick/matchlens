@@ -72,6 +72,13 @@ def test_workflow_retries_after_fact_check_and_localises(sheets):
     assert "487" not in json.dumps(out["texts"])
 
 
+def test_state_of_play_takes_quick_path(sheets):
+    sop = next(s for s in sheets if s["kind"] == "state_of_play")
+    out = asyncio.run(newsroom(invent_number_first=False).produce(sop, ["es"]))
+    steps = [t["step"] for t in out["trace"]]
+    assert not out["fallback"] and "analyst" not in steps and steps[0] == "writer"
+
+
 def test_writer_outage_falls_back_to_template(sheets):
     goal = next(s for s in sheets if s["kind"] == "goal")
     out = asyncio.run(newsroom(fail_roles=("writer",)).produce(goal, ["es"]))
