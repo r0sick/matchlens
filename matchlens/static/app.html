@@ -139,15 +139,24 @@
   <section id="fantasy" class="view">
     <p class="hint" id="fxNote" hidden></p>
     <div class="fgrid">
+     <div class="fside">
       <div class="card fsquad">
         <div class="fhead">
           <div><h2 data-i18n="my_squad">My squad</h2><div class="hint" id="fxMeta"></div></div>
           <div class="ftotal"><span class="num" id="fxTotal">0</span><small data-i18n="live_pts">live points</small></div>
         </div>
-        <ul class="flist" id="fxSquad"></ul>
+        <div class="seg" role="group" id="fxView"><button data-v="pitch" aria-pressed="true" data-i18n="v_pitch">Pitch</button><button data-v="list" aria-pressed="false" data-i18n="v_list">List</button></div>
+        <div id="fxPitch" class="fpitch"></div>
+        <ul class="flist" id="fxSquad" hidden></ul>
         <div class="factions"><button id="fxReset" data-i18n="reset_squad">Use suggested squad</button>
-          <span class="hint" data-i18n="squad_hint">Tap ★ to pick your captain (double points). Ask the advisor about any player.</span></div>
+          <span class="hint" id="fxHint" data-i18n="squad_hint">Tap ★ to pick your captain (double points). Ask the advisor about any player.</span></div>
       </div>
+      <div class="card ffix">
+        <h2 data-i18n="fixtures">Next fixtures</h2>
+        <div class="ptable-wrap"><table class="fixgrid" id="fxFix"></table></div>
+        <div class="legend" data-i18n="fdr_legend">Colour = opponent difficulty: green easy, red hard. H home, A away.</div>
+      </div>
+     </div>
       <div class="fside">
         <div class="card">
           <h2 data-i18n="advisor">Transfer Advisor</h2>
@@ -164,6 +173,10 @@
     </div>
   </section>
 </main>
+
+<dialog id="profDlg" class="profile" aria-labelledby="prName"><div id="profBody"></div>
+  <div class="actions"><button id="prCap" data-i18n="make_captain">Make captain</button><button id="prAdv" data-i18n="advice">Advice</button><button class="primary" id="prClose" data-i18n="close">Close</button></div>
+</dialog>
 
 <dialog id="prefsDlg">
   <h2 data-i18n="preferences">Preferences</h2>

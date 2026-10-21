@@ -178,7 +178,8 @@ details.trace .bad { color: #A33; }
 
 /* ---------------------------------------------------------------- fantasy */
 .fgrid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; align-items: start; }
-.fside { display: grid; gap: 14px; }
+.fside { display: grid; gap: 14px; min-width: 0; }
+.fgrid > *, .fside > * { min-width: 0; }
 .fhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 .ftotal { text-align: right; line-height: 1; }
 .ftotal .num { display: block; font: 700 44px/1 var(--font-cond); }
@@ -216,9 +217,88 @@ details.trace .bad { color: #A33; }
 .qb b { font-size: 17px; }
 .qb small { grid-column: 1 / -1; color: var(--ink-2); font-size: 12px; }
 .fcalls li { display: grid; grid-template-columns: 46px 1fr auto; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.fcalls li.hint { display: block; }
 .fcalls .m { font-family: var(--font-cond); color: var(--ink-2); }
 .fcalls li.won .st { color: #1F5C3A; font-weight: 700; }
 .fcalls li.lost { color: var(--ink-2); }
+
+/* fantasy: pitch line-up */
+.fpitch { margin-top: 6px; }
+.pfield { position: relative; display: flex; flex-direction: column; justify-content: space-around; gap: 10px; min-height: 470px; padding: 18px 8px;
+  border-radius: var(--radius-m); background: repeating-linear-gradient(180deg, var(--pitch) 0 46px, var(--pitch-2) 46px 92px);
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,.55); }
+.pfield::before { content: ""; position: absolute; left: 3px; right: 3px; top: 50%; border-top: 2px solid rgba(255,255,255,.45); }
+.pfield::after { content: ""; position: absolute; left: 50%; top: 50%; width: 90px; height: 90px; margin: -45px 0 0 -45px; border: 2px solid rgba(255,255,255,.45); border-radius: 50%; }
+.pfield .shape { position: absolute; top: 8px; right: 12px; color: #fff; font-size: 18px; opacity: .85; z-index: 1; }
+.prow { position: relative; z-index: 1; display: flex; justify-content: space-evenly; gap: 4px; }
+.shirt { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 86px; background: none; border: 0; padding: 2px; cursor: pointer; border-radius: var(--radius-s); }
+.shirt .jersey { position: relative; }
+.jersey { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 9px 9px 14px 14px; color: #fff;
+  font: 700 12px/1 var(--font-cond); box-shadow: 0 2px 4px rgba(0,0,0,.35); border: 2px solid rgba(255,255,255,.85); }
+.jersey .c { position: absolute; top: -7px; right: -9px; width: 18px; height: 18px; border-radius: 50%; background: var(--flag); color: var(--ink);
+  font: 700 11px/18px var(--font); font-style: normal; text-align: center; }
+.jersey .live { position: absolute; bottom: -4px; left: -4px; width: 10px; height: 10px; border-radius: 50%; background: #3BD16F; border: 2px solid #fff; animation: pulse 1.6s infinite; }
+.shirt .nm { max-width: 86px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: #fff; color: var(--ink);
+  font: 600 12px/1.25 var(--font); padding: 1px 6px; border-radius: 3px; }
+.shirt .sub { background: rgba(20,33,61,.9); color: #fff; font: 500 11px/1.3 var(--font); padding: 0 6px; border-radius: 3px; min-height: 15px; }
+.shirt .sub b { font-size: 14px; color: var(--flag); }
+.shirt.here .nm { box-shadow: inset 0 -2px 0 #3BD16F; }
+.shirt.target { outline: 3px dashed var(--flag); }
+.shirt.sel { outline: 3px solid var(--flag); }
+.pbench { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; padding: 8px; background: #EEF2EC; border-radius: var(--radius-m); }
+.pbench .lbl { font: 600 13px/1 var(--font-cond); color: var(--ink-2); text-transform: uppercase; margin-right: 4px; }
+.pbench .shirt .nm { background: #fff; }
+.pbench .shirt .sub { background: var(--ink-2); }
+.bslot { display: flex; flex-direction: column; align-items: center; }
+.swapb { border: 1px solid var(--ink); background: #fff; border-radius: 12px; padding: 0 9px; cursor: pointer; font-size: 13px; }
+.swapb[aria-pressed="true"] { background: var(--flag); border-color: var(--flag); }
+.pname { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--ink); cursor: pointer; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.pname:hover { text-decoration-color: var(--ink); }
+.chip.bench { background: #EEF0EC; color: var(--ink-2); }
+/* fantasy: fixtures grid */
+table.fixgrid { width: 100%; border-collapse: collapse; font-size: 13px; }
+.fixgrid th { font-weight: 600; color: var(--ink-2); padding: 4px; text-align: center; border-bottom: 2px solid var(--ink); }
+.fixgrid td { padding: 3px 4px; border-bottom: 1px solid var(--rule); text-align: center; white-space: nowrap; }
+.fixgrid td:first-child { text-align: left; }
+.fdr { display: inline-block; min-width: 54px; padding: 3px 5px; border-radius: 3px; font: 600 12px/1.1 var(--font-cond); }
+/* fantasy: player profile */
+dialog.profile { max-width: 880px; width: calc(100% - 24px); max-height: calc(100vh - 32px); overflow: auto; padding: 0 0 14px; }
+#profBody { padding: 18px 20px 0; }
+dialog.profile .actions { padding: 0 20px; }
+.phead { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+.jersey.big { width: 72px; height: 72px; font-size: 30px; border-radius: 14px 14px 22px 22px; }
+.phead h2 { font-size: 26px; margin: 0 0 4px; }
+.pills { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }
+.pill { font: 600 12px/1 var(--font); padding: 5px 9px; border-radius: 12px; background: #EEF0EC; }
+.st-starter { background: #E3F1E8; color: #1F5C3A; } .st-rotation { background: #FFF4D6; color: #7A5A00; }
+.st-bench, .st-not_playing { background: #FBE7E7; color: #8A2626; }
+.formbar { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink-2); }
+.formbar .track { display: inline-block; width: 110px; height: 8px; background: #EEF0EC; border-radius: 4px; overflow: hidden; }
+.formbar b { display: block; height: 100%; background: var(--pitch); }
+.formbar em { font-style: normal; font-weight: 700; color: var(--ink); font-size: 15px; }
+.pprice { text-align: right; }
+.pprice .num { display: block; font: 700 32px/1 var(--font-cond); }
+.pprice small { font-size: 12px; color: var(--ink-2); }
+.up { color: #1F5C3A; font-weight: 700; } .down { color: #B3261E; font-weight: 700; }
+.pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 14px 0; }
+dialog.profile h3 { color: var(--ink); font-size: 15px; margin: 14px 0 6px; }
+svg.radar { width: 100%; max-width: 320px; display: block; margin: 0 auto; }
+.radar .ax { font: 600 11px var(--font); fill: var(--ink); }
+.radar .axv { font: 700 13px var(--font-cond); fill: var(--ink-2); }
+dl.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; }
+dl.tiles div { background: #F1F5EF; border-radius: var(--radius-s); padding: 8px 10px; }
+dl.tiles dt { font-size: 12px; color: var(--ink-2); }
+dl.tiles dd { margin: 2px 0 0; font: 700 22px/1 var(--font-cond); }
+dl.tiles.sm { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
+dl.tiles.sm dd { font-size: 19px; }
+.rolemap { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.rolemap svg { width: 70px; height: 100px; border-radius: 4px; }
+.chart .pv { font: 600 11px var(--font-cond); fill: var(--ink); }
+.plist { list-style: none; margin: 0; padding: 0; }
+.plist li { display: grid; grid-template-columns: 40px 42px 1fr auto; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.plist .fdr { min-width: 0; text-align: center; }
+.plist .pts { font: 700 18px/1 var(--font-cond); text-align: center; }
+.plist .pts.hi { color: #1F5C3A; }
 
 /* ---------------------------------------------------------------- settings dialog */
 dialog { border: 1px solid var(--rule); border-radius: var(--radius-m); padding: 18px 20px; max-width: 420px; width: calc(100% - 32px); color: var(--ink); }
@@ -244,6 +324,12 @@ body.overlay .pitch-wrap { display: none; }
   .below, .agrid, .fgrid { grid-template-columns: 1fr; }
   .flist li { grid-template-columns: 28px 34px 1fr auto; }
   .flist .adv { grid-column: 3 / -1; justify-self: start; }
+  .pgrid { grid-template-columns: 1fr; }
+  .phead { grid-template-columns: auto 1fr; }
+  .pprice { grid-column: 1 / -1; text-align: left; }
+  .shirt { width: 64px; } .shirt .nm { max-width: 64px; font-size: 11px; }
+  .jersey { width: 34px; height: 34px; font-size: 10px; }
+  .pfield { min-height: 400px; padding: 14px 2px; }
   main { padding: 12px 12px 32px; }
   #focusCard dl { grid-template-columns: repeat(2, 1fr); }
   .fanscore .big { font-size: 48px; }

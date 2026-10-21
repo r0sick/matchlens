@@ -71,6 +71,20 @@ const I18N = {
     r_conceded: 'Conceded', r_saves: 'Saves', r_defensive: 'Defensive work', r_yellow: 'Yellow', r_red: 'Red',
     r_own_goal: 'Own goal', r_bonus: 'Bonus', provisional: 'provisional', captain: 'Captain',
     f_form: 'form', f_pts: 'pts', transferred: '{out} out, {in} in.',
+    v_pitch: 'Pitch', v_list: 'List', bench: 'Bench', swap: 'Swap into the XI', swap_hint: 'Tap a highlighted starter to swap {name} in.',
+    fixtures: 'Next fixtures', fdr_legend: 'Colour = opponent difficulty: green easy, red hard. H home, A away. Ø = average difficulty.',
+    md_short: 'MD', make_captain: 'Make captain', close: 'Close', radar: 'Strengths and weaknesses', scorecard: 'Scorecard',
+    radar_hint: 'Percentile against the {n} {pos} players with 270+ minutes (100 = best in the league).',
+    radar_few: 'Not enough minutes yet (fewer than {m}) for a fair comparison.',
+    ax_attack: 'Attack', ax_creativity: 'Creativity', ax_defence: 'Defence', ax_passing: 'Passing', ax_physical: 'Physical',
+    ax_shot_stopping: 'Shot-stopping', ax_clean_sheets: 'Clean sheets', ax_distribution: 'Distribution', ax_availability: 'Availability', ax_points: 'Points',
+    st_starter: 'Starter', st_rotation: 'Rotation', st_bench: 'Bench role', st_not_playing: 'Not playing', st_unknown: 'No data yet',
+    form_pct_hint: 'Form over the last 3 matchdays, as a percentile among players in the same position',
+    last3_md: 'last 3 MDs', price: 'Price', p_points: 'Points', p_avg: 'Avg / match', p_last3: 'Avg last 3', p_home: 'Avg home', p_away: 'Avg away',
+    p_proj: 'Projected', p_apps: '{m} matches · {s} starts · {min} minutes', role: 'Usual position', by_md: 'Points by matchday',
+    last5: 'Last 5 matches', next5: 'Next 5 fixtures', season_stats: 'Season stats', did_not_play: 'did not play', sub_on: 'sub',
+    s_goals: 'Goals', s_assists: 'Assists', s_def: 'Defensive actions', s_saves: 'Saves', s_cards: 'Yellow / red',
+    foot_left: 'left foot', foot_right: 'right foot', foot_both: 'both feet',
   },
   es: {
     watch: 'Ver', pause: 'Pausa', resume: 'Reanudar', broadcast: 'Retransmisión', analyst: 'Analista', fan: 'Afición',
@@ -133,6 +147,20 @@ const I18N = {
     r_conceded: 'Goles encajados', r_saves: 'Paradas', r_defensive: 'Trabajo defensivo', r_yellow: 'Amarilla', r_red: 'Roja',
     r_own_goal: 'Gol en propia', r_bonus: 'Bonus', provisional: 'provisional', captain: 'Capitán',
     f_form: 'forma', f_pts: 'pts', transferred: 'Sale {out}, entra {in}.',
+    v_pitch: 'Campo', v_list: 'Lista', bench: 'Banquillo', swap: 'Meter en el once', swap_hint: 'Pulsa un titular resaltado para meter a {name}.',
+    fixtures: 'Próximos partidos', fdr_legend: 'Color = dificultad del rival: verde fácil, rojo difícil. H casa, A fuera. Ø = dificultad media.',
+    md_short: 'J', make_captain: 'Hacer capitán', close: 'Cerrar', radar: 'Fortalezas y debilidades', scorecard: 'Ficha',
+    radar_hint: 'Percentil frente a los {n} jugadores {pos} con más de 270 minutos (100 = el mejor de la liga).',
+    radar_few: 'Aún no tiene minutos suficientes (menos de {m}) para compararlo con justicia.',
+    ax_attack: 'Ataque', ax_creativity: 'Creatividad', ax_defence: 'Defensa', ax_passing: 'Pase', ax_physical: 'Físico',
+    ax_shot_stopping: 'Paradas', ax_clean_sheets: 'Porterías a cero', ax_distribution: 'Juego con el pie', ax_availability: 'Disponibilidad', ax_points: 'Puntos',
+    st_starter: 'Titular', st_rotation: 'Rotación', st_bench: 'Suplente', st_not_playing: 'No juega', st_unknown: 'Sin datos aún',
+    form_pct_hint: 'Forma en las 3 últimas jornadas, como percentil entre jugadores de su posición',
+    last3_md: 'últimas 3 J', price: 'Precio', p_points: 'Puntos', p_avg: 'Media', p_last3: 'Media últimos 3', p_home: 'Media en casa', p_away: 'Media fuera',
+    p_proj: 'Previsión', p_apps: '{m} partidos · {s} de titular · {min} minutos', role: 'Posición habitual', by_md: 'Puntos por jornada',
+    last5: 'Últimos 5 partidos', next5: 'Próximos 5 partidos', season_stats: 'Estadísticas de la temporada', did_not_play: 'no jugó', sub_on: 'suplente',
+    s_goals: 'Goles', s_assists: 'Asistencias', s_def: 'Acciones defensivas', s_saves: 'Paradas', s_cards: 'Amarillas / rojas',
+    foot_left: 'zurdo', foot_right: 'diestro', foot_both: 'ambidiestro',
   },
 };
 const CAUSE = { en: { goal: 'goal', card: 'card', shot: 'shot' }, es: { goal: 'gol', card: 'tarjeta', shot: 'tiro' } };
@@ -720,7 +748,7 @@ function renderAll() {
 // ------------------------------------------------------------------ fantasy
 const FX_KEY = 'matchlens.fantasy';
 const POS_ORDER = ['GK', 'DEF', 'MID', 'FWD'];
-let fx = { squad: [], captain: null, md: null };
+let fx = { squad: [], captain: null, md: null, xi: [] };
 try { fx = { ...fx, ...JSON.parse(localStorage.getItem(FX_KEY) || '{}') }; } catch (e) { /* storage unavailable */ }
 const saveFx = () => { try { localStorage.setItem(FX_KEY, JSON.stringify(fx)); } catch (e) { /* storage unavailable */ } };
 const money = v => (+v).toFixed(1);
@@ -735,6 +763,7 @@ async function onFantasyHello(f) {
     if (S.fx.md !== md) {
       const rows = await (await fetch(`/api/fantasy/players?matchday=${md}`)).json();
       S.fx.players = Object.fromEntries(rows.map(r => [r.player_id, r]));
+      S.fx.fix = await (await fetch(`/api/fantasy/fixtures?matchday=${md}`)).json();
       S.fx.md = md; S.fx.advice = null;
     }
     // keep the manager's squad across matchdays; build the suggested one the first time
@@ -745,7 +774,8 @@ async function onFantasyHello(f) {
 
 async function resetSquad() {
   const r = await (await fetch(`/api/fantasy/squad?matchday=${S.fx.md}&match_id=${encodeURIComponent($('match').value)}`)).json();
-  fx = { squad: r.squad, captain: null, md: S.fx.md };
+  fx = { squad: r.squad, captain: null, md: S.fx.md, xi: [] };
+  fx.xi = autoXI(fx.squad);
   const live = r.squad.filter(p => S.meta && inMatch(p)).sort((a, b) => S.fx.players[b].projected - S.fx.players[a].projected);
   fx.captain = live[0] || r.squad[0];
   saveFx(); S.fx.advice = null;
@@ -763,7 +793,8 @@ function renderFantasy() {
   const P = S.fx.players, budget = S.fx.meta ? S.fx.meta.budget : 100;
   const cost = fx.squad.reduce((a, p) => a + (P[p]?.price || 0), 0);
   $('fxMeta').textContent = t('fx_meta', { md: S.fx.md, cost: money(cost), budget: money(budget), bank: money(budget - cost) });
-  $('fxTotal').textContent = fx.squad.reduce((a, p) => a + livePts(p), 0);
+  if (!validXI(fx.xi)) { fx.xi = autoXI(fx.squad); saveFx(); }
+  $('fxTotal').textContent = fx.xi.reduce((a, p) => a + livePts(p), 0);     // starting XI count, captain doubles
   const rows = [...fx.squad].sort((a, b) => POS_ORDER.indexOf(P[a].position) - POS_ORDER.indexOf(P[b].position)
     || (inMatch(b) - inMatch(a)) || P[b].price - P[a].price);
   $('fxSquad').innerHTML = rows.map(pid => {
@@ -773,15 +804,16 @@ function renderFantasy() {
     return `<li class="${here ? 'here' : ''}" data-pid="${pid}">
       <button class="cap ${cap ? 'on' : ''}" data-cap="${pid}" title="${t('captain')}" aria-pressed="${cap}">★</button>
       <span class="pos">${p.position}</span>
-      <div class="who"><strong>${esc(p.name)}</strong> <span class="hint">${p.club} · €${money(p.price)}m · ${t('f_form')} ${p.form}</span>
+      <div class="who"><button class="pname" data-prof="${pid}">${esc(p.name)}</button>${fx.xi.includes(pid) ? '' : ` <span class="chip bench">${t('bench')}</span>`} <span class="hint">${p.club} · €${money(p.price)}m · ${t('f_form')} ${p.form}</span>
         <div class="chips">${here ? '<span class="dot"></span>' : ''}<span class="hint">${esc(status)}</span>${reasons}</div></div>
       <span class="pts num">${here && r ? livePts(pid) : '–'}</span>
       <button class="adv" data-adv="${pid}">${t('advice')}</button></li>`;
   }).join('');
-  renderCalls(); renderAdvice();
+  renderPitch(); renderFixtures(); renderCalls(); renderAdvice();
 }
 $('fxSquad').addEventListener('click', e => {
-  const c = e.target.closest('[data-cap]'), a = e.target.closest('[data-adv]');
+  const c = e.target.closest('[data-cap]'), a = e.target.closest('[data-adv]'), pr = e.target.closest('[data-prof]');
+  if (pr) openProfile(pr.dataset.prof);
   if (c) { fx.captain = c.dataset.cap; saveFx(); renderFantasy(); }
   if (a) askAdvisor(a.dataset.adv);
 });
@@ -820,6 +852,7 @@ $('fxAdvice').addEventListener('click', e => {
   const out = b.dataset.out, inn = b.dataset.in;
   fx.squad = fx.squad.map(p => (p === out ? inn : p));
   if (fx.captain === out) fx.captain = inn;
+  fx.xi = fx.xi.map(p => (p === out ? inn : p));
   saveFx();
   const msg = t('transferred', { out: S.fx.players[out].name, in: S.fx.players[inn].name });
   S.fx.advice = null; renderFantasy();
@@ -850,6 +883,168 @@ $('fxQuotes').addEventListener('click', e => {
   const b = e.target.closest('.qb'); if (!b || !S.ws || S.ws.readyState !== 1) return;
   S.ws.send(JSON.stringify({ action: 'call', kind: b.dataset.kind, target: b.dataset.target }));
 });
+
+// ------------------------------------------------------------------ fantasy: line-up on a pitch
+const SHAPE = { GK: [1, 1], DEF: [3, 5], MID: [2, 5], FWD: [1, 3] };
+const posOf = pid => S.fx.players[pid]?.position;
+function validXI(xi) {
+  if (!xi || xi.length !== 11 || xi.some(p => !fx.squad.includes(p))) return false;
+  return Object.entries(SHAPE).every(([pos, [lo, hi]]) => { const n = xi.filter(p => posOf(p) === pos).length; return n >= lo && n <= hi; });
+}
+function autoXI(squad) {
+  // best projection first, respecting 1 GK, 3-5 DEF, 2-5 MID, 1-3 FWD
+  // players in the match being watched get a nudge, so the default XI shows live points
+  const score = p => S.fx.players[p].projected + (inMatch(p) ? 2.5 : 0);
+  const by = pos => squad.filter(p => posOf(p) === pos).sort((a, b) => score(b) - score(a));
+  const xi = [by('GK')[0], ...by('DEF').slice(0, 3), ...by('MID').slice(0, 2), by('FWD')[0]];
+  const rest = squad.filter(p => !xi.includes(p) && posOf(p) !== 'GK').sort((a, b) => score(b) - score(a));
+  for (const p of rest) {
+    if (xi.length === 11) break;
+    const n = xi.filter(q => posOf(q) === posOf(p)).length;
+    if (n < SHAPE[posOf(p)][1]) xi.push(p);
+  }
+  return xi;
+}
+const CLUB_COL = () => Object.fromEntries(S.clubs.map(c => [c.team_id, c.colors?.primary || '#14213D']));
+const FDR = ['', '#2E7A4F', '#8CC79B', '#D9DED6', '#EBA184', '#B3261E'];
+const fdrText = d => (d === 1 || d === 5 ? '#fff' : 'var(--ink)');
+
+function shirtHtml(pid, cols, opts = {}) {
+  const p = S.fx.players[pid], r = S.fx.live[pid], here = inMatch(pid), cap = pid === fx.captain;
+  const nxt = (S.fx.fix?.[p.club_id] || [])[0];
+  const sub = here && r ? `<b class="num">${livePts(pid)}</b>` : here ? `<span>${t('in_match')}</span>`
+    : nxt ? `<span>${nxt.opponent} (${nxt.home ? 'H' : 'A'})</span>` : '';
+  return `<button class="shirt ${here ? 'here' : ''} ${opts.target ? 'target' : ''} ${S.fx.swap === pid ? 'sel' : ''}" data-shirt="${pid}">
+    <span class="jersey" style="background:${cols[p.club_id] || '#14213D'}">${esc(p.club)}${cap ? '<i class="c">C</i>' : ''}${here ? '<i class="live"></i>' : ''}</span>
+    <span class="nm">${esc(p.name)}</span><span class="sub">${sub}</span></button>`;
+}
+function renderPitch() {
+  const el = $('fxPitch');
+  if (!S.fx.md || !fx.squad.length) { el.innerHTML = ''; return; }
+  const cols = CLUB_COL(), sw = S.fx.swap;
+  const canSwap = q => { if (!sw) return false; const xi = fx.xi.map(p => (p === q ? sw : p)); return validXI(xi); };
+  const row = pos => `<div class="prow">${fx.xi.filter(p => posOf(p) === pos).map(p => shirtHtml(p, cols, { target: canSwap(p) })).join('')}</div>`;
+  const bench = fx.squad.filter(p => !fx.xi.includes(p)).sort((a, b) => POS_ORDER.indexOf(posOf(a)) - POS_ORDER.indexOf(posOf(b)));
+  const shape = ['DEF', 'MID', 'FWD'].map(pos => fx.xi.filter(p => posOf(p) === pos).length).join('-');
+  el.innerHTML = `<div class="pfield"><span class="shape num">${shape}</span>${row('FWD')}${row('MID')}${row('DEF')}${row('GK')}</div>
+    <div class="pbench"><span class="lbl">${t('bench')}</span>${bench.map(p => `<div class="bslot">${shirtHtml(p, cols)}<button class="swapb" data-swap="${p}" aria-pressed="${sw === p}" title="${t('swap')}">⇄</button></div>`).join('')}</div>`;
+  $('fxHint').textContent = sw ? t('swap_hint', { name: S.fx.players[sw].name }) : t('squad_hint');
+}
+$('fxPitch').addEventListener('click', e => {
+  const sb = e.target.closest('[data-swap]'), sh = e.target.closest('[data-shirt]');
+  if (sb) { S.fx.swap = S.fx.swap === sb.dataset.swap ? null : sb.dataset.swap; renderPitch(); return; }
+  if (!sh) return;
+  const pid = sh.dataset.shirt;
+  if (S.fx.swap && fx.xi.includes(pid)) {
+    const xi = fx.xi.map(p => (p === pid ? S.fx.swap : p));
+    if (validXI(xi)) { fx.xi = xi; if (fx.captain === pid) fx.captain = S.fx.swap; saveFx(); }
+    S.fx.swap = null; renderFantasy(); return;
+  }
+  S.fx.swap = null; openProfile(pid);
+});
+$('fxView').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  $('fxView').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  $('fxPitch').hidden = b.dataset.v !== 'pitch'; $('fxSquad').hidden = b.dataset.v !== 'list';
+});
+
+// ------------------------------------------------------------------ fantasy: fixtures grid
+function renderFixtures() {
+  const el = $('fxFix');
+  if (!S.fx.fix || !fx.squad.length) { el.innerHTML = ''; return; }
+  const mds = [...new Set(Object.values(S.fx.fix).flat().map(f => f.md))].sort((a, b) => a - b).slice(0, 5);
+  const rows = [...fx.squad].sort((a, b) => POS_ORDER.indexOf(posOf(a)) - POS_ORDER.indexOf(posOf(b)));
+  el.innerHTML = `<thead><tr><th></th>${mds.map(m => `<th>${t('md_short')}${m}</th>`).join('')}<th>Ø</th></tr></thead><tbody>` + rows.map(pid => {
+    const p = S.fx.players[pid], fxs = S.fx.fix[p.club_id] || [];
+    const avg = fxs.length ? (fxs.reduce((a, f) => a + f.difficulty, 0) / fxs.length).toFixed(1) : '–';
+    return `<tr><td><button class="pname" data-prof="${pid}">${esc(p.name)}</button> <span class="hint">${p.position}</span></td>${mds.map(m => {
+      const f = fxs.find(x => x.md === m);
+      return f ? `<td><span class="fdr" style="background:${FDR[f.difficulty]};color:${fdrText(f.difficulty)}">${f.opponent} ${f.home ? 'H' : 'A'}</span></td>` : '<td>–</td>';
+    }).join('')}<td class="num">${avg}</td></tr>`;
+  }).join('') + '</tbody>';
+}
+$('fxFix').addEventListener('click', e => { const b = e.target.closest('[data-prof]'); if (b) openProfile(b.dataset.prof); });
+
+// ------------------------------------------------------------------ fantasy: player profile
+const ROLE_XY = { GK: [50, 92], CB: [50, 76], LCB: [36, 76], RCB: [64, 76], LB: [15, 70], RB: [85, 70], LWB: [12, 58], RWB: [88, 58],
+  DM: [50, 61], LDM: [38, 61], RDM: [62, 61], LCM: [35, 48], RCM: [65, 48], CM: [50, 48], LM: [12, 45], RM: [88, 45],
+  CAM: [50, 34], LAM: [36, 33], RAM: [64, 33], LW: [15, 22], RW: [85, 22], ST: [50, 13], LST: [40, 14], RST: [60, 14] };
+function radarSvg(rd, color) {
+  const n = rd.axes.length, cx = 130, cy = 118, R = 84;
+  const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + R * v * Math.cos(a), cy + R * v * Math.sin(a)]; };
+  let s = '';
+  for (const v of [0.25, 0.5, 0.75, 1]) s += `<polygon points="${rd.axes.map((_, i) => pt(i, v).join(',')).join(' ')}" fill="${v === 1 ? '#F5F7F2' : 'none'}" stroke="#D9DED6"/>`;
+  rd.axes.forEach((_, i) => { const [x, y] = pt(i, 1); s += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#D9DED6"/>`; });
+  const poly = rd.axes.map((a, i) => pt(i, (a.pct ?? 0) / 100).join(',')).join(' ');
+  s += `<polygon points="${poly}" fill="${color}" fill-opacity=".28" stroke="${color}" stroke-width="2"/>`;
+  rd.axes.forEach((a, i) => {
+    const [x, y] = pt(i, 1.2), anchor = Math.abs(x - cx) < 5 ? 'middle' : x > cx ? 'start' : 'end';
+    s += `<text x="${x}" y="${y}" text-anchor="${anchor}" class="ax">${esc(t('ax_' + a.axis))}</text>
+          <text x="${x}" y="${y + 14}" text-anchor="${anchor}" class="axv">${a.pct ?? '–'}</text>`;
+  });
+  return `<svg class="radar" viewBox="-46 -4 352 248" role="img" aria-label="${t('radar')}">${s}</svg>`;
+}
+function pointsChart(rows) {
+  if (!rows.length) return `<p class="hint">–</p>`;
+  const w = 560, h = 170, pad = { l: 26, r: 34, t: 10, b: 22 }, bw = (w - pad.l - pad.r) / rows.length;
+  const maxP = Math.max(10, ...rows.map(r => r.points)), minP = Math.min(0, ...rows.map(r => r.points));
+  const sy = v => pad.t + (maxP - v) / (maxP - minP) * (h - pad.t - pad.b);
+  const prices = rows.map(r => r.price), pLo = Math.min(...prices) - 0.3, pHi = Math.max(...prices) + 0.3;
+  const py = v => pad.t + (pHi - v) / (pHi - pLo) * (h - pad.t - pad.b);
+  let s = `<line x1="${pad.l}" x2="${w - pad.r}" y1="${sy(0)}" y2="${sy(0)}" stroke="#B9C0C9"/>`;
+  rows.forEach((r, i) => {
+    const x = pad.l + i * bw + bw * 0.15, top = sy(Math.max(0, r.points)), bot = sy(Math.min(0, r.points));
+    const col = r.minutes === 0 ? '#D9DED6' : r.points >= 8 ? '#14213D' : r.points >= 4 ? '#2E7A4F' : r.points >= 0 ? '#8CC79B' : '#B3261E';
+    s += `<rect x="${x}" y="${top}" width="${bw * 0.7}" height="${Math.max(1, bot - top)}" fill="${col}" rx="2"><title>${t('md_short')}${r.md} · ${r.opponent} (${r.home ? 'H' : 'A'}) ${r.score || ''} · ${r.minutes}' · ${r.points} ${t('f_pts')}</title></rect>
+      <text x="${x + bw * 0.35}" y="${h - 6}" text-anchor="middle">${r.md}</text>${r.minutes ? `<text x="${x + bw * 0.35}" y="${top - 3}" text-anchor="middle" class="pv">${r.points}</text>` : ''}`;
+  });
+  s += `<polyline points="${rows.map((r, i) => `${pad.l + i * bw + bw / 2},${py(r.price)}`).join(' ')}" fill="none" stroke="var(--flag)" stroke-width="2"/>`;
+  return `<svg class="chart" viewBox="0 0 ${w} ${h}">${s}</svg><div class="legend"><span><i style="background:#2E7A4F"></i>${t('f_pts')}</span><span><i style="background:var(--flag)"></i>${t('price')}</span></div>`;
+}
+let profPid = null;
+async function openProfile(pid) {
+  if (!S.fx.md) return;
+  profPid = pid;
+  $('profBody').innerHTML = `<p class="hint">…</p>`;
+  if (!$('profDlg').open) $('profDlg').showModal();
+  const p = await (await fetch(`/api/fantasy/player/${pid}?matchday=${S.fx.md}`)).json();
+  if (profPid !== pid) return;
+  const col = CLUB_COL()[p.club_id] || '#14213D', T = p.totals, rd = p.radar;
+  const trend = p.price_change_3 > 0 ? `<span class="up">▲ ${money(p.price_change_3)}</span>` : p.price_change_3 < 0 ? `<span class="down">▼ ${money(-p.price_change_3)}</span>` : '<span class="hint">=</span>';
+  const tile = (k, v) => `<div><dt>${t(k)}</dt><dd class="num">${v ?? '–'}</dd></div>`;
+  const [rx, ry] = ROLE_XY[p.role] || ROLE_XY[{ GK: 'GK', DEF: 'CB', MID: 'CM', FWD: 'ST' }[p.position]];
+  const fxRow = f => `<li><span class="fdr" style="background:${FDR[f.difficulty]};color:${fdrText(f.difficulty)}">${f.difficulty}</span><span>${t('md_short')}${f.md}</span><span>${f.opponent} (${f.home ? 'H' : 'A'})</span></li>`;
+  const lastRow = r => `<li><span class="pts num ${r.points >= 6 ? 'hi' : ''}">${r.minutes ? r.points : '–'}</span><span>${t('md_short')}${r.md}</span><span>${r.opponent} (${r.home ? 'H' : 'A'}) ${r.score}</span><span class="hint">${r.minutes ? r.minutes + "'" : t('did_not_play')}${r.started ? '' : r.minutes ? ' · ' + t('sub_on') : ''}</span></li>`;
+  const stats = [['s_goals', T.goals], ['s_assists', T.assists], ['t_xg', T.xg], ['t_xa', T.xa], ['t_shots', T.shots], ['t_kp', T.key_passes],
+    ['t_acc', T.pass_accuracy != null ? T.pass_accuracy + '%' : null], ['s_def', T.def_actions], ...(p.position === 'GK' ? [['s_saves', T.saves]] : []),
+    ['s_cards', `${T.yellow} / ${T.red}`], ['t_top', T.top_speed]];
+  $('profBody').innerHTML = `
+    <div class="phead"><div class="jersey big" style="background:${col}">${p.shirt ?? ''}</div>
+      <div class="pid"><h2 id="prName">${esc(p.name)}${p.player_id === fx.captain ? ' <span class="chip">C</span>' : ''}</h2>
+        <div class="hint">${esc(p.full_name)} · ${esc(p.club_name)} · ${p.position} (${p.role || ''}) · ${p.age ?? ''} · ${p.nationality ?? ''} · ${t('foot_' + p.foot)} · ${p.height_cm ?? ''} cm</div>
+        <div class="pills"><span class="pill st-${p.status}">${t('st_' + p.status)}</span>
+          <span class="formbar" title="${t('form_pct_hint')}"><span>${t('f_form')}</span><span class="track"><b style="width:${p.form_pct ?? 0}%"></b></span><em class="num">${p.form_pct ?? '–'}%</em></span></div></div>
+      <div class="pprice"><span class="num">€${money(p.price)}m</span><small>${trend} ${t('last3_md')}</small></div></div>
+    <div class="pgrid">
+      <div><h3>${t('radar')}</h3>${radarSvg(rd, col)}
+        <p class="hint">${rd.axes.some(a => a.pct == null) ? t('radar_few', { m: rd.min_minutes }) : t('radar_hint', { n: rd.peers, pos: p.position })}</p>
+        <div class="chips">${rd.strengths.map(x => `<span class="chip">▲ ${esc(t('ax_' + rd.axes.find(a => a.label === x).axis))}</span>`).join('')}${rd.weaknesses.map(x => `<span class="chip neg">▼ ${esc(t('ax_' + rd.axes.find(a => a.label === x).axis))}</span>`).join('')}</div></div>
+      <div><h3>${t('scorecard')}</h3><dl class="tiles">${tile('p_points', p.points)}${tile('p_avg', p.avg_points)}${tile('p_last3', p.avg_last3)}${tile('p_home', p.avg_home)}${tile('p_away', p.avg_away)}${tile('p_proj', p.projected)}</dl>
+        <p class="hint">${t('p_apps', { m: p.matches, s: p.starts, min: p.minutes })}</p>
+        <div class="rolemap"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#2E7A4F"/><g fill="none" stroke="rgba(255,255,255,.7)" stroke-width=".8">
+          <rect x="2" y="2" width="96" height="96"/><line x1="2" y1="50" x2="98" y2="50"/><circle cx="50" cy="50" r="10"/><rect x="25" y="2" width="50" height="15"/><rect x="25" y="83" width="50" height="15"/></g>
+          <circle cx="${rx}" cy="${ry}" r="5" fill="var(--flag)" stroke="#fff" stroke-width="1"/></svg><span class="hint">${t('role')}: ${p.role || p.position}</span></div></div>
+    </div>
+    <h3>${t('by_md')}</h3>${pointsChart(p.by_matchday)}
+    <div class="pgrid"><div><h3>${t('last5')}</h3><ul class="plist">${p.last5.map(lastRow).join('') || '<li class="hint">–</li>'}</ul></div>
+      <div><h3>${t('next5')}</h3><ul class="plist">${p.next5.map(fxRow).join('') || '<li class="hint">–</li>'}</ul></div></div>
+    <h3>${t('season_stats')}</h3><dl class="tiles sm">${stats.map(([k, v]) => tile(k, v)).join('')}</dl>`;
+  $('prCap').hidden = !fx.squad.includes(pid) || !fx.xi.includes(pid); $('prAdv').hidden = !fx.squad.includes(pid);
+}
+$('prClose').onclick = () => $('profDlg').close();
+$('prCap').onclick = () => { fx.captain = profPid; saveFx(); $('profDlg').close(); renderFantasy(); };
+$('prAdv').onclick = () => { $('profDlg').close(); askAdvisor(profPid); };
+$('profDlg').addEventListener('click', e => { if (e.target === $('profDlg')) $('profDlg').close(); });
 
 // ------------------------------------------------------------------ preferences
 function fillPrefsClubs() {

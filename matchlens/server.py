@@ -488,6 +488,22 @@ def fantasy_default_squad(matchday: int, match_id: str | None = None):
             "cost": round(sum(fantasy_season.price(p, matchday) for p in squad), 1)}
 
 
+@app.get("/api/fantasy/player/{player_id}")
+def fantasy_player_profile(player_id: str, matchday: int):
+    """Player page: card, strengths/weaknesses radar, points by matchday, last 5 and next 5 fixtures."""
+    F = _need_fantasy()
+    if player_id not in F["players"]:
+        raise HTTPException(404, "unknown player")
+    return fantasy_season.profile(player_id, matchday)
+
+
+@app.get("/api/fantasy/fixtures")
+def fantasy_fixtures(matchday: int, n: int = 5):
+    """Next n fixtures of every club from `matchday`, with difficulty 1 (easy) .. 5 (hard)."""
+    F = _need_fantasy()
+    return fantasy_season.fixtures_grid(F["clubs"].keys(), matchday, max(1, min(n, 10)))
+
+
 @app.post("/api/fantasy/advice")
 async def fantasy_advice(req: AdviceRequest):
     """Transfer Advisor: HOLD / WATCH / SELL for one squad player, with replacements and an explanation."""

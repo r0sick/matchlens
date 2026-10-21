@@ -38,7 +38,8 @@ def main():
             players[p["player_id"]] = {
                 "player_id": p["player_id"], "name": p["short_name"], "full_name": p["name"],
                 "club_id": c["club_id"], "club": c["abbr"], "position": pos, "group": p["group"],
-                "overall": p["overall"], "is_star": p["is_star"], "start_price": base_price(p["overall"], pos),
+                "overall": p["overall"], "is_star": p["is_star"], "shirt": p["shirt"], "role": p["position"],
+                "age": p["age"], "nationality": p["nationality"], "foot": p["foot"], "height_cm": p["height_cm"], "start_price": base_price(p["overall"], pos),
                 "history": []}
 
     rows = defaultdict(dict)        # pid -> md -> row
@@ -65,7 +66,18 @@ def main():
                     "reasons": {x["code"]: x["pts"] for x in r["reasons"]} if r else {},
                     "goals": int(Q["goals"]), "assists": int(Q["assists"]),
                     "xg": round(Q["xg"], 2), "xa": round(Q["xa"], 2),
-                    "rating": r["rating"] if r else None}
+                    "rating": r["rating"] if r else None,
+                    # profile stats (radar, stat table)
+                    "role": Q["position"], "shots": int(Q["shots"]), "key_passes": int(Q["key_passes"]),
+                    "passes": int(Q["passes"]), "passes_complete": int(Q["passes_complete"]),
+                    "progressive": int(Q["progressive_passes"] + Q["progressive_carries"]),
+                    "dribbles": int(Q["dribbles_complete"]),
+                    "def_actions": int(Q["tackles_won"] + Q["interceptions"] + Q["clearances"]
+                                       + fs.blocks[pid] + Q["ball_recoverys"]),
+                    "saves": int(Q["saves"]), "conceded": fs.conceded[pid],
+                    "yellow": int(Q["yellow"]), "red": int(Q["red"]),
+                    "distance_km": round(Q["distance_m"] / 1000, 1), "sprints": int(Q["sprints"]),
+                    "top_speed": round(Q["top_speed_kmh"], 1)}
 
     last_md = max(f["matchday"] for f in fixtures)
     for pid, P in players.items():

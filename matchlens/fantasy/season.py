@@ -276,3 +276,128 @@ def xg_shares(club_ids, matchday: int) -> dict:
         if tot > 1.0:
             out.update({pid: round(v / tot, 4) for pid, v in xg.items()})
     return out
+
+
+# --------------------------------------------------------------------------- player profile
+RADAR_AXES = {
+    "outfield": [("attack", "Attack"), ("creativity", "Creativity"), ("defence", "Defence"),
+                 ("passing", "Passing"), ("physical", "Physical")],
+    "GK": [("shot_stopping", "Shot-stopping"), ("clean_sheets", "Clean sheets"), ("distribution", "Distribution"),
+           ("availability", "Availability"), ("points", "Points")],
+}
+MIN_MINUTES_RADAR = 270
+
+
+def _per90(h: list[dict]) -> dict | None:
+    mins = sum(r["minutes"] for r in h)
+    if mins < MIN_MINUTES_RADAR:
+        return None
+    g = lambda k: sum(r.get(k, 0) or 0 for r in h)
+    played = [r for r in h if r["minutes"] > 0]
+    f = 90 / mins
+    passes = g("passes")
+    return {
+        "attack": (g("xg") + g("goals") * 0.5 + 0.05 * g("shots")) * f,
+        "creativity": (g("xa") + 0.1 * g("key_passes") + 0.03 * g("dribbles")) * f,
+        "defence": g("def_actions") * f,
+        "passing": (g("passes_complete") / passes if passes else 0) + 0.004 * g("progressive") * f,
+        "physical": (g("distance_km") / max(1, len(played))) * 0.6 + 0.04 * g("sprints") * f
+                    + 0.02 * max((r.get("top_speed") or 0) for r in h),
+        "shot_stopping": g("saves") * f,
+        "clean_sheets": sum(1 for r in played if r["minutes"] >= 60 and r.get("conceded", 0) == 0) / max(1, len(played)),
+        "distribution": g("passes_complete") / passes if passes else 0,
+        "availability": mins / (90 * len(h)),
+        "points": g("points") / max(1, len(played)),
+    }
+
+
+@lru_cache(maxsize=64)
+def _peer_values(position: str, matchday: int) -> dict:
+    """axis -> sorted list of per-90 values of same-position players with enough minutes."""
+    out: dict[str, list] = {}
+    for pid, P in load()["players"].items():
+        if P["position"] != position:
+            continue
+        v = _per90(history(pid, matchday))
+        if v:
+            for k, x in v.items():
+                out.setdefault(k, []).append(x)
+    return {k: sorted(v) for k, v in out.items()}
+
+
+def radar(pid: str, matchday: int) -> dict:
+    """Percentile (0-100) against players in the same position, before `matchday`."""
+    P = load()["players"][pid]
+    axes = RADAR_AXES["GK" if P["position"] == "GK" else "outfield"]
+    mine = _per90(history(pid, matchday))
+    peers = _peer_values(P["position"], matchday)
+    rows = []
+    for key, label in axes:
+        if not mine or not peers.get(key):
+            rows.append({"axis": key, "label": label, "pct": None})
+            continue
+        vals = peers[key]
+        below = sum(1 for x in vals if x < mine[key]) + 0.5 * sum(1 for x in vals if x == mine[key])
+        rows.append({"axis": key, "label": label, "pct": round(100 * below / len(vals)),
+                     "value": round(mine[key], 2)})
+    known = [r for r in rows if r["pct"] is not None]
+    strengths = [r["label"] for r in sorted(known, key=lambda r: -r["pct"]) if r["pct"] >= 70][:2]
+    weaknesses = [r["label"] for r in sorted(known, key=lambda r: r["pct"]) if r["pct"] <= 30][:2]
+    return {"axes": rows, "peers": len(peers.get(axes[0][0], [])), "strengths": strengths, "weaknesses": weaknesses,
+            "min_minutes": MIN_MINUTES_RADAR}
+
+
+def status(h: list[dict]) -> str:
+    """starter | rotation | bench | not_playing, from the last three matchdays."""
+    last = h[-3:]
+    if not last:
+        return "unknown"
+    starts = sum(1 for r in last if r.get("started"))
+    mins = sum(r["minutes"] for r in last)
+    if starts >= 2:
+        return "starter"
+    if mins >= 60:
+        return "rotation"
+    return "bench" if mins else "not_playing"
+
+
+def profile(pid: str, matchday: int) -> dict:
+    """Everything the player page shows, as of `matchday`."""
+    F = load()
+    P = F["players"][pid]
+    h = history(pid, matchday)
+    played = [r for r in h if r["minutes"] > 0]
+    pr = price(pid, matchday)
+    g = lambda k: sum(r.get(k, 0) or 0 for r in h)
+    peers_form = sorted(form(history(q, matchday)) for q, Q in F["players"].items()
+                        if Q["position"] == P["position"] and history(q, matchday))
+    f = form(h) if h else 0.0
+    form_pct = round(100 * sum(1 for x in peers_form if x < f) / len(peers_form)) if peers_form else None
+    home = [r for r in played if r.get("home")]
+    away = [r for r in played if not r.get("home")]
+    avg = lambda rows: round(sum(r["points"] for r in rows) / len(rows), 1) if rows else None
+    return {
+        "player_id": pid, "name": P["name"], "full_name": P["full_name"], "club": P["club"], "club_id": P["club_id"],
+        "club_name": F["clubs"][P["club_id"]]["name"], "position": P["position"], "role": P.get("role"),
+        "group": P["group"], "shirt": P.get("shirt"), "age": P.get("age"), "nationality": P.get("nationality"),
+        "foot": P.get("foot"), "height_cm": P.get("height_cm"),
+        "price": pr, "start_price": P["start_price"], "price_change_3": round(pr - (h[-3]["price"] if len(h) >= 3 else P["start_price"]), 1),
+        "status": status(h), "form": round(f, 1), "form_pct": form_pct,
+        "points": g("points"), "matches": len(played), "starts": sum(1 for r in h if r.get("started")),
+        "minutes": g("minutes"), "avg_points": avg(played), "avg_home": avg(home), "avg_away": avg(away),
+        "avg_last3": round(form(h), 1) if h else None, "projected": projection(pid, matchday),
+        "totals": {k: g(k) for k in ("goals", "assists", "shots", "key_passes", "saves", "yellow", "red")}
+                  | {"xg": round(g("xg"), 2), "xa": round(g("xa"), 2),
+                     "pass_accuracy": round(100 * g("passes_complete") / g("passes")) if g("passes") else None,
+                     "def_actions": g("def_actions"), "top_speed": max([r.get("top_speed") or 0 for r in h] or [0])},
+        "radar": radar(pid, matchday),
+        "by_matchday": [{k: r.get(k) for k in ("md", "opponent", "home", "score", "minutes", "started", "points",
+                                               "price", "goals", "assists", "rating", "reasons")} for r in h],
+        "last5": [{k: r.get(k) for k in ("md", "opponent", "home", "score", "minutes", "started", "points")}
+                  for r in h[-5:]][::-1],
+        "next5": upcoming(P["club_id"], matchday, 5),
+    }
+
+
+def fixtures_grid(club_ids, matchday: int, n: int = 5) -> dict:
+    return {cid: upcoming(cid, matchday, n) for cid in club_ids}
