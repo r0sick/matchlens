@@ -370,6 +370,15 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="MatchLens live", version="0.4.0", lifespan=lifespan)
+
+
+@app.middleware("http")
+async def no_stale_pages(request, call_next):
+    """Browsers must revalidate the page and its scripts, so a redeploy is visible immediately."""
+    response = await call_next(request)
+    if request.url.path == "/" or request.url.path.startswith("/static/"):
+        response.headers["Cache-Control"] = "no-cache"
+    return response
 if STATIC.exists():
     app.mount("/static", StaticFiles(directory=STATIC), name="static")
 app.mount("/mcp", MCP.streamable_http_app())
