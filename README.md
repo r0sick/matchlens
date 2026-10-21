@@ -33,33 +33,42 @@
 ## Architecture
 
 ```mermaid
-flowchart LR
-  subgraph Data["Synthetic data"]
-    SIM["matchsim<br/>season simulator"] --> FEED["timed event feed"]
+flowchart TB
+  SIM["matchsim: synthetic season<br/>10 clubs · 230 players · 90 matches"] --> FEED["timed live event feed"]
+  FEED --> STATE["Live engine (MatchState)<br/>possession · PPDA · field tilt · xG · momentum · chaos · ratings"]
+  MODELS["Models (JSON coefficients)<br/>win prob · next goal · pass difficulty"] --> STATE
+  STATE --> FACTS["Moment detector<br/>deterministic fact sheets"]
+  STATE --> FANT["Fantasy scorer + live calls"]
+  STATE --> MCP[("MCP server /mcp<br/>7 read-only tools")]
+
+  subgraph NEWS["Newsroom workflow"]
+    direction LR
+    AN["Analyst"] --> WR["Writer"] --> FC{"Fact checker<br/>(code)"}
+    FC -- "retry with exact issues" --> WR
+    FC -- approved --> LOC["Localisers<br/>(concurrent, per language)"]
   end
-  subgraph Engine["Live engine (FastAPI, one container)"]
-    FEED --> STATE["MatchState<br/>stats · PPDA · momentum · chaos"]
-    MODELS["models<br/>win prob · next goal · pass difficulty"] --> STATE
-    STATE --> FACTS["Moment detector<br/>fact sheets"]
-    STATE --> FAN["Fantasy scorer<br/>+ live calls"]
-    STATE --> MCP["MCP server /mcp<br/>read-only tools"]
-  end
-  subgraph Agents["Microsoft Agent Framework workflows"]
-    FACTS --> AN["Analyst"] --> WR["Writer"] --> FC{"Fact checker<br/>(code)"}
-    FC -- retry --> WR
-    FC -- approved --> LOC["Localisers<br/>(per language, concurrent)"]
-    SC["Scout (rules)"] --> ADV["Transfer Advisor"] --> FC2{"Fact checker<br/>(code)"}
+  subgraph ADVW["Advisor workflow"]
+    direction LR
+    SC["Scout (rules)<br/>HOLD · WATCH · SELL"] --> ADV["Advisor"] --> FC2{"Fact checker<br/>(code)"}
     FC2 -- retry --> ADV
   end
+
+  FACTS --> AN
+  SEASON["Season & Fantasy data<br/>(as of the matchday)"] --> SC
   AN -. tools .-> MCP
   ADV -. tools .-> MCP
-  COP["GitHub Copilot<br/>(VS Code)"] -. tools .-> MCP
-  Agents <--> FOUNDRY["Microsoft Foundry<br/>model deployment"]
-  LOC --> WS["WebSocket"]
-  FAN --> WS
+  COP["GitHub Copilot in VS Code"] -. tools .-> MCP
+  NEWS <-. model calls .-> FOUNDRY["Microsoft Foundry<br/>model deployment"]
+  ADVW <-. model calls .-> FOUNDRY
+
+  LOC --> WS["WebSocket + REST (FastAPI)"]
+  FANT --> WS
   STATE --> WS
-  WS --> UI["Web app<br/>Broadcast · Analyst · Fan · Fantasy<br/>+ OBS overlay"]
+  FC2 --> WS
+  WS --> UI["Web app: Broadcast · Analyst · Fan · Fantasy<br/>+ transparent OBS overlay"]
 ```
+
+Both workflows are Microsoft Agent Framework graphs. Dotted lines are MCP tool calls and model calls.
 
 **Microsoft technologies**
 
