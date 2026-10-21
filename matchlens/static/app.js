@@ -924,6 +924,58 @@ function autoXI(squad) {
   return xi;
 }
 const CLUB_COL = () => Object.fromEntries(S.clubs.map(c => [c.team_id, c.colors?.primary || '#14213D']));
+const CLUB_KIT = () => Object.fromEntries(S.clubs.map(c => [c.team_id, c.colors || {}]));
+// Procedural player portrait: an illustrated, made-up face (the players are fictional), deterministic per player_id.
+function avatarSvg(pid, kit = {}, shirt = '', size = 96) {
+  let h = 2166136261;
+  for (const ch of pid) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
+  const rnd = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
+  const pick = a => a[Math.floor(rnd() * a.length)];
+  const skin = pick(['#F6D3B3', '#EBC09A', '#D9A57B', '#C68B5E', '#A86E45', '#8A5534', '#6B3F25']);
+  const hairC = pick(['#1E1A18', '#2B211C', '#3B2A20', '#5A3A24', '#8A5A2E', '#B98745', '#D8B26A', '#14100E']);
+  const style = pick(['crop', 'buzz', 'curly', 'quiff', 'long', 'bald', 'afro', 'fade']);
+  const beard = pick(['none', 'none', 'stubble', 'full', 'goatee']);
+  const brow = pick([0, 1, 2]), mouth = pick([0, 1, 2]), faceW = 25 + rnd() * 4, jaw = 30 + rnd() * 4;
+  const p = kit.primary || '#14213D', s2 = kit.secondary || '#FFFFFF';
+  const shade = 'rgba(0,0,0,.12)';
+  const hair = {
+    crop: `<path d="M${50 - faceW},44 C${50 - faceW},18 ${50 + faceW},18 ${50 + faceW},44 C${50 + faceW - 4},32 ${50 - faceW + 4},32 ${50 - faceW},44Z" fill="${hairC}"/>`,
+    buzz: `<path d="M${50 - faceW + 1},42 C${50 - faceW},22 ${50 + faceW},22 ${50 + faceW - 1},42 C${50 + 10},34 ${50 - 10},34 ${50 - faceW + 1},42Z" fill="${hairC}" opacity=".75"/>`,
+    curly: [...Array(9)].map((_, i) => `<circle cx="${50 - faceW + 3 + i * (2 * faceW - 6) / 8}" cy="${26 + (i % 2) * 3}" r="7.5" fill="${hairC}"/>`).join('') + `<rect x="${50 - faceW}" y="26" width="${2 * faceW}" height="10" fill="${hairC}"/>`,
+    quiff: `<path d="M${50 - faceW},44 C${50 - faceW - 2},20 ${50 + 4},10 ${50 + faceW + 2},24 C${50 + faceW + 2},30 ${50 + faceW},36 ${50 + faceW},44 C${50 + 10},30 ${50 - 14},34 ${50 - faceW},44Z" fill="${hairC}"/>`,
+    long: `<path d="M${50 - faceW - 3},66 C${50 - faceW - 6},14 ${50 + faceW + 6},14 ${50 + faceW + 3},66 L${50 + faceW - 2},66 C${50 + faceW},36 ${50 - faceW},36 ${50 - faceW + 2},66Z" fill="${hairC}"/>`,
+    bald: '',
+    afro: `<ellipse cx="50" cy="30" rx="${faceW + 9}" ry="19" fill="${hairC}"/>`,
+    fade: `<path d="M${50 - faceW + 2},40 C${50 - faceW + 2},18 ${50 + faceW - 2},18 ${50 + faceW - 2},40 L${50 + faceW - 6},31 L${50 - faceW + 6},31Z" fill="${hairC}"/><rect x="${50 - faceW}" y="31" width="${2 * faceW}" height="9" fill="${hairC}" opacity=".35"/>`,
+  }[style];
+  const beards = {
+    none: '', stubble: `<path d="M${50 - faceW + 3},56 Q50,${62 + jaw - 30} ${50 + faceW - 3},56 Q50,${84} ${50 - faceW + 3},56Z" fill="${hairC}" opacity=".22"/>`,
+    full: `<path d="M${50 - faceW + 1},52 Q50,${66} ${50 + faceW - 1},52 Q${50 + faceW - 4},80 50,${82} Q${50 - faceW + 4},80 ${50 - faceW + 1},52Z" fill="${hairC}" opacity=".9"/>`,
+    goatee: `<path d="M44,70 Q50,74 56,70 Q55,80 50,81 Q45,80 44,70Z" fill="${hairC}" opacity=".85"/>`,
+  }[beard];
+  const brows = [`<path d="M38,45 L45,44 M55,44 L62,45" stroke="${hairC}" stroke-width="2.2" stroke-linecap="round"/>`,
+    `<path d="M38,46 Q41.5,43 45,45 M55,45 Q58.5,43 62,46" stroke="${hairC}" stroke-width="2" fill="none" stroke-linecap="round"/>`,
+    `<path d="M38,44 L45,45.5 M55,45.5 L62,44" stroke="${hairC}" stroke-width="2.4" stroke-linecap="round"/>`][brow];
+  const mouths = ['<path d="M45,67 Q50,70 55,67" stroke="#6B3A2E" stroke-width="1.6" fill="none" stroke-linecap="round"/>',
+    '<path d="M45.5,67.5 L54.5,67.5" stroke="#6B3A2E" stroke-width="1.6" stroke-linecap="round"/>',
+    '<path d="M44.5,66.5 Q50,72 55.5,66.5 Q50,69 44.5,66.5Z" fill="#fff" stroke="#6B3A2E" stroke-width="1.2"/>'][mouth];
+  const gid = 'g' + pid.replace(/\W/g, '');
+  return `<svg class="avatar" width="${size}" height="${size}" viewBox="0 0 100 100" role="img" aria-label="illustrated portrait">
+    <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${p}" stop-opacity=".25"/><stop offset="1" stop-color="${p}" stop-opacity=".7"/></linearGradient>
+      <clipPath id="c${gid}"><rect width="100" height="100" rx="14"/></clipPath></defs>
+    <g clip-path="url(#c${gid})"><rect width="100" height="100" fill="url(#${gid})"/>
+    <path d="M8,100 C10,84 26,78 40,76 L60,76 C74,78 90,84 92,100Z" fill="${p}"/>
+    <path d="M40,76 L50,88 L60,76" fill="none" stroke="${s2}" stroke-width="3"/>
+    <text x="73" y="95" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="14" fill="${s2}" stroke="rgba(0,0,0,.25)" stroke-width=".4">${shirt}</text>
+    <rect x="43" y="64" width="14" height="14" rx="4" fill="${skin}"/><rect x="43" y="70" width="14" height="5" fill="${shade}"/>
+    <g transform="translate(50 46) scale(0.86 1.02) translate(-50 -50)">${style === 'long' ? hair : ''}
+    <ellipse cx="${50 - faceW}" cy="52" rx="3.5" ry="5.5" fill="${skin}"/><ellipse cx="${50 + faceW}" cy="52" rx="3.5" ry="5.5" fill="${skin}"/>
+    <path d="M${50 - faceW},44 C${50 - faceW},26 ${50 + faceW},26 ${50 + faceW},44 L${50 + faceW - 2},58 Q50,${jaw + 44} ${50 - faceW + 2},58Z" fill="${skin}"/>
+    ${beards}${style === 'long' ? '' : hair}${brows}
+    <ellipse cx="41.5" cy="50" rx="2.3" ry="2.6" fill="#fff"/><ellipse cx="58.5" cy="50" rx="2.3" ry="2.6" fill="#fff"/>
+    <circle cx="41.8" cy="50.4" r="1.5" fill="#2A1E18"/><circle cx="58.8" cy="50.4" r="1.5" fill="#2A1E18"/>
+    <path d="M50,52 L48,60 Q50,61.5 52,60" stroke="${shade}" stroke-width="1.6" fill="none" stroke-linecap="round"/>${mouths}</g></g></svg>`;
+}
 const FDR = ['', '#2E7A4F', '#8CC79B', '#D9DED6', '#EBA184', '#B3261E'];
 const fdrText = d => (d === 1 || d === 5 ? '#fff' : 'var(--ink)');
 
@@ -1050,7 +1102,7 @@ async function openProfile(pid) {
     ['t_acc', T.pass_accuracy != null ? T.pass_accuracy + '%' : null], ['s_def', T.def_actions], ...(p.position === 'GK' ? [['s_saves', T.saves]] : []),
     ['s_cards', `${T.yellow} / ${T.red}`], ['t_top', T.top_speed]];
   $('profBody').innerHTML = `
-    <div class="phead"><div class="ovr"><span class="num">${hx.overall}</span><small>${p.position}</small><div class="jersey" style="background:${col}">${p.shirt ?? ''}</div></div>
+    <div class="phead"><div class="ovr"><span class="num">${hx.overall}</span><small>${p.position}</small></div>${avatarSvg(p.player_id, CLUB_KIT()[p.club_id], p.shirt ?? '', 104)}
       <div class="pid"><h2 id="prName">${esc(p.name)}${p.player_id === fx.captain ? ' <span class="chip">C</span>' : ''}</h2>
         <div class="hint">${esc(p.full_name)} · ${esc(p.club_name)} · ${p.position} (${p.role || ''}) · ${p.age ?? ''} · ${p.nationality ?? ''} · ${t('foot_' + p.foot)} · ${p.height_cm ?? ''} cm</div>
         <div class="pills"><span class="pill st-${p.status}">${t('st_' + p.status)}</span>
