@@ -76,8 +76,17 @@ const I18N = {
     md_short: 'MD', make_captain: 'Make captain', close: 'Close', radar: 'Strengths and weaknesses', scorecard: 'Scorecard',
     radar_hint: 'Percentile against the {n} {pos} players with 270+ minutes (100 = best in the league).',
     radar_few: 'Not enough minutes yet (fewer than {m}) for a fair comparison.',
-    ax_attack: 'Attack', ax_creativity: 'Creativity', ax_defence: 'Defence', ax_passing: 'Passing', ax_physical: 'Physical',
-    ax_shot_stopping: 'Shot-stopping', ax_clean_sheets: 'Clean sheets', ax_distribution: 'Distribution', ax_availability: 'Availability', ax_points: 'Points',
+    hexagon: 'Attribute analysis', attributes: 'Attributes', hx_rating: 'Rating (attributes)', hx_season: 'This season (percentile vs position)',
+    measured: 'Measured in this season’s matches: percentile against the same position (1–99)',
+    attrs_hint: '◉ = measured in this season’s matches, as a percentile against players in the same position (needs {m}+ minutes). Other values are scouting attributes (1–99).',
+    hx_pac: 'Pace', hx_sho: 'Shooting', hx_pas: 'Passing', hx_dri: 'Dribbling', hx_def: 'Defending', hx_phy: 'Physical',
+    hx_div: 'Diving', hx_han: 'Handling', hx_kic: 'Kicking', hx_ref: 'Reflexes', hx_spd: 'Speed', hx_pos: 'Positioning',
+    sa_pace: 'Pace', sa_top_speed: 'Top speed', sa_sprints90: 'Sprints per 90', sa_finishing: 'Finishing', sa_shot_power: 'Shot power',
+    sa_positioning: 'Positioning', sa_shots90: 'Shots per 90', sa_xg90: 'xG per 90', sa_passing: 'Passing', sa_vision: 'Vision',
+    sa_pass_acc: 'Pass accuracy', sa_kp90: 'Key passes per 90', sa_prog90: 'Progressive actions per 90', sa_dribbling: 'Dribbling',
+    sa_composure: 'Composure', sa_drb90: 'Dribbles per 90', sa_tackling: 'Tackling', sa_aerial: 'Heading / aerial', sa_def90: 'Defensive actions per 90',
+    sa_stamina: 'Stamina', sa_dist90: 'Distance per 90', sa_availability: 'Availability', sa_keeping: 'Goalkeeping', sa_saves90: 'Saves per 90',
+    sa_clean_sheets: 'Clean-sheet rate', sa_conceded90: 'Goals conceded per 90 (fewer = higher)', sa_save_pct: 'Save percentage',
     st_starter: 'Starter', st_rotation: 'Rotation', st_bench: 'Bench role', st_not_playing: 'Not playing', st_unknown: 'No data yet',
     form_pct_hint: 'Form over the last 3 matchdays, as a percentile among players in the same position',
     last3_md: 'last 3 MDs', price: 'Price', p_points: 'Points', p_avg: 'Avg / match', p_last3: 'Avg last 3', p_home: 'Avg home', p_away: 'Avg away',
@@ -152,8 +161,17 @@ const I18N = {
     md_short: 'J', make_captain: 'Hacer capitán', close: 'Cerrar', radar: 'Fortalezas y debilidades', scorecard: 'Ficha',
     radar_hint: 'Percentil frente a los {n} jugadores {pos} con más de 270 minutos (100 = el mejor de la liga).',
     radar_few: 'Aún no tiene minutos suficientes (menos de {m}) para compararlo con justicia.',
-    ax_attack: 'Ataque', ax_creativity: 'Creatividad', ax_defence: 'Defensa', ax_passing: 'Pase', ax_physical: 'Físico',
-    ax_shot_stopping: 'Paradas', ax_clean_sheets: 'Porterías a cero', ax_distribution: 'Juego con el pie', ax_availability: 'Disponibilidad', ax_points: 'Puntos',
+    hexagon: 'Análisis de atributos', attributes: 'Atributos', hx_rating: 'Valoración (atributos)', hx_season: 'Esta temporada (percentil por posición)',
+    measured: 'Medido en los partidos de esta temporada: percentil frente a su posición (1–99)',
+    attrs_hint: '◉ = medido en los partidos de esta temporada, como percentil frente a jugadores de su posición (requiere {m}+ minutos). El resto son atributos de ojeo (1–99).',
+    hx_pac: 'Ritmo', hx_sho: 'Tiro', hx_pas: 'Pase', hx_dri: 'Regate', hx_def: 'Defensa', hx_phy: 'Físico',
+    hx_div: 'Estirada', hx_han: 'Blocaje', hx_kic: 'Saque', hx_ref: 'Reflejos', hx_spd: 'Velocidad', hx_pos: 'Colocación',
+    sa_pace: 'Velocidad', sa_top_speed: 'Velocidad punta', sa_sprints90: 'Sprints por 90', sa_finishing: 'Definición', sa_shot_power: 'Potencia de tiro',
+    sa_positioning: 'Colocación', sa_shots90: 'Tiros por 90', sa_xg90: 'xG por 90', sa_passing: 'Pase', sa_vision: 'Visión',
+    sa_pass_acc: 'Precisión de pase', sa_kp90: 'Pases clave por 90', sa_prog90: 'Acciones progresivas por 90', sa_dribbling: 'Regate',
+    sa_composure: 'Compostura', sa_drb90: 'Regates por 90', sa_tackling: 'Entradas', sa_aerial: 'Juego aéreo', sa_def90: 'Acciones defensivas por 90',
+    sa_stamina: 'Resistencia', sa_dist90: 'Distancia por 90', sa_availability: 'Disponibilidad', sa_keeping: 'Portería', sa_saves90: 'Paradas por 90',
+    sa_clean_sheets: 'Porterías a cero', sa_conceded90: 'Goles encajados por 90 (menos = más alto)', sa_save_pct: 'Porcentaje de paradas',
     st_starter: 'Titular', st_rotation: 'Rotación', st_bench: 'Suplente', st_not_playing: 'No juega', st_unknown: 'Sin datos aún',
     form_pct_hint: 'Forma en las 3 últimas jornadas, como percentil entre jugadores de su posición',
     last3_md: 'últimas 3 J', price: 'Precio', p_points: 'Puntos', p_avg: 'Media', p_last3: 'Media últimos 3', p_home: 'Media en casa', p_away: 'Media fuera',
@@ -969,20 +987,33 @@ $('fxFix').addEventListener('click', e => { const b = e.target.closest('[data-pr
 const ROLE_XY = { GK: [50, 92], CB: [50, 76], LCB: [36, 76], RCB: [64, 76], LB: [15, 70], RB: [85, 70], LWB: [12, 58], RWB: [88, 58],
   DM: [50, 61], LDM: [38, 61], RDM: [62, 61], LCM: [35, 48], RCM: [65, 48], CM: [50, 48], LM: [12, 45], RM: [88, 45],
   CAM: [50, 34], LAM: [36, 33], RAM: [64, 33], LW: [15, 22], RW: [85, 22], ST: [50, 13], LST: [40, 14], RST: [60, 14] };
-function radarSvg(rd, color) {
-  const n = rd.axes.length, cx = 130, cy = 118, R = 84;
+function hexSvg(hx, color) {
+  // Football Manager-style analysis shape: club colour = attribute ratings, dashed gold = this season (percentile)
+  const cats = hx.categories, n = cats.length, cx = 150, cy = 128, R = 100;
   const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + R * v * Math.cos(a), cy + R * v * Math.sin(a)]; };
+  const scale = v => Math.max(0, (v - 20) / 79);                       // 20 at the centre, 99 at the edge
   let s = '';
-  for (const v of [0.25, 0.5, 0.75, 1]) s += `<polygon points="${rd.axes.map((_, i) => pt(i, v).join(',')).join(' ')}" fill="${v === 1 ? '#F5F7F2' : 'none'}" stroke="#D9DED6"/>`;
-  rd.axes.forEach((_, i) => { const [x, y] = pt(i, 1); s += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#D9DED6"/>`; });
-  const poly = rd.axes.map((a, i) => pt(i, (a.pct ?? 0) / 100).join(',')).join(' ');
-  s += `<polygon points="${poly}" fill="${color}" fill-opacity=".28" stroke="${color}" stroke-width="2"/>`;
-  rd.axes.forEach((a, i) => {
-    const [x, y] = pt(i, 1.2), anchor = Math.abs(x - cx) < 5 ? 'middle' : x > cx ? 'start' : 'end';
-    s += `<text x="${x}" y="${y}" text-anchor="${anchor}" class="ax">${esc(t('ax_' + a.axis))}</text>
-          <text x="${x}" y="${y + 14}" text-anchor="${anchor}" class="axv">${a.pct ?? '–'}</text>`;
+  [1, 0.75, 0.5, 0.25].forEach((v, k) => { s += `<polygon points="${cats.map((_, i) => pt(i, v).join(',')).join(' ')}" fill="${k % 2 ? '#FFFFFF' : '#F1F5EF'}" stroke="#D9DED6"/>`; });
+  cats.forEach((_, i) => { const [x, y] = pt(i, 1); s += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#D9DED6"/>`; });
+  s += `<polygon points="${cats.map((c, i) => pt(i, scale(c.rating ?? 20)).join(',')).join(' ')}" fill="${color}" fill-opacity=".32" stroke="${color}" stroke-width="2.2" stroke-linejoin="round"/>`;
+  if (hx.has_season) s += `<polygon points="${cats.map((c, i) => pt(i, scale(c.season ?? 20)).join(',')).join(' ')}" fill="none" stroke="var(--flag)" stroke-width="2.2" stroke-dasharray="5 3" stroke-linejoin="round"/>`;
+  cats.forEach((c, i) => {
+    const [x, y] = pt(i, 1.17), anchor = Math.abs(x - cx) < 5 ? 'middle' : x > cx ? 'start' : 'end';
+    const cls = hx.strengths.includes(c.key) ? 'good' : hx.weaknesses.includes(c.key) ? 'bad' : '';
+    s += `<text x="${x}" y="${y - 2}" text-anchor="${anchor}" class="ax ${cls}">${esc(t('hx_' + c.key))}</text>
+          <text x="${x}" y="${y + 13}" text-anchor="${anchor}" class="axv">${c.rating ?? '–'}${c.season != null ? ` <tspan class="axs">· ${c.season}</tspan>` : ''}</text>`;
   });
-  return `<svg class="radar" viewBox="-46 -4 352 248" role="img" aria-label="${t('radar')}">${s}</svg>`;
+  return `<svg class="radar" viewBox="-74 -8 448 282" role="img" aria-label="${t('hexagon')}">${s}</svg>
+    <div class="legend"><span><i style="background:${color}"></i>${t('hx_rating')}</span>${hx.has_season ? `<span><i style="background:var(--flag)"></i>${t('hx_season')}</span>` : ''}</div>`;
+}
+const attrCol = v => v == null ? '#B9C0C9' : v >= 85 ? '#1F7A45' : v >= 75 ? '#4C9A2A' : v >= 65 ? '#B98900' : v >= 50 ? '#D2691E' : '#B3261E';
+function attrCard(hx) {
+  // EA FC-style attribute breakdown: each category with its sub-attributes; ◉ = measured in this season's matches
+  return `<div class="attrs">${hx.categories.map(c => `<div class="acat">
+      <div class="ahead"><span class="num" style="color:${attrCol(c.rating)}">${c.rating ?? '–'}</span><strong>${esc(t('hx_' + c.key))}</strong></div>
+      <ul>${c.subs.map(r => `<li class="${r.kind}"><span>${r.kind === 'stat' ? '<i title="' + esc(t('measured')) + '">◉</i> ' : ''}${esc(t('sa_' + r.key))}</span>
+        <span class="aval num" style="color:${attrCol(r.value)}">${r.value ?? '–'}</span><span class="abar"><b style="width:${r.value ?? 0}%;background:${attrCol(r.value)}"></b></span></li>`).join('')}</ul>
+    </div>`).join('')}</div><p class="hint">${t('attrs_hint', { m: hx.min_minutes })}</p>`;
 }
 function pointsChart(rows) {
   if (!rows.length) return `<p class="hint">–</p>`;
@@ -1009,7 +1040,7 @@ async function openProfile(pid) {
   if (!$('profDlg').open) $('profDlg').showModal();
   const p = await (await fetch(`/api/fantasy/player/${pid}?matchday=${S.fx.md}`)).json();
   if (profPid !== pid) return;
-  const col = CLUB_COL()[p.club_id] || '#14213D', T = p.totals, rd = p.radar;
+  const col = CLUB_COL()[p.club_id] || '#14213D', T = p.totals, hx = p.hexagon;
   const trend = p.price_change_3 > 0 ? `<span class="up">▲ ${money(p.price_change_3)}</span>` : p.price_change_3 < 0 ? `<span class="down">▼ ${money(-p.price_change_3)}</span>` : '<span class="hint">=</span>';
   const tile = (k, v) => `<div><dt>${t(k)}</dt><dd class="num">${v ?? '–'}</dd></div>`;
   const [rx, ry] = ROLE_XY[p.role] || ROLE_XY[{ GK: 'GK', DEF: 'CB', MID: 'CM', FWD: 'ST' }[p.position]];
@@ -1019,22 +1050,23 @@ async function openProfile(pid) {
     ['t_acc', T.pass_accuracy != null ? T.pass_accuracy + '%' : null], ['s_def', T.def_actions], ...(p.position === 'GK' ? [['s_saves', T.saves]] : []),
     ['s_cards', `${T.yellow} / ${T.red}`], ['t_top', T.top_speed]];
   $('profBody').innerHTML = `
-    <div class="phead"><div class="jersey big" style="background:${col}">${p.shirt ?? ''}</div>
+    <div class="phead"><div class="ovr"><span class="num">${hx.overall}</span><small>${p.position}</small><div class="jersey" style="background:${col}">${p.shirt ?? ''}</div></div>
       <div class="pid"><h2 id="prName">${esc(p.name)}${p.player_id === fx.captain ? ' <span class="chip">C</span>' : ''}</h2>
         <div class="hint">${esc(p.full_name)} · ${esc(p.club_name)} · ${p.position} (${p.role || ''}) · ${p.age ?? ''} · ${p.nationality ?? ''} · ${t('foot_' + p.foot)} · ${p.height_cm ?? ''} cm</div>
         <div class="pills"><span class="pill st-${p.status}">${t('st_' + p.status)}</span>
           <span class="formbar" title="${t('form_pct_hint')}"><span>${t('f_form')}</span><span class="track"><b style="width:${p.form_pct ?? 0}%"></b></span><em class="num">${p.form_pct ?? '–'}%</em></span></div></div>
       <div class="pprice"><span class="num">€${money(p.price)}m</span><small>${trend} ${t('last3_md')}</small></div></div>
     <div class="pgrid">
-      <div><h3>${t('radar')}</h3>${radarSvg(rd, col)}
-        <p class="hint">${rd.axes.some(a => a.pct == null) ? t('radar_few', { m: rd.min_minutes }) : t('radar_hint', { n: rd.peers, pos: p.position })}</p>
-        <div class="chips">${rd.strengths.map(x => `<span class="chip">▲ ${esc(t('ax_' + rd.axes.find(a => a.label === x).axis))}</span>`).join('')}${rd.weaknesses.map(x => `<span class="chip neg">▼ ${esc(t('ax_' + rd.axes.find(a => a.label === x).axis))}</span>`).join('')}</div></div>
+      <div><h3>${t('hexagon')}</h3>${hexSvg(hx, col)}
+        <div class="chips">${hx.strengths.map(k => `<span class="chip">▲ ${esc(t('hx_' + k))}</span>`).join('')}${hx.weaknesses.map(k => `<span class="chip neg">▼ ${esc(t('hx_' + k))}</span>`).join('')}</div>
+        ${hx.has_season ? '' : `<p class="hint">${t('radar_few', { m: hx.min_minutes })}</p>`}</div>
       <div><h3>${t('scorecard')}</h3><dl class="tiles">${tile('p_points', p.points)}${tile('p_avg', p.avg_points)}${tile('p_last3', p.avg_last3)}${tile('p_home', p.avg_home)}${tile('p_away', p.avg_away)}${tile('p_proj', p.projected)}</dl>
         <p class="hint">${t('p_apps', { m: p.matches, s: p.starts, min: p.minutes })}</p>
         <div class="rolemap"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#2E7A4F"/><g fill="none" stroke="rgba(255,255,255,.7)" stroke-width=".8">
           <rect x="2" y="2" width="96" height="96"/><line x1="2" y1="50" x2="98" y2="50"/><circle cx="50" cy="50" r="10"/><rect x="25" y="2" width="50" height="15"/><rect x="25" y="83" width="50" height="15"/></g>
           <circle cx="${rx}" cy="${ry}" r="5" fill="var(--flag)" stroke="#fff" stroke-width="1"/></svg><span class="hint">${t('role')}: ${p.role || p.position}</span></div></div>
     </div>
+    <h3>${t('attributes')}</h3>${attrCard(hx)}
     <h3>${t('by_md')}</h3>${pointsChart(p.by_matchday)}
     <div class="pgrid"><div><h3>${t('last5')}</h3><ul class="plist">${p.last5.map(lastRow).join('') || '<li class="hint">–</li>'}</ul></div>
       <div><h3>${t('next5')}</h3><ul class="plist">${p.next5.map(fxRow).join('') || '<li class="hint">–</li>'}</ul></div></div>

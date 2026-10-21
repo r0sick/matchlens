@@ -279,16 +279,45 @@ def xg_shares(club_ids, matchday: int) -> dict:
 
 
 # --------------------------------------------------------------------------- player profile
-RADAR_AXES = {
-    "outfield": [("attack", "Attack"), ("creativity", "Creativity"), ("defence", "Defence"),
-                 ("passing", "Passing"), ("physical", "Physical")],
-    "GK": [("shot_stopping", "Shot-stopping"), ("clean_sheets", "Clean sheets"), ("distribution", "Distribution"),
-           ("availability", "Availability"), ("points", "Points")],
+# Attribute hexagon (EA FC-style card, Football Manager-style shape). Each category has sub-attributes:
+#   kind "attr"  -> the player's scouting attribute (1-99) that drives the simulator
+#   kind "stat"  -> measured in this season's matches, as a percentile against the same position (1-99)
+# The hexagon draws two shapes: ratings (attributes) and this season (measured percentiles).
+HEXAGON = {
+    "outfield": [
+        ("pac", "Pace", [("attr", "pace", "Pace"), ("stat", "top_speed", "Top speed"), ("stat", "sprints90", "Sprints per 90")]),
+        ("sho", "Shooting", [("attr", "finishing", "Finishing"), ("attr", "shot_power", "Shot power"),
+                             ("attr", "positioning", "Attacking positioning"), ("stat", "shots90", "Shots per 90"),
+                             ("stat", "xg90", "xG per 90")]),
+        ("pas", "Passing", [("attr", "passing", "Passing"), ("attr", "vision", "Vision"),
+                            ("stat", "pass_acc", "Pass accuracy"), ("stat", "kp90", "Key passes per 90"),
+                            ("stat", "prog90", "Progressive actions per 90")]),
+        ("dri", "Dribbling", [("attr", "dribbling", "Dribbling"), ("attr", "composure", "Composure"),
+                              ("stat", "drb90", "Dribbles per 90")]),
+        ("def", "Defending", [("attr", "tackling", "Tackling"), ("attr", "aerial", "Heading"),
+                              ("stat", "def90", "Defensive actions per 90")]),
+        ("phy", "Physical", [("attr", "stamina", "Stamina"), ("stat", "dist90", "Distance per 90"),
+                             ("stat", "availability", "Availability")]),
+    ],
+    "GK": [
+        ("div", "Diving", [("attr", "keeping", "Goalkeeping"), ("stat", "saves90", "Saves per 90")]),
+        ("han", "Handling", [("attr", "keeping", "Goalkeeping"), ("attr", "composure", "Composure"),
+                             ("stat", "conceded90", "Goals conceded per 90 (fewer is better)")]),
+        ("kic", "Kicking", [("attr", "passing", "Passing"), ("stat", "pass_acc", "Pass accuracy")]),
+        ("ref", "Reflexes", [("attr", "keeping", "Goalkeeping"), ("attr", "aerial", "Aerial reach"),
+                             ("stat", "save_pct", "Save percentage")]),
+        ("spd", "Speed", [("attr", "pace", "Pace"), ("stat", "top_speed", "Top speed")]),
+        ("pos", "Positioning", [("attr", "positioning", "Positioning"), ("stat", "clean_sheets", "Clean-sheet rate"),
+                                ("stat", "availability", "Availability")]),
+    ],
 }
 MIN_MINUTES_RADAR = 270
+ABSOLUTE = {"availability"}          # shown as share of possible minutes (1-99), not a percentile: most regulars tie
+INVERTED = {"conceded90"}            # lower is better
 
 
 def _per90(h: list[dict]) -> dict | None:
+    """Measured season values (per 90 where it makes sense); None below the minutes threshold."""
     mins = sum(r["minutes"] for r in h)
     if mins < MIN_MINUTES_RADAR:
         return None
@@ -297,23 +326,20 @@ def _per90(h: list[dict]) -> dict | None:
     f = 90 / mins
     passes = g("passes")
     return {
-        "attack": (g("xg") + g("goals") * 0.5 + 0.05 * g("shots")) * f,
-        "creativity": (g("xa") + 0.1 * g("key_passes") + 0.03 * g("dribbles")) * f,
-        "defence": g("def_actions") * f,
-        "passing": (g("passes_complete") / passes if passes else 0) + 0.004 * g("progressive") * f,
-        "physical": (g("distance_km") / max(1, len(played))) * 0.6 + 0.04 * g("sprints") * f
-                    + 0.02 * max((r.get("top_speed") or 0) for r in h),
-        "shot_stopping": g("saves") * f,
+        "top_speed": max((r.get("top_speed") or 0) for r in h), "sprints90": g("sprints") * f,
+        "shots90": g("shots") * f, "xg90": g("xg") * f,
+        "pass_acc": g("passes_complete") / passes if passes else 0, "kp90": g("key_passes") * f,
+        "prog90": g("progressive") * f, "drb90": g("dribbles") * f, "def90": g("def_actions") * f,
+        "dist90": g("distance_km") * f, "availability": mins / (90 * len(h)), "saves90": g("saves") * f,
+        "conceded90": g("conceded") * f,
+        "save_pct": g("saves") / (g("saves") + g("conceded")) if g("saves") + g("conceded") else 0,
         "clean_sheets": sum(1 for r in played if r["minutes"] >= 60 and r.get("conceded", 0) == 0) / max(1, len(played)),
-        "distribution": g("passes_complete") / passes if passes else 0,
-        "availability": mins / (90 * len(h)),
-        "points": g("points") / max(1, len(played)),
     }
 
 
 @lru_cache(maxsize=64)
 def _peer_values(position: str, matchday: int) -> dict:
-    """axis -> sorted list of per-90 values of same-position players with enough minutes."""
+    """key -> sorted measured values of same-position players with enough minutes."""
     out: dict[str, list] = {}
     for pid, P in load()["players"].items():
         if P["position"] != position:
@@ -325,26 +351,63 @@ def _peer_values(position: str, matchday: int) -> dict:
     return {k: sorted(v) for k, v in out.items()}
 
 
-def radar(pid: str, matchday: int) -> dict:
-    """Percentile (0-100) against players in the same position, before `matchday`."""
+@lru_cache(maxsize=1)
+def _attrs() -> dict:
+    league = json.loads((PATH.parent / "league.json").read_text(encoding="utf-8"))
+    return {p["player_id"]: p["attrs"] for c in league["clubs"] for p in c["squad"]}
+
+
+def _pct(vals: list, x: float) -> int:
+    below = sum(1 for v in vals if v < x) + 0.5 * sum(1 for v in vals if v == x)
+    return max(1, min(99, round(99 * below / len(vals))))
+
+
+def hexagon(pid: str, matchday: int) -> dict:
     P = load()["players"][pid]
-    axes = RADAR_AXES["GK" if P["position"] == "GK" else "outfield"]
+    attrs = _attrs().get(pid, {})
     mine = _per90(history(pid, matchday))
     peers = _peer_values(P["position"], matchday)
-    rows = []
-    for key, label in axes:
-        if not mine or not peers.get(key):
-            rows.append({"axis": key, "label": label, "pct": None})
+    cats = []
+    for key, label, subs in HEXAGON["GK" if P["position"] == "GK" else "outfield"]:
+        rows = []
+        for kind, k, sub_label in subs:
+            if kind == "attr":
+                rows.append({"kind": "attr", "key": k, "label": sub_label, "value": round(attrs.get(k, 0))})
+            else:
+                ok = mine is not None and peers.get(k)
+                if not ok:
+                    value = None
+                elif k in ABSOLUTE:
+                    value = max(1, min(99, round(99 * mine[k])))
+                else:
+                    value = _pct(peers[k], mine[k])
+                    if k in INVERTED:
+                        value = 100 - value
+                rows.append({"kind": "stat", "key": k, "label": sub_label, "value": value,
+                             "raw": round(mine[k], 2) if mine is not None else None})
+        a = [r["value"] for r in rows if r["kind"] == "attr"]
+        s = [r["value"] for r in rows if r["kind"] == "stat" and r["value"] is not None]
+        rating = round(sum(a) / len(a)) if a else None
+        season = round(sum(s) / len(s)) if s else None
+        cats.append({"key": key, "label": label, "rating": rating, "season": season, "subs": rows})
+    # strengths / weaknesses relative to the position: rating percentile among peers, blended with this season
+    peer_ratings = {c["key"]: [] for c in cats}
+    for q, Q in load()["players"].items():
+        if Q["position"] != P["position"]:
             continue
-        vals = peers[key]
-        below = sum(1 for x in vals if x < mine[key]) + 0.5 * sum(1 for x in vals if x == mine[key])
-        rows.append({"axis": key, "label": label, "pct": round(100 * below / len(vals)),
-                     "value": round(mine[key], 2)})
-    known = [r for r in rows if r["pct"] is not None]
-    strengths = [r["label"] for r in sorted(known, key=lambda r: -r["pct"]) if r["pct"] >= 70][:2]
-    weaknesses = [r["label"] for r in sorted(known, key=lambda r: r["pct"]) if r["pct"] <= 30][:2]
-    return {"axes": rows, "peers": len(peers.get(axes[0][0], [])), "strengths": strengths, "weaknesses": weaknesses,
-            "min_minutes": MIN_MINUTES_RADAR}
+        qa = _attrs().get(q, {})
+        for key, _, subs in HEXAGON["GK" if P["position"] == "GK" else "outfield"]:
+            a = [qa.get(k, 0) for kind, k, _ in subs if kind == "attr"]
+            peer_ratings[key].append(sum(a) / len(a))
+    for c in cats:
+        sub_a = [r["value"] for r in c["subs"] if r["kind"] == "attr"]
+        rp = _pct(sorted(peer_ratings[c["key"]]), sum(sub_a) / len(sub_a))
+        c["score"] = round((rp + c["season"]) / 2) if c["season"] is not None else rp
+    strengths = [c["key"] for c in sorted(cats, key=lambda c: -c["score"]) if c["score"] >= 70][:2]
+    weaknesses = [c["key"] for c in sorted(cats, key=lambda c: c["score"]) if c["score"] <= 30][:2]
+    return {"overall": P["overall"], "categories": cats, "strengths": strengths, "weaknesses": weaknesses,
+            "peers": len(next(iter(peers.values()), [])), "min_minutes": MIN_MINUTES_RADAR,
+            "has_season": mine is not None}
 
 
 def status(h: list[dict]) -> str:
@@ -390,7 +453,7 @@ def profile(pid: str, matchday: int) -> dict:
                   | {"xg": round(g("xg"), 2), "xa": round(g("xa"), 2),
                      "pass_accuracy": round(100 * g("passes_complete") / g("passes")) if g("passes") else None,
                      "def_actions": g("def_actions"), "top_speed": max([r.get("top_speed") or 0 for r in h] or [0])},
-        "radar": radar(pid, matchday),
+        "hexagon": hexagon(pid, matchday),
         "by_matchday": [{k: r.get(k) for k in ("md", "opponent", "home", "score", "minutes", "started", "points",
                                                "price", "goals", "assists", "rating", "reasons")} for r in h],
         "last5": [{k: r.get(k) for k in ("md", "opponent", "home", "score", "minutes", "started", "points")}

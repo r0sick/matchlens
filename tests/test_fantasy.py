@@ -120,9 +120,12 @@ def test_advisor_without_ai_uses_templates():
 def test_player_profile_radar_and_fixtures():
     pid = pid_of("Peiró", "THR")
     p = S.profile(pid, MD)
-    assert len(p["radar"]["axes"]) == 5 and all(0 <= a["pct"] <= 100 for a in p["radar"]["axes"])
+    hx = p["hexagon"]
+    assert [c["key"] for c in hx["categories"]] == ["pac", "sho", "pas", "dri", "def", "phy"]
+    assert all(1 <= r["value"] <= 99 for c in hx["categories"] for r in c["subs"])
     assert [r["md"] for r in p["by_matchday"]] == list(range(1, MD))          # history only, no spoilers
     assert len(p["next5"]) == 5 and p["next5"][0]["md"] == MD and p["status"] == "starter"
     gk = next(k for k, P in S.load()["players"].items() if P["position"] == "GK")
-    assert S.radar(gk, MD)["axes"][0]["axis"] == "shot_stopping"
-    assert S.radar(pid, 1)["axes"][0]["pct"] is None                          # no minutes before matchday 1
+    assert S.hexagon(gk, MD)["categories"][0]["key"] == "div"
+    early = S.hexagon(pid, 1)                                                 # no minutes before matchday 1
+    assert not early["has_season"] and early["categories"][0]["season"] is None
