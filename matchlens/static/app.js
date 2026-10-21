@@ -61,7 +61,8 @@ const I18N = {
     advisor: 'Transfer Advisor', advisor_hint: 'Choose “Advice” on a player: hold, watch or sell, with the reasons and affordable replacements.',
     calls: 'Live calls', call_pts: 'call points', my_calls: 'My calls', no_calls: 'No calls yet.',
     calls_hint: 'Predict what happens next. Odds come from the live models; a correct call pays 10 ÷ its probability. Calls never change Fantasy points.',
-    fx_meta: 'Matchday {md} · €{cost}m of €{budget}m · bank €{bank}m', fx_unavailable: 'Fantasy uses the Aurora League season: pick a Matchday match to play.',
+    fx_meta: 'Matchday {md} · €{cost}m of €{budget}m · bank €{bank}m', fx_unavailable: 'Fantasy uses the Aurora League season, and this is a demo match outside it. Pick a Matchday match to play.',
+    fx_go: 'Watch Matchday 10 · Kingsmere United v Thornbury Rovers',
     in_match: 'In this match', not_playing: 'Not in this match', advice: 'Advice', asking: 'The advisor is looking at {name}…',
     next_goal: 'Next goal', no_more: 'No more goals', scorer: 'To score', booked: 'To be booked', pays: 'pays {n}',
     won: 'won', lost: 'lost', open_call: 'open', calls_closed: 'Calls are closed: the match is over.',
@@ -146,7 +147,8 @@ const I18N = {
     advisor: 'Asesor de fichajes', advisor_hint: 'Pulsa «Consejo» en un jugador: mantener, vigilar o vender, con los motivos y sustitutos asequibles.',
     calls: 'Predicciones en directo', call_pts: 'puntos de predicción', my_calls: 'Mis predicciones', no_calls: 'Aún no hay predicciones.',
     calls_hint: 'Predice lo que va a pasar. Las cuotas salen de los modelos en directo; un acierto paga 10 ÷ su probabilidad. Las predicciones nunca cambian los puntos Fantasy.',
-    fx_meta: 'Jornada {md} · {cost} M€ de {budget} M€ · banco {bank} M€', fx_unavailable: 'Fantasy usa la temporada de la Aurora League: elige un partido de una jornada.',
+    fx_meta: 'Jornada {md} · {cost} M€ de {budget} M€ · banco {bank} M€', fx_unavailable: 'Fantasy usa la temporada de la Aurora League y este es un partido de demostración fuera de ella. Elige un partido de una jornada.',
+    fx_go: 'Ver la jornada 10 · Kingsmere United - Thornbury Rovers',
     in_match: 'Juega este partido', not_playing: 'No juega este partido', advice: 'Consejo', asking: 'El asesor está analizando a {name}…',
     next_goal: 'Próximo gol', no_more: 'No habrá más goles', scorer: 'Marca', booked: 'Ve tarjeta', pays: 'paga {n}',
     won: 'acertada', lost: 'fallada', open_call: 'abierta', calls_closed: 'Predicciones cerradas: el partido ha terminado.',
@@ -195,6 +197,7 @@ const S = {
 let viewerId = 'v-' + Math.random().toString(36).slice(2, 12);
 try { viewerId = localStorage.getItem('matchlens.viewer') || viewerId; localStorage.setItem('matchlens.viewer', viewerId); } catch (e) { /* storage unavailable */ }
 const PREFS_KEY = 'matchlens.prefs';
+const DEMO_MATCH = 'AUR26-MD10-KMU-THR';
 let prefs = { lang: params.get('lang') || 'en', favClub: null, favPlayer: null };
 try { prefs = { ...prefs, ...JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') }; } catch (e) { /* storage unavailable */ }
 if (params.get('lang')) prefs.lang = params.get('lang');
@@ -252,7 +255,7 @@ async function loadCatalogue() {
   else if (prefs.favClub) {
     const fm = S.catalogue.find(m => m.home.team_id === prefs.favClub || m.away.team_id === prefs.favClub);
     if (fm) $('match').value = fm.match_id;
-  }
+  } else if (S.catalogue.some(m => m.match_id === DEMO_MATCH)) $('match').value = DEMO_MATCH;   // the showcase match
   // URL values that are not in the drop-downs are added, so any speed / start minute can be linked to
   for (const [key, el, label] of [['speed', 'speed', v => `${v}×`], ['from', 'from', v => `From ${v}'`]]) {
     const v = params.get(key);
@@ -774,7 +777,9 @@ const money = v => (+v).toFixed(1);
 async function onFantasyHello(f) {
   S.fx.live = (f && f.points) || {}; S.fx.quotes = f && f.quotes;
   const md = f && f.season ? f.matchday : null;
-  $('fxNote').hidden = !!md; $('fxNote').textContent = md ? '' : t('fx_unavailable');
+  $('fxNote').hidden = !!md;
+  document.querySelector('#fantasy .fgrid').hidden = !md;
+  if (!md) $('fxNote').innerHTML = `<p>${t('fx_unavailable')}</p><button class="primary" id="fxGo">${t('fx_go')}</button>`;
   if (!md) { S.fx.md = null; renderFantasy(); return; }
   try {
     if (!S.fx.meta) S.fx.meta = await (await fetch('/api/fantasy/meta')).json();
@@ -798,6 +803,10 @@ async function resetSquad() {
   fx.captain = live[0] || r.squad[0];
   saveFx(); S.fx.advice = null;
 }
+$('fxNote').addEventListener('click', e => {
+  if (!e.target.closest('#fxGo')) return;
+  $('match').value = DEMO_MATCH; connect(false);
+});
 $('fxReset').onclick = async () => { if (S.fx.md) { await resetSquad(); renderFantasy(); } };
 
 function inMatch(pid) {

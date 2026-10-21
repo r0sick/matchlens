@@ -18,6 +18,7 @@
   --font-cond: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", var(--font);
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { margin: 0; }
 body { background: var(--paper); color: var(--ink); font: 15px/1.45 var(--font); }
 button, select, input { font: inherit; color: inherit; }
@@ -222,6 +223,8 @@ details.trace .bad { color: #A33; }
 .fcalls li.won .st { color: #1F5C3A; font-weight: 700; }
 .fcalls li.lost { color: var(--ink-2); }
 
+.fxempty { max-width: 640px; margin: 30px auto; text-align: center; padding: 24px; }
+.fxempty button { background: var(--flag); border: 0; border-radius: var(--radius-s); padding: 9px 16px; font-weight: 600; cursor: pointer; }
 /* fantasy: pitch line-up */
 .fpitch { margin-top: 6px; }
 .pfield { position: relative; display: flex; flex-direction: column; justify-content: space-around; gap: 10px; min-height: 470px; padding: 18px 8px;
