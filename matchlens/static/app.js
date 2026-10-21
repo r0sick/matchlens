@@ -252,10 +252,16 @@ async function loadCatalogue() {
     `<option value="${m.match_id}">${m.source === 'demo' ? 'Demo · ' : 'Matchday ' + (m.competition.matchday || '') + ' · '}${m.home.name} v ${m.away.name}</option>`).join('');
   const want = params.get('match');
   if (want && S.catalogue.some(m => m.match_id === want)) $('match').value = want;
-  else if (prefs.favClub) {
-    const fm = S.catalogue.find(m => m.home.team_id === prefs.favClub || m.away.team_id === prefs.favClub);
+  else {
+    // the showcase match, unless a favourite club is set: then that club's showcase-matchday match (season, not demo)
+    const plays = m => m.home.team_id === prefs.favClub || m.away.team_id === prefs.favClub;
+    const show = S.catalogue.find(m => m.match_id === DEMO_MATCH);
+    const md = show ? show.competition.matchday : null;
+    const fm = prefs.favClub && (S.catalogue.find(m => m.source === 'season' && plays(m) && m.competition.matchday === md)
+                                 || S.catalogue.find(m => m.source === 'season' && plays(m)));
     if (fm) $('match').value = fm.match_id;
-  } else if (S.catalogue.some(m => m.match_id === DEMO_MATCH)) $('match').value = DEMO_MATCH;   // the showcase match
+    else if (show) $('match').value = DEMO_MATCH;
+  }
   // URL values that are not in the drop-downs are added, so any speed / start minute can be linked to
   for (const [key, el, label] of [['speed', 'speed', v => `${v}×`], ['from', 'from', v => `From ${v}'`]]) {
     const v = params.get(key);
