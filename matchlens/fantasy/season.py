@@ -138,7 +138,7 @@ def default_squad(matchday: int, focus_clubs: tuple[str, ...] = (), budget: floa
     rows = []
     for pid, P in F["players"].items():
         proj = projection(pid, matchday)
-        bonus = 0.6 if P["club_id"] in focus_clubs else 0.0
+        bonus = 2.5 if P["club_id"] in focus_clubs else 0.0     # so live points show while watching
         rows.append((proj + bonus, pid, P["position"], P["club"], price(pid, matchday)))
     squad, spent, clubs = [], 0.0, {}
     need = dict(SQUAD_SHAPE)

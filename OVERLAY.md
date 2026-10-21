@@ -55,6 +55,8 @@ Every message has the same envelope, so a renderer can schedule it against the m
 | `players` | Every 10 s of wall time and at period end | Per-player live stats and rating (passes, accuracy, average pass difficulty, xG, xA, key passes, tackles, distance, top speed, rating …) |
 | `narrative` | A goal, red card, big chance or 15-minute state-of-play read. Sent twice with the same `moment_id`: first `status: "draft"` (instant template text), then `status: "final"` (AI newsroom) | `moment_id`, `kind`, `display_minute`, `status`, `source`, `model`, `fallback`, `texts` {lang: {`caption`, `commentary`, `fan`, `analyst`}}, `trace`, `latency_ms` |
 | `recap` | Half time and full time, draft then final, like `narrative` | `texts` {lang: {`headline`, `studio_script`, `article`, `social`, `player_of_the_match`}} |
+| `fantasy` | Every 5 s of wall time and right after goals, cards, subs, saves and period ends | `matchday` (null outside the Fantasy season), `points` {player_id: {`points`, `minutes`, `position`, `reasons` [{`code`, `label`, `count`, `pts`}], `rating`, `provisional`}}, `quotes` {`open`, `next_goal` {home, none, away}, `scorer` {player_id: p}, `booked` {player_id: p}} |
+| `calls` | To one viewer only: after connecting, after placing a call and when one of their calls settles | `points`, `won`, `lost`, `calls` [{`call_id`, `kind`, `target`, `label`, `p`, `pays`, `minute`, `status`}], optional `placed` / `settled` |
 | `session` | On pause, resume, speed change, restart and full time | `speed`, `paused`, `done`, `progress`, `viewers` |
 | `error` | Bad match id or command | `message` |
 
@@ -88,7 +90,13 @@ Send JSON over the socket, or POST it to `/api/sessions/{match_id}/control`:
 {"action": "speed", "speed": 120}
 {"action": "restart", "speed": 60, "from_minute": 70}
 {"action": "lang", "lang": "fr"}      // WebSocket only: also translate narratives into this language
+{"action": "call", "kind": "scorer", "target": "P0106"}   // WebSocket only: a live call (next_goal: home|none|away; scorer / booked: player_id)
+{"action": "calls"}                   // WebSocket only: resend my calls
 ```
+
+Pass `?viewer=<token>` on the WebSocket so a viewer keeps their calls across reconnects.
+A correct call pays `round(10 / p)` call points, where `p` is the model probability when it was made
+(at most 3 open calls). Calls never change Fantasy points.
 
 The WebSocket also accepts `?lang=fr`. The newsroom writes English plus the viewers' languages and the
 clubs' home-market languages (up to three).
@@ -100,3 +108,7 @@ clubs' home-market languages (up to three).
 | `GET /api/matches` | Available matches (demo and season), no final scores |
 | `GET /api/matches/{match_id}` | Match summary and session status |
 | `GET /api/sessions/{match_id}/state` | Full current snapshot, including every player |
+| `GET /api/fantasy/meta` | Budget, squad shape, club limit, clubs |
+| `GET /api/fantasy/players?matchday=10` | Every player as of a matchday: price, points, form, goals, xG, projection (earlier matchdays only) |
+| `GET /api/fantasy/squad?matchday=10&match_id=…` | A suggested 15-player squad within budget |
+| `POST /api/fantasy/advice` | `{player_id, squad, matchday, bank, lang}` → Transfer Advisor verdict, reasons, replacements, texts, trace |

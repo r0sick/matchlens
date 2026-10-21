@@ -108,6 +108,27 @@ for ev in iter_live(m["events"], speed=60):
     ...  # push into the interpretation layer
 ```
 
+## Stage 5 – Fantasy: live points, live calls and a Transfer Advisor (`matchlens/fantasy/`)
+
+Open the **Fantasy** tab while watching a matchday match (e.g. *Matchday 10 · Kingsmere United v Thornbury Rovers*).
+
+- **Live points with reasons.** Every point has a reason ("Goal +5", "60+ min +2", "Yellow −1",
+  "Bonus +3 provisional"). Rules are in `matchlens/fantasy/scoring.py`. The same scorer runs live and
+  built the season table (`python tools/build_fantasy.py` → `data/season_2026-27/fantasy.json`), and a
+  test checks that live totals equal the season table. Fan input never changes official points.
+- **Squad.** 15 players (2 GK, 5 DEF, 5 MID, 3 FWD), €100m, at most 3 per club. Prices start from player
+  quality and position and move with form. A suggested squad is ready-made; transfers are made from the advisor.
+- **Live calls.** Next goal, to score, to be booked, with odds from the live models (next-goal model,
+  each player's share of their club's expected goals, fouls and chaos for cards). A correct call pays
+  10 ÷ probability, so every call is worth the same on average: skill at reading the match, not safe picks.
+- **Transfer Advisor** (Agent Framework workflow): `Scout` (code: form vs price, season output,
+  goals vs xG, minutes trend, next fixtures → HOLD / WATCH / SELL and affordable replacements) →
+  `Advisor` agent (explains, may call the MCP tool `get_fantasy_player`) → deterministic `FactChecker`
+  (numbers grounded, verdict unchanged, only listed replacements) with retries → `Localiser`.
+  The verdict is decided by transparent rules; the model only explains it. Without AI, template text.
+
+No spoilers: Fantasy data is always "as of" the matchday being watched.
+
 ## What the engine models
 
 - **Fictional Aurora League**: 10 clubs across 7 fan markets (en, es, fr, de, it, pt, nl) with distinct formations (4-3-3, 4-2-3-1, 4-4-2, 3-5-2, 3-4-3) and tactical styles (possession, press, directness, tempo, width, line height). Squads of 23 with 14 nationalities and 12 attributes per player.

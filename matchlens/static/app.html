@@ -27,6 +27,7 @@
     <button data-mode="broadcast" aria-pressed="true" data-i18n="broadcast">Broadcast</button>
     <button data-mode="analyst" aria-pressed="false" data-i18n="analyst">Analyst</button>
     <button data-mode="fan" aria-pressed="false" data-i18n="fan">Fan</button>
+    <button data-mode="fantasy" aria-pressed="false" data-i18n="fantasy">Fantasy</button>
   </div>
   <span class="spacer"></span>
   <span class="conn" id="aiBadge"></span>
@@ -130,6 +131,35 @@
       <div class="card" style="margin-top:18px">
         <h2 data-i18n="story">The story so far</h2>
         <ul class="timeline" id="timeline"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FANTASY ============================== -->
+  <section id="fantasy" class="view">
+    <p class="hint" id="fxNote" hidden></p>
+    <div class="fgrid">
+      <div class="card fsquad">
+        <div class="fhead">
+          <div><h2 data-i18n="my_squad">My squad</h2><div class="hint" id="fxMeta"></div></div>
+          <div class="ftotal"><span class="num" id="fxTotal">0</span><small data-i18n="live_pts">live points</small></div>
+        </div>
+        <ul class="flist" id="fxSquad"></ul>
+        <div class="factions"><button id="fxReset" data-i18n="reset_squad">Use suggested squad</button>
+          <span class="hint" data-i18n="squad_hint">Tap ★ to pick your captain (double points). Ask the advisor about any player.</span></div>
+      </div>
+      <div class="fside">
+        <div class="card">
+          <h2 data-i18n="advisor">Transfer Advisor</h2>
+          <div id="fxAdvice"><p class="hint" data-i18n="advisor_hint">Choose “Advice” on a player: hold, watch or sell, with the reasons and affordable replacements.</p></div>
+        </div>
+        <div class="card">
+          <div class="fhead"><h2 data-i18n="calls">Live calls</h2><div class="ftotal sm"><span class="num" id="fxCallPts">0</span><small data-i18n="call_pts">call points</small></div></div>
+          <p class="hint" data-i18n="calls_hint">Predict what happens next. Odds come from the live models; a correct call pays 10 ÷ its probability. Calls never change Fantasy points.</p>
+          <div id="fxQuotes"></div>
+          <h3 data-i18n="my_calls">My calls</h3>
+          <ul class="fcalls" id="fxCalls"></ul>
+        </div>
       </div>
     </div>
   </section>

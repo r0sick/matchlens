@@ -55,6 +55,22 @@ const I18N = {
     lang_hint: 'Menus are in English or Spanish; match commentary is written in every listed language.',
     st_analyst: 'Analyst', st_writer: 'Writer', st_fact_check: 'Fact check', st_recap_editor: 'Studio editor',
     st_localiser: 'Translator', tools: 'tools', retry: 'retry', secs: 's',
+    // fantasy
+    fantasy: 'Fantasy', my_squad: 'My squad', live_pts: 'live points', reset_squad: 'Use suggested squad',
+    squad_hint: 'Tap ★ to pick your captain (double points). Ask the advisor about any player.',
+    advisor: 'Transfer Advisor', advisor_hint: 'Choose “Advice” on a player: hold, watch or sell, with the reasons and affordable replacements.',
+    calls: 'Live calls', call_pts: 'call points', my_calls: 'My calls', no_calls: 'No calls yet.',
+    calls_hint: 'Predict what happens next. Odds come from the live models; a correct call pays 10 ÷ its probability. Calls never change Fantasy points.',
+    fx_meta: 'Matchday {md} · €{cost}m of €{budget}m · bank €{bank}m', fx_unavailable: 'Fantasy uses the Aurora League season: pick a Matchday match to play.',
+    in_match: 'In this match', not_playing: 'Not in this match', advice: 'Advice', asking: 'The advisor is looking at {name}…',
+    next_goal: 'Next goal', no_more: 'No more goals', scorer: 'To score', booked: 'To be booked', pays: 'pays {n}',
+    won: 'won', lost: 'lost', open_call: 'open', calls_closed: 'Calls are closed: the match is over.',
+    replacements: 'Affordable replacements', transfer_in: 'Transfer in', ppm: '{p} pts/match projected',
+    v_HOLD: 'Hold', v_WATCH: 'Watch', v_SELL: 'Sell', st_scout: 'Scout (rules)', st_advisor: 'Advisor',
+    r_appearance: 'Played', r_appearance_60: '60+ min', r_goal: 'Goal', r_assist: 'Assist', r_clean_sheet: 'Clean sheet',
+    r_conceded: 'Conceded', r_saves: 'Saves', r_defensive: 'Defensive work', r_yellow: 'Yellow', r_red: 'Red',
+    r_own_goal: 'Own goal', r_bonus: 'Bonus', provisional: 'provisional', captain: 'Captain',
+    f_form: 'form', f_pts: 'pts', transferred: '{out} out, {in} in.',
   },
   es: {
     watch: 'Ver', pause: 'Pausa', resume: 'Reanudar', broadcast: 'Retransmisión', analyst: 'Analista', fan: 'Afición',
@@ -102,6 +118,21 @@ const I18N = {
     lang_hint: 'Los menús están en inglés o español; los comentarios se escriben en todos los idiomas de la lista.',
     st_analyst: 'Analista', st_writer: 'Redactor', st_fact_check: 'Verificación', st_recap_editor: 'Editor',
     st_localiser: 'Traductor', tools: 'herramientas', retry: 'reintento', secs: 's',
+    fantasy: 'Fantasy', my_squad: 'Mi plantilla', live_pts: 'puntos en directo', reset_squad: 'Usar plantilla sugerida',
+    squad_hint: 'Pulsa ★ para elegir capitán (puntos dobles). Pide consejo sobre cualquier jugador.',
+    advisor: 'Asesor de fichajes', advisor_hint: 'Pulsa «Consejo» en un jugador: mantener, vigilar o vender, con los motivos y sustitutos asequibles.',
+    calls: 'Predicciones en directo', call_pts: 'puntos de predicción', my_calls: 'Mis predicciones', no_calls: 'Aún no hay predicciones.',
+    calls_hint: 'Predice lo que va a pasar. Las cuotas salen de los modelos en directo; un acierto paga 10 ÷ su probabilidad. Las predicciones nunca cambian los puntos Fantasy.',
+    fx_meta: 'Jornada {md} · {cost} M€ de {budget} M€ · banco {bank} M€', fx_unavailable: 'Fantasy usa la temporada de la Aurora League: elige un partido de una jornada.',
+    in_match: 'Juega este partido', not_playing: 'No juega este partido', advice: 'Consejo', asking: 'El asesor está analizando a {name}…',
+    next_goal: 'Próximo gol', no_more: 'No habrá más goles', scorer: 'Marca', booked: 'Ve tarjeta', pays: 'paga {n}',
+    won: 'acertada', lost: 'fallada', open_call: 'abierta', calls_closed: 'Predicciones cerradas: el partido ha terminado.',
+    replacements: 'Sustitutos asequibles', transfer_in: 'Fichar', ppm: '{p} pts/partido previstos',
+    v_HOLD: 'Mantener', v_WATCH: 'Vigilar', v_SELL: 'Vender', st_scout: 'Ojeador (reglas)', st_advisor: 'Asesor',
+    r_appearance: 'Jugó', r_appearance_60: '60+ min', r_goal: 'Gol', r_assist: 'Asistencia', r_clean_sheet: 'Portería a cero',
+    r_conceded: 'Goles encajados', r_saves: 'Paradas', r_defensive: 'Trabajo defensivo', r_yellow: 'Amarilla', r_red: 'Roja',
+    r_own_goal: 'Gol en propia', r_bonus: 'Bonus', provisional: 'provisional', captain: 'Capitán',
+    f_form: 'forma', f_pts: 'pts', transferred: 'Sale {out}, entra {in}.',
   },
 };
 const CAUSE = { en: { goal: 'goal', card: 'card', shot: 'shot' }, es: { goal: 'gol', card: 'tarjeta', shot: 'tiro' } };
@@ -113,7 +144,10 @@ const S = {
   ws: null, meta: null, state: null, series: [], players: {}, keyEvents: [], passes: [], timeline: new Map(),
   mode: params.get('mode') || 'broadcast', paused: false, done: false, sort: { key: 'rating', dir: -1 },
   passSide: 'home', clubs: [], catalogue: [], narr: new Map(), recaps: {}, newsroom: null,
+  fx: { md: null, players: {}, live: {}, quotes: null, calls: null, advice: null, meta: null },
 };
+let viewerId = 'v-' + Math.random().toString(36).slice(2, 12);
+try { viewerId = localStorage.getItem('matchlens.viewer') || viewerId; localStorage.setItem('matchlens.viewer', viewerId); } catch (e) { /* storage unavailable */ }
 const PREFS_KEY = 'matchlens.prefs';
 let prefs = { lang: params.get('lang') || 'en', favClub: null, favPlayer: null };
 try { prefs = { ...prefs, ...JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') }; } catch (e) { /* storage unavailable */ }
@@ -186,7 +220,7 @@ function connect(restart = false) {
   if (S.ws) { S.ws.onclose = null; S.ws.close(); }
   resetView();
   const id = $('match').value, proto = location.protocol === 'https:' ? 'wss' : 'ws';
-  const url = `${proto}://${location.host}/ws/${id}?speed=${+$('speed').value || 60}&from_minute=${+$('from').value || 0}&restart=${restart ? 1 : 0}&lang=${prefs.lang}`;
+  const url = `${proto}://${location.host}/ws/${id}?speed=${+$('speed').value || 60}&from_minute=${+$('from').value || 0}&restart=${restart ? 1 : 0}&lang=${prefs.lang}&viewer=${encodeURIComponent(viewerId)}`;
   $('conn').textContent = t('connecting');
   const ws = new WebSocket(url);
   S.ws = ws;
@@ -213,7 +247,9 @@ function handle(m) {
     case 'session': onSession(m.payload); break;
     case 'narrative': onNarrative(m.payload); break;
     case 'recap': onRecap(m.payload); break;
-    case 'error': $('conn').textContent = m.payload.message; break;
+    case 'fantasy': S.fx.live = m.payload.points || {}; S.fx.quotes = m.payload.quotes; if (S.mode === 'fantasy') renderFantasy(); break;
+    case 'calls': S.fx.calls = m.payload; if (S.mode === 'fantasy') renderCalls(); break;
+    case 'error': if (S.mode === 'fantasy') { $('fxCalls').insertAdjacentHTML('afterbegin', `<li class="lost">${esc(m.payload.message)}</li>`); } else $('conn').textContent = m.payload.message; break;
   }
 }
 
@@ -240,6 +276,7 @@ function onHello(p) {
   (p.narratives || []).forEach(n => (n.kind === 'half_time' || n.kind === 'full_time') ? onRecap(n, true) : onNarrative(n, true));
   const sess = p.state.session || {};
   onSession({ speed: sess.speed, paused: sess.paused, done: sess.done });
+  onFantasyHello(p.fantasy);
   renderState(); renderAll();
 }
 
@@ -677,7 +714,142 @@ function renderAll() {
   renderState(); renderTimeline(); renderNotes(); renderRecap(); renderAiBadge();
   if (S.mode === 'analyst') { renderCharts(); renderShotMap(); renderPassMap(); renderPlayers(); }
   if (S.mode === 'fan') renderFan();
+  if (S.mode === 'fantasy') renderFantasy();
 }
+
+// ------------------------------------------------------------------ fantasy
+const FX_KEY = 'matchlens.fantasy';
+const POS_ORDER = ['GK', 'DEF', 'MID', 'FWD'];
+let fx = { squad: [], captain: null, md: null };
+try { fx = { ...fx, ...JSON.parse(localStorage.getItem(FX_KEY) || '{}') }; } catch (e) { /* storage unavailable */ }
+const saveFx = () => { try { localStorage.setItem(FX_KEY, JSON.stringify(fx)); } catch (e) { /* storage unavailable */ } };
+const money = v => (+v).toFixed(1);
+
+async function onFantasyHello(f) {
+  S.fx.live = (f && f.points) || {}; S.fx.quotes = f && f.quotes;
+  const md = f && f.season ? f.matchday : null;
+  $('fxNote').hidden = !!md; $('fxNote').textContent = md ? '' : t('fx_unavailable');
+  if (!md) { S.fx.md = null; renderFantasy(); return; }
+  try {
+    if (!S.fx.meta) S.fx.meta = await (await fetch('/api/fantasy/meta')).json();
+    if (S.fx.md !== md) {
+      const rows = await (await fetch(`/api/fantasy/players?matchday=${md}`)).json();
+      S.fx.players = Object.fromEntries(rows.map(r => [r.player_id, r]));
+      S.fx.md = md; S.fx.advice = null;
+    }
+    // keep the manager's squad across matchdays; build the suggested one the first time
+    if (!fx.squad.length || fx.squad.some(p => !S.fx.players[p])) await resetSquad();
+  } catch (e) { $('fxNote').hidden = false; $('fxNote').textContent = t('fx_unavailable'); }
+  renderFantasy();
+}
+
+async function resetSquad() {
+  const r = await (await fetch(`/api/fantasy/squad?matchday=${S.fx.md}&match_id=${encodeURIComponent($('match').value)}`)).json();
+  fx = { squad: r.squad, captain: null, md: S.fx.md };
+  const live = r.squad.filter(p => S.meta && inMatch(p)).sort((a, b) => S.fx.players[b].projected - S.fx.players[a].projected);
+  fx.captain = live[0] || r.squad[0];
+  saveFx(); S.fx.advice = null;
+}
+$('fxReset').onclick = async () => { if (S.fx.md) { await resetSquad(); renderFantasy(); } };
+
+function inMatch(pid) {
+  return S.meta && [...S.meta.home.starting_xi, ...S.meta.home.bench, ...S.meta.away.starting_xi, ...S.meta.away.bench]
+    .some(p => p.player_id === pid);
+}
+const livePts = pid => { const r = S.fx.live[pid]; return r ? r.points * (pid === fx.captain ? 2 : 1) : 0; };
+
+function renderFantasy() {
+  if (!S.fx.md || !fx.squad.length) { $('fxSquad').innerHTML = ''; $('fxMeta').textContent = ''; $('fxTotal').textContent = '–'; renderCalls(); return; }
+  const P = S.fx.players, budget = S.fx.meta ? S.fx.meta.budget : 100;
+  const cost = fx.squad.reduce((a, p) => a + (P[p]?.price || 0), 0);
+  $('fxMeta').textContent = t('fx_meta', { md: S.fx.md, cost: money(cost), budget: money(budget), bank: money(budget - cost) });
+  $('fxTotal').textContent = fx.squad.reduce((a, p) => a + livePts(p), 0);
+  const rows = [...fx.squad].sort((a, b) => POS_ORDER.indexOf(P[a].position) - POS_ORDER.indexOf(P[b].position)
+    || (inMatch(b) - inMatch(a)) || P[b].price - P[a].price);
+  $('fxSquad').innerHTML = rows.map(pid => {
+    const p = P[pid], r = S.fx.live[pid], here = inMatch(pid), cap = pid === fx.captain;
+    const reasons = r ? r.reasons.map(x => `<span class="chip ${x.pts < 0 ? 'neg' : ''}">${esc(t('r_' + x.code))} ${x.pts > 0 ? '+' : ''}${x.pts}</span>`).join('') : '';
+    const status = here ? (r ? `${r.minutes}' ${r.provisional ? '· ' + t('provisional') : ''}` : t('in_match')) : t('not_playing');
+    return `<li class="${here ? 'here' : ''}" data-pid="${pid}">
+      <button class="cap ${cap ? 'on' : ''}" data-cap="${pid}" title="${t('captain')}" aria-pressed="${cap}">★</button>
+      <span class="pos">${p.position}</span>
+      <div class="who"><strong>${esc(p.name)}</strong> <span class="hint">${p.club} · €${money(p.price)}m · ${t('f_form')} ${p.form}</span>
+        <div class="chips">${here ? '<span class="dot"></span>' : ''}<span class="hint">${esc(status)}</span>${reasons}</div></div>
+      <span class="pts num">${here && r ? livePts(pid) : '–'}</span>
+      <button class="adv" data-adv="${pid}">${t('advice')}</button></li>`;
+  }).join('');
+  renderCalls(); renderAdvice();
+}
+$('fxSquad').addEventListener('click', e => {
+  const c = e.target.closest('[data-cap]'), a = e.target.closest('[data-adv]');
+  if (c) { fx.captain = c.dataset.cap; saveFx(); renderFantasy(); }
+  if (a) askAdvisor(a.dataset.adv);
+});
+
+async function askAdvisor(pid) {
+  const P = S.fx.players, budget = S.fx.meta ? S.fx.meta.budget : 100;
+  const bank = Math.max(0, budget - fx.squad.reduce((a, p) => a + (P[p]?.price || 0), 0));
+  S.fx.advice = { loading: P[pid].name, pid };
+  renderAdvice();
+  try {
+    const r = await fetch('/api/fantasy/advice', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ player_id: pid, squad: fx.squad, matchday: S.fx.md, bank: +bank.toFixed(1), lang: prefs.lang }) });
+    S.fx.advice = await r.json();
+  } catch (e) { S.fx.advice = null; }
+  renderAdvice();
+}
+function renderAdvice() {
+  const a = S.fx.advice, el = $('fxAdvice');
+  if (!a) { el.innerHTML = `<p class="hint">${t('advisor_hint')}</p>`; return; }
+  if (a.loading) { el.innerHTML = `<p class="hint">${t('asking', { name: esc(a.loading) })}</p>`; return; }
+  const tx = (a.texts && (a.texts[prefs.lang] || a.texts.en)) || {};
+  const reasons = a.sheet.reasons.map(r => {
+    const w = Math.min(100, Math.abs(r.effect) * 33);
+    return `<li><span class="bar"><i class="${r.effect < 0 ? 'neg' : ''}" style="width:${w}%"></i></span><span class="eff num">${r.effect > 0 ? '+' : ''}${r.effect}</span>${esc(r.text)}</li>`;
+  }).join('');
+  const reps = a.sheet.replacements.map(r => `<li><div><strong>${esc(r.name)}</strong> <span class="hint">${r.club} · €${money(r.price)}m · ${t('ppm', { p: r.projected_points_per_match })}</span></div>
+      <button data-in="${r.player_id}" data-out="${a.player_id}">${t('transfer_in')}</button></li>`).join('');
+  el.innerHTML = `<div class="verdict v-${a.verdict}">${t('v_' + a.verdict)}</div>
+    <h3 class="advh">${esc(tx.headline)}${srcBadge({ ...a, status: 'final' })}</h3>
+    <p>${esc(tx.explanation)}</p><p class="hint">${esc(tx.replacement_note)}</p>
+    <ul class="reasons">${reasons}</ul>
+    ${reps ? `<h3>${t('replacements')}</h3><ul class="reps">${reps}</ul>` : ''}${traceHtml(a)}`;
+}
+$('fxAdvice').addEventListener('click', e => {
+  const b = e.target.closest('[data-in]'); if (!b) return;
+  const out = b.dataset.out, inn = b.dataset.in;
+  fx.squad = fx.squad.map(p => (p === out ? inn : p));
+  if (fx.captain === out) fx.captain = inn;
+  saveFx();
+  const msg = t('transferred', { out: S.fx.players[out].name, in: S.fx.players[inn].name });
+  S.fx.advice = null; renderFantasy();
+  $('fxAdvice').innerHTML = `<p><strong>${esc(msg)}</strong></p>`;
+});
+
+function renderCalls() {
+  const q = S.fx.quotes, c = S.fx.calls;
+  $('fxCallPts').textContent = c ? c.points : 0;
+  $('fxCalls').innerHTML = c && c.calls.length ? [...c.calls].reverse().map(x =>
+    `<li class="${x.status}"><span class="m">${esc(x.minute)}</span><span>${esc(x.label)}</span>
+      <span class="st">${x.status === 'won' ? '+' + x.pays : x.status === 'lost' ? t('lost') : t('pays', { n: x.pays })}</span></li>`).join('')
+    : `<li class="hint">${t('no_calls')}</li>`;
+  if (!q || !S.meta) { $('fxQuotes').innerHTML = ''; return; }
+  if (!q.open) { $('fxQuotes').innerHTML = `<p class="hint">${t('calls_closed')}</p>`; return; }
+  const pays = p => Math.max(11, Math.min(500, Math.round(10 / Math.max(p, 1e-6))));
+  const btn = (kind, target, label, p) => p >= 0.01
+    ? `<button class="qb" data-kind="${kind}" data-target="${target}"><span>${esc(label)}</span><b class="num">${pct(p)}%</b><small>${t('pays', { n: pays(p) })}</small></button>` : '';
+  const ng = q.next_goal;
+  const name = pid => (S.players[pid] && S.players[pid].name) || (S.fx.players[pid] && S.fx.players[pid].name) || pid;
+  const mine = new Set(fx.squad);
+  const pick = (obj, n) => Object.entries(obj).sort((a, b) => (mine.has(b[0]) - mine.has(a[0])) || b[1] - a[1]).slice(0, n);
+  $('fxQuotes').innerHTML = `<h3>${t('next_goal')}</h3><div class="qrow">${btn('next_goal', 'home', S.meta.home.short_name, ng.home)}${btn('next_goal', 'none', t('no_more'), ng.none)}${btn('next_goal', 'away', S.meta.away.short_name, ng.away)}</div>
+    <h3>${t('scorer')}</h3><div class="qrow">${pick(q.scorer, 4).map(([pid, p]) => btn('scorer', pid, (mine.has(pid) ? '★ ' : '') + name(pid), p)).join('')}</div>
+    <h3>${t('booked')}</h3><div class="qrow">${pick(q.booked, 4).map(([pid, p]) => btn('booked', pid, (mine.has(pid) ? '★ ' : '') + name(pid), p)).join('')}</div>`;
+}
+$('fxQuotes').addEventListener('click', e => {
+  const b = e.target.closest('.qb'); if (!b || !S.ws || S.ws.readyState !== 1) return;
+  S.ws.send(JSON.stringify({ action: 'call', kind: b.dataset.kind, target: b.dataset.target }));
+});
 
 // ------------------------------------------------------------------ preferences
 function fillPrefsClubs() {
