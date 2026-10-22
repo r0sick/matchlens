@@ -76,7 +76,7 @@ const I18N = {
     r_appearance: 'Played', r_appearance_60: '60+ min', r_goal: 'Goal', r_assist: 'Assist', r_clean_sheet: 'Clean sheet',
     r_conceded: 'Conceded', r_saves: 'Saves', r_defensive: 'Defensive work', r_yellow: 'Yellow', r_red: 'Red',
     r_own_goal: 'Own goal', r_bonus: 'Bonus', provisional: 'provisional', captain: 'Captain',
-    f_form: 'form', f_pts: 'pts', transferred: '{out} out, {in} in.',
+    f_form: 'form', f_pts: 'pts', transferred: '{out} out, {in} in.', open_profile: 'Open {name}’s profile',
     v_pitch: 'Pitch', v_list: 'List', bench: 'Bench', swap: 'Swap into the XI', swap_hint: 'Tap a highlighted starter to swap {name} in.',
     fixtures: 'Next fixtures', fdr_legend: 'Colour = opponent difficulty: green easy, red hard. H home, A away. Ø = average difficulty.',
     md_short: 'MD', make_captain: 'Make captain', close: 'Close', radar: 'Strengths and weaknesses', scorecard: 'Scorecard',
@@ -167,7 +167,7 @@ const I18N = {
     r_appearance: 'Jugó', r_appearance_60: '60+ min', r_goal: 'Gol', r_assist: 'Asistencia', r_clean_sheet: 'Portería a cero',
     r_conceded: 'Goles encajados', r_saves: 'Paradas', r_defensive: 'Trabajo defensivo', r_yellow: 'Amarilla', r_red: 'Roja',
     r_own_goal: 'Gol en propia', r_bonus: 'Bonus', provisional: 'provisional', captain: 'Capitán',
-    f_form: 'forma', f_pts: 'pts', transferred: 'Sale {out}, entra {in}.',
+    f_form: 'forma', f_pts: 'pts', transferred: 'Sale {out}, entra {in}.', open_profile: 'Ver la ficha de {name}',
     v_pitch: 'Campo', v_list: 'Lista', bench: 'Banquillo', swap: 'Meter en el once', swap_hint: 'Pulsa un titular resaltado para meter a {name}.',
     fixtures: 'Próximos partidos', fdr_legend: 'Color = dificultad del rival: verde fácil, rojo difícil. H casa, A fuera. Ø = dificultad media.',
     md_short: 'J', make_captain: 'Hacer capitán', close: 'Cerrar', radar: 'Fortalezas y debilidades', scorecard: 'Ficha',
@@ -877,9 +877,11 @@ async function askAdvisor(pid) {
   renderAdvice();
 }
 function renderAdvice() {
-  const a = S.fx.advice, el = $('fxAdvice');
-  if (!a) { el.innerHTML = `<p class="hint">${t('advisor_hint')}</p>`; return; }
-  if (a.loading) { el.innerHTML = `<p class="hint">${t('asking', { name: esc(a.loading) })}</p>`; return; }
+  const a = S.fx.advice;
+  const pr = $('prAdvice'), inProfile = pr && $('profDlg').open && a && (a.pid || a.player_id) === profPid;
+  const put = html => { $('fxAdvice').innerHTML = html; if (inProfile) { pr.innerHTML = html; pr.hidden = false; } };
+  if (!a) { $('fxAdvice').innerHTML = `<p class="hint">${t('advisor_hint')}</p>`; return; }
+  if (a.loading) { put(`<p class="hint">${t('asking', { name: esc(a.loading) })}</p>`); return; }
   const tx = (a.texts && (a.texts[prefs.lang] || a.texts.en)) || {};
   const reasons = a.sheet.reasons.map(r => {
     const w = Math.min(100, Math.abs(r.effect) * 33);
@@ -887,22 +889,24 @@ function renderAdvice() {
   }).join('');
   const reps = a.sheet.replacements.map(r => `<li><div><strong>${esc(r.name)}</strong> <span class="hint">${r.club} · €${money(r.price)}m · ${t('ppm', { p: r.projected_points_per_match })}</span></div>
       <button data-in="${r.player_id}" data-out="${a.player_id}">${t('transfer_in')}</button></li>`).join('');
-  el.innerHTML = `<div class="verdict v-${a.verdict}">${t('v_' + a.verdict)}</div>
+  put(`<div class="verdict v-${a.verdict}">${t('v_' + a.verdict)}</div>
     <h3 class="advh">${esc(tx.headline)}${srcBadge({ ...a, status: 'final' })}</h3>
     <p>${esc(tx.explanation)}</p><p class="hint">${esc(tx.replacement_note)}</p>
     <ul class="reasons">${reasons}</ul>
-    ${reps ? `<h3>${t('replacements')}</h3><ul class="reps">${reps}</ul>` : ''}${traceHtml(a)}`;
+    ${reps ? `<h3>${t('replacements')}</h3><ul class="reps">${reps}</ul>` : ''}${traceHtml(a)}`);
 }
-$('fxAdvice').addEventListener('click', e => {
-  const b = e.target.closest('[data-in]'); if (!b) return;
-  const out = b.dataset.out, inn = b.dataset.in;
+function doTransfer(out, inn) {
   fx.squad = fx.squad.map(p => (p === out ? inn : p));
   if (fx.captain === out) fx.captain = inn;
   fx.xi = fx.xi.map(p => (p === out ? inn : p));
   saveFx();
-  const msg = t('transferred', { out: S.fx.players[out].name, in: S.fx.players[inn].name });
+  const msg = esc(t('transferred', { out: S.fx.players[out].name, in: S.fx.players[inn].name }));
   S.fx.advice = null; renderFantasy();
-  $('fxAdvice').innerHTML = `<p><strong>${esc(msg)}</strong></p>`;
+  $('fxAdvice').innerHTML = `<p><strong>${msg}</strong></p>`;
+  return msg;
+}
+$('fxAdvice').addEventListener('click', e => {
+  const b = e.target.closest('[data-in]'); if (b) doTransfer(b.dataset.out, b.dataset.in);
 });
 
 function renderCalls() {
@@ -1136,6 +1140,7 @@ async function openProfile(pid) {
         <div class="pills"><span class="pill st-${p.status}">${t('st_' + p.status)}</span>
           <span class="formbar" title="${t('form_pct_hint')}"><span>${t('f_form')}</span><span class="track"><b style="width:${p.form_pct ?? 0}%"></b></span><em class="num">${p.form_pct ?? '–'}%</em></span></div></div>
       <div class="pprice"><span class="num">€${money(p.price)}m</span><small>${trend} ${t('last3_md')}</small></div></div>
+    <section class="pradvice" id="prAdvice" hidden></section>
     <div class="pgrid">
       <div><h3>${t('hexagon')}</h3>${hexSvg(hx, col)}
         <div class="chips">${hx.strengths.map(k => `<span class="chip">▲ ${esc(t('hx_' + k))}</span>`).join('')}${hx.weaknesses.map(k => `<span class="chip neg">▼ ${esc(t('hx_' + k))}</span>`).join('')}</div>
@@ -1155,7 +1160,21 @@ async function openProfile(pid) {
 }
 $('prClose').onclick = () => $('profDlg').close();
 $('prCap').onclick = () => { fx.captain = profPid; saveFx(); $('profDlg').close(); renderFantasy(); };
-$('prAdv').onclick = () => { $('profDlg').close(); askAdvisor(profPid); };
+$('prAdv').onclick = async () => {
+  const pending = askAdvisor(profPid);
+  $('prAdvice').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  await pending;
+};
+$('profBody').addEventListener('click', e => {
+  const b = e.target.closest('[data-in]');
+  if (b) {
+    const inn = b.dataset.in, msg = doTransfer(b.dataset.out, inn);
+    $('prAdvice').innerHTML = `<p><strong>${msg}</strong></p><button class="pname" data-open="${inn}">${esc(t('open_profile', { name: S.fx.players[inn].name }))}</button>`;
+    $('prCap').hidden = true; $('prAdv').hidden = true;
+    return;
+  }
+  const o = e.target.closest('[data-open]'); if (o) openProfile(o.dataset.open);
+});
 $('profDlg').addEventListener('click', e => { if (e.target === $('profDlg')) $('profDlg').close(); });
 
 // ------------------------------------------------------------------ highlights (data replays)

@@ -268,6 +268,7 @@ table.fixgrid { width: 100%; border-collapse: collapse; font-size: 13px; }
 dialog.profile { max-width: 880px; width: calc(100% - 24px); max-height: calc(100vh - 32px); overflow: auto; padding: 0 0 14px; }
 #profBody { padding: 18px 20px 0; }
 dialog.profile .actions { padding: 0 20px; }
+.pradvice { margin: 14px 0 4px; padding: 14px 16px; background: #F7F9F5; border: 1px solid var(--rule); border-left: 4px solid var(--ink); border-radius: var(--radius-m); }
 .phead { display: grid; grid-template-columns: auto auto 1fr auto; gap: 16px; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
 .jersey.big { width: 72px; height: 72px; font-size: 30px; border-radius: 14px 14px 22px 22px; }
 .phead h2 { font-size: 26px; margin: 0 0 4px; }
