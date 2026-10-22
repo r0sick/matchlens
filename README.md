@@ -25,6 +25,8 @@
 | Player tagging with speed indicators | Name tags on the live pitch with sprint speed (km/h), match-record sprints, distance covered |
 | Pass quality and difficulty | Pass-difficulty model (0–100, AUC 0.79) with reasons; pass map coloured by difficulty; "pass of note" graphics |
 | Ball and shot speed | Ball release speed per pass, shot speed per shot, "rocket shot" alerts |
+| Probability of scoring | Live **goal chance** of the team on the ball, updated every touch (calibrated model), plus xG per shot; shown on the broadcast, in the fan view and in every highlight (*goal chance 1% → 6% · xG 0.04*) |
+| Highlights | Data replays of goals, big chances, great saves and penalties in a picture-in-picture player, with slow motion and a downloadable clip |
 | Narratives and recaps | Live commentary, fan and analyst lines for every key moment; studio script, article, social post and player of the match at half and full time |
 | Explainability: control vs chaos, pressing, rhythm | Momentum and chaos indices (validated against the simulator's hidden ground truth), PPDA, field tilt, rhythm (passes, turnovers, fouls per 5 min), win-probability swings with their cause |
 | Synthetic data | Everything: league, players, matches, season, fantasy prices |
@@ -272,6 +274,7 @@ Home win / draw / away win over 400 matches: 43% / 22% / 35%. Ball in play ≈ 5
 | win / draw / loss | log loss | **0.582** | 0.648 | 1.047 |
 | next goal | log loss | **0.873** | 0.925 | 1.099 |
 | pass difficulty | AUC | **0.79** | – | 0.50 |
+| live goal chance (per touch, 2,000 matches) | log loss / AUC | **0.106 / 0.69** | – | 0.113 / 0.50 |
 
 Momentum index vs the simulation's hidden momentum: correlation 0.64. Chaos index vs hidden chaos: 0.43 (it tracks the direction well but under-reads the most extreme spells). Full tables in `matchlens/model_files/training_report.json`.
 

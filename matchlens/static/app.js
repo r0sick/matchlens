@@ -12,6 +12,9 @@ const I18N = {
     hl_goal: 'Goal', hl_penalty_goal: 'Penalty goal', hl_big_chance: 'Big chance', hl_great_save: 'Great save',
     hl_penalty_save: 'Penalty saved', hl_penalty_miss: 'Penalty missed', hl_replay: 'Replay', hl_download: 'Download clip',
     hl_replay_k: 'REPLAY', hl_slowmo: 'SLOW MOTION', hl_missed: 'MISSED!', hl_saved: 'SAVED!',
+    hl_chance: 'goal chance {a}% → {b}%', hl_chance_now: 'Goal chance of this move: {p}%',
+    chance_live: '{team} on the ball · goal chance {p}%', chance_danger: 'DANGER · {team} {p}% goal chance',
+    chance_fan: 'Right now {team} have the ball, with a {p}% chance this attack ends in a goal.',
     win_prob: 'Win probability', xg_race: 'xG race', momentum_chaos: 'Momentum and chaos', team_stats: 'Team stats',
     shot_map: 'Shot map', shot_legend: 'Circle size = xG. Filled = goal.', pass_map: 'Completed passes, last 10 minutes',
     pass_legend: 'Line colour = pass difficulty: green easy, yellow medium, red hard.', players: 'Players',
@@ -110,6 +113,9 @@ const I18N = {
     hl_goal: 'Gol', hl_penalty_goal: 'Gol de penalti', hl_big_chance: 'Ocasión clara', hl_great_save: 'Gran parada',
     hl_penalty_save: 'Penalti parado', hl_penalty_miss: 'Penalti fallado', hl_replay: 'Repetir', hl_download: 'Descargar clip',
     hl_replay_k: 'REPETICIÓN', hl_slowmo: 'CÁMARA LENTA', hl_missed: '¡FUERA!', hl_saved: '¡PARADA!',
+    hl_chance: 'prob. de gol {a}% → {b}%', hl_chance_now: 'Prob. de gol de esta jugada: {p}%',
+    chance_live: 'Balón para {team} · prob. de gol {p}%', chance_danger: 'PELIGRO · {team} {p}% prob. de gol',
+    chance_fan: 'Ahora mismo el balón es de {team}: un {p}% de que este ataque acabe en gol.',
     win_prob: 'Probabilidad de victoria', xg_race: 'Carrera de xG', momentum_chaos: 'Dominio y caos', team_stats: 'Estadísticas de equipo',
     shot_map: 'Mapa de tiros', shot_legend: 'Tamaño del círculo = xG. Relleno = gol.', pass_map: 'Pases completados, últimos 10 minutos',
     pass_legend: 'Color de la línea = dificultad del pase: verde fácil, amarillo media, rojo difícil.', players: 'Jugadores',
@@ -304,7 +310,7 @@ function resetView() {
 function handle(m) {
   switch (m.type) {
     case 'hello': onHello(m.payload); break;
-    case 'state': S.state = m.payload; renderState(); break;
+    case 'state': S.state = m.payload; renderState(); if ('live_chance' in m.payload) renderChance(m.payload.live_chance); break;
     case 'event': onEvent(m.payload, m); break;
     case 'alert': onAlert(m); break;
     case 'win_prob_swing': onSwing(m); break;
@@ -359,6 +365,7 @@ const TAGGED = new Set(['pass', 'shot', 'sprint', 'tackle', 'dribble', 'intercep
 let lastTagAt = 0;
 function onEvent(ev, env) {
   if (!S.meta) return;
+  if ('chance' in ev) renderChance(ev.chance);
   if (['shot', 'goal', 'card', 'substitution'].includes(ev.type)) S.keyEvents.push(ev);
   if (ev.type === 'pass' && ev.outcome === 'complete') { S.passes.push(ev); if (S.passes.length > 400) S.passes.shift(); }
   if (S.mode === 'analyst' && (ev.type === 'shot' || ev.type === 'goal')) renderShotMap();
@@ -1177,6 +1184,21 @@ $('profBody').addEventListener('click', e => {
 });
 $('profDlg').addEventListener('click', e => { if (e.target === $('profDlg')) $('profDlg').close(); });
 
+// ------------------------------------------------------------------ live goal chance
+// probability that the team on the ball scores before losing it (model: matchlens/chance.py), updated every touch
+const CHANCE_DANGER = 0.08;            // about the most dangerous 10% of touches
+function renderChance(c) {
+  S.chance = c;
+  const el = $('chance');
+  if (!c) { el.classList.remove('on', 'danger'); $('fChance').textContent = ''; return; }
+  const p = c.p, team = abbr(c.side);
+  el.classList.add('on'); el.classList.toggle('danger', p >= CHANCE_DANGER);
+  $('chTxt').textContent = p >= CHANCE_DANGER ? t('chance_danger', { team, p: Math.round(p * 100) }) : t('chance_live', { team, p: Math.max(1, Math.round(p * 100)) });
+  $('chBar').style.width = `${Math.min(100, p / 0.2 * 100)}%`;
+  $('chBar').style.background = `var(--${c.side})`;
+  $('fChance').textContent = t('chance_fan', { team: S.meta[c.side].short_name, p: Math.max(1, Math.round(p * 100)) });
+}
+
 // ------------------------------------------------------------------ highlights (data replays)
 const HL_KIND = { goal: 'hl_goal', penalty_goal: 'hl_penalty_goal', big_chance: 'hl_big_chance', great_save: 'hl_great_save',
   penalty_save: 'hl_penalty_save', penalty_miss: 'hl_penalty_miss' };
@@ -1191,7 +1213,7 @@ function renderHighlights(fresh = null) {
     return `<button class="hltile ${goal ? 'goal' : ''} ${fresh === h.highlight_id ? 'new' : ''}" data-hl="${h.highlight_id}" style="--team:var(--${h.side})">
       <span class="play">▶</span><span class="k">${esc(t(HL_KIND[h.kind]))}</span>
       <span class="who"><b>${esc(h.display_minute)}</b> ${esc(h.player)} <span class="hint">${esc(abbr(h.side))}</span></span>
-      <span class="hint">xG ${(h.xg ?? 0).toFixed(2)}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}</span></button>`;
+      <span class="hint">${h.chance_peak != null ? t('hl_chance', { a: Math.max(1, Math.round(h.chance_start * 100)), b: Math.round(h.chance_peak * 100) }) + ' · ' : ''}xG ${(h.xg ?? 0).toFixed(2)}</span></button>`;
   }).join('') : `<p class="hint">${t('hl_wait')}</p>`;
   $('hlB').innerHTML = html; $('hlF').innerHTML = html;
 }
@@ -1313,6 +1335,15 @@ function playHighlight(h) {
       trail.forEach(([a, c], i) => (i ? ctx.lineTo(a, c) : ctx.moveTo(a, c))); ctx.stroke();
       ctx.beginPath(); ctx.arc(x, y, 4.2, 0, 7); ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = '#14213D'; ctx.lineWidth = 1.2; ctx.stroke();
     }
+    // live goal chance of the move at this moment of the replay, then the shot's xG
+    const seen = F.filter(f => f.chance != null && f.t <= tm);
+    if (seen.length && tm < tShot) {
+      const cp = seen[seen.length - 1].chance;
+      ctx.fillStyle = 'rgba(20,33,61,.9)'; ctx.fillRect(10, H - 44, 190, 34);
+      ctx.fillStyle = '#fff'; ctx.font = '600 12px Barlow, sans-serif'; ctx.fillText(t('hl_chance_now', { p: Math.max(1, Math.round(cp * 100)) }), 18, H - 30);
+      ctx.fillStyle = 'rgba(255,255,255,.25)'; ctx.fillRect(18, H - 22, 174, 6);
+      ctx.fillStyle = cp >= CHANCE_DANGER ? '#F2B705' : col[h.side]; ctx.fillRect(18, H - 22, Math.min(174, 174 * cp / 0.2), 6);
+    }
     // header band
     ctx.fillStyle = '#14213D'; ctx.fillRect(0, 0, W, 26);
     ctx.fillStyle = '#F2B705'; ctx.fillRect(0, 0, 78, 26);
@@ -1321,7 +1352,7 @@ function playHighlight(h) {
     if (slow && !endCard) { ctx.fillStyle = '#F2B705'; ctx.textAlign = 'right'; ctx.fillText(t('hl_slowmo'), W - 10, 18); ctx.textAlign = 'left'; }
     // shot info and verdict
     if (tm >= tShot) {
-      const info = `xG ${(h.xg ?? 0).toFixed(2)}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}${h.distance_m ? ' · ' + Math.round(h.distance_m) + ' m' : ''}`;
+      const info = `${h.chance_peak != null ? t('hl_chance', { a: Math.max(1, Math.round(h.chance_start * 100)), b: Math.round(h.chance_peak * 100) }) + ' · ' : ''}xG ${(h.xg ?? 0).toFixed(2)}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}${h.distance_m ? ' · ' + Math.round(h.distance_m) + ' m' : ''}`;
       label(W / 2, H - 14, info, 'rgba(20,33,61,.92)', '#fff', 15);
     }
     if (tm >= tShot + 0.6 || endCard) {

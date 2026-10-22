@@ -31,6 +31,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from matchsim.replay import load_match
+from .chance import ChanceTracker, load_chance_model
 from .facts import MomentDetector
 from .highlights import HighlightDetector
 from .fantasy import season as fantasy_season
@@ -60,6 +61,7 @@ KEY_EVENT_TYPES = {"shot", "goal", "card", "substitution"}
 FANTASY_NOW = {"goal", "card", "substitution", "goalkeeper", "period_end", "match_end"}
 
 MODELS = load_models()
+CHANCE_MODEL = load_chance_model()
 NEWSROOM: Newsroom | None = None          # created at startup (needs the event loop)
 
 
@@ -141,6 +143,7 @@ class MatchSession:
         self.recent_passes: deque = deque(maxlen=400)
         self.detector = MomentDetector(self.meta)
         self.hl = HighlightDetector(self.meta)
+        self.chance = ChanceTracker(self.meta, CHANCE_MODEL)   # live goal chance of the team on the ball
         self.highlights: list = []                 # data replays of goals, big chances, great saves, penalties
         self.fantasy = FantasyScorer(self.state)
         shares = (fantasy_season.xg_shares([self.meta["home"]["team_id"], self.meta["away"]["team_id"]],
@@ -186,6 +189,7 @@ class MatchSession:
     def state_payload(self) -> dict:
         snap = self.state.snapshot(include_players=False)
         snap.pop("series", None)
+        snap["live_chance"] = self.chance.current
         snap["session"] = self.status()
         return snap
 
@@ -222,7 +226,8 @@ class MatchSession:
         signals = self.state.update(ev)
         self.fantasy.update(ev)
         settled = self.calls.settle(ev)
-        hl = self.hl.observe(ev, self.state.score)
+        self.chance.update(ev)
+        hl = self.hl.observe(ev, self.state.score, self.chance.current)
         if ev["type"] == "match_end":
             hl = hl or self.hl.flush(self.state.score)
         if hl:
@@ -232,6 +237,7 @@ class MatchSession:
         if ev["type"] != "physical_snapshot":
             se = slim_event(ev)
             se["display_minute"], se["match_time_s"] = ev["display_minute"], ev["match_time_s"]
+            se["chance"] = self.chance.current        # null = nobody has the ball under control
             if ev["type"] in KEY_EVENT_TYPES:          # kept even while fast-forwarding, for late joiners
                 self.key_events.append(se)
             elif ev["type"] == "pass" and ev["outcome"] == "complete":

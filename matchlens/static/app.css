@@ -95,6 +95,12 @@ h3 { font: 600 14px/1.2 var(--font); margin: 0 0 8px; color: var(--ink-2); }
 .momo { position: absolute; top: 3.2%; right: 2.4%; width: 20cqi; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.7); font: 600 clamp(9px, 1.1cqi, 14px)/1.2 var(--font-cond); text-align: right; }
 .momo .bar { position: relative; height: .8cqi; min-height: 5px; background: rgba(255,255,255,.25); border-radius: 3px; margin-top: .3em; }
 .momo .bar i { position: absolute; top: 0; bottom: 0; border-radius: 3px; transition: all .8s; }
+.chance { margin-top: .9em; opacity: 0; transition: opacity .4s; }
+.chance.on { opacity: 1; }
+.chance .bar { position: relative; height: .8cqi; min-height: 5px; background: rgba(255,255,255,.25); border-radius: 3px; margin-top: .3em; overflow: hidden; }
+.chance .bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; transition: width .35s; }
+.chance.danger span { color: var(--flag); animation: pulse 1s infinite; }
+.fchance { margin: 8px 0 0; font-size: 14px; color: var(--ink-2); min-height: 1.4em; }
 .momo .bar b { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: #fff; }
 
 .below { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 14px; }

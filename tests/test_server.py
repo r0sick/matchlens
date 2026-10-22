@@ -103,3 +103,19 @@ def test_highlights_are_published_after_the_shot():
     shot_seq = next(m["seq"] for m in msgs if m["type"] == "event" and m["payload"]["type"] == "shot"
                     and m["payload"]["player_name"] == "Peiró" and m["payload"]["outcome"] == "goal")
     assert next(m["seq"] for m in msgs if m["type"] == "highlight") > shot_seq       # never before the shot
+
+
+def test_live_goal_chance_streams_and_reaches_highlights():
+    from matchlens.chance import features, load_chance_model
+    m = load_chance_model()
+    near = {"type": "pass", "outcome": "complete", "end_location": [100, 34], "location": [90, 34], "details": {}}
+    far = dict(near, end_location=[40, 34], location=[30, 34])
+    ctx = {"actions": 5, "seconds": 12, "pattern": "regular_play"}
+    assert m.predict(features(near, ctx)) > 5 * m.predict(features(far, ctx))
+    with client.websocket_connect("/ws/AUR26-MD10-KMU-THR?speed=5000&restart=1") as ws:
+        ws.receive_json()
+        msgs = run_to_end(ws)
+    chances = [m["payload"]["chance"] for m in msgs if m["type"] == "event" and m["payload"].get("chance")]
+    assert len(chances) > 500 and all(0 < c["p"] < 1 and c["side"] in ("home", "away") for c in chances)
+    goal = next(m["payload"] for m in msgs if m["type"] == "highlight" and m["payload"]["kind"] == "goal")
+    assert 0 < goal["chance_start"] <= goal["chance_peak"] < 1

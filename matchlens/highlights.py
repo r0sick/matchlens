@@ -47,11 +47,14 @@ class HighlightDetector:
         self.meta = meta
         self.recent: deque = deque(maxlen=400)
         self.pending: dict | None = None
+        self.chance_at: dict = {}            # event_id -> live goal chance right after that touch
         self.count = 0
 
-    def observe(self, ev: dict, score: dict) -> dict | None:
+    def observe(self, ev: dict, score: dict, chance: dict | None = None) -> dict | None:
         """Feed every event in order; returns a finished highlight when one is complete."""
         done = None
+        if chance and chance.get("t") == round(ev["match_time_s"], 2):
+            self.chance_at[ev["event_id"]] = chance["p"]
         if self.pending and (ev["match_time_s"] > self.pending["shot_t"] + AFTER_S or ev["type"] == "goal"):
             if ev["type"] == "goal":
                 self.recent.append(ev)
@@ -79,7 +82,14 @@ class HighlightDetector:
         starts = [e["match_time_s"] for e in window
                   if e.get("possession_id") == poss and e["type"] in ("pass", "carry", "dribble", "shot")]
         t0 = max(min(starts) - 1.0, t_shot - WINDOW_S) if starts else t_shot - 6
-        frames = [_frame(e) for e in window if e["match_time_s"] >= t0]
+        frames = []
+        for e in window:
+            if e["match_time_s"] >= t0:
+                f = _frame(e)
+                if e["event_id"] in self.chance_at and e.get("team_side") == shot["team_side"]:
+                    f["chance"] = self.chance_at[e["event_id"]]
+                frames.append(f)
+        curve = [f["chance"] for f in frames if "chance" in f]
         d = shot["details"]
         self.count += 1
         side = shot["team_side"]
@@ -91,4 +101,6 @@ class HighlightDetector:
             "body_part": d.get("body_part"), "technique": d.get("technique"), "distance_m": d.get("distance_m"),
             "goalkeeper_id": d.get("goalkeeper_id"), "score_after": dict(score),
             "t_start": round(t0, 2), "t_shot": round(t_shot, 2), "frames": frames,
+            # live goal chance of the move before the shot (start of the clip -> highest), then the shot's xG
+            "chance_start": curve[0] if curve else None, "chance_peak": max(curve) if curve else None,
         }
