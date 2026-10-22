@@ -88,6 +88,10 @@ Both workflows are Microsoft Agent Framework graphs. Dotted lines are MCP tool c
 4. **Never blocks the broadcast.** Every moment appears instantly as template text and is upgraded in place when the agents finish. A deadline-aware priority queue never drops goals, red cards or recaps.
 5. **Transparent by default.** Every text carries a trace (agents, tool calls, fact-check results, retries, timings), shown under *"How this was written"*, and a badge: *AI · fact-checked* or *auto text*.
 
+![An analyst note written by the agents on Microsoft Foundry, with its trace](docs/screens/ai_trace.png)
+
+*A live analyst note on the deployed app: written by the agents on Microsoft Foundry (gpt-6-luna), fact-checked, translated into Spanish, in 14.9 s.*
+
 Decisions stay explainable. Fantasy verdicts (HOLD / WATCH / SELL) come from transparent rules, with each factor listed next to its contribution. The model only explains the verdict. Fan predictions never change official Fantasy points.
 
 ## The four views
