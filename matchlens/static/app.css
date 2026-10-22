@@ -231,6 +231,25 @@ details.trace .bad { color: #A33; }
 
 .fxempty { max-width: 640px; margin: 30px auto; text-align: center; padding: 24px; }
 .fxempty button { background: var(--flag); border: 0; border-radius: var(--radius-s); padding: 9px 16px; font-weight: 600; cursor: pointer; }
+/* fantasy theme: deep purple with cyan / green / magenta accents (colours only, no league branding) */
+body[data-mode="fantasy"] { --fx-purple: #37003C; --fx-cyan: #04F5FF; --fx-green: #00FF85; --fx-pink: #E90052;
+  background: radial-gradient(1200px 500px at 85% -10%, rgba(4,245,255,.18), transparent 60%),
+              radial-gradient(900px 500px at -10% 110%, rgba(233,0,82,.18), transparent 60%),
+              linear-gradient(160deg, #37003C 0%, #2C0031 55%, #1E0024 100%) fixed; }
+body[data-mode="fantasy"] .topbar { background: #2A002E; box-shadow: inset 0 -3px 0 var(--fx-green); }
+body[data-mode="fantasy"] #fantasy .card { border: 0; box-shadow: 0 8px 24px rgba(0,0,0,.28); }
+body[data-mode="fantasy"] #fantasy .card > h2, body[data-mode="fantasy"] #fantasy .fhead h2 { color: var(--fx-purple); }
+body[data-mode="fantasy"] #fantasy .card > h2::before, body[data-mode="fantasy"] #fantasy .fhead h2::before {
+  content: ""; display: inline-block; width: 4px; height: .95em; margin-right: 8px; vertical-align: -2px; border-radius: 2px;
+  background: linear-gradient(var(--fx-cyan), var(--fx-green)); }
+body[data-mode="fantasy"] .ftotal .num { color: var(--fx-purple); }
+body[data-mode="fantasy"] #fxView button[aria-pressed="true"] { background: var(--fx-purple); }
+body[data-mode="fantasy"] .flist .adv, body[data-mode="fantasy"] .factions button, body[data-mode="fantasy"] .reps button {
+  border-color: var(--fx-purple); color: var(--fx-purple); }
+body[data-mode="fantasy"] .qb:hover { border-color: var(--fx-purple); }
+body[data-mode="fantasy"] .fxempty button { background: var(--fx-green); color: var(--fx-purple); }
+body[data-mode="fantasy"] .pbench { background: #F3EDF4; }
+dialog.profile .pradvice { border-left-color: #37003C; }
 /* fantasy: pitch line-up */
 .fpitch { margin-top: 6px; }
 .pfield { position: relative; display: flex; flex-direction: column; justify-content: space-around; gap: 10px; min-height: 470px; padding: 18px 8px;
