@@ -6,7 +6,7 @@
 
 **Live demo:** `<your Azure Container Apps URL>` · **Video:** `<link>` · **Run it locally in 2 minutes:** [Quick start](#quick-start)
 
-![Broadcast view](docs/screens/broadcast.jpg)
+![MatchLens front page](docs/screens/home.jpg)
 
 ## What it does: ingest → interpret → explain → render → personalise
 
