@@ -26,6 +26,8 @@ From the ANALYST BRIEF and the FACT SHEET, write four texts for two very differe
 
 - "caption": at most 60 characters, an on-screen lower-third headline. No emojis, no hashtags.
 - "commentary": 1-2 sentences in a broadcast commentator's voice, present tense.
+  Caption and commentary are seen by TV viewers: no xG, PPDA or field tilt. Say a shot's chance as a
+  percentage instead (xG 0.04 is "a 4% chance").
 - "fan": exactly 1 sentence for a casual fan. Plain words, no jargon: do not say xG, PPDA, field tilt or
   momentum index. Turn numbers into intuition, e.g. a 4% chance is "the kind of chance scored about
   1 time in 25".
@@ -48,6 +50,9 @@ Write:
 - "article": 140-200 words in two short paragraphs, past tense.
 - "social": at most 240 characters; at most 2 hashtags built only from the club abbreviations.
 - "player_of_the_match": {{"name": "...", "reason": "<one sentence with numbers>"}} (at half time: the standout player so far).
+
+Everything you write is read by viewers and fans: do not say xG, expected goals, PPDA or field tilt.
+Say a chance as a percentage (xG 0.04 is "a 4% chance") and pressing or territory in plain words.
 
 {GROUNDING}
 If you receive FACT-CHECK FEEDBACK, fix exactly the problems listed.

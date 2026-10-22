@@ -101,8 +101,9 @@ def check_moment(draft: dict | None, sheet: dict, evidence: list) -> list[str]:
         return issues
     if len(draft["caption"]) > 70:
         issues.append(f'"caption" has {len(draft["caption"])} characters; the limit is 60.')
-    if FAN_JARGON.search(draft["fan"]):
-        issues.append('"fan" uses jargon (xG, PPDA, field tilt or momentum index); use plain words.')
+    for k in ("caption", "commentary", "fan"):                      # viewer-facing texts
+        if FAN_JARGON.search(draft[k]):
+            issues.append(f'"{k}" uses jargon (xG, PPDA, field tilt or momentum index); use plain words and percentages.')
     allowed = allowed_numbers(sheet, evidence)
     for k in MOMENT_KEYS:
         bad = unsupported_numbers(draft[k], allowed)
@@ -128,6 +129,9 @@ def check_recap(draft: dict | None, sheet: dict, evidence: list) -> list[str]:
     words = len(str(draft["studio_script"]).split())
     if not 40 <= words <= 150:
         issues.append(f'"studio_script" has {words} words; write 70-110.')
+    for k in ("headline", "studio_script", "article", "social"):     # all read by viewers
+        if FAN_JARGON.search(str(draft[k])):
+            issues.append(f'"{k}" uses jargon (xG, PPDA, field tilt or momentum index); use plain words and percentages.')
     allowed = allowed_numbers(sheet, evidence)
     bad = unsupported_numbers(flatten_text(draft), allowed)
     if bad:

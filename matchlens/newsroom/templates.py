@@ -114,13 +114,13 @@ def state_of_play(s, lang):
     if lang == "es":
         top = f"Domina el {team}" if abs(m["momentum"]) >= 25 else "Partido igualado"
         return {"caption": f"{m['minute']}: {top}",
-                "commentary": f"Partido {ctl}. En los últimos 15 minutos, xG {xg['home']:.2f}-{xg['away']:.2f}.",
+                "commentary": f"Partido {ctl}. En los últimos 15 minutos {'manda el ' + team if abs(m['momentum']) >= 25 else 'nadie se impone'}.",
                 "fan": (f"El {team} está mandando: juega el {tilt}% del tiempo en campo rival." if abs(m["momentum"]) >= 25
                         else "Ningún equipo se impone por ahora."),
                 "analyst": f"PPDA últimos 15': {ppda['home']} vs {ppda['away']} (presiona más el {s[presser]['short_name']}); field tilt {tilt}%."}
     top = f"{team} on top" if abs(m["momentum"]) >= 25 else "Evenly poised"
     return {"caption": f"{m['minute']} — {top}",
-            "commentary": f"A {ctl} game so far. Over the last 15 minutes the xG reads {xg['home']:.2f}-{xg['away']:.2f}.",
+            "commentary": f"A {ctl} game so far, and {team + ' have had the better of the last 15 minutes' if abs(m['momentum']) >= 25 else 'neither side has the upper hand over the last 15 minutes'}.",
             "fan": (f"{team} are in charge, playing {tilt}% of the game in the opposition half." if abs(m["momentum"]) >= 25
                     else "Neither side has taken control yet."),
             "analyst": f"PPDA last 15': {ppda['home']} vs {ppda['away']} ({s[presser]['short_name']} pressing harder); field tilt {tilt}%."}
@@ -135,14 +135,14 @@ def recap(s, lang):
     ft = s["kind"] == "full_time"
     if lang == "es":
         head = (f"Final: {H} {h}-{a} {A}" if ft else f"Descanso: {H} {h}-{a} {A}")
-        script = (f"{head}. Goles: {goals}. xG {ts['home']['xg']:.2f}-{ts['away']['xg']:.2f}, "
-                  f"tiros {ts['home']['shots']}-{ts['away']['shots']}. Partido {CONTROL['es'][m['control']]}.")
+        script = (f"{head}. Goles: {goals}. "
+                  f"Tiros {ts['home']['shots']}-{ts['away']['shots']}. Partido {CONTROL['es'][m['control']]}.")
         return {"headline": head, "studio_script": script, "article": script,
                 "social": f"{head} | {goals}", "player_of_the_match":
                     {"name": top.get("name"), "reason": f"Nota {top.get('rating')} con {top.get('key_passes', 0)} pases clave."}}
     head = (f"Full time: {H} {h}-{a} {A}" if ft else f"Half time: {H} {h}-{a} {A}")
-    script = (f"{head}. Goals: {goals}. Expected goals {ts['home']['xg']:.2f}-{ts['away']['xg']:.2f}, "
-              f"shots {ts['home']['shots']}-{ts['away']['shots']}. A {CONTROL['en'][m['control']]} contest.")
+    script = (f"{head}. Goals: {goals}. "
+              f"Shots {ts['home']['shots']}-{ts['away']['shots']}. A {CONTROL['en'][m['control']]} contest.")
     return {"headline": head, "studio_script": script, "article": script, "social": f"{head} | {goals}",
             "player_of_the_match": {"name": top.get("name"),
                                     "reason": f"Rated {top.get('rating')} with {top.get('key_passes', 0)} key passes."}}

@@ -12,7 +12,7 @@ const I18N = {
     hl_goal: 'Goal', hl_penalty_goal: 'Penalty goal', hl_big_chance: 'Big chance', hl_great_save: 'Great save',
     hl_penalty_save: 'Penalty saved', hl_penalty_miss: 'Penalty missed', hl_replay: 'Replay', hl_download: 'Download clip',
     hl_replay_k: 'REPLAY', hl_slowmo: 'SLOW MOTION', hl_missed: 'MISSED!', hl_saved: 'SAVED!',
-    hl_chance: 'goal chance {a}% → {b}%', hl_chance_now: 'Goal chance of this move: {p}%',
+    hl_chance: 'goal chance {a}% → {b}%', hl_shot: 'shot {p}% to score', hl_chance_now: 'Goal chance of this move: {p}%',
     chance_live: '{team} on the ball · goal chance {p}%', chance_danger: 'DANGER · {team} {p}% goal chance',
     chance_fan: 'Right now {team} have the ball, with a {p}% chance this attack ends in a goal.',
     win_prob: 'Win probability', xg_race: 'xG race', momentum_chaos: 'Momentum and chaos', team_stats: 'Team stats',
@@ -33,12 +33,12 @@ const I18N = {
     momentum: 'Momentum', chaos: 'Chaos', on_top: '{team} on top', level: 'Even',
     // captions
     goal: 'Goal! {player} ({team})', goal_k: 'GOAL', assist: 'Assist: {name}.',
-    goal_why: 'A {xg} xG chance – scored about {pct}% of the time.',
+    goal_why: 'A chance that is scored about {pct}% of the time.',
     swing: '{team} win chance {b}% → {a}%.',
     card_yellow: 'Yellow card for {player} ({team})', card_red: 'Red card for {player} ({team})',
     card_second_yellow: 'Second yellow – {player} ({team}) is sent off', card_k: 'CARD',
     sub: '{team} change: {on} on for {off}', sub_k: 'SUB',
-    big_chance: 'Big chance missed by {player} ({team})', big_chance_why: 'Worth {xg} xG – usually scored {pct}% of the time.',
+    big_chance: 'Big chance missed by {player} ({team})', big_chance_why: 'A chance that is usually scored {pct}% of the time.', big_chance_k: 'BIG CHANCE',
     rocket: '{player} unleashes a {kmh} km/h shot', rocket_k: 'SHOT SPEED',
     speed: '{player} clocks {kmh} km/h', speed_record: 'Fastest sprint of the match so far', speed_k: 'TOP SPEED',
     hard_pass: '{player} completes a difficulty-{d} pass to {to}', hard_pass_k: 'PASS OF NOTE',
@@ -51,7 +51,7 @@ const I18N = {
     h_draw: 'A draw is the most likely result ({p}%).', h_chaos: 'It has turned scrappy: the ball keeps changing hands.',
     h_pre: 'Kick-off is coming up.',
     follow_prompt: 'Follow one player through the match: pick them in Preferences.', follow_btn: 'Choose a player',
-    f_rating: 'Rating', f_passes: 'Passes', f_xg: 'xG', f_shots: 'Shots', f_kp: 'Key passes', f_tk: 'Tackles won',
+    f_rating: 'Rating', f_passes: 'Passes', f_xg: 'xG', f_sot: 'Shots on target', shot_pct: '{p}% to score', f_shots: 'Shots', f_kp: 'Key passes', f_tk: 'Tackles won',
     f_dist: 'Distance', f_top: 'Top speed', not_in_match: '{name} is not in this match.',
     on_bench: 'On the bench', subbed_off: 'Substituted',
     // newsroom
@@ -113,7 +113,7 @@ const I18N = {
     hl_goal: 'Gol', hl_penalty_goal: 'Gol de penalti', hl_big_chance: 'Ocasión clara', hl_great_save: 'Gran parada',
     hl_penalty_save: 'Penalti parado', hl_penalty_miss: 'Penalti fallado', hl_replay: 'Repetir', hl_download: 'Descargar clip',
     hl_replay_k: 'REPETICIÓN', hl_slowmo: 'CÁMARA LENTA', hl_missed: '¡FUERA!', hl_saved: '¡PARADA!',
-    hl_chance: 'prob. de gol {a}% → {b}%', hl_chance_now: 'Prob. de gol de esta jugada: {p}%',
+    hl_chance: 'prob. de gol {a}% → {b}%', hl_shot: 'tiro con {p}% de gol', hl_chance_now: 'Prob. de gol de esta jugada: {p}%',
     chance_live: 'Balón para {team} · prob. de gol {p}%', chance_danger: 'PELIGRO · {team} {p}% prob. de gol',
     chance_fan: 'Ahora mismo el balón es de {team}: un {p}% de que este ataque acabe en gol.',
     win_prob: 'Probabilidad de victoria', xg_race: 'Carrera de xG', momentum_chaos: 'Dominio y caos', team_stats: 'Estadísticas de equipo',
@@ -130,12 +130,12 @@ const I18N = {
     t_xa: 'xA', t_shots: 'Tiros', t_kp: 'Pases clave', t_tk: 'Entradas ganadas', t_dist: 'km', t_top: 'Vel. máx.',
     momentum: 'Dominio', chaos: 'Caos', on_top: 'Domina {team}', level: 'Igualado',
     goal: '¡Gol! {player} ({team})', goal_k: 'GOL', assist: 'Asistencia: {name}.',
-    goal_why: 'Una ocasión de {xg} xG: se marca aproximadamente el {pct}% de las veces.',
+    goal_why: 'Una ocasión que se marca aproximadamente el {pct}% de las veces.',
     swing: 'Opciones de victoria de {team}: {b}% → {a}%.',
     card_yellow: 'Amarilla para {player} ({team})', card_red: 'Roja para {player} ({team})',
     card_second_yellow: 'Segunda amarilla: {player} ({team}) es expulsado', card_k: 'TARJETA',
     sub: 'Cambio de {team}: entra {on}, sale {off}', sub_k: 'CAMBIO',
-    big_chance: 'Ocasión clara fallada por {player} ({team})', big_chance_why: 'Valía {xg} xG: suele marcarse el {pct}% de las veces.',
+    big_chance: 'Ocasión clara fallada por {player} ({team})', big_chance_why: 'Una ocasión que suele marcarse el {pct}% de las veces.', big_chance_k: 'OCASIÓN CLARA',
     rocket: '{player} dispara a {kmh} km/h', rocket_k: 'POTENCIA',
     speed: '{player} alcanza {kmh} km/h', speed_record: 'El sprint más rápido del partido', speed_k: 'VELOCIDAD',
     hard_pass: '{player} completa un pase de dificultad {d} a {to}', hard_pass_k: 'PASE DESTACADO',
@@ -147,7 +147,7 @@ const I18N = {
     h_draw: 'El empate es el resultado más probable ({p}%).', h_chaos: 'El partido se ha roto: el balón cambia de manos constantemente.',
     h_pre: 'El partido está a punto de empezar.',
     follow_prompt: 'Sigue a un jugador durante todo el partido: elígelo en Preferencias.', follow_btn: 'Elegir jugador',
-    f_rating: 'Nota', f_passes: 'Pases', f_xg: 'xG', f_shots: 'Tiros', f_kp: 'Pases clave', f_tk: 'Entradas ganadas',
+    f_rating: 'Nota', f_passes: 'Pases', f_xg: 'xG', f_sot: 'Tiros a puerta', shot_pct: '{p}% de gol', f_shots: 'Tiros', f_kp: 'Pases clave', f_tk: 'Entradas ganadas',
     f_dist: 'Distancia', f_top: 'Vel. máx.', not_in_match: '{name} no juega este partido.',
     on_bench: 'En el banquillo', subbed_off: 'Sustituido',
     ai_badge: 'IA · verificado', auto_badge: 'Texto automático', fallback_badge: 'Texto seguro (falló la verificación)',
@@ -379,7 +379,7 @@ function onEvent(ev, env) {
     const fav = isFavPlayer(ev.player_id);
     let extra = '';
     if (ev.type === 'sprint') { if (ev.details.top_speed_kmh < 31 && !fav) return; extra = `${ev.details.top_speed_kmh.toFixed(1)} km/h`; }
-    if (ev.type === 'shot') extra = `xG ${ev.details.xg.toFixed(2)} · ${Math.round(ev.details.shot_speed_kmh)} km/h`;
+    if (ev.type === 'shot') extra = `${t('shot_pct', { p: chancePct(ev.details.xg) })} · ${Math.round(ev.details.shot_speed_kmh)} km/h`;
     if (ev.type === 'pass' && ev.derived?.pass_difficulty >= 70 && ev.outcome === 'complete') extra = `${t('t_diff').split(' ')[0]} ${ev.derived.pass_difficulty}`;
     if (!extra && !fav && now - lastTagAt < 450) return;     // keep the picture readable at high speed
     lastTagAt = now;
@@ -412,7 +412,7 @@ function addLiveEvent(ev, env) {
   if (isFavPlayer(ev.player_id)) li.className = 'fav';
   const d = ev.details || {};
   let txt = `${ev.player_name || ''} (${abbr(ev.team_side)}) · ${ev.type.replace('_', ' ')}`;
-  if (ev.type === 'shot') txt += ` · ${ev.outcome.replace('_', ' ')} · xG ${d.xg.toFixed(2)}`;
+  if (ev.type === 'shot') txt += ` · ${ev.outcome.replace('_', ' ')} · ${t('shot_pct', { p: chancePct(d.xg) })}`;
   if (ev.type === 'pass' && ev.derived) txt += ` → ${d.recipient_name || ''} · ${d.length_m} m · ${ev.derived.pass_difficulty}`;
   li.innerHTML = `<span class="m">${env.display_minute}</span><span class="x">${txt}</span>`;
   const ul = $('liveEvents'); ul.prepend(li);
@@ -435,7 +435,7 @@ function onAlert(env, replay = false) {
       why = (d.assist ? t('assist', { name: d.assist }) + ' ' : '') + t('goal_why', v); sub = why; break;
     case 'card': title = t('card_' + d.card, v); key = t('card_k'); timeline = true; break;
     case 'substitution': title = t('sub', v); key = t('sub_k'); timeline = true; break;
-    case 'big_chance_missed': title = t('big_chance', v); why = t('big_chance_why', v); sub = why; key = 'xG'; timeline = true; break;
+    case 'big_chance_missed': title = t('big_chance', v); why = t('big_chance_why', v); sub = why; key = t('big_chance_k'); timeline = true; break;
     case 'rocket_shot': title = t('rocket', v); key = t('rocket_k'); timeline = fav; break;
     case 'speed': title = t('speed', v); sub = d.match_record ? t('speed_record') : ''; key = t('speed_k'); timeline = fav || d.match_record; break;
     case 'hard_pass': title = t('hard_pass', v); sub = (d.reasons || []).join(', '); key = t('hard_pass_k'); timeline = fav; break;
@@ -584,14 +584,14 @@ function renderState() {
   $('momoBar').style.left = mo >= 0 ? '50%' : `${50 + 50 * mo}%`; $('momoBar').style.width = `${50 * Math.abs(mo)}%`;
   $('momoBar').style.background = mo >= 0 ? 'var(--home)' : 'var(--away)';
   $('momoTxt').textContent = `${t('momentum')}: ${Math.abs(s.momentum) < 15 ? t('level') : t('on_top', { team: abbr(mo >= 0 ? 'home' : 'away') })}`;
-  const statsHtml = statRows(s);
-  $('statsB').innerHTML = statsHtml; $('statsA').innerHTML = statsHtml;
+  $('statsB').innerHTML = statRows(s); $('statsA').innerHTML = statRows(s, true);
   renderFan();
 }
-function statRows(s) {
+const chancePct = xg => Math.max(1, Math.round(100 * (xg ?? 0)));   // a shot's xG shown to viewers as a % chance
+function statRows(s, analyst = false) {
   const H = s.teams.home, A = s.teams.away, f = (v, d = 0) => (v ?? 0).toFixed(d);
   const rows = [
-    [f(H.xg, 2), t('s_xg'), f(A.xg, 2)],
+    ...(analyst ? [[f(H.xg, 2), t('s_xg'), f(A.xg, 2)]] : []),
     [`${f(H.shots)} (${f(H.shots_on_target)})`, t('s_shots'), `${f(A.shots)} (${f(A.shots_on_target)})`],
     [`${Math.round(s.possession.total[0])}%`, t('s_poss'), `${Math.round(s.possession.total[1])}%`],
     [`${Math.round(s.possession.last5[0])}%`, t('s_poss5'), `${Math.round(s.possession.last5[1])}%`],
@@ -660,7 +660,7 @@ function renderFocus() {
     <div><h2 style="margin:0">★ ${who.name}</h2><div class="hint">${who.position} · ${S.meta[who.side].name}${status ? ' · ' + status : ''}</div></div></div>
     <dl><div><dt>${t('f_rating')}</dt><dd>${P ? f(v.rating, 1) : '–'}</dd></div>
     <div><dt>${t('f_passes')}</dt><dd>${f(v.passes_complete)}/${f(v.passes)}</dd></div>
-    <div><dt>${t('f_xg')}</dt><dd>${f(v.xg, 2)}</dd></div><div><dt>${t('f_shots')}</dt><dd>${f(v.shots)}</dd></div>
+    <div><dt>${t('f_sot')}</dt><dd>${f(v.shots_on_target)}</dd></div><div><dt>${t('f_shots')}</dt><dd>${f(v.shots)}</dd></div>
     <div><dt>${t('f_kp')}</dt><dd>${f(v.key_passes)}</dd></div><div><dt>${t('f_tk')}</dt><dd>${f(v.tackles_won)}</dd></div>
     <div><dt>${t('f_dist')}</dt><dd>${f((v.distance_m || 0) / 1000, 1)} km</dd></div><div><dt>${t('f_top')}</dt><dd>${f(v.top_speed_kmh, 1)}</dd></div></dl>`;
 }
@@ -1213,7 +1213,7 @@ function renderHighlights(fresh = null) {
     return `<button class="hltile ${goal ? 'goal' : ''} ${fresh === h.highlight_id ? 'new' : ''}" data-hl="${h.highlight_id}" style="--team:var(--${h.side})">
       <span class="play">▶</span><span class="k">${esc(t(HL_KIND[h.kind]))}</span>
       <span class="who"><b>${esc(h.display_minute)}</b> ${esc(h.player)} <span class="hint">${esc(abbr(h.side))}</span></span>
-      <span class="hint">${h.chance_peak != null ? t('hl_chance', { a: Math.max(1, Math.round(h.chance_start * 100)), b: Math.round(h.chance_peak * 100) }) + ' · ' : ''}xG ${(h.xg ?? 0).toFixed(2)}</span></button>`;
+      <span class="hint">${h.chance_peak != null ? t('hl_chance', { a: Math.max(1, Math.round(h.chance_start * 100)), b: Math.round(h.chance_peak * 100) }) + ' · ' : ''}${t('hl_shot', { p: chancePct(h.xg) })}</span></button>`;
   }).join('') : `<p class="hint">${t('hl_wait')}</p>`;
   $('hlB').innerHTML = html; $('hlF').innerHTML = html;
 }
@@ -1352,7 +1352,7 @@ function playHighlight(h) {
     if (slow && !endCard) { ctx.fillStyle = '#F2B705'; ctx.textAlign = 'right'; ctx.fillText(t('hl_slowmo'), W - 10, 18); ctx.textAlign = 'left'; }
     // shot info and verdict
     if (tm >= tShot) {
-      const info = `${h.chance_peak != null ? t('hl_chance', { a: Math.max(1, Math.round(h.chance_start * 100)), b: Math.round(h.chance_peak * 100) }) + ' · ' : ''}xG ${(h.xg ?? 0).toFixed(2)}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}${h.distance_m ? ' · ' + Math.round(h.distance_m) + ' m' : ''}`;
+      const info = `${h.chance_peak != null ? t('hl_chance', { a: Math.max(1, Math.round(h.chance_start * 100)), b: Math.round(h.chance_peak * 100) }) + ' · ' : ''}${t('hl_shot', { p: chancePct(h.xg) })}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}${h.distance_m ? ' · ' + Math.round(h.distance_m) + ' m' : ''}`;
       label(W / 2, H - 14, info, 'rgba(20,33,61,.92)', '#fff', 15);
     }
     if (tm >= tShot + 0.6 || endCard) {
