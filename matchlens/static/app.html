@@ -11,7 +11,7 @@
 </head>
 <body data-mode="broadcast">
 <header class="topbar">
-  <div class="brand">Match<span>Lens</span></div>
+  <a class="brand" href="?mode=home" id="brand" title="Home">Match<span>Lens</span></a>
   <select id="match" aria-label="Match"></select>
   <select id="speed" aria-label="Replay speed">
     <option value="1">Real time</option><option value="10">10×</option><option value="30">30×</option>
@@ -36,6 +36,43 @@
 </header>
 
 <main>
+  <!-- ============================== HOME ============================== -->
+  <section id="home" class="view">
+    <div class="hero">
+      <div class="hero-text">
+        <div class="kicker" data-i18n="home_kicker">Microsoft Premier League Hackathon</div>
+        <h1>Match<span>Lens</span></h1>
+        <p class="hero-tag" data-i18n="home_tag">Explainable live match intelligence</p>
+        <p class="sub" data-i18n="home_sub">Numbers fans can trust, stories in their language, fantasy decisions they can act on. Every number the AI writes is fact-checked against the data before anyone sees it.</p>
+        <div class="cta"><button class="go" id="homeGo" data-i18n="home_go">▶ Watch the showcase match</button>
+          <span class="hint" data-i18n="home_go_hint">Matchday 10 · Kingsmere United v Thornbury Rovers · from 40' at 10× speed</span></div>
+        <p class="ai" id="homeAi"></p>
+      </div>
+      <svg class="hero-art" viewBox="-24 0 248 236" aria-hidden="true">
+        <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00FF85"/><stop offset="1" stop-color="#04F5FF"/></linearGradient></defs>
+        <circle cx="100" cy="100" r="92" fill="none" stroke="url(#hg)" stroke-width="5"/>
+        <circle cx="100" cy="100" r="64" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2" stroke-dasharray="4 6"/>
+        <polyline points="20,150 55,128 80,140 108,92 132,104 168,46" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="168" cy="46" r="9" fill="#E90052"/>
+        <text x="100" y="226" text-anchor="middle" class="hero-cap">WIN PROBABILITY 37% → 71%</text>
+      </svg>
+    </div>
+    <div class="tiles">
+      <button class="tile" data-go="broadcast"><b data-i18n="broadcast">Broadcast</b><span data-i18n="home_b">Live graphics: player speed, shot chances, win probability, goal chance and instant replays. Also a TV graphics layer.</span></button>
+      <button class="tile" data-go="analyst"><b data-i18n="analyst">Analyst</b><span data-i18n="home_a">Pressing, territory, xG race, momentum vs chaos, pass difficulty and fact-checked analyst notes with their trace.</span></button>
+      <button class="tile" data-go="fan"><b data-i18n="fan">Fan</b><span data-i18n="home_f">Who is on top and why, in plain words and in your language, plus the story of the match.</span></button>
+      <button class="tile" data-go="fantasy"><b data-i18n="fantasy">Fantasy</b><span data-i18n="home_x">Live points with reasons, player profiles, fair live predictions and a Transfer Advisor agent.</span></button>
+    </div>
+    <ol class="how">
+      <li><b data-i18n="how1">Synthetic season</b><span data-i18n="how1s">10 fictional clubs, 230 players, 90 matches</span></li>
+      <li><b data-i18n="how2">Live engine</b><span data-i18n="how2s">stats and models on every event</span></li>
+      <li><b data-i18n="how3">AI agents</b><span data-i18n="how3s">Microsoft Foundry · Agent Framework · MCP</span></li>
+      <li><b data-i18n="how4">Fact checker</b><span data-i18n="how4s">code, not a model, checks every number</span></li>
+      <li><b data-i18n="how5">You</b><span data-i18n="how5s">broadcast, analyst, fan or fantasy, in 7 languages</span></li>
+    </ol>
+    <p class="foot" data-i18n="home_foot">100% synthetic data: the Aurora League, its clubs and players are invented.</p>
+  </section>
+
   <!-- ============================== BROADCAST ============================== -->
   <section id="broadcast" class="view">
     <div class="stage" id="stage">

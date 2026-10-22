@@ -47,7 +47,7 @@ button, select, input { font: inherit; color: inherit; }
 main { max-width: 1320px; margin: 0 auto; padding: 18px 20px 40px; }
 .view { display: none; }
 body[data-mode="broadcast"] #broadcast, body[data-mode="analyst"] #analyst, body[data-mode="fan"] #fan,
-body[data-mode="fantasy"] #fantasy { display: block; }
+body[data-mode="fantasy"] #fantasy, body[data-mode="home"] #home { display: block; }
 .card { background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius-m); padding: 14px 16px; }
 h2 { font: 600 17px/1.2 var(--font); margin: 0 0 10px; }
 h3 { font: 600 14px/1.2 var(--font); margin: 0 0 8px; color: var(--ink-2); }
@@ -231,25 +231,74 @@ details.trace .bad { color: #A33; }
 
 .fxempty { max-width: 640px; margin: 30px auto; text-align: center; padding: 24px; }
 .fxempty button { background: var(--flag); border: 0; border-radius: var(--radius-s); padding: 9px 16px; font-weight: 600; cursor: pointer; }
-/* fantasy theme: deep purple with cyan / green / magenta accents (colours only, no league branding) */
-body[data-mode="fantasy"] { --fx-purple: #37003C; --fx-cyan: #04F5FF; --fx-green: #00FF85; --fx-pink: #E90052;
+/* app theme: deep purple with cyan / green / magenta accents (colours only, no league branding) */
+html { background: #1E0024; }
+body { min-height: 100vh; --fx-purple: #37003C; --fx-cyan: #04F5FF; --fx-green: #00FF85; --fx-pink: #E90052;
   background: radial-gradient(1200px 500px at 85% -10%, rgba(4,245,255,.18), transparent 60%),
               radial-gradient(900px 500px at -10% 110%, rgba(233,0,82,.18), transparent 60%),
               linear-gradient(160deg, #37003C 0%, #2C0031 55%, #1E0024 100%) fixed; }
-body[data-mode="fantasy"] .topbar { background: #2A002E; box-shadow: inset 0 -3px 0 var(--fx-green); }
-body[data-mode="fantasy"] #fantasy .card { border: 0; box-shadow: 0 8px 24px rgba(0,0,0,.28); }
-body[data-mode="fantasy"] #fantasy .card > h2, body[data-mode="fantasy"] #fantasy .fhead h2 { color: var(--fx-purple); }
-body[data-mode="fantasy"] #fantasy .card > h2::before, body[data-mode="fantasy"] #fantasy .fhead h2::before {
+body .topbar { background: #2A002E; box-shadow: inset 0 -3px 0 var(--fx-green); }
+main .card { border: 0; box-shadow: 0 8px 24px rgba(0,0,0,.28); }
+main .card > h2, body #fantasy .fhead h2 { color: var(--fx-purple); }
+main .card > h2::before, body #fantasy .fhead h2::before {
   content: ""; display: inline-block; width: 4px; height: .95em; margin-right: 8px; vertical-align: -2px; border-radius: 2px;
   background: linear-gradient(var(--fx-cyan), var(--fx-green)); }
-body[data-mode="fantasy"] .ftotal .num { color: var(--fx-purple); }
-body[data-mode="fantasy"] #fxView button[aria-pressed="true"] { background: var(--fx-purple); }
-body[data-mode="fantasy"] .flist .adv, body[data-mode="fantasy"] .factions button, body[data-mode="fantasy"] .reps button {
+body .ftotal .num { color: var(--fx-purple); }
+body #fxView button[aria-pressed="true"] { background: var(--fx-purple); }
+body .flist .adv, body .factions button, body .reps button {
   border-color: var(--fx-purple); color: var(--fx-purple); }
-body[data-mode="fantasy"] .qb:hover { border-color: var(--fx-purple); }
-body[data-mode="fantasy"] .fxempty button { background: var(--fx-green); color: var(--fx-purple); }
-body[data-mode="fantasy"] .pbench { background: #F3EDF4; }
+body .qb:hover { border-color: var(--fx-purple); }
+body .fxempty button { background: var(--fx-green); color: var(--fx-purple); }
+body .pbench { background: #F3EDF4; }
 dialog.profile .pradvice { border-left-color: #37003C; }
+/* text that sits directly on the purple background */
+body .headline { color: #fff; }
+body .tugl, body .fchance { color: rgba(255,255,255,.82); }
+body .fanscore .min { color: var(--ink-2); }
+body #fxNote.hint { color: #fff; }
+body .seg button[aria-pressed="true"] { background: var(--fx-purple); }
+body .topbar button.primary { background: var(--fx-green); border-color: var(--fx-green); color: var(--fx-purple); }
+body .brand span { color: var(--fx-green); }
+body .stage { box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+/* home page */
+a.brand { color: inherit; text-decoration: none; }
+body[data-mode="home"] .topbar > select, body[data-mode="home"] #watch, body[data-mode="home"] #pause, body[data-mode="home"] #conn { display: none; }
+#home { color: #fff; padding: 30px 10px 10px; }
+.hero { display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: center; min-height: 420px; }
+.hero .kicker { font: 600 18px/1 var(--font-cond); letter-spacing: .18em; text-transform: uppercase; color: var(--fx-cyan); margin-bottom: 14px; }
+.hero h1 { font: 700 clamp(52px, 11vw, 150px)/.88 var(--font-cond); margin: 0; overflow-wrap: anywhere; }
+.hero h1 span { background: linear-gradient(90deg, var(--fx-green), var(--fx-cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero .hero-tag { font: 600 clamp(22px, 2.6vw, 34px)/1.15 var(--font); margin: 18px 0 0; }
+.hero .sub { font-size: 18px; line-height: 1.5; color: rgba(255,255,255,.8); max-width: 720px; margin: 12px 0 0; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 28px; }
+.cta .go { background: var(--fx-green); color: var(--fx-purple); border: 0; border-radius: 999px; padding: 15px 26px; font: 700 18px/1 var(--font); cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,255,133,.3); }
+.cta .go:hover { transform: translateY(-1px); }
+.cta .hint { color: rgba(255,255,255,.7); }
+.hero .ai { margin: 16px 0 0; font-size: 14px; color: rgba(255,255,255,.7); }
+.hero-art { width: 100%; max-width: 340px; justify-self: center; }
+.hero-cap { font: 700 14px var(--font-cond); fill: var(--fx-cyan); }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 26px; }
+.tile { text-align: left; background: rgba(255,255,255,.07); border: 2px solid rgba(255,255,255,.16); border-radius: var(--radius-m); color: #fff;
+  padding: 18px; cursor: pointer; display: flex; flex-direction: column; gap: 8px; transition: border-color .2s, background .2s; }
+.tile:hover { border-color: var(--fx-green); background: rgba(255,255,255,.11); }
+.tile b { font: 700 22px/1 var(--font-cond); text-transform: uppercase; letter-spacing: .04em; }
+.tile b::after { content: " →"; color: var(--fx-green); }
+.tile span { font-size: 14.5px; line-height: 1.45; color: rgba(255,255,255,.8); }
+.how { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 0; margin: 28px 0 0; counter-reset: s; }
+.how li { counter-increment: s; border-top: 3px solid var(--fx-cyan); padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+.how li::before { content: counter(s); font: 700 14px/1 var(--font-cond); color: var(--fx-cyan); }
+.how b { font: 700 17px/1.1 var(--font-cond); text-transform: uppercase; }
+.how span { font-size: 13.5px; color: rgba(255,255,255,.75); }
+#home .foot { margin: 26px 0 0; font-size: 13px; color: rgba(255,255,255,.55); }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero-art { max-width: 220px; order: -1; }
+  .tiles { grid-template-columns: 1fr 1fr; }
+  .how { grid-template-columns: 1fr; }
+  #home { padding: 10px 0; overflow-x: hidden; }
+}
+@media (max-width: 520px) { .tiles { grid-template-columns: 1fr; } .hero .kicker { letter-spacing: .1em; } }
 /* fantasy: pitch line-up */
 .fpitch { margin-top: 6px; }
 .pfield { position: relative; display: flex; flex-direction: column; justify-content: space-around; gap: 10px; min-height: 470px; padding: 18px 8px;
@@ -380,8 +429,9 @@ dialog button { padding: 7px 14px; border-radius: var(--radius-s); border: 1px s
 dialog button.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
 /* ---------------------------------------------------------------- overlay-only view (for OBS / vMix) */
-body.overlay { background: transparent; }
-body.overlay .topbar, body.overlay .below, body.overlay #analyst, body.overlay #fan { display: none !important; }
+html:has(body.overlay), body.overlay { background: transparent !important; }
+body.overlay .topbar { box-shadow: none; }
+body.overlay .topbar, body.overlay .below, body.overlay #analyst, body.overlay #fan, body.overlay #fantasy, body.overlay #home { display: none !important; }
 body.overlay main { max-width: none; padding: 0; }
 body.overlay #broadcast { display: block; }
 body.overlay .stage { background: transparent; border-radius: 0; height: 100vh; aspect-ratio: auto; }

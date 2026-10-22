@@ -64,6 +64,18 @@ const I18N = {
     st_analyst: 'Analyst', st_writer: 'Writer', st_fact_check: 'Fact check', st_recap_editor: 'Studio editor',
     st_localiser: 'Translator', tools: 'tools', retry: 'retry', secs: 's',
     // fantasy
+    home_kicker: 'Microsoft Premier League Hackathon', home_tag: 'Explainable live match intelligence',
+    home_sub: 'Numbers fans can trust, stories in their language, fantasy decisions they can act on. Every number the AI writes is fact-checked against the data before anyone sees it.',
+    home_go: '▶ Watch the showcase match', home_go_hint: "Matchday 10 · Kingsmere United v Thornbury Rovers · from 40' at 10× speed",
+    home_b: 'Live graphics: player speed, shot chances, win probability, goal chance and instant replays. Also a TV graphics layer.',
+    home_a: 'Pressing, territory, xG race, momentum vs chaos, pass difficulty and fact-checked analyst notes with their trace.',
+    home_f: 'Who is on top and why, in plain words and in your language, plus the story of the match.',
+    home_x: 'Live points with reasons, player profiles, fair live predictions and a Transfer Advisor agent.',
+    how1: 'Synthetic season', how1s: '10 fictional clubs, 230 players, 90 matches', how2: 'Live engine', how2s: 'stats and models on every event',
+    how3: 'AI agents', how3s: 'Microsoft Foundry · Agent Framework · MCP', how4: 'Fact checker', how4s: 'code, not a model, checks every number',
+    how5: 'You', how5s: 'broadcast, analyst, fan or fantasy, in 7 languages',
+    home_foot: '100% synthetic data: the Aurora League, its clubs and players are invented.',
+    home_ai_on: 'AI newsroom live: {src}', home_ai_off: 'AI newsroom off on this server: template texts are used.',
     fantasy: 'Fantasy', my_squad: 'My squad', live_pts: 'live points', reset_squad: 'Use suggested squad',
     squad_hint: 'Tap ★ to pick your captain (double points). Ask the advisor about any player.',
     advisor: 'Transfer Advisor', advisor_hint: 'Choose “Advice” on a player: hold, watch or sell, with the reasons and affordable replacements.',
@@ -158,6 +170,18 @@ const I18N = {
     lang_hint: 'Los menús están en inglés o español; los comentarios se escriben en todos los idiomas de la lista.',
     st_analyst: 'Analista', st_writer: 'Redactor', st_fact_check: 'Verificación', st_recap_editor: 'Editor',
     st_localiser: 'Traductor', tools: 'herramientas', retry: 'reintento', secs: 's',
+    home_kicker: 'Microsoft Premier League Hackathon', home_tag: 'Inteligencia de partido en directo, explicable',
+    home_sub: 'Números en los que confiar, historias en tu idioma y decisiones fantasy accionables. Cada número que escribe la IA se verifica con los datos antes de publicarse.',
+    home_go: '▶ Ver el partido de muestra', home_go_hint: "Jornada 10 · Kingsmere United - Thornbury Rovers · desde el 40' a 10×",
+    home_b: 'Gráficos en directo: velocidad de jugadores, probabilidad de gol de cada tiro y de cada ataque, probabilidad de victoria y repeticiones. También una capa gráfica para TV.',
+    home_a: 'Presión, territorio, carrera de xG, dominio frente a caos, dificultad de pase y notas del analista verificadas, con su traza.',
+    home_f: 'Quién domina y por qué, en palabras sencillas y en tu idioma, más la historia del partido.',
+    home_x: 'Puntos en directo con motivos, fichas de jugador, predicciones con cuotas justas y un agente asesor de fichajes.',
+    how1: 'Temporada sintética', how1s: '10 clubes ficticios, 230 jugadores, 90 partidos', how2: 'Motor en directo', how2s: 'estadísticas y modelos en cada evento',
+    how3: 'Agentes de IA', how3s: 'Microsoft Foundry · Agent Framework · MCP', how4: 'Verificador', how4s: 'código, no un modelo, comprueba cada número',
+    how5: 'Tú', how5s: 'retransmisión, analista, afición o fantasy, en 7 idiomas',
+    home_foot: 'Datos 100% sintéticos: la Aurora League, sus clubes y jugadores son inventados.',
+    home_ai_on: 'Redacción IA activa: {src}', home_ai_off: 'Redacción IA desactivada en este servidor: se usan textos automáticos.',
     fantasy: 'Fantasy', my_squad: 'Mi plantilla', live_pts: 'puntos en directo', reset_squad: 'Usar plantilla sugerida',
     squad_hint: 'Pulsa ★ para elegir capitán (puntos dobles). Pide consejo sobre cualquier jugador.',
     advisor: 'Asesor de fichajes', advisor_hint: 'Pulsa «Consejo» en un jugador: mantener, vigilar o vender, con los motivos y sustitutos asequibles.',
@@ -206,7 +230,7 @@ const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
 const S = {
   ws: null, meta: null, state: null, series: [], players: {}, keyEvents: [], passes: [], timeline: new Map(),
-  mode: params.get('mode') || 'broadcast', paused: false, done: false, sort: { key: 'rating', dir: -1 },
+  mode: params.get('mode') || (params.get('match') || params.get('view') ? 'broadcast' : 'home'), paused: false, done: false, sort: { key: 'rating', dir: -1 },
   passSide: 'home', clubs: [], catalogue: [], narr: new Map(), recaps: {}, newsroom: null,
   highlights: [],
   fx: { md: null, players: {}, live: {}, quotes: null, calls: null, advice: null, meta: null },
@@ -1424,6 +1448,7 @@ $('pSave').onclick = () => {
 // ------------------------------------------------------------------ modes & controls
 function setMode(mode) {
   S.mode = mode; document.body.dataset.mode = mode;
+  if (mode !== 'home' && !S.ws && S.catalogue.length) connect(false);   // the match starts once someone leaves the front page
   document.querySelectorAll('.modes button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
   const u = new URL(location.href); u.searchParams.set('mode', mode); history.replaceState(null, '', u);
   renderAll();
@@ -1438,5 +1463,16 @@ $('speed').onchange = () => S.ws && S.ws.readyState === 1 && S.ws.send(JSON.stri
   if (params.get('view') === 'overlay') document.body.classList.add('overlay');
   initPitches(); applyI18n(); setMode(S.mode);
   await loadCatalogue();
-  connect(false);
+  if (S.mode !== 'home') connect(false);
+  try {
+    const nr = await (await fetch('/api/newsroom')).json();
+    $('homeAi').textContent = nr.enabled ? t('home_ai_on', { src: nr.source + (nr.model ? ' · ' + nr.model : '') }) : t('home_ai_off');
+  } catch (e) { /* status is optional */ }
 })();
+$('brand').onclick = e => { e.preventDefault(); setMode('home'); };
+document.querySelectorAll('#home [data-go]').forEach(b => { b.onclick = () => setMode(b.dataset.go); });
+$('homeGo').onclick = () => {
+  if (![...$('from').options].some(o => o.value === '40')) $('from').add(new Option("From 40'", '40'), 3);
+  $('match').value = DEMO_MATCH; $('speed').value = '10'; $('from').value = '40';
+  connect(true); setMode('broadcast');
+};
