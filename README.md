@@ -95,6 +95,7 @@ Decisions stay explainable. Fantasy verdicts (HOLD / WATCH / SELL) come from tra
 | | |
 |---|---|
 | ![Analyst](docs/screens/analyst.jpg) **Analyst:** win probability, xG race, momentum and chaos, team stats, shot and pass maps, player table, analyst notes and match report | ![Fan](docs/screens/fan.jpg) **Fan:** plain-language headline of who is on top, win-probability tug of war, the story so far, followed player |
+| ![Highlight replay](docs/screens/highlight.jpg) **Highlights:** data replays of goals, big chances, great saves and penalties, with the live goal chance of the move and the shot's chance to score | ![Broadcast](docs/screens/broadcast.jpg) **Broadcast:** score bug, win probability, player tags with speed and shot chance, goal-chance meter, lower thirds; also a transparent TV graphics layer |
 | ![Fantasy](docs/screens/fantasy.jpg) **Fantasy:** your XI on the pitch with live points and reasons, fixtures grid, live calls with fair model odds, Transfer Advisor | ![Player](docs/screens/profile.jpg) **Player profile:** attribute hexagon (rating vs this season), EA FC-style attribute breakdown, scorecard, points by matchday, last 5 / next 5 |
 
 ## Quick start
