@@ -88,3 +88,18 @@ def test_fantasy_live_points_and_calls():
     advice = client.post("/api/fantasy/advice", json={"player_id": sq["squad"][0], "squad": sq["squad"],
                                                       "matchday": 10, "lang": "es"}).json()
     assert advice["verdict"] in ("HOLD", "WATCH", "SELL") and "es" in advice["texts"]
+
+
+def test_highlights_are_published_after_the_shot():
+    with client.websocket_connect("/ws/AUR26-MD10-KMU-THR?speed=5000&restart=1") as ws:
+        ws.receive_json()
+        msgs = run_to_end(ws)
+    hls = [m["payload"] for m in msgs if m["type"] == "highlight"]
+    kinds = [h["kind"] for h in hls]
+    assert kinds.count("goal") == 2 and "great_save" in kinds
+    goal = hls[kinds.index("goal")]
+    assert goal["player"] == "Peiró" and goal["score_after"] == {"home": 0, "away": 1}
+    assert all(f["t"] <= goal["t_shot"] + 1.5 for f in goal["frames"]) and goal["frames"][-1]["type"] in ("shot", "goal")
+    shot_seq = next(m["seq"] for m in msgs if m["type"] == "event" and m["payload"]["type"] == "shot"
+                    and m["payload"]["player_name"] == "Peiró" and m["payload"]["outcome"] == "goal")
+    assert next(m["seq"] for m in msgs if m["type"] == "highlight") > shot_seq       # never before the shot

@@ -6,7 +6,12 @@ const I18N = {
   en: {
     watch: 'Watch', pause: 'Pause', resume: 'Resume', broadcast: 'Broadcast', analyst: 'Analyst', fan: 'Fan',
     preferences: 'Preferences', key_moments: 'Key moments', match_stats: 'Match stats', on_the_ball: 'On the ball',
-    overlay_hint: 'Add ?view=overlay to the address for a transparent graphics layer you can put over a video feed in OBS or vMix.',
+    overlay_btn: 'Open TV graphics layer',
+    overlay_hint: 'The live score, win-probability bar and goal banners on a see-through background, so a TV producer can place them over their own match video (for example in OBS or vMix).',
+    highlights: 'Highlights', hl_wait: 'Goals, big chances, great saves and penalties appear here as data replays.',
+    hl_goal: 'Goal', hl_penalty_goal: 'Penalty goal', hl_big_chance: 'Big chance', hl_great_save: 'Great save',
+    hl_penalty_save: 'Penalty saved', hl_penalty_miss: 'Penalty missed', hl_replay: 'Replay', hl_download: 'Download clip',
+    hl_replay_k: 'REPLAY', hl_slowmo: 'SLOW MOTION', hl_missed: 'MISSED!', hl_saved: 'SAVED!',
     win_prob: 'Win probability', xg_race: 'xG race', momentum_chaos: 'Momentum and chaos', team_stats: 'Team stats',
     shot_map: 'Shot map', shot_legend: 'Circle size = xG. Filled = goal.', pass_map: 'Completed passes, last 10 minutes',
     pass_legend: 'Line colour = pass difficulty: green easy, yellow medium, red hard.', players: 'Players',
@@ -99,7 +104,12 @@ const I18N = {
   es: {
     watch: 'Ver', pause: 'Pausa', resume: 'Reanudar', broadcast: 'Retransmisión', analyst: 'Analista', fan: 'Afición',
     preferences: 'Preferencias', key_moments: 'Momentos clave', match_stats: 'Estadísticas', on_the_ball: 'Con el balón',
-    overlay_hint: 'Añade ?view=overlay a la dirección para obtener una capa gráfica transparente sobre la señal de vídeo en OBS o vMix.',
+    overlay_btn: 'Abrir capa gráfica para TV',
+    overlay_hint: 'El marcador en directo, la barra de probabilidad y los rótulos de gol sobre un fondo transparente, para que un realizador los coloque sobre su propia señal de vídeo (por ejemplo en OBS o vMix).',
+    highlights: 'Jugadas destacadas', hl_wait: 'Los goles, ocasiones claras, grandes paradas y penaltis aparecen aquí como repeticiones de datos.',
+    hl_goal: 'Gol', hl_penalty_goal: 'Gol de penalti', hl_big_chance: 'Ocasión clara', hl_great_save: 'Gran parada',
+    hl_penalty_save: 'Penalti parado', hl_penalty_miss: 'Penalti fallado', hl_replay: 'Repetir', hl_download: 'Descargar clip',
+    hl_replay_k: 'REPETICIÓN', hl_slowmo: 'CÁMARA LENTA', hl_missed: '¡FUERA!', hl_saved: '¡PARADA!',
     win_prob: 'Probabilidad de victoria', xg_race: 'Carrera de xG', momentum_chaos: 'Dominio y caos', team_stats: 'Estadísticas de equipo',
     shot_map: 'Mapa de tiros', shot_legend: 'Tamaño del círculo = xG. Relleno = gol.', pass_map: 'Pases completados, últimos 10 minutos',
     pass_legend: 'Color de la línea = dificultad del pase: verde fácil, amarillo media, rojo difícil.', players: 'Jugadores',
@@ -192,6 +202,7 @@ const S = {
   ws: null, meta: null, state: null, series: [], players: {}, keyEvents: [], passes: [], timeline: new Map(),
   mode: params.get('mode') || 'broadcast', paused: false, done: false, sort: { key: 'rating', dir: -1 },
   passSide: 'home', clubs: [], catalogue: [], narr: new Map(), recaps: {}, newsroom: null,
+  highlights: [],
   fx: { md: null, players: {}, live: {}, quotes: null, calls: null, advice: null, meta: null },
 };
 let viewerId = 'v-' + Math.random().toString(36).slice(2, 12);
@@ -302,6 +313,7 @@ function handle(m) {
     case 'session': onSession(m.payload); break;
     case 'narrative': onNarrative(m.payload); break;
     case 'recap': onRecap(m.payload); break;
+    case 'highlight': onHighlight(m.payload); break;
     case 'fantasy': S.fx.live = m.payload.points || {}; S.fx.quotes = m.payload.quotes; if (S.mode === 'fantasy') renderFantasy(); break;
     case 'calls': S.fx.calls = m.payload; if (S.mode === 'fantasy') renderCalls(); break;
     case 'error': if (S.mode === 'fantasy') { $('fxCalls').insertAdjacentHTML('afterbegin', `<li class="lost">${esc(m.payload.message)}</li>`); } else $('conn').textContent = m.payload.message; break;
@@ -331,6 +343,7 @@ function onHello(p) {
   (p.narratives || []).forEach(n => (n.kind === 'half_time' || n.kind === 'full_time') ? onRecap(n, true) : onNarrative(n, true));
   const sess = p.state.session || {};
   onSession({ speed: sess.speed, paused: sess.paused, done: sess.done });
+  S.highlights = []; (p.highlights || []).forEach(h => onHighlight(h, true)); renderHighlights();
   onFantasyHello(p.fantasy);
   renderState(); renderAll();
 }
@@ -1144,6 +1157,192 @@ $('prClose').onclick = () => $('profDlg').close();
 $('prCap').onclick = () => { fx.captain = profPid; saveFx(); $('profDlg').close(); renderFantasy(); };
 $('prAdv').onclick = () => { $('profDlg').close(); askAdvisor(profPid); };
 $('profDlg').addEventListener('click', e => { if (e.target === $('profDlg')) $('profDlg').close(); });
+
+// ------------------------------------------------------------------ highlights (data replays)
+const HL_KIND = { goal: 'hl_goal', penalty_goal: 'hl_penalty_goal', big_chance: 'hl_big_chance', great_save: 'hl_great_save',
+  penalty_save: 'hl_penalty_save', penalty_miss: 'hl_penalty_miss' };
+function onHighlight(h, replay = false) {
+  if (S.highlights.some(x => x.highlight_id === h.highlight_id)) return;
+  S.highlights.push(h);
+  renderHighlights(replay ? null : h.highlight_id);
+}
+function renderHighlights(fresh = null) {
+  const html = S.highlights.length ? [...S.highlights].reverse().map(h => {
+    const goal = h.kind === 'goal' || h.kind === 'penalty_goal';
+    return `<button class="hltile ${goal ? 'goal' : ''} ${fresh === h.highlight_id ? 'new' : ''}" data-hl="${h.highlight_id}" style="--team:var(--${h.side})">
+      <span class="play">▶</span><span class="k">${esc(t(HL_KIND[h.kind]))}</span>
+      <span class="who"><b>${esc(h.display_minute)}</b> ${esc(h.player)} <span class="hint">${esc(abbr(h.side))}</span></span>
+      <span class="hint">xG ${(h.xg ?? 0).toFixed(2)}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}</span></button>`;
+  }).join('') : `<p class="hint">${t('hl_wait')}</p>`;
+  $('hlB').innerHTML = html; $('hlF').innerHTML = html;
+}
+['hlB', 'hlF'].forEach(id => $(id).addEventListener('click', e => {
+  const b = e.target.closest('[data-hl]'); if (!b) return;
+  const h = S.highlights.find(x => x.highlight_id === b.dataset.hl); if (h) playHighlight(h);
+}));
+
+const PIP = { raf: 0, rec: null, url: null, h: null };
+function playHighlight(h) {
+  cancelAnimationFrame(PIP.raf);
+  if (PIP.rec && PIP.rec.state === 'recording') PIP.rec.stop();
+  PIP.h = h;
+  $('pip').hidden = false;
+  $('pipTitle').textContent = `${t(HL_KIND[h.kind])} · ${h.display_minute} · ${h.player}`;
+  $('pipDl').hidden = true;
+  const cv = $('pipCanvas'), ctx = cv.getContext('2d');
+  const css = getComputedStyle(document.documentElement);
+  const col = { home: css.getPropertyValue('--home').trim() || '#B3122E', away: css.getPropertyValue('--away').trim() || '#1D3F8C' };
+  const W = cv.width, H = cv.height, S5 = 5.4, OX = (W - 105 * S5) / 2, OY = 30;
+  const P = ([x, y]) => [OX + x * S5, OY + y * S5];
+  const roster = {};
+  for (const side of ['home', 'away']) for (const p of [...S.meta[side].starting_xi, ...S.meta[side].bench]) roster[p.player_id] = { ...p, side };
+
+  // ball: piecewise-linear path through every ball action (pass, carry, dribble, clearance, shot)
+  const F = h.frames, ballPts = [];
+  for (const f of F) {
+    if (!f.loc || !['pass', 'carry', 'dribble', 'clearance', 'shot'].includes(f.type)) continue;
+    ballPts.push([f.t, f.loc, f]);
+    if (f.end) ballPts.push([f.t + Math.max(f.dur || 0.5, 0.3), f.end, f]);
+  }
+  ballPts.sort((a, b) => a[0] - b[0]);
+  // players: every place they act (and where they receive a pass)
+  const track = {};
+  const addPt = (pid, t, pos) => { if (!pid || !pos) return; (track[pid] = track[pid] || []).push([t, pos]); };
+  for (const f of F) {
+    addPt(f.player_id, f.t, f.loc);
+    if (f.end && ['carry', 'dribble'].includes(f.type)) addPt(f.player_id, f.t + Math.max(f.dur || 0.5, 0.3), f.end);
+    if (f.type === 'pass' && f.to && f.end) addPt(f.to, f.t + Math.max(f.dur || 0.5, 0.3), f.end);
+  }
+  Object.values(track).forEach(a => a.sort((p, q) => p[0] - q[0]));
+  const lerp = (pts, tm) => {
+    if (!pts.length) return null;
+    if (tm <= pts[0][0]) return pts[0][1];
+    for (let i = 1; i < pts.length; i++) if (tm <= pts[i][0]) {
+      const [t0, a] = pts[i - 1], [t1, b] = pts[i], k = t1 > t0 ? (tm - t0) / (t1 - t0) : 1;
+      return [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k];
+    }
+    return pts[pts.length - 1][1];
+  };
+  // everyone else: formation slots (own frame: x 0 = own goal) shifted with the ball like a team block
+  const shotF = F.find(f => f.type === 'shot');
+  const attGoalX = shotF && shotF.end ? (shotF.end[0] < 52.5 ? 0 : 105) : (h.side === 'home' ? 105 : 0);
+  const dirOf = side => ((side === h.side) === (attGoalX === 105) ? 1 : -1);   // +1: attacks towards x = 105
+  const SLOT = { GK: [5, 34], CB: [22, 34], LCB: [22, 24], RCB: [22, 44], LB: [26, 9], RB: [26, 59], LWB: [36, 7], RWB: [36, 61],
+    DM: [36, 34], LDM: [36, 27], RDM: [36, 41], CM: [46, 34], LCM: [46, 23], RCM: [46, 45], LM: [52, 9], RM: [52, 59],
+    CAM: [58, 34], LAM: [58, 24], RAM: [58, 44], LW: [70, 10], RW: [70, 58], ST: [78, 34], LST: [77, 27], RST: [77, 41] };
+  const xi = {};
+  for (const side of ['home', 'away']) xi[side] = S.meta[side].starting_xi.map(p => p.player_id);
+  const formation = (pid, ball) => {
+    const who = roster[pid], d = dirOf(who.side), [sx, sy] = SLOT[who.position] || [45, 34];
+    const own = d > 0 ? ball[0] : 105 - ball[0];               // ball position in this team's frame
+    const attacking = who.side === h.side;
+    let x = who.position === 'GK' ? 5 + Math.max(0, own - 52) * 0.12 : sx + (own - 52) * (attacking ? 0.55 : 0.45) + (attacking ? 6 : -6);
+    x = Math.max(2, Math.min(103, x));
+    const y = sy + (ball[1] - sy) * (who.position === 'GK' ? 0.15 : 0.18);
+    return [d > 0 ? x : 105 - x, y];
+  };
+  const tStart = h.t_start, tShot = h.t_shot, tEnd = Math.max(...F.map(f => f.t)) + 1.2;
+  const goal = h.kind === 'goal' || h.kind === 'penalty_goal';
+  const verdict = { goal: 'GOAL!', penalty_goal: 'GOAL!', big_chance: t('hl_missed'), great_save: t('hl_saved'), penalty_save: t('hl_saved'), penalty_miss: t('hl_missed') }[h.kind];
+  const trail = [];
+
+  function pitch() {
+    for (let i = 0; i < 14; i++) { ctx.fillStyle = i % 2 ? '#2E7A4F' : '#2A7148'; ctx.fillRect(OX + i * 7.5 * S5, OY, 7.5 * S5, 68 * S5); }
+    ctx.strokeStyle = 'rgba(255,255,255,.8)'; ctx.lineWidth = 1.4;
+    const r = (x, y, w, hh) => { const [a, b] = P([x, y]); ctx.strokeRect(a, b, w * S5, hh * S5); };
+    r(0, 0, 105, 68); r(0, 13.84, 16.5, 40.32); r(88.5, 13.84, 16.5, 40.32); r(0, 24.84, 5.5, 18.32); r(99.5, 24.84, 5.5, 18.32);
+    ctx.beginPath(); ctx.moveTo(...P([52.5, 0])); ctx.lineTo(...P([52.5, 68])); ctx.stroke();
+    ctx.beginPath(); ctx.arc(...P([52.5, 34]), 9.15 * S5, 0, 7); ctx.stroke();
+    ctx.fillStyle = 'rgba(255,255,255,.9)'; ctx.fillRect(...P([-1.2, 30.34]), 1.2 * S5, 7.32 * S5); ctx.fillRect(...P([105, 30.34]), 1.2 * S5, 7.32 * S5);
+  }
+  function label(x, y, text, bg = 'rgba(20,33,61,.9)', fg = '#fff', size = 13) {
+    ctx.font = `600 ${size}px Barlow, system-ui, sans-serif`;
+    const w = ctx.measureText(text).width + 10;
+    ctx.fillStyle = bg; ctx.fillRect(x - w / 2, y - size - 6, w, size + 6);
+    ctx.fillStyle = fg; ctx.textAlign = 'center'; ctx.fillText(text, x, y - 5); ctx.textAlign = 'left';
+  }
+  function frame(tm, slow, endCard) {
+    ctx.fillStyle = '#14213D'; ctx.fillRect(0, 0, W, H);
+    pitch();
+    // players: tracked actors where they act, everyone else in shape around the ball
+    const lastActor = [...F].reverse().find(f => f.t <= tm && f.player_id)?.player_id;
+    const ballNow = lerp(ballPts.map(p => [p[0], p[1]]), tm) || [52.5, 34];
+    const ids = new Set([...xi.home, ...xi.away, ...Object.keys(track)]);
+    for (const pid of ids) {
+      const who = roster[pid]; if (!who) continue;
+      const base = formation(pid, ballNow), pts = track[pid];
+      let pos = base;
+      if (pts) {
+        const first = pts[0][0], last = pts[pts.length - 1][0];
+        const at = lerp(pts, tm);
+        const k = tm < first ? Math.max(0, 1 - (first - tm) / 2.5) : tm > last ? Math.max(0, 1 - (tm - last) / 4) : 1;
+        pos = [base[0] + (at[0] - base[0]) * k, base[1] + (at[1] - base[1]) * k];
+      }
+      const [x, y] = P(pos), involved = !!pts;
+      ctx.globalAlpha = involved ? 1 : 0.8;
+      ctx.beginPath(); ctx.arc(x, y, involved ? 8 : 6.5, 0, 7); ctx.fillStyle = col[who.side]; ctx.fill();
+      ctx.lineWidth = involved ? 2 : 1.2; ctx.strokeStyle = '#fff'; ctx.stroke();
+      ctx.fillStyle = '#fff'; ctx.font = `700 ${involved ? 9 : 8}px Barlow, sans-serif`; ctx.textAlign = 'center'; ctx.fillText(who.shirt, x, y + 3); ctx.textAlign = 'left';
+      ctx.globalAlpha = 1;
+      if (pid === lastActor || (endCard && pid === h.player_id)) label(x, y - 10, who.short_name || who.name);
+    }
+    // ball and trail
+    const b = lerp(ballPts.map(p => [p[0], p[1]]), tm);
+    if (b) {
+      const [x, y] = P(b); trail.push([x, y]); if (trail.length > 18) trail.shift();
+      ctx.strokeStyle = 'rgba(242,183,5,.7)'; ctx.lineWidth = 2.5; ctx.beginPath();
+      trail.forEach(([a, c], i) => (i ? ctx.lineTo(a, c) : ctx.moveTo(a, c))); ctx.stroke();
+      ctx.beginPath(); ctx.arc(x, y, 4.2, 0, 7); ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = '#14213D'; ctx.lineWidth = 1.2; ctx.stroke();
+    }
+    // header band
+    ctx.fillStyle = '#14213D'; ctx.fillRect(0, 0, W, 26);
+    ctx.fillStyle = '#F2B705'; ctx.fillRect(0, 0, 78, 26);
+    ctx.font = '700 14px Barlow Condensed, Barlow, sans-serif'; ctx.fillStyle = '#14213D'; ctx.fillText(t('hl_replay_k'), 9, 18);
+    ctx.fillStyle = '#fff'; ctx.fillText(`${t(HL_KIND[h.kind]).toUpperCase()} · ${h.display_minute} · ${h.player} (${abbr(h.side)})`, 88, 18);
+    if (slow && !endCard) { ctx.fillStyle = '#F2B705'; ctx.textAlign = 'right'; ctx.fillText(t('hl_slowmo'), W - 10, 18); ctx.textAlign = 'left'; }
+    // shot info and verdict
+    if (tm >= tShot) {
+      const info = `xG ${(h.xg ?? 0).toFixed(2)}${h.shot_speed_kmh ? ' · ' + Math.round(h.shot_speed_kmh) + ' km/h' : ''}${h.distance_m ? ' · ' + Math.round(h.distance_m) + ' m' : ''}`;
+      label(W / 2, H - 14, info, 'rgba(20,33,61,.92)', '#fff', 15);
+    }
+    if (tm >= tShot + 0.6 || endCard) {
+      ctx.font = '700 46px Barlow Condensed, Barlow, sans-serif'; ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.fillText(verdict, W / 2 + 2, H / 2 + 2);
+      ctx.fillStyle = goal ? '#F2B705' : '#fff'; ctx.fillText(verdict, W / 2, H / 2); ctx.textAlign = 'left';
+      if (endCard) label(W / 2, H / 2 + 40, `${S.meta.home.abbr} ${h.score_after.home}–${h.score_after.away} ${S.meta.away.abbr}`, '#fff', '#14213D', 18);
+    }
+  }
+  // record the replay so it can be downloaded as a clip
+  try {
+    const chunks = [];
+    PIP.rec = new MediaRecorder(cv.captureStream(30), { mimeType: MediaRecorder.isTypeSupported('video/webm;codecs=vp9') ? 'video/webm;codecs=vp9' : 'video/webm' });
+    PIP.rec.ondataavailable = e => e.data.size && chunks.push(e.data);
+    PIP.rec.onstop = () => {
+      if (PIP.h !== h || !chunks.length) return;
+      if (PIP.url) URL.revokeObjectURL(PIP.url);
+      PIP.url = URL.createObjectURL(new Blob(chunks, { type: 'video/webm' }));
+      $('pipDl').href = PIP.url; $('pipDl').download = `matchlens-${h.kind}-${h.player}-${h.display_minute.replace(/\W/g, '')}.webm`; $('pipDl').hidden = false;
+    };
+    PIP.rec.start();
+  } catch (e) { PIP.rec = null; }
+  let tm = tStart, last = performance.now(), hold = 0;
+  const step = now => {
+    const dt = Math.min(0.05, (now - last) / 1000); last = now;
+    const slow = tm >= tShot - 2.2 && tm <= tShot + 1.4;
+    if (tm < tEnd) { tm += dt * (slow ? 0.45 : 1.8); frame(Math.min(tm, tEnd), slow, false); }
+    else { hold += dt; frame(tEnd, false, true); if (hold > 2.2) { if (PIP.rec && PIP.rec.state === 'recording') PIP.rec.stop(); return; } }
+    PIP.raf = requestAnimationFrame(step);
+  };
+  trail.length = 0;
+  PIP.raf = requestAnimationFrame(step);
+}
+$('pipReplay').onclick = () => PIP.h && playHighlight(PIP.h);
+$('pipClose').onclick = () => { cancelAnimationFrame(PIP.raf); if (PIP.rec && PIP.rec.state === 'recording') PIP.rec.stop(); $('pip').hidden = true; };
+$('openOverlay').onclick = () => {
+  const u = new URL(location.href);
+  u.searchParams.set('view', 'overlay'); u.searchParams.set('match', $('match').value); u.searchParams.delete('mode');
+  window.open(u.toString(), '_blank', 'noopener');
+};
 
 // ------------------------------------------------------------------ preferences
 function fillPrefsClubs() {

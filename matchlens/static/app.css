@@ -320,6 +320,30 @@ dl.tiles.sm dd { font-size: 19px; }
 .plist .pts { font: 700 18px/1 var(--font-cond); text-align: center; }
 .plist .pts.hi { color: #1F5C3A; }
 
+/* ---------------------------------------------------------------- highlights + overlay button */
+.overlaybox { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+.overlaybox button, .pipbar button, .pipbar .btn { border: 1px solid var(--ink); background: #fff; border-radius: var(--radius-s); padding: 5px 11px;
+  cursor: pointer; font-size: 13px; color: var(--ink); text-decoration: none; }
+.overlaybox p { margin: 6px 0 0; }
+.hlcard { grid-column: 1 / -1; }
+.hltiles { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; }
+.hltile { flex: 0 0 210px; display: grid; grid-template-columns: auto 1fr; column-gap: 10px; row-gap: 2px; align-items: center; text-align: left;
+  background: #fff; border: 1px solid var(--rule); border-left: 5px solid var(--team, var(--ink)); border-radius: var(--radius-m);
+  padding: 9px 11px; cursor: pointer; }
+.hltile:hover { border-color: var(--ink); }
+.hltile .play { grid-row: 1 / 4; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 13px; }
+.hltile.goal .play { background: var(--flag); color: var(--ink); }
+.hltile .k { font: 700 13px/1 var(--font-cond); text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); }
+.hltile .who { font-size: 14px; }
+.hltile.new { animation: hlpulse 1.2s ease-out 3; }
+@keyframes hlpulse { 0% { box-shadow: 0 0 0 0 rgba(242,183,5,.8); } 100% { box-shadow: 0 0 0 10px rgba(242,183,5,0); } }
+.pip { position: fixed; right: 18px; bottom: 18px; z-index: 50; width: min(520px, calc(100vw - 24px)); background: #14213D;
+  border-radius: var(--radius-m); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.pip canvas { display: block; width: 100%; height: auto; }
+.pipbar { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: #fff; font-size: 13px; font-weight: 600; }
+.pipbar .spacer { flex: 1; }
+body.overlay .pip { display: none !important; }
+
 /* ---------------------------------------------------------------- settings dialog */
 dialog { border: 1px solid var(--rule); border-radius: var(--radius-m); padding: 18px 20px; max-width: 420px; width: calc(100% - 32px); color: var(--ink); }
 dialog::backdrop { background: rgba(20,33,61,.4); }

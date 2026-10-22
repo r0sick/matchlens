@@ -32,6 +32,7 @@ from pydantic import BaseModel
 
 from matchsim.replay import load_match
 from .facts import MomentDetector
+from .highlights import HighlightDetector
 from .fantasy import season as fantasy_season
 from .fantasy.advisor import advise
 from .fantasy.calls import CallBook
@@ -139,6 +140,8 @@ class MatchSession:
         self.key_events: list = []                 # shots, goals, cards, subs so far (for late joiners)
         self.recent_passes: deque = deque(maxlen=400)
         self.detector = MomentDetector(self.meta)
+        self.hl = HighlightDetector(self.meta)
+        self.highlights: list = []                 # data replays of goals, big chances, great saves, penalties
         self.fantasy = FantasyScorer(self.state)
         shares = (fantasy_season.xg_shares([self.meta["home"]["team_id"], self.meta["away"]["team_id"]],
                                            self.fantasy_md) if self.fantasy_md else {})
@@ -211,6 +214,7 @@ class MatchSession:
             "narratives": self.desk.narratives,
             "newsroom": newsroom_info(),
             "fantasy": self.fantasy_payload(),
+            "highlights": self.highlights,
         })
 
     # ---- processing
@@ -218,6 +222,11 @@ class MatchSession:
         signals = self.state.update(ev)
         self.fantasy.update(ev)
         settled = self.calls.settle(ev)
+        hl = self.hl.observe(ev, self.state.score)
+        if ev["type"] == "match_end":
+            hl = hl or self.hl.flush(self.state.score)
+        if hl:
+            self.highlights.append(hl)
         self.idx += 1
         se = None
         if ev["type"] != "physical_snapshot":
@@ -235,6 +244,8 @@ class MatchSession:
         now = time.monotonic()
         if se:
             self.broadcast("event", se)
+        if hl:
+            self.broadcast("highlight", hl)
         for s in signals:
             self.broadcast("win_prob_swing" if s["kind"] == "win_prob_swing" else "alert", s)
         for sheet in sheets:
@@ -432,6 +443,15 @@ def session_narratives(match_id: str):
     if not s:
         raise HTTPException(404, "no session for this match")
     return s.desk.narratives
+
+
+@app.get("/api/sessions/{match_id}/highlights")
+def session_highlights(match_id: str):
+    """Data replays published so far (goals, big chances, great saves, penalties)."""
+    s = SESSIONS.get(match_id)
+    if not s:
+        raise HTTPException(404, "no session for this match")
+    return s.highlights
 
 
 @app.get("/api/sessions/{match_id}/state")

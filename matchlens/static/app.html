@@ -60,7 +60,9 @@
       <div class="card"><h2 data-i18n="key_moments">Key moments</h2><ul class="feed" id="feedB"></ul></div>
       <div class="card"><h2 data-i18n="match_stats">Match stats</h2><table class="statgrid" id="statsB"></table></div>
       <div class="card"><h2 data-i18n="on_the_ball">On the ball</h2><ul class="feed" id="liveEvents"></ul>
-        <p class="hint" data-i18n="overlay_hint">Add <code>?view=overlay</code> to the address for a transparent graphics layer you can put over a video feed in OBS or vMix.</p></div>
+        <div class="overlaybox"><button id="openOverlay" data-i18n="overlay_btn">Open TV graphics layer</button>
+          <p class="hint" data-i18n="overlay_hint">The live score, win-probability bar and goal banners on a see-through background, so a TV producer can place them over their own match video (for example in OBS or vMix).</p></div></div>
+      <div class="card hlcard"><h2 data-i18n="highlights">Highlights</h2><div class="hltiles" id="hlB"><p class="hint" data-i18n="hl_wait">Goals, big chances, great saves and penalties appear here as data replays.</p></div></div>
     </div>
   </section>
 
@@ -128,6 +130,7 @@
         <h2 data-i18n="match_report">Match report</h2>
         <div id="recapF"></div>
       </div>
+      <div class="card" style="margin-top:18px"><h2 data-i18n="highlights">Highlights</h2><div class="hltiles" id="hlF"><p class="hint" data-i18n="hl_wait">Goals, big chances, great saves and penalties appear here as data replays.</p></div></div>
       <div class="card" style="margin-top:18px">
         <h2 data-i18n="story">The story so far</h2>
         <ul class="timeline" id="timeline"></ul>
@@ -173,6 +176,12 @@
     </div>
   </section>
 </main>
+
+<div class="pip" id="pip" hidden role="dialog" aria-label="Highlight replay">
+  <canvas id="pipCanvas" width="640" height="400"></canvas>
+  <div class="pipbar"><span id="pipTitle"></span><span class="spacer"></span>
+    <button id="pipReplay" data-i18n="hl_replay">Replay</button><a id="pipDl" class="btn" download hidden data-i18n="hl_download">Download clip</a><button id="pipClose" aria-label="Close">✕</button></div>
+</div>
 
 <dialog id="profDlg" class="profile" aria-labelledby="prName"><div id="profBody"></div>
   <div class="actions"><button id="prCap" data-i18n="make_captain">Make captain</button><button id="prAdv" data-i18n="advice">Advice</button><button class="primary" id="prClose" data-i18n="close">Close</button></div>
