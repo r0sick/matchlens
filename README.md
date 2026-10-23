@@ -298,4 +298,4 @@ Momentum index vs the simulation's hidden momentum: correlation 0.64. Chaos inde
 | `OVERLAY.md`, `SCHEMA.md` | Live protocol and event schema |
 | `tests/` | Offline end-to-end and agent tests |
 
-License: MIT. All names, clubs and players are fictional.
+© 2026 Pablo. All rights reserved: published for the Inside the Game: Developer Hackathon for review and testing; see `LICENSE`. All names, clubs and players are fictional.
