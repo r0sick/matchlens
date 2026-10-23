@@ -4,7 +4,7 @@
 
 > Built for the Microsoft Premier League Hackathon. All data is **synthetic**: the Aurora League, its 10 clubs, 230 players and referees are invented, so no real league, club, player or broadcast data is used.
 
-**Live demo:** `<your Azure Container Apps URL>` · **Video:** `<link>` · **Run it locally in 2 minutes:** [Quick start](#quick-start)
+**▶ [Watch the 2-minute demo video](https://youtu.be/oWACqf0rSzE)** · **[Live demo](https://matchlens.happyglacier-8df1afe0.swedencentral.azurecontainerapps.io)** (opens on the front page: press *Watch the showcase match*) · **Run it locally in 2 minutes:** [Quick start](#quick-start)
 
 ![MatchLens front page](docs/screens/home.jpg)
 
@@ -121,7 +121,7 @@ Choose **Matchday 10 · Kingsmere United v Thornbury Rovers**, press **Watch**, 
 
 **Use MatchLens from GitHub Copilot:** with the server running, open the repo in VS Code. The `matchlens` MCP server in `.vscode/mcp.json` appears in Copilot agent mode.
 
-**Tests:** `pip install -r requirements-dev.txt && python -m pytest -q`. The 21 tests run offline with a scripted model and cover the live stream, the no-look-ahead rule, grounding, retries, localisation, MCP tools and Fantasy.
+**Tests:** `pip install -r requirements-dev.txt && python -m pytest -q`. The 23 tests run offline with a scripted model and cover the live stream, the no-look-ahead rule, grounding, retries, localisation, MCP tools and Fantasy.
 
 **Deploy:** `docker build -t matchlens .`, or use the image GitHub Actions publishes (`ghcr.io/r0sick/matchlens:latest`) on Azure Container Apps. Use port 8000, the same environment variables as `.env` (the key as a secret), and 1 replica, because live sessions are held in memory.
 
